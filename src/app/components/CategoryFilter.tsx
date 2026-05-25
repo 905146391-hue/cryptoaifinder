@@ -10,7 +10,7 @@ export default function CategoryFilter({ activeCategory, onCategoryChange }: Cat
   return (
     <section className="border-y border-[#1a1a2e]/50 bg-[#06060b]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-1.5 sm:gap-2 py-4 overflow-x-auto scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6">
+        <div className="flex items-center gap-1.5 sm:gap-2 py-4 overflow-x-auto scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6 pr-16 sm:pr-20">
           {categories.map((category) => (
             <button
               key={category.id}
