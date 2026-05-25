@@ -1,76 +1,64 @@
-"use client";
-
-import { Globe, Link } from "lucide-react";
+import Link from "next/link";
+import { Globe } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#1e1e2e] bg-[#0a0a0f] py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="border-t border-[#1a1a2e]/50 bg-[#06060b]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400">
-                <span className="text-sm font-bold text-white">AI</span>
+          <div className="md:col-span-2">
+            <Link href="/" className="flex items-center gap-2.5 mb-4">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">CF</span>
               </div>
-              <span className="text-lg font-bold">
-                <span className="text-white">Crypto</span>
-                <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                  Finder
-                </span>
+              <span className="text-lg font-bold text-white">
+                Crypto<span className="text-cyan-400">Finder</span>
               </span>
-            </div>
-            <p className="text-sm text-[#64748b]">
-              The most comprehensive directory of AI-powered tools for cryptocurrency.
+            </Link>
+            <p className="text-sm text-[#475569] max-w-sm leading-relaxed">
+              The most comprehensive directory of AI-powered tools for cryptocurrency. Discover, compare, and choose the best tools for your crypto journey.
             </p>
+            <div className="flex gap-3 mt-4">
+              <a href="https://github.com/905146391-hue/cryptoaifinder" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-[#0d0d14] border border-[#1a1a2e] flex items-center justify-center text-[#475569] hover:text-white hover:border-[#2a2a3e] transition-all">
+                <Globe size={14} />
+              </a>
+            </div>
           </div>
 
-          {/* Links */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#tools" className="text-sm text-[#64748b] hover:text-white transition-colors">
-                  All Tools
-                </a>
-              </li>
-              <li>
-                <a href="#categories" className="text-sm text-[#64748b] hover:text-white transition-colors">
-                  Categories
-                </a>
-              </li>
+            <h4 className="text-sm font-semibold text-white mb-4">Directory</h4>
+            <ul className="space-y-2.5">
+              {["Trading Bots", "DeFi AI", "Analytics", "Security", "Charting", "Wallets"].map((item) => (
+                <li key={item}>
+                  <Link href="/categories/trading-bots" className="text-sm text-[#475569] hover:text-cyan-400 transition-colors">
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Social */}
+          {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Connect</h4>
-            <div className="flex gap-3">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#111118] border border-[#1e1e2e] text-[#64748b] hover:text-white hover:border-indigo-500/30 transition-all"
-                aria-label="Twitter"
-              >
-                <Globe className="h-4 w-4" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#111118] border border-[#1e1e2e] text-[#64748b] hover:text-white hover:border-indigo-500/30 transition-all"
-                aria-label="GitHub"
-              >
-                <Link className="h-4 w-4" />
-              </a>
-            </div>
+            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2.5">
+              <li><Link href="/about" className="text-sm text-[#475569] hover:text-cyan-400 transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-sm text-[#475569] hover:text-cyan-400 transition-colors">Contact</Link></li>
+              <li><Link href="/privacy" className="text-sm text-[#475569] hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-sm text-[#475569] hover:text-cyan-400 transition-colors">Terms of Service</Link></li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-[#1e1e2e] text-center">
-          <p className="text-sm text-[#64748b]">
-            © 2026 Crypto AI Finder. All rights reserved. Some links are affiliate links.
+        {/* Bottom bar */}
+        <div className="mt-12 pt-6 border-t border-[#1a1a2e]/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-[#333]">
+            &copy; {new Date().getFullYear()} CryptoFinder. All rights reserved.
+          </p>
+          <p className="text-xs text-[#333]">
+            Not financial advice. Always DYOR.
           </p>
         </div>
       </div>

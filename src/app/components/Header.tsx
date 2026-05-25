@@ -1,7 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import { Search, Menu, X } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 interface HeaderProps {
   searchQuery: string;
@@ -12,84 +11,96 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#1e1e2e] bg-[#0a0a0f]/80 backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 border-b border-[#1a1a2e]/50 bg-[#06060b]/80 backdrop-blur-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400">
-              <span className="text-sm font-bold text-white">AI</span>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 flex items-center justify-center">
+              <span className="text-white font-bold text-sm">CF</span>
             </div>
-            <span className="text-xl font-bold tracking-tight">
-              <span className="text-white">Crypto</span>
-              <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                Finder
+            <div className="hidden sm:block">
+              <span className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                Crypto<span className="text-cyan-400">Finder</span>
               </span>
-            </span>
-          </div>
+            </div>
+          </Link>
 
-          {/* Desktop Search */}
-          <div className="hidden md:flex flex-1 max-w-md mx-8">
+          {/* Search Bar - Desktop */}
+          <div className="hidden md:flex flex-1 max-w-xl mx-8">
             <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748b]" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#475569]" />
               <input
                 type="text"
-                placeholder="Search AI crypto tools..."
+                placeholder="Search 446+ AI crypto tools..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                className="w-full rounded-lg border border-[#1e1e2e] bg-[#111118] py-2 pl-10 pr-4 text-sm text-[#e2e8f0] placeholder-[#64748b] focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-2 bg-[#0d0d14] border border-[#1a1a2e] rounded-lg text-sm text-white placeholder-[#475569] focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
               />
             </div>
           </div>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#tools" className="text-sm text-[#64748b] hover:text-white transition-colors">
-              Tools
-            </a>
-            <a href="#categories" className="text-sm text-[#64748b] hover:text-white transition-colors">
-              Categories
-            </a>
-            <a
-              href="https://github.com"
+          {/* Nav Links - Desktop */}
+          <nav className="hidden md:flex items-center gap-1">
+            <Link href="/about" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
+              About
+            </Link>
+            <Link href="/contact" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
+              Contact
+            </Link>
+            <Link
+              href="https://github.com/905146391-hue/cryptoaifinder"
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-[#64748b] hover:text-white transition-colors"
+              className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all"
             >
               GitHub
-            </a>
+            </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-[#64748b] hover:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-[#64748b] hover:text-white"
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
-        {/* Mobile Search & Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748b]" />
-              <input
-                type="text"
-                placeholder="Search AI crypto tools..."
-                value={searchQuery}
-                onChange={(e) => onSearchChange(e.target.value)}
-                className="w-full rounded-lg border border-[#1e1e2e] bg-[#111118] py-2 pl-10 pr-4 text-sm text-[#e2e8f0] placeholder-[#64748b] focus:border-indigo-500 focus:outline-none"
-              />
-            </div>
-            <nav className="flex flex-col gap-2">
-              <a href="#tools" className="text-sm text-[#64748b] hover:text-white py-2">Tools</a>
-              <a href="#categories" className="text-sm text-[#64748b] hover:text-white py-2">Categories</a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#64748b] hover:text-white py-2">GitHub</a>
-            </nav>
+        {/* Search Bar - Mobile */}
+        <div className="md:hidden pb-3">
+          <div className="relative w-full">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#475569]" />
+            <input
+              type="text"
+              placeholder="Search tools..."
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 bg-[#0d0d14] border border-[#1a1a2e] rounded-lg text-sm text-white placeholder-[#475569] focus:outline-none focus:border-cyan-500/50"
+            />
           </div>
-        )}
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-[#1a1a2e] bg-[#06060b]">
+          <div className="px-4 py-3 space-y-1">
+            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
+              About
+            </Link>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
+              Contact
+            </Link>
+            <Link
+              href="https://github.com/905146391-hue/cryptoaifinder"
+              target="_blank"
+              className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]"
+            >
+              GitHub
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

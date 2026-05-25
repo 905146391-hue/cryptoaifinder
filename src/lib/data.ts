@@ -27,7 +27,6 @@ export const categories = [
 ];
 
 export const tools: Tool[] = [
-] = [
 {
     id: "3commas",
     name: "3Commas",

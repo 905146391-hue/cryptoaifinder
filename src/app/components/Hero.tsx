@@ -1,64 +1,65 @@
-"use client";
-
-import { Sparkles, TrendingUp, Shield } from "lucide-react";
+import { Sparkles, TrendingUp, Shield, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/20 via-transparent to-transparent" />
-      
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm text-indigo-300 mb-8">
-          <Sparkles className="h-4 w-4" />
-          <span>446+ AI-Powered Crypto Tools Curated</span>
+    <section className="relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 grid-bg" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-cyan-500/5 via-emerald-500/3 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-20 right-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60" />
+      <div className="absolute top-40 left-1/3 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-float opacity-40" style={{ animationDelay: "2s" }} />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-16">
+        {/* Badge */}
+        <div className="flex justify-center mb-8 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-full">
+            <Sparkles size={14} className="text-cyan-400" />
+            <span className="text-xs font-medium text-cyan-400">446+ AI-Powered Crypto Tools</span>
+          </div>
         </div>
-        
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-          Discover the Best{" "}
-          <span className="bg-gradient-to-r from-indigo-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-            AI Tools
-          </span>{" "}
-          for Crypto
-        </h1>
-        
-        <p className="mx-auto max-w-2xl text-lg text-[#64748b] mb-10">
-          Your comprehensive directory of AI-powered tools for trading, DeFi, 
-          on-chain analytics, and portfolio management. Find, compare, and choose 
-          the right tools for your crypto journey.
-        </p>
-        
-        <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="#tools"
-            className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-medium text-white hover:bg-indigo-500 transition-colors"
-          >
-            <TrendingUp className="h-4 w-4" />
-            Explore Tools
-          </a>
-          <a
-            href="#categories"
-            className="inline-flex items-center gap-2 rounded-lg border border-[#1e1e2e] bg-[#111118] px-6 py-3 text-sm font-medium text-[#e2e8f0] hover:bg-[#1a1a24] transition-colors"
-          >
-            <Shield className="h-4 w-4" />
-            Browse Categories
-          </a>
+
+        {/* Title */}
+        <div className="text-center max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+            <span className="text-white">Discover the Best</span>
+            <br />
+            <span className="gradient-text">AI Tools for Crypto</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-[#64748b] max-w-2xl mx-auto leading-relaxed">
+            The most comprehensive directory of AI-powered tools for trading, DeFi, analytics, security, and more. Find, compare, and choose the right tools.
+          </p>
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white">446+</div>
-            <div className="text-sm text-[#64748b] mt-1">AI Tools</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white">11</div>
-            <div className="text-sm text-[#64748b] mt-1">Categories</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white">20+</div>
-            <div className="text-sm text-[#64748b] mt-1">With Affiliate</div>
-          </div>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          {[
+            { icon: Zap, value: "446+", label: "AI Tools", color: "cyan" },
+            { icon: TrendingUp, value: "11", label: "Categories", color: "emerald" },
+            { icon: Shield, value: "384+", label: "Platforms", color: "purple" },
+          ].map((stat) => (
+            <div key={stat.label} className="flex items-center gap-3 bg-[#0d0d14]/80 border border-[#1a1a2e] rounded-xl px-5 py-3">
+              <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                stat.color === "cyan" ? "bg-cyan-500/10" : stat.color === "emerald" ? "bg-emerald-500/10" : "bg-purple-500/10"
+              }`}>
+                <stat.icon size={16} className={
+                  stat.color === "cyan" ? "text-cyan-400" : stat.color === "emerald" ? "text-emerald-400" : "text-purple-400"
+                } />
+              </div>
+              <div>
+                <div className="text-lg font-bold text-white">{stat.value}</div>
+                <div className="text-xs text-[#475569]">{stat.label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Featured Categories Preview */}
+        <div className="flex flex-wrap justify-center gap-2 mt-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          {["Trading Bots", "DeFi AI", "Analytics", "Security", "Sentiment", "Charting"].map((cat) => (
+            <span key={cat} className="px-3 py-1 text-xs text-[#475569] bg-[#0d0d14] border border-[#1a1a2e]/50 rounded-md">
+              {cat}
+            </span>
+          ))}
         </div>
       </div>
     </section>

@@ -1,8 +1,18 @@
-"use client";
-
-import { Tool } from "@/lib/data";
 import ToolCard from "./ToolCard";
-import { Search } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
+
+interface Tool {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  tags: string[];
+  url: string;
+  affiliateUrl?: string;
+  pricing: string;
+  rating: number;
+  featured?: boolean;
+}
 
 interface ToolGridProps {
   tools: Tool[];
@@ -10,33 +20,39 @@ interface ToolGridProps {
 }
 
 export default function ToolGrid({ tools, activeCategory }: ToolGridProps) {
-  if (tools.length === 0) {
-    return (
-      <section id="tools" className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <Search className="h-12 w-12 text-[#1e1e2e] mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-white mb-2">No tools found</h3>
-          <p className="text-[#64748b]">Try adjusting your search or category filter.</p>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section id="tools" className="py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl font-semibold text-white">
-            {activeCategory === "all" ? "All Tools" : tools[0]?.category}
-          </h2>
-          <span className="text-sm text-[#64748b]">{tools.length} tools</span>
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      {/* Results header */}
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-3">
+          <SlidersHorizontal size={16} className="text-[#475569]" />
+          <span className="text-sm text-[#64748b]">
+            Showing <span className="text-white font-medium">{tools.length}</span> tools
+            {activeCategory !== "all" && (
+              <span> in this category</span>
+            )}
+          </span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {tools.map((tool) => (
-            <ToolCard key={tool.id} tool={tool} />
-          ))}
+        <div className="text-xs text-[#475569]">
+          Sorted by rating
         </div>
       </div>
+
+      {/* Grid */}
+      {tools.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {tools
+            .sort((a, b) => b.rating - a.rating)
+            .map((tool) => (
+              <ToolCard key={tool.id} tool={tool} />
+            ))}
+        </div>
+      ) : (
+        <div className="text-center py-20">
+          <p className="text-[#475569] text-lg">No tools found matching your criteria.</p>
+          <p className="text-[#333] text-sm mt-2">Try adjusting your search or category filter.</p>
+        </div>
+      )}
     </section>
   );
 }

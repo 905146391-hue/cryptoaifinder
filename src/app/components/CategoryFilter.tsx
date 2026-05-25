@@ -1,6 +1,5 @@
-"use client";
-
 import { categories } from "@/lib/data";
+import Link from "next/link";
 
 interface CategoryFilterProps {
   activeCategory: string;
@@ -9,31 +8,26 @@ interface CategoryFilterProps {
 
 export default function CategoryFilter({ activeCategory, onCategoryChange }: CategoryFilterProps) {
   return (
-    <section id="categories" className="py-8 border-b border-[#1e1e2e]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2 mb-4">
-          <h2 className="text-lg font-semibold text-white">Categories</h2>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
+    <section className="border-y border-[#1a1a2e]/50 bg-[#06060b]/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center gap-2 py-4 overflow-x-auto scrollbar-hide">
+          {categories.map((category) => (
             <button
-              key={cat.id}
-              onClick={() => onCategoryChange(cat.id)}
-              className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-all ${
-                activeCategory === cat.id
-                  ? "bg-indigo-600 text-white"
-                  : "bg-[#111118] text-[#64748b] border border-[#1e1e2e] hover:border-indigo-500/50 hover:text-white"
+              key={category.id}
+              onClick={() => onCategoryChange(category.id)}
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
+                activeCategory === category.id
+                  ? "bg-cyan-500/15 text-cyan-400 border border-cyan-500/30 glow-cyan"
+                  : "text-[#64748b] hover:text-white hover:bg-[#0d0d14] border border-transparent"
               }`}
             >
-              {cat.name}
-              <span
-                className={`rounded-full px-2 py-0.5 text-xs ${
-                  activeCategory === cat.id
-                    ? "bg-indigo-500/30 text-indigo-200"
-                    : "bg-[#1a1a24] text-[#64748b]"
-                }`}
-              >
-                {cat.count}
+              {category.id === "all" ? "All" : category.name}
+              <span className={`text-xs px-1.5 py-0.5 rounded-md ${
+                activeCategory === category.id
+                  ? "bg-cyan-500/20 text-cyan-300"
+                  : "bg-[#0d0d14] text-[#475569]"
+              }`}>
+                {category.count}
               </span>
             </button>
           ))}
