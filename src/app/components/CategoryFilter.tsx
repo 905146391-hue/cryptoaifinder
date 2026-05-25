@@ -10,12 +10,12 @@ export default function CategoryFilter({ activeCategory, onCategoryChange }: Cat
   return (
     <section className="border-y border-[#1a1a2e]/50 bg-[#06060b]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 py-4">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-1.5 sm:gap-2 py-4">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => onCategoryChange(category.id)}
-              className={`flex items-center gap-1 sm:gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
+              className={`flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all ${
                 activeCategory === category.id
                   ? "bg-cyan-500/15 text-cyan-400 border border-cyan-500/30 glow-cyan"
                   : "text-[#64748b] hover:text-white hover:bg-[#0d0d14] border border-transparent"
