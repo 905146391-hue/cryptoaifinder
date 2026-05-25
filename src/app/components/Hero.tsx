@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm text-indigo-300 mb-8">
           <Sparkles className="h-4 w-4" />
-          <span>50+ AI-Powered Crypto Tools Curated</span>
+          <span>446+ AI-Powered Crypto Tools Curated</span>
         </div>
         
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
@@ -48,15 +48,15 @@ export default function Hero() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
           <div className="text-center">
-            <div className="text-3xl font-bold text-white">50+</div>
+            <div className="text-3xl font-bold text-white">446+</div>
             <div className="text-sm text-[#64748b] mt-1">AI Tools</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white">9</div>
+            <div className="text-3xl font-bold text-white">11</div>
             <div className="text-sm text-[#64748b] mt-1">Categories</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white">10+</div>
+            <div className="text-3xl font-bold text-white">20+</div>
             <div className="text-sm text-[#64748b] mt-1">With Affiliate</div>
           </div>
         </div>

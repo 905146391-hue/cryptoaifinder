@@ -2,6 +2,7 @@
 
 import { Star, ExternalLink, Tag, Sparkles } from "lucide-react";
 import { Tool } from "@/lib/data";
+import Link from "next/link";
 
 interface ToolCardProps {
   tool: Tool;
@@ -22,8 +23,8 @@ export default function ToolCard({ tool }: ToolCardProps) {
         </div>
       )}
 
-      {/* Header */}
-      <div className="flex items-start justify-between mb-3">
+      {/* Header - Clickable */}
+      <Link href={`/tools/${tool.id}`} className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500/20 to-cyan-400/20 text-indigo-400 font-bold text-sm">
             {tool.name.charAt(0)}
@@ -38,12 +39,14 @@ export default function ToolCard({ tool }: ToolCardProps) {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
 
-      {/* Description */}
-      <p className="text-sm text-[#94a3b8] mb-4 flex-1 line-clamp-3">
-        {tool.description}
-      </p>
+      {/* Description - Clickable */}
+      <Link href={`/tools/${tool.id}`} className="flex-1">
+        <p className="text-sm text-[#94a3b8] mb-4 flex-1 line-clamp-3">
+          {tool.description}
+        </p>
+      </Link>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5 mb-4">
