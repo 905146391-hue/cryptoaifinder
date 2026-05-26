@@ -1,4 +1,5 @@
-import { Sparkles, TrendingUp, Shield, Zap } from "lucide-react";
+import { Sparkles, TrendingUp, Shield, Zap, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -26,16 +27,33 @@ export default function Hero() {
             <span className="gradient-text">AI Tools for Crypto</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#64748b] max-w-2xl mx-auto leading-relaxed">
-            The most comprehensive directory of AI-powered tools for trading, DeFi, analytics, security, and more. Find, compare, and choose the right tools.
+            Find the right AI tool for your crypto strategy. Compare trading bots, analytics platforms, DeFi tools, and more — all in one place.
           </p>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mt-8 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+          <Link
+            href="/categories/trading-bots"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white font-semibold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-cyan-500/20"
+          >
+            Explore Featured Tools
+            <ArrowRight size={16} />
+          </Link>
+          <Link
+            href="/categories/analytics"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#0d0d14] border border-[#1a1a2e] text-[#e2e8f0] font-medium rounded-xl hover:border-cyan-500/30 transition-colors"
+          >
+            Browse by Category
+          </Link>
         </div>
 
         {/* Stats */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
           {[
-            { icon: Zap, value: "446+", label: "AI Tools", color: "cyan" },
+            { icon: Zap, value: "446+", label: "AI Tools Curated", color: "cyan" },
             { icon: TrendingUp, value: "11", label: "Categories", color: "emerald" },
-            { icon: Shield, value: "384+", label: "Platforms", color: "purple" },
+            { icon: Shield, value: "100%", label: "Free to Browse", color: "purple" },
           ].map((stat) => (
             <div key={stat.label} className="flex items-center gap-3 bg-[#0d0d14]/80 border border-[#1a1a2e] rounded-xl px-5 py-3">
               <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${

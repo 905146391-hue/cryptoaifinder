@@ -52,8 +52,16 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Affiliate Disclosure */}
+        <div className="mt-8 pt-6 border-t border-[#1a1a2e]/50">
+          <p className="text-xs text-[#475569] leading-relaxed">
+            <strong className="text-[#64748b]">Affiliate Disclosure:</strong> Some links on CryptoFinder are affiliate links. If you click through and make a purchase or sign up, we may earn a commission at no extra cost to you. This helps us keep the directory free and continuously updated. Our reviews and rankings are never influenced by affiliate partnerships — we only recommend tools we genuinely believe provide value. For more details, see our{" "}
+            <Link href="/privacy" className="text-cyan-400/70 hover:text-cyan-400 transition-colors underline">Privacy Policy</Link>.
+          </p>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-[#1a1a2e]/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-6 pt-6 border-t border-[#1a1a2e]/50 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-[#333]">
             &copy; {new Date().getFullYear()} CryptoFinder. All rights reserved.
           </p>

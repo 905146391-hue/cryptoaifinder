@@ -34,7 +34,7 @@ export default function ToolGrid({ tools, activeCategory }: ToolGridProps) {
           </span>
         </div>
         <div className="text-xs text-[#475569]">
-          Sorted by rating
+          Featured tools first
         </div>
       </div>
 
@@ -42,7 +42,12 @@ export default function ToolGrid({ tools, activeCategory }: ToolGridProps) {
       {tools.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {tools
-            .sort((a, b) => b.rating - a.rating)
+            .sort((a, b) => {
+              // Featured tools first, then by rating
+              if (a.featured && !b.featured) return -1;
+              if (!a.featured && b.featured) return 1;
+              return b.rating - a.rating;
+            })
             .map((tool) => (
               <ToolCard key={tool.id} tool={tool} />
             ))}
