@@ -938,6 +938,85 @@ The platform also includes a demo mode that allows traders to test their strateg
     pricing: "$150-3000/mo",
     rating: 4.6,
     featured: true,
+    detailedContent: {
+      longDescription: `Nansen is a leading blockchain analytics platform that provides institutional-grade on-chain intelligence by combining massive datasets with powerful analytical tools. Founded in 2020, Nansen has built the industry's most extensive wallet labeling database, encompassing over 500 million labeled addresses across Ethereum, Solana, BNB Chain, Polygon, Arbitrum, Optimism, Base, and other major blockchains. This deep address intelligence makes it possible to track the behavior of smart money investors, whales, funds, and other key market participants in real time.
+
+The platform's Smart Money tracking system is its flagship feature, allowing users to monitor the on-chain activities of the most profitable and influential wallets in the crypto space. By labeling wallets belonging to hedge funds, venture capital firms, market makers, early adopters, and top DeFi users, Nansen transforms raw blockchain data into actionable intelligence. Users can set up real-time alerts to be notified when smart money wallets make significant moves, providing a powerful edge for identifying emerging trends before they become widely apparent.
+
+Nansen's NFT analytics capabilities are equally impressive. The platform tracks NFT minting, trading, and holding patterns across all major NFT marketplaces, providing detailed insights into collection performance, whale accumulation, and wash trading detection. Features like NFT God Mode offer a comprehensive view of any wallet's NFT holdings, transaction history, and profit and loss across multiple collections.
+
+For DeFi researchers and analysts, Nansen provides deep protocol-level analytics including token flow analysis, liquidity pool monitoring, and smart contract interaction tracking. The platform's Profiler tool allows users to investigate any Ethereum address in detail, revealing its complete transaction history, token holdings, DeFi positions, and NFT portfolio. This is invaluable for conducting due diligence on projects, analyzing competitor behavior, or investigating suspicious wallet activity.
+
+Nansen's Research division publishes regular market intelligence reports that combine on-chain data analysis with macro market context. These reports are widely followed by institutional investors, fund managers, and crypto-native analysts for their data-driven insights into market trends, protocol performance, and token dynamics. The platform also offers a powerful API for quantitative teams and developers who need to integrate on-chain analytics into their own workflows and trading systems.
+
+The platform supports multi-chain analysis, ensuring that users can track activity across the rapidly expanding ecosystem of Layer 1 and Layer 2 networks. Whether you are analyzing Ethereum DeFi protocols, tracking Solana meme coin activity, or monitoring Arbitrum yield farming positions, Nansen provides the tools and data needed to make informed decisions based on on-chain reality rather than market noise.`,
+      features: [
+        "500M+ labeled wallet addresses across 10+ blockchains",
+        "Real-time Smart Money tracking with customizable alerts",
+        "NFT God Mode for comprehensive NFT portfolio analysis",
+        "Token flow analytics and protocol-level DeFi insights",
+        "Address Profiler for deep wallet investigation",
+        "Multi-chain support: ETH, SOL, BSC, ARB, OP, BASE, and more",
+        "Research reports with institutional-grade market intelligence",
+        "Wash trade detection and suspicious activity monitoring",
+        "Custom dashboards and query builder for advanced analysis",
+        "REST API and Python SDK for quantitative workflows",
+        "Hot Contracts dashboard for trending protocol tracking",
+        "Counterparty risk analysis for DeFi positions",
+      ],
+      pricingPlans: [
+        {
+          name: "Researcher",
+          price: "$150/month",
+          features: ["Smart Money tracking", "Token God Mode", "NFT analytics", "Multi-chain support", "Basic alerts"],
+        },
+        {
+          name: "Investor",
+          price: "$500/month",
+          features: ["Everything in Researcher", "Profiler with full history", "Advanced alerts", "API access", "Priority research reports"],
+          highlight: true,
+        },
+        {
+          name: "Enterprise",
+          price: "$3000+/month",
+          features: ["Everything in Investor", "Full API access", "Custom data feeds", "Dedicated account manager", "On-chain intelligence consulting", "Custom integrations"],
+        },
+      ],
+      bestFor: [
+        "Institutional investors tracking smart money and whale activity",
+        "NFT traders analyzing collection performance and whale behavior",
+        "DeFi researchers conducting protocol and token flow analysis",
+        "Quantitative teams building on-chain trading strategies",
+        "Due diligence analysts investigating wallet and project activity",
+      ],
+      pros: [
+        "Industry-leading wallet labeling database with 500M+ addresses",
+        "Comprehensive multi-chain coverage across all major networks",
+        "Actionable smart money alerts provide genuine trading edge",
+        "Institutional-grade research reports with deep on-chain analysis",
+        "Powerful API and SDK for custom quantitative workflows",
+      ],
+      cons: [
+        "Premium pricing makes it inaccessible for casual retail traders",
+        "Steep learning curve for users unfamiliar with on-chain analytics",
+        "Free tier is very limited compared to paid plans",
+        "Some advanced features require Enterprise-level subscription",
+      ],
+      alternatives: ["dune", "moralis", "coinglass", "coingecko"],
+      gettingStarted: [
+        { step: 1, title: "Sign Up and Choose a Plan", description: "Create an account on Nansen.ai and select a subscription plan that fits your needs. The Researcher plan is ideal for individual traders, while Investor and Enterprise plans offer more advanced features." },
+        { step: 2, title: "Explore Smart Money Dashboards", description: "Navigate to the Smart Money section to view top-performing wallets, their recent transactions, and portfolio changes. Set up alerts to be notified of significant wallet movements." },
+        { step: 3, title: "Build Custom Queries", description: "Use Nansen's query builder and Profiler tool to investigate specific addresses, track token flows, and create personalized dashboards tailored to your research needs." },
+      ],
+      faq: [
+        { question: "What is Nansen Smart Money?", answer: "Smart Money refers to wallets that Nansen has identified as belonging to profitable and influential market participants, including hedge funds, VC firms, experienced traders, and early adopters. Tracking their on-chain activity can provide valuable insights into market trends." },
+        { question: "How does Nansen label wallets?", answer: "Nansen uses a combination of on-chain heuristics, machine learning algorithms, and manual research to identify and categorize wallet addresses. Labels include fund names, exchange hot/cold wallets, DeFi whales, NFT collectors, and more." },
+        { question: "Which blockchains does Nansen support?", answer: "Nansen supports Ethereum, Solana, BNB Chain, Polygon, Arbitrum, Optimism, Base, Avalanche, Fantom, and several other EVM-compatible chains. The platform continuously adds support for new networks as they gain traction." },
+        { question: "Is Nansen worth the price for retail traders?", answer: "For serious retail traders who actively trade based on on-chain data, Nansen's Researcher plan at $150/month can be worth the investment. However, casual investors may find the price steep and might be better served by free alternatives like Dune or Dexscreener." },
+        { question: "What is NFT God Mode?", answer: "NFT God Mode is Nansen's premium NFT analytics feature that provides a comprehensive view of any wallet's NFT activity, including minting history, trading patterns, profit and loss calculations, and current holdings across all major NFT collections." },
+        { question: "Can I use Nansen for free?", answer: "Nansen offers a very limited free tier that provides basic access to some dashboards and features. However, the most valuable features like Smart Money tracking, full Profiler access, and API require a paid subscription." },
+      ],
+    },
   },
   {
     id: "arkham",
@@ -960,6 +1039,87 @@ The platform also includes a demo mode that allows traders to test their strateg
     pricing: "Free / $300+/mo",
     rating: 4.7,
     featured: true,
+    detailedContent: {
+      longDescription: `Dune Analytics is a revolutionary blockchain data platform that democratizes on-chain analysis by allowing anyone to query, visualize, and share blockchain data using standard SQL. Founded in 2018, Dune has grown into one of the most important infrastructure tools in the cryptocurrency ecosystem, serving researchers, developers, traders, journalists, and DAOs who need to extract meaningful insights from raw blockchain data without writing custom indexers or running their own nodes.
+
+The platform's core strength lies in its approachability. Dune ingests and decodes data from multiple blockchains including Ethereum, Polygon, BNB Chain, Optimism, Arbitrum, Solana, Base, and others, then organizes it into relational database tables that can be queried using standard PostgreSQL syntax. This means that anyone with basic SQL knowledge can analyze complex on-chain data patterns, from tracking DeFi protocol usage and token transfers to monitoring NFT trading volumes and whale wallet activity.
+
+Dune's community-driven model is what truly sets it apart. The platform hosts hundreds of thousands of publicly available dashboards and queries created by its community of analysts. These community contributions cover virtually every aspect of the crypto ecosystem, from Ethereum gas price analysis and DeFi TVL tracking to meme coin sentiment and DAO governance participation. Users can fork existing queries, modify them for their own purposes, and share their findings with the broader community.
+
+For developers and researchers who need custom analysis, Dune provides a powerful query editor with autocomplete, syntax highlighting, and the ability to schedule automated queries. The platform supports parameterized queries, which allow dashboard viewers to interact with visualizations by adjusting inputs like token addresses, time ranges, and wallet addresses. This interactivity makes Dune dashboards incredibly versatile for both personal research and public reporting.
+
+Dune's visualization engine supports a wide range of chart types including line charts, bar charts, pie charts, scatter plots, and tables. Users can create multi-widget dashboards that combine multiple visualizations into a cohesive analytical view. These dashboards can be embedded on external websites, making Dune the go-to platform for crypto journalists and content creators who need to present on-chain data to their audiences.
+
+The platform has also introduced Dune Plus, a premium subscription that offers higher query concurrency, faster execution times, private queries, and access to Dune's API for programmatic data access. For teams and organizations that need to integrate on-chain analytics into their workflows, Dune Plus and the API provide the performance and reliability needed for production-grade applications.
+
+Dune continues to expand its blockchain coverage and data offerings, recently adding support for decoded ABIs, enhanced spell (custom data tables), and improved multi-chain querying capabilities. The platform's commitment to open data and community collaboration has made it an essential tool in the crypto analyst's toolkit, whether you are tracking a specific protocol's growth, analyzing token distribution, or building data-driven investment theses.`,
+      features: [
+        "Query blockchain data using standard PostgreSQL SQL",
+        "200,000+ community-created dashboards and queries",
+        "Multi-chain support: ETH, SOL, BSC, ARB, OP, BASE, and more",
+        "Interactive visualizations with parameterized queries",
+        "Query scheduling and automated data refresh",
+        "Embeddable dashboards for external websites and reports",
+        "Spell tables for custom decoded data enrichment",
+        "Dune API for programmatic data access",
+        "Community-driven with social features and query sharing",
+        "Advanced chart types: line, bar, pie, scatter, area, table",
+        "Fork and remix any public query for customization",
+        "Real-time data decoding with comprehensive ABI coverage",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["Unlimited public queries", "Access to community dashboards", "Basic visualization tools", "Community support"],
+        },
+        {
+          name: "Dune Plus",
+          price: "$349/month",
+          features: ["Faster query execution", "Higher concurrency limits", "Private queries", "Dune API access", "Query scheduling", "Priority support"],
+          highlight: true,
+        },
+        {
+          name: "Dune Team",
+          price: "Custom pricing",
+          features: ["Everything in Dune Plus", "Team collaboration", "Shared workspaces", "Dedicated support", "Custom integrations", "Volume discounts"],
+        },
+      ],
+      bestFor: [
+        "Crypto researchers who need SQL-based on-chain analysis",
+        "Journalists and content creators visualizing blockchain data",
+        "DAO contributors tracking governance and treasury activity",
+        "DeFi analysts monitoring protocol metrics and TVL trends",
+        "Developers building data-driven crypto applications",
+      ],
+      pros: [
+        "Incredibly powerful yet accessible with standard SQL knowledge",
+        "Massive community library of pre-built queries and dashboards",
+        "Supports all major blockchains with continuously expanding coverage",
+        "Free tier is generous for individual researchers and analysts",
+        "Embeddable dashboards make it ideal for public reporting",
+      ],
+      cons: [
+        "Query performance can be slow during peak usage hours",
+        "Learning SQL is required to fully leverage the platform",
+        "Free tier has limited query concurrency and speed",
+        "Data freshness depends on blockchain sync and decoding times",
+      ],
+      alternatives: ["nansen", "moralis", "coingecko", "coinglass"],
+      gettingStarted: [
+        { step: 1, title: "Create Your Account", description: "Sign up for free on Dune.com using your email or connect with your Ethereum wallet. No credit card is required for the free tier." },
+        { step: 2, title: "Explore Community Dashboards", description: "Browse the dashboard gallery to find pre-built analyses on protocols, tokens, or trends you are interested in. Fork a dashboard to use it as a starting point for your own research." },
+        { step: 3, title: "Write Your First Query", description: "Open the query editor, select a blockchain and table, and write SQL to extract the data you need. Create visualizations from your results and save them to a custom dashboard." },
+      ],
+      faq: [
+        { question: "Do I need to know SQL to use Dune?", answer: "While writing custom queries requires SQL knowledge, you can still get immense value from Dune without coding by exploring the hundreds of thousands of community-built dashboards. Many popular analyses are already available as interactive visualizations." },
+        { question: "How fresh is the data on Dune?", answer: "Dune continuously syncs blockchain data, with most queries reflecting data that is a few minutes to an hour old. The platform uses 'Dune Engine V2' for significantly faster query execution compared to the original engine." },
+        { question: "What blockchains does Dune support?", answer: "Dune supports Ethereum, Gnosis, Polygon, BNB Chain, Optimism, Arbitrum, Solana, Base, Avalanche, Fantom, Zora, and several other networks. The list continues to expand as new chains gain adoption." },
+        { question: "What are Dune Spells?", answer: "Spells are custom data tables created by the community that decode complex on-chain data into human-readable formats. They are maintained by 'Dune wizards' who ensure data accuracy and keep tables updated as protocols evolve." },
+        { question: "Can I use Dune API for my application?", answer: "Yes, Dune offers an API through the Dune Plus subscription. The API allows you to execute queries and retrieve results programmatically, making it easy to integrate on-chain data into your own applications, trading bots, or research workflows." },
+        { question: "How does Dune compare to Nansen?", answer: "Dune excels at custom SQL-based analysis with a strong community ecosystem, while Nansen focuses on pre-built smart money tracking and wallet labeling. Dune is more flexible and accessible, while Nansen provides more curated institutional-grade intelligence." },
+      ],
+    },
   },
   {
     id: "glassnode",
@@ -991,6 +1151,92 @@ The platform also includes a demo mode that allows traders to test their strateg
     affiliateUrl: "https://start.moralismoney.com",
     pricing: "Free / $49+/mo",
     rating: 4.4,
+    detailedContent: {
+      longDescription: `Moralis is a comprehensive Web3 development platform that provides developers with the infrastructure and APIs needed to build decentralized applications (dApps) quickly and efficiently. Often described as the "Firebase for Web3," Moralis abstracts away the complexity of blockchain interactions, allowing developers to focus on building great user experiences rather than wrestling with low-level blockchain mechanics. The platform supports all major EVM chains including Ethereum, Polygon, BNB Chain, Arbitrum, Avalanche, Fantom, and Solana, providing a unified API layer that works across networks.
+
+At its core, Moralis offers a powerful suite of REST and WebSocket APIs that provide real-time access to on-chain data. Developers can query token balances, NFT metadata, transaction histories, smart contract events, and DeFi protocol data through simple API calls, without needing to run their own nodes or build custom indexers. The Moralis Streams API is particularly notable, enabling real-time monitoring of blockchain events and sending instant notifications via webhooks when specific on-chain activities occur.
+
+Moralis's Authentication API makes it easy to implement Web3 login functionality, supporting multiple wallet connection methods including MetaMask, WalletConnect, Coinbase Wallet, and others. This unified authentication layer handles the complexities of wallet verification and session management, significantly reducing development time for Web3 applications that require user identity management.
+
+The platform also provides enterprise-grade development tools including Moralis Admin, a visual dashboard for managing API keys, monitoring usage, and configuring streams. The Moralis Speedy Nodes service offers fast, reliable RPC endpoints for all supported blockchains, ensuring that applications maintain high performance even during periods of network congestion. For developers building DeFi applications, Moralis provides specialized DeFi APIs that can fetch token prices, liquidity pool data, protocol-specific metrics, and cross-chain bridge information.
+
+Moralis Academy, the platform's educational division, offers structured courses on blockchain development, smart contract programming, and Web3 business strategy. While the academy is a separate product from the core API platform, it reflects Moralis's commitment to growing the Web3 developer ecosystem and providing resources for developers at all skill levels.
+
+The platform has gained significant traction among Web3 developers, powering thousands of dApps across DeFi, NFT gaming, social platforms, and enterprise applications. Major companies and projects in the crypto space rely on Moralis for their backend infrastructure, drawn by its reliability, comprehensive documentation, and responsive developer support. The free tier is generous enough for prototyping and small-scale applications, while paid plans offer the scalability and features needed for production deployments.
+
+Moralis continues to expand its feature set with new APIs, additional chain support, and enhanced tooling. Recent additions include improved NFT API features with collection-level analytics, enhanced price oracle integrations, and native IPFS storage integration for decentralized file management. The platform's vision of making Web3 development as accessible as Web2 development positions it as a critical piece of infrastructure for the next generation of blockchain applications.`,
+      features: [
+        "Unified REST and WebSocket APIs for all major blockchains",
+        "Real-time Streams API with customizable webhook notifications",
+        "Web3 Authentication API supporting MetaMask, WalletConnect, and more",
+        "NFT API with metadata, ownership, and transfer data",
+        "Token API with balances, transfers, and price data",
+        "DeFi API for protocol data, liquidity pools, and yield metrics",
+        "Speedy Nodes with fast RPC endpoints for 15+ chains",
+        "IPFS integration for decentralized file storage",
+        "Enterprise-grade rate limits and uptime guarantees",
+        "Comprehensive SDKs for JavaScript, Python, React, and Unity",
+        "Admin dashboard for API management and monitoring",
+        "Cross-chain bridge tracking and analytics",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["50K API calls/month", "3 streams", "5 rate limits/sec", "Community support", "All API endpoints"],
+        },
+        {
+          name: "Pro",
+          price: "$49/month",
+          features: ["5M API calls/month", "10 streams", "50 rate limits/sec", "Email support", "Priority execution"],
+          highlight: true,
+        },
+        {
+          name: "Business",
+          price: "$249/month",
+          features: ["25M API calls/month", "50 streams", "200 rate limits/sec", "Priority support", "Custom webhooks", "Dedicated resources"],
+        },
+        {
+          name: "Enterprise",
+          price: "$749/month",
+          features: ["100M API calls/month", "Unlimited streams", "500 rate limits/sec", "Dedicated support", "SLA guarantee", "Custom integrations"],
+        },
+      ],
+      bestFor: [
+        "Web3 developers building dApps across multiple blockchains",
+        "DeFi projects needing real-time protocol data and token prices",
+        "NFT platforms requiring metadata and ownership tracking",
+        "Teams wanting to add Web3 wallet authentication quickly",
+        "GameFi developers building on-chain game economies",
+      ],
+      pros: [
+        "Truly unified API across all major EVM chains and Solana",
+        "Generous free tier with 50K API calls per month",
+        "Excellent documentation with code examples and tutorials",
+        "Real-time streams API is powerful for event-driven applications",
+        "Active developer community and responsive support team",
+      ],
+      cons: [
+        "Most useful for developers rather than non-technical users",
+        "Free tier rate limits can be restrictive for production use",
+        "Some advanced features require higher-tier plans",
+        "Node reliability can vary during extreme network congestion",
+      ],
+      alternatives: ["nansen", "dune", "coingecko"],
+      gettingStarted: [
+        { step: 1, title: "Create Your Account", description: "Sign up on Moralis.io to get your free API key. The free tier gives you 50,000 API calls per month, which is sufficient for development and testing." },
+        { step: 2, title: "Install the SDK", description: "Install Moralis SDK in your project using npm or yarn. The SDK is available for JavaScript/TypeScript, React, and other frameworks with comprehensive documentation and quick-start guides." },
+        { step: 3, title: "Start Building", description: "Use the API to fetch on-chain data, set up real-time streams for blockchain events, implement Web3 authentication, and integrate DeFi or NFT functionality into your application." },
+      ],
+      faq: [
+        { question: "What is Moralis?", answer: "Moralis is a Web3 development platform that provides APIs and infrastructure for building decentralized applications. It offers unified APIs for token data, NFTs, DeFi protocols, authentication, and real-time blockchain events across multiple chains." },
+        { question: "Do I need to run my own node to use Moralis?", answer: "No, Moralis provides its own high-speed RPC nodes through the Speedy Nodes service. You can also bring your own node if preferred. Moralis handles all the infrastructure complexity so you can focus on building your application." },
+        { question: "Which blockchains does Moralis support?", answer: "Moralis supports Ethereum, Polygon, BNB Chain, Arbitrum, Avalanche, Fantom, Solana, Cronos, BNB Testnet, Goerli, and many other EVM-compatible chains. The platform continuously adds support for new networks." },
+        { question: "Is the free tier sufficient for production?", answer: "The free tier is designed for development and prototyping with 50K API calls and 3 streams per month. For production applications, the Pro plan at $49/month offers 5M calls and more streams, which is suitable for most small to medium dApps." },
+        { question: "What is the Moralis Streams API?", answer: "The Streams API allows you to monitor blockchain events in real time. You can create custom streams to track specific contract events, wallet activity, or token transfers, and receive instant webhook notifications when those events occur." },
+        { question: "How does Moralis compare to Alchemy?", answer: "Both are Web3 infrastructure platforms, but Moralis offers a broader set of high-level APIs including NFT, DeFi, and token-specific endpoints, making it easier to build feature-rich dApps quickly. Alchemy focuses more on core node infrastructure and transaction management. Moralis is generally more beginner-friendly." },
+      ],
+    },
   },
   {
     id: "footprint",
@@ -1426,6 +1672,92 @@ The platform also includes useful developer tools like the Solidity compiler for
     affiliateUrl: "https://coingecko.com/partner-program",
     pricing: "Free / $32.5+/mo",
     rating: 4.7,
+    detailedContent: {
+      longDescription: `CoinGecko is the world's largest independent cryptocurrency data aggregator, tracking over 12,000 cryptocurrencies across more than 700 exchanges. Founded in 2014 by Bobby Ong and TM Lee, CoinGecko has established itself as the go-to source for real-time cryptocurrency prices, market capitalization data, trading volume, and comprehensive market intelligence. The platform processes billions of data points daily to provide accurate, up-to-date information that serves millions of users ranging from individual investors to institutional funds and financial media outlets.
+
+The platform's core offering is its comprehensive price tracking system, which aggregates data from hundreds of exchanges to calculate accurate market prices and trading volumes. CoinGecko goes beyond simple price tracking by incorporating unique metrics like the Trust Score, which evaluates exchange liquidity and API coverage to help users identify reliable trading venues. The platform also tracks developer activity, community growth, and public interest metrics, providing a holistic view of each cryptocurrency's health and potential.
+
+CoinGecko's cryptocurrency pages offer deep-dive information for every tracked asset, including price charts with multiple timeframe options, historical data exports, market cap rankings, circulating supply details, and links to official websites, block explorers, and social media channels. Each coin page also features an integrated community section that aggregates social media mentions, GitHub activity, and community sentiment data.
+
+The platform's portfolio tracker is a popular feature that allows users to monitor their crypto holdings across multiple exchanges and wallets. By connecting exchange accounts via API or manually adding transactions, users can get a real-time view of their portfolio performance, including profit and loss calculations, asset allocation breakdowns, and performance benchmarking against market indices. The portfolio tracker supports over 1,000 coins and integrates with DeFi positions on major protocols.
+
+For developers and businesses, CoinGecko provides a powerful API that delivers real-time and historical cryptocurrency data. The API offers endpoints for price data, market metrics, exchange information, trending coins, and more. The free tier provides generous rate limits suitable for personal projects, while paid tiers offer higher limits and additional data fields for production applications. Many of the world's leading cryptocurrency exchanges, wallet applications, and financial platforms rely on CoinGecko's API to power their price displays and market data.
+
+CoinGecko also produces high-quality research content through CoinGecko Research, which publishes quarterly reports, market analyses, and trend studies that are widely cited in the financial media. The platform's GeckoTerminal product extends CoinGecko's data coverage to decentralized exchanges, providing real-time DEX prices, liquidity pool data, and new token launches across all major chains including Ethereum, Solana, BNB Chain, Base, and Arbitrum.
+
+The platform's mobile app brings all of these features to iOS and Android devices, offering push notifications for price alerts, trending coin updates, and portfolio tracking on the go. CoinGecko's commitment to data accuracy, comprehensive coverage, and user-friendly design has made it one of the most trusted and widely referenced cryptocurrency data platforms in the industry.`,
+      features: [
+        "12,000+ cryptocurrencies tracked across 700+ exchanges",
+        "Real-time price data with multiple chart timeframes",
+        "Trust Score system for evaluating exchange reliability",
+        "Portfolio tracker with multi-exchange and wallet integration",
+        "CoinGecko API for developers with generous free tier",
+        "GeckoTerminal for real-time DEX data and new token tracking",
+        "Trending coins, top gainers, and recently added listings",
+        "Developer activity and community metrics for each coin",
+        "CoinGecko Research reports with institutional-grade analysis",
+        "NFT floor price tracking and collection analytics",
+        "Price alerts via push notifications and email",
+        "Historical data export and CSV downloads",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["Basic price tracking", "Portfolio tracker", "Community metrics", "Limited API access", "Price alerts"],
+        },
+        {
+          name: "Analyst",
+          price: "$32.50/month",
+          features: ["Advanced API access", "Historical data export", "Custom dashboards", "Higher rate limits", "Priority support"],
+          highlight: true,
+        },
+        {
+          name: "Pro Trader",
+          price: "$99/month",
+          features: ["Real-time API access", "Full historical data", "Advanced analytics", "Unlimited alerts", "DEX integration"],
+        },
+        {
+          name: "Enterprise",
+          price: "Custom pricing",
+          features: ["Dedicated API infrastructure", "SLA guarantees", "Custom data feeds", "Onboarding support", "Volume discounts"],
+        },
+      ],
+      bestFor: [
+        "Crypto investors who need accurate, real-time price tracking",
+        "Developers integrating crypto data into their applications",
+        "Portfolio managers monitoring holdings across exchanges",
+        "Researchers analyzing market trends and coin metrics",
+        "DEX traders tracking new token launches on GeckoTerminal",
+      ],
+      pros: [
+        "Most comprehensive independent crypto data aggregator available",
+        "Free tier provides excellent value with portfolio tracking and basic API",
+        "Trust Score system helps identify trustworthy exchanges",
+        "GeckoTerminal provides excellent DEX and new token coverage",
+        "Regularly updated research reports with deep market insights",
+      ],
+      cons: [
+        "API rate limits on free tier can be restrictive for high-usage apps",
+        "Some niche tokens and low-cap coins have delayed data updates",
+        "Historical data access requires paid subscription",
+        "Portfolio tracker manual entry can be tedious for large portfolios",
+      ],
+      alternatives: ["coinstats", "nansen", "dune", "coinglass"],
+      gettingStarted: [
+        { step: 1, title: "Create Your Free Account", description: "Visit CoinGecko.com and sign up for a free account to unlock portfolio tracking, price alerts, and enhanced data features beyond what is available to unregistered visitors." },
+        { step: 2, title: "Set Up Your Portfolio", description: "Connect your exchange accounts via API or manually add your cryptocurrency holdings. CoinGecko will automatically calculate your portfolio value, P&L, and allocation." },
+        { step: 3, title: "Explore and Analyze", description: "Use the platform to research coins, track trending assets, set price alerts, and explore GeckoTerminal for DEX opportunities. Developers can also start using the API to integrate CoinGecko data." },
+      ],
+      faq: [
+        { question: "Is CoinGecko free to use?", answer: "Yes, CoinGecko offers a comprehensive free tier that includes price tracking, portfolio management, community metrics, and limited API access. Premium plans are available for advanced features like higher API limits, historical data exports, and enhanced analytics." },
+        { question: "How accurate is CoinGecko data?", answer: "CoinGecko aggregates data from over 700 exchanges and uses its proprietary Trust Score to evaluate data quality. While the platform strives for maximum accuracy, prices may vary slightly between exchanges due to liquidity differences and timing." },
+        { question: "What is GeckoTerminal?", answer: "GeckoTerminal is CoinGecko's decentralized exchange analytics platform. It provides real-time prices, trading volume, liquidity data, and new token listings from DEXs across Ethereum, Solana, BNB Chain, Base, and many other blockchains." },
+        { question: "How does CoinGecko compare to CoinMarketCap?", answer: "Both are major crypto data aggregators, but CoinGecko is independently owned and operated, while CoinMarketCap was acquired by Binance. CoinGecko is often preferred for its unbiased Trust Score system and comprehensive DEX coverage through GeckoTerminal." },
+        { question: "Can I use CoinGecko API for my app?", answer: "Yes, CoinGecko offers a public API with a free tier that provides 10,000-30,000 calls per month depending on the endpoint. Paid plans offer higher rate limits, additional data fields, and dedicated support for production applications." },
+        { question: "Does CoinGecko support NFT tracking?", answer: "Yes, CoinGecko tracks NFT collection floor prices, trading volume, and market statistics across major NFT marketplaces. Users can view NFT data on individual coin pages or through the dedicated NFT section." },
+      ],
+    },
   },
   {
     id: "coinmarketcap",
@@ -3499,6 +3831,92 @@ CoinStats Premium unlocks additional features including advanced portfolio analy
     pricing: "Free / $14.95-59.95/mo",
     rating: 4.8,
     featured: true,
+    detailedContent: {
+      longDescription: `TradingView is the world's most popular online charting platform and social network for traders, used by over 90 million traders and investors globally. Founded in 2011, TradingView has fundamentally transformed how traders interact with financial markets by providing a powerful, browser-based charting experience that rivals and often surpasses traditional desktop trading platforms. The platform supports virtually every financial instrument including cryptocurrencies, stocks, forex, commodities, indices, and futures, making it a universal tool for multi-asset traders.
+
+At the heart of TradingView is its advanced charting engine, which offers over 100 built-in technical indicators, multiple chart types (candlestick, bar, line, Heikin Ashi, Renko, Kagi, and more), and a sophisticated drawing toolkit with trendlines, Fibonacci retracements, pitchforks, and geometric shapes. Charts are highly customizable with multi-timeframe analysis, side-by-side chart comparisons, and the ability to save and share chart layouts. The platform's rendering engine is smooth and responsive even with large datasets, ensuring a seamless analysis experience.
+
+TradingView's Pine Script programming language is one of its most powerful features, allowing traders to create custom technical indicators, strategies, and alerts without leaving the platform. Pine Script has evolved significantly over the years, with version 5 introducing enhanced features like user-defined functions, object-oriented programming concepts, and improved performance. The platform's community library contains over 100,000 publicly available Pine Script indicators and strategies, many of which incorporate machine learning, artificial intelligence, and advanced quantitative techniques specifically relevant to cryptocurrency trading.
+
+The social features of TradingView create a vibrant community where traders can share ideas, publish chart analyses, and follow top contributors. The platform's "Ideas" feed is a real-time stream of trading analysis from millions of users, providing diverse perspectives on market conditions. Users can follow specific traders, like and comment on ideas, and build a reputation within the community. For crypto traders, this social layer provides valuable sentiment indicators and trade ideas from a global community.
+
+TradingView's alert system is remarkably flexible, supporting price-based alerts, indicator-based alerts, drawing-based alerts, and even alerts triggered by custom Pine Script conditions. Alerts can be delivered via push notifications, email, SMS, or webhook integrations, allowing traders to stay connected to the markets without constantly watching charts. This is particularly valuable for cryptocurrency markets that trade 24/7.
+
+The platform's integration capabilities are extensive, with native connections to dozens of brokers and exchanges allowing direct order execution from charts. For cryptocurrency traders, TradingView connects to major exchanges and provides real-time and historical data for thousands of trading pairs. The platform also offers mobile apps for iOS and Android with full charting capabilities, ensuring traders can analyze markets and manage positions from anywhere.
+
+TradingView's pricing model offers a generous free tier that includes basic charting, limited indicators, and community access. Paid plans unlock advanced features like additional indicators, saved chart layouts, extended historical data, multiple monitors, and faster alert frequencies. The Pro+ and Premium tiers are particularly popular among active traders who need the full suite of tools and maximum flexibility.`,
+      features: [
+        "90M+ user community with real-time trading ideas and analysis",
+        "100+ built-in technical indicators and drawing tools",
+        "Pine Script v5 for custom indicators, strategies, and alerts",
+        "100,000+ community-built indicators and strategies",
+        "Multi-asset support: crypto, stocks, forex, commodities, futures",
+        "Advanced alert system with webhook and notification integrations",
+        "Direct broker and exchange integration for one-click trading",
+        "Multi-timeframe analysis and side-by-side chart comparisons",
+        "Mobile apps with full charting capabilities for iOS and Android",
+        "Economic calendar and earnings data integration",
+        "Paper trading simulator for strategy testing",
+        "Screeners for stocks, crypto, forex, and more",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["Basic charting", "Limited indicators", "Community ideas", "2 indicators per chart", "Basic alerts"],
+        },
+        {
+          name: "Pro",
+          price: "$14.95/month",
+          features: ["10 indicators per chart", "Saved layouts", "10 price alerts", "5 properties per indicator", "Ad-free experience"],
+          highlight: true,
+        },
+        {
+          name: "Pro+",
+          price: "$29.95/month",
+          features: ["25 indicators per chart", "20 alerts", "Intraday charts", "Volume profiles", "Custom timeframes", "Multiple monitors"],
+        },
+        {
+          name: "Premium",
+          price: "$59.95/month",
+          features: ["Unlimited indicators", "Unlimited alerts", "Extended historical data", "Secondary timeframes", "Exclusive indicators", "Priority support"],
+        },
+      ],
+      bestFor: [
+        "Active crypto traders who rely heavily on technical analysis",
+        "Strategy developers using Pine Script for custom indicators",
+        "Multi-asset traders combining crypto with traditional markets",
+        "Content creators sharing chart analysis and trading ideas",
+        "Beginners learning technical analysis with a supportive community",
+      ],
+      pros: [
+        "Industry-leading charting experience with smooth, responsive rendering",
+        "Massive community with 100K+ custom indicators and strategies",
+        "Pine Script is powerful yet accessible for custom tool development",
+        "Universal multi-asset platform eliminates need for separate charting tools",
+        "Free tier is remarkably generous for basic technical analysis",
+      ],
+      cons: [
+        "Free tier limited to 2 indicators per chart and fewer alerts",
+        "Advanced Pine Script features require paid subscription",
+        "Some community indicators may be unreliable or poorly maintained",
+        "Historical data depth varies by asset and subscription tier",
+      ],
+      alternatives: ["trendspider", "coingecko", "coinglass"],
+      gettingStarted: [
+        { step: 1, title: "Create Your Free Account", description: "Sign up on TradingView.com with your email, Google, or Apple account. The free tier provides immediate access to basic charting tools and the community." },
+        { step: 2, title: "Customize Your Charts", description: "Add cryptocurrency pairs to your watchlist, apply technical indicators, and experiment with drawing tools. Save your preferred chart layout for quick access." },
+        { step: 3, title: "Explore and Engage", description: "Browse community indicators and strategies, follow top crypto analysts, set up price alerts, and consider upgrading to Pro for more advanced features and capabilities." },
+      ],
+      faq: [
+        { question: "Is TradingView free?", answer: "Yes, TradingView offers a robust free tier with basic charting, a selection of indicators, community ideas, and limited alerts. Paid plans starting at $14.95/month unlock additional indicators, saved layouts, and advanced features." },
+        { question: "What is Pine Script?", answer: "Pine Script is TradingView's proprietary programming language that allows users to create custom technical indicators, backtesting strategies, and alert conditions. No external software is needed as everything runs within the TradingView platform." },
+        { question: "Can I trade directly from TradingView?", answer: "Yes, TradingView integrates with dozens of brokers and exchanges, allowing you to place orders directly from charts. For crypto, you can connect supported exchanges and execute trades without leaving the platform." },
+        { question: "Does TradingView support cryptocurrency?", answer: "Absolutely. TradingView provides real-time and historical data for thousands of cryptocurrency trading pairs across major exchanges. It is widely used as the primary charting tool by crypto traders worldwide." },
+        { question: "How many indicators can I use on the free plan?", answer: "The free plan allows up to 2 indicators per chart layout. The Pro plan increases this to 10, Pro+ to 25, and Premium offers unlimited indicators per chart." },
+        { question: "What is the difference between TradingView and TrendSpider?", answer: "TradingView offers more flexibility with its Pine Script language, massive community, and broader asset coverage. TrendSpider focuses on automated technical analysis with AI-powered pattern recognition, auto trendlines, and automated alerts. TradingView is better for custom analysis, while TrendSpider excels at automated TA." },
+      ],
+    },
   },
   {
     id: "trendspider",
@@ -3510,6 +3928,87 @@ CoinStats Premium unlocks additional features including advanced portfolio analy
     affiliateUrl: "https://trendspider.com/?ref=affiliate",
     pricing: "$39-179/mo",
     rating: 4.4,
+    detailedContent: {
+      longDescription: `TrendSpider is an advanced trading analysis platform that leverages artificial intelligence and machine learning to automate the most time-consuming aspects of technical analysis. Unlike traditional charting platforms that require manual drawing and subjective interpretation, TrendSpider uses proprietary algorithms to automatically identify and plot trendlines, support and resistance levels, candlestick patterns, Fibonacci retracements, and other key technical formations across multiple timeframes simultaneously. This automation eliminates the subjective bias that often plagues manual analysis and ensures consistent, data-driven trading decisions.
+
+The platform's core technology is its automated trendline detection engine, which scans price action data and draws statistically significant trendlines without human intervention. Traders can customize the sensitivity and timeframes of the detection algorithm, but the heavy lifting is handled entirely by AI. This is particularly valuable for cryptocurrency traders who need to monitor dozens of trading pairs across multiple timeframes, as it would be virtually impossible to manually draw and maintain accurate trendlines at this scale.
+
+TrendSpider's candlestick pattern recognition system automatically identifies over 30 classic and advanced candlestick patterns, including dojis, engulfing patterns, hammers, morning and evening stars, and many more. Each pattern detection is accompanied by a confidence score based on the statistical significance of the formation, helping traders filter out noise and focus on high-probability setups. The platform also provides backtested performance statistics for each pattern, showing historical win rates and average returns.
+
+The platform's multi-timeframe analysis capability allows traders to view technical analysis across different time periods simultaneously. For example, a crypto trader can see automated trendlines and patterns on the 15-minute, 1-hour, 4-hour, and daily charts side by side, identifying confluence zones where multiple timeframes align. This top-down analysis approach is widely considered one of the most effective strategies for identifying high-probability trade setups.
+
+TrendSpider's alert system is among the most sophisticated in the industry, supporting alerts based on price levels, indicator crosses, pattern completions, trendline breaks, and custom conditions. Alerts can be delivered via push notifications, SMS, email, or webhook integrations with third-party platforms. The platform's Dynamic Price Alerts feature automatically adjusts alert levels as new data comes in, ensuring that alerts remain relevant as market conditions evolve.
+
+For crypto traders specifically, TrendSpider provides real-time and historical data for hundreds of cryptocurrency pairs, with support for major exchanges. The platform's strategy testing tools allow traders to backtest their automated analysis parameters against historical data, optimizing their approach before risking capital. The Raindrop Charts feature offers a unique volume-based visualization that shows buying and selling pressure at each price level, providing insights that traditional candlestick charts cannot capture.
+
+TrendSpider also offers a screener tool that can scan hundreds of assets simultaneously for specific technical conditions, making it easy to find coins that meet your criteria. Combined with the platform's watchlist management and performance tracking features, TrendSpider provides a complete analysis-to-execution workflow for active cryptocurrency traders who want to leverage AI-powered automation in their technical analysis.`,
+      features: [
+        "AI-powered automated trendline detection and plotting",
+        "Candlestick pattern recognition with confidence scores",
+        "Multi-timeframe analysis with simultaneous chart views",
+        "Automated support and resistance level identification",
+        "Dynamic Price Alerts with webhook integrations",
+        "Raindrop Charts for unique volume-based price visualization",
+        "Strategy backtesting and optimization tools",
+        "Screener tool for scanning hundreds of assets simultaneously",
+        "Fibonacci retracement and extension automation",
+        "Real-time crypto data with hundreds of trading pairs",
+        "Anchored VWAP and volume profile analysis",
+        "Performance tracking and trade journal integration",
+      ],
+      pricingPlans: [
+        {
+          name: "Essential",
+          price: "$39/month",
+          features: ["Automated trendlines", "Pattern recognition", "3 simultaneous charts", "Basic alerts", "1 year historical data"],
+        },
+        {
+          name: "Elite",
+          price: "$79/month",
+          features: ["Everything in Essential", "8 simultaneous charts", "Advanced alerts with webhooks", "Strategy tester", "Screener", "3 years data"],
+          highlight: true,
+        },
+        {
+          name: "Elite Plus",
+          price: "$179/month",
+          features: ["Everything in Elite", "Unlimited charts", "Dynamic Price Alerts", "Raindrop Charts", "5 years data", "Priority support", "API access"],
+        },
+      ],
+      bestFor: [
+        "Technical analysts who want to eliminate subjective bias",
+        "Crypto traders monitoring many pairs across multiple timeframes",
+        "Swing traders who rely on trendline and pattern analysis",
+        "Active traders needing automated alerts and screening",
+        "Beginners learning technical analysis with AI assistance",
+      ],
+      pros: [
+        "AI automation eliminates subjective bias in technical analysis",
+        "Saves significant time by auto-drawing trendlines and patterns",
+        "Multi-timeframe analysis identifies high-probability confluence zones",
+        "Raindrop Charts provide unique volume-based insights",
+        "Comprehensive alert system with webhook and automation support",
+      ],
+      cons: [
+        "No free tier available, starts at $39/month",
+        "Steeper learning curve than simpler charting platforms",
+        "Pattern recognition confidence scores can sometimes be misleading",
+        "Chart customization options are more limited than TradingView",
+      ],
+      alternatives: ["tradingview", "tickeron"],
+      gettingStarted: [
+        { step: 1, title: "Start a Free Trial", description: "Sign up for TrendSpider's free trial to explore the platform's automated analysis features. No credit card is required to start the trial." },
+        { step: 2, title: "Add Crypto Charts", description: "Create a new chart, select your preferred cryptocurrency pairs, and let the AI automatically detect trendlines, patterns, and key levels across your chosen timeframes." },
+        { step: 3, title: "Configure Alerts and Screens", description: "Set up automated alerts for pattern completions, trendline breaks, and price levels. Use the screener to find additional trading opportunities that match your criteria." },
+      ],
+      faq: [
+        { question: "What makes TrendSpider different from TradingView?", answer: "TrendSpider focuses on AI-powered automation of technical analysis, automatically drawing trendlines, detecting patterns, and identifying key levels. TradingView offers more manual control with Pine Script customization. TrendSpider is better for traders who want automated analysis, while TradingView is better for custom indicator developers." },
+        { question: "Does TrendSpider work for cryptocurrency trading?", answer: "Yes, TrendSpider supports hundreds of cryptocurrency trading pairs with real-time and historical data. The platform's automated analysis features work equally well on crypto charts as on traditional financial instruments." },
+        { question: "Is there a free trial for TrendSpider?", answer: "Yes, TrendSpider offers a free trial period that gives you full access to all platform features. You can explore the automated analysis tools, backtesting capabilities, and alert system before committing to a paid subscription." },
+        { question: "What are Raindrop Charts?", answer: "Raindrop Charts are TrendSpider's proprietary visualization that shows buying and selling pressure at each price level using a volume-based approach. Unlike candlestick charts that only show open/high/low/close, Raindrop Charts reveal the balance between buyers and sellers at every price point." },
+        { question: "How accurate is TrendSpider's pattern recognition?", answer: "TrendSpider's AI provides confidence scores for each detected pattern based on statistical significance. While no pattern recognition system is perfect, the confidence scores help traders filter signals. The platform also provides historical backtest data showing the win rate of each pattern type." },
+        { question: "Can I use TrendSpider on mobile?", answer: "TrendSpider is primarily a web-based platform optimized for desktop browsers. While the charts are viewable on mobile devices, the full analysis experience and setup tools are designed for larger screens. The platform's alert system works across all devices." },
+      ],
+    },
   },
   {
     id: "tickeron",
@@ -4742,6 +5241,86 @@ CoinStats Premium unlocks additional features including advanced portfolio analy
     affiliateUrl: "https://www.asdfghjklqw.com/join/28774619",
     pricing: "0.1% Maker/Taker",
     rating: 4.6,
+    detailedContent: {
+      longDescription: `OKX is one of the world's largest and most innovative cryptocurrency exchanges, consistently ranked among the top three globally by trading volume. Founded in 2017 and headquartered in Seychelles, OKX serves over 50 million users across more than 180 countries, offering a comprehensive suite of trading products that spans spot, margin, futures, options, and perpetual swaps. The platform is widely recognized for its cutting-edge technology, deep liquidity, and commitment to building a robust Web3 ecosystem that extends far beyond traditional exchange services.
+
+At the heart of OKX's offering is its advanced trading engine, capable of processing millions of transactions per second with sub-millisecond latency. This high-performance infrastructure ensures that traders experience minimal slippage even during periods of extreme market volatility. The exchange supports over 350 trading pairs across spot markets and more than 200 derivative contracts, giving traders access to virtually every major cryptocurrency and a wide selection of altcoins.
+
+OKX's derivatives market is particularly impressive, offering perpetual swaps with up to 125x leverage, quarterly futures, and options contracts. The exchange's funding rate mechanism and insurance fund provide additional layers of protection for traders, while the sophisticated risk management system helps prevent liquidation cascades during sharp market movements. For institutional clients, OKX provides dedicated API endpoints, cold storage solutions, and over-the-counter (OTC) trading desks.
+
+One of OKX's standout features is its Copy Trading platform, which allows users to automatically replicate the trades of successful lead traders. With transparent performance metrics, risk scores, and historical track records, copy trading on OKX is an excellent option for beginners who want to participate in the market while learning from experienced traders. The platform also offers Trading Bots including Grid, DCA, and Arbitrage strategies that run 24/7, executing trades based on predefined parameters without requiring constant monitoring.
+
+OKX has also emerged as a leader in the Web3 space with its self-custodial OKX Wallet, which supports multi-chain DeFi access, NFT management, and cross-chain bridging. The exchange's Layer 2 network, X Layer, provides fast and low-cost transactions for Ethereum-based assets. Additionally, OKX's Jumpstart platform offers users early access to promising token launches through launchpad and launchpool events.
+
+The platform places a strong emphasis on security, employing a combination of cold storage for the majority of user funds, multi-signature authentication, and regular third-party proof-of-reserves (PoR) audits. OKX was one of the first major exchanges to adopt transparent reserve verification, publishing monthly reports that allow users to independently verify that their assets are fully backed 1:1 on-chain.`,
+      features: [
+        "350+ spot trading pairs and 200+ derivative contracts",
+        "Perpetual swaps with up to 125x leverage",
+        "Copy Trading with transparent lead trader metrics",
+        "Automated trading bots: Grid, DCA, Arbitrage, and more",
+        "OKX Web3 Wallet with multi-chain DeFi and NFT support",
+        "X Layer L2 network for fast, low-cost transactions",
+        "Jumpstart launchpad for early token access",
+        "Monthly proof-of-reserves (PoR) audits",
+        "Advanced API for algorithmic and institutional trading",
+        "24/7 multilingual customer support",
+        "Earn products with flexible and fixed staking options",
+        "One-stop trading terminal combining spot, futures, and options",
+      ],
+      pricingPlans: [
+        {
+          name: "Standard",
+          price: "0.1% Maker / 0.1% Taker",
+          features: ["Spot trading", "Futures trading", "Copy Trading", "Trading bots", "OKX Wallet"],
+        },
+        {
+          name: "VIP 1-5",
+          price: "0.08-0.02% Maker / 0.1-0.05% Taker",
+          features: ["Reduced trading fees", "Higher API rate limits", "Dedicated account manager", "Priority customer support", "OTC trading access"],
+          highlight: true,
+        },
+        {
+          name: "Institutional",
+          price: "Custom pricing",
+          features: ["Dedicated API endpoints", "Cold storage custody", "Bespoke fee structure", "24/7 institutional support", "Settlement services"],
+        },
+      ],
+      bestFor: [
+        "Active traders seeking deep liquidity and advanced order types",
+        "Beginners wanting to learn through Copy Trading",
+        "DeFi users looking for a multi-chain Web3 wallet",
+        "Institutional traders requiring API and OTC services",
+        "Users interested in early-stage token launches",
+      ],
+      pros: [
+        "Consistently top-3 in global trading volume with excellent liquidity",
+        "Wide range of products: spot, futures, options, DeFi, and NFTs",
+        "Transparent proof-of-reserves audits published monthly",
+        "Powerful automated trading bots with zero coding required",
+        "Innovative Web3 ecosystem including X Layer and OKX Wallet",
+        "Competitive fee structure with VIP tier discounts",
+      ],
+      cons: [
+        "Not available to US users due to regulatory restrictions",
+        "Customer support response times can be slow during peak periods",
+        "The sheer number of features can overwhelm absolute beginners",
+        "Some advanced trading features have a learning curve",
+      ],
+      alternatives: ["3commas", "pionex", "bitsgap", "coinstats"],
+      gettingStarted: [
+        { step: 1, title: "Create Your Account", description: "Visit OKX and sign up with your email or phone number. Complete identity verification (KYC) to unlock full trading features and higher withdrawal limits." },
+        { step: 2, title: "Fund Your Account", description: "Deposit crypto from an external wallet or purchase directly with a credit card, bank transfer, or third-party payment provider." },
+        { step: 3, title: "Start Trading", description: "Explore the spot market, try Copy Trading to follow top traders, or set up automated Grid and DCA bots to trade 24/7 without constant monitoring." },
+      ],
+      faq: [
+        { question: "Is OKX safe to use?", answer: "OKX is considered one of the safest crypto exchanges globally. It stores the majority of user funds in cold storage, performs regular proof-of-reserves audits, and uses multi-signature technology and encryption to protect accounts." },
+        { question: "What is OKX Copy Trading?", answer: "Copy Trading allows you to automatically replicate the trades of experienced lead traders on the platform. You can view their performance history, risk scores, and choose how much capital to allocate to each trader." },
+        { question: "How much are OKX trading fees?", answer: "OKX charges a base rate of 0.1% for both makers and takers in spot markets. Futures fees start at 0.02% maker and 0.05% taker. VIP users enjoy lower rates based on their 30-day trading volume and OKX Token holdings." },
+        { question: "Can I use OKX in the United States?", answer: "No, OKX does not serve US customers due to regulatory restrictions. US users should look for US-regulated exchanges. OKX is available in most other countries worldwide." },
+        { question: "What is OKX Earn?", answer: "OKX Earn is a suite of savings and staking products that allow users to earn passive income on their crypto holdings. It includes flexible savings with daily interest, fixed-term staking with higher APYs, and structured products." },
+        { question: "What is the OKX Web3 Wallet?", answer: "The OKX Web3 Wallet is a self-custodial decentralized wallet that supports multiple blockchains including Ethereum, Polygon, BSC, Solana, and more. It allows users to interact with DeFi protocols, manage NFTs, and bridge assets across chains without relying on a centralized custodian." },
+      ],
+    },
   },
   {
     id: "bybit",
