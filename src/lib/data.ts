@@ -65,7 +65,7 @@ export const tools: Tool[] = [
     category: "trading-bots",
     tags: ["DCA", "Grid", "Options", "Smart Terminal"],
     url: "https://3commas.io",
-    affiliateUrl: "https://3commas.io/affiliate",
+    affiliateUrl: "https://app.3commas.io/auth/registration?utm_source=referral&utm_medium=cabinet&c=tc2230167",
     pricing: "Free / $29-99/mo",
     rating: 4.5,
     featured: true,
