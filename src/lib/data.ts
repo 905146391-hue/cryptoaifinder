@@ -1,3 +1,33 @@
+export interface PricingPlan {
+  name: string;
+  price: string;
+  features: string[];
+  highlight?: boolean;
+}
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export interface GettingStartedStep {
+  step: number;
+  title: string;
+  description: string;
+}
+
+export interface DetailedContent {
+  longDescription: string;
+  features: string[];
+  pricingPlans: PricingPlan[];
+  bestFor: string[];
+  pros: string[];
+  cons: string[];
+  alternatives: string[]; // tool ids that have affiliate links
+  gettingStarted: GettingStartedStep[];
+  faq: FAQ[];
+}
+
 export interface Tool {
   id: string;
   name: string;
@@ -9,6 +39,7 @@ export interface Tool {
   pricing: string;
   rating: number;
   featured?: boolean;
+  detailedContent?: DetailedContent;
 }
 
 export const categories = [
@@ -38,6 +69,89 @@ export const tools: Tool[] = [
     pricing: "Free / $29-99/mo",
     rating: 4.5,
     featured: true,
+    detailedContent: {
+      longDescription: `3Commas is one of the most comprehensive cryptocurrency trading platforms available today, designed for both beginners and experienced traders who want to automate their strategies across multiple exchanges. Founded in 2017, the platform has grown to serve over 500,000 users worldwide by providing a powerful suite of tools that includes smart trading terminals, AI-powered trading bots, and advanced portfolio management features.
+
+At its core, 3Commas allows traders to connect their exchange accounts via secure API keys and execute automated trading strategies 24/7. The platform supports over 20 major cryptocurrency exchanges including Binance, Coinbase Pro, Kraken, KuCoin, and Bybit, giving traders the flexibility to manage all their positions from a single dashboard. This multi-exchange capability is particularly valuable for traders who operate across different platforms and need a unified view of their portfolio.
+
+One of the standout features of 3Commas is its DCA (Dollar Cost Averaging) bot, which automates the process of buying assets at regular intervals or when prices dip. This strategy is especially popular in the volatile crypto market, where prices can fluctuate dramatically within hours. The DCA bot allows traders to set their own parameters including the base order size, safety order size, price deviation, and maximum number of safety orders, giving them full control over their risk management.
+
+The Grid bot is another powerful tool offered by 3Commas, enabling traders to profit from market volatility by placing a grid of buy and sell orders at predetermined price intervals. When the market moves within the grid range, the bot automatically executes trades, capturing small profits from each price movement. This strategy works particularly well in sideways markets where prices oscillate within a defined range.
+
+For more advanced traders, 3Commas offers an Options bot that automates options trading strategies on Deribit and other options platforms. Additionally, the Smart Trade terminal provides a professional-grade trading interface with advanced order types, trailing stops, and take-profit/stop-loss settings that go beyond what most exchanges offer natively.
+
+The platform also includes a social trading marketplace where users can browse, subscribe to, and copy trading signals and strategies from top-performing traders. This feature is ideal for beginners who want to leverage the expertise of more experienced traders while they learn the ropes of crypto trading automation.`,
+      features: [
+        "Smart Trade terminal with trailing stop-loss and take-profit orders",
+        "DCA Bot for automated dollar-cost averaging with custom parameters",
+        "Grid Bot for profiting from sideways market volatility",
+        "Options Bot for automated options trading strategies",
+        "Supports 20+ exchanges via secure API key connections",
+        "Social trading marketplace with copy-trading signals",
+        "Real-time portfolio tracking and P&L analytics",
+        "Backtesting engine to validate strategies before going live",
+        "Mobile app for iOS and Android with full bot management",
+        "Risk management tools with automatic stop-loss triggers",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["Paper trading", "Smart Trade terminal", "Single DCA bot", "Single Grid bot", "Basic portfolio tracking"],
+        },
+        {
+          name: "Starter",
+          price: "$29/month",
+          features: ["3 DCA bots", "3 Grid bots", "1 Options bot", "Smart Trade terminal", "API connections (3 exchanges)", "Community support"],
+        },
+        {
+          name: "Advanced",
+          price: "$49/month",
+          features: ["15 DCA bots", "15 Grid bots", "5 Options bots", "Smart Trade terminal", "API connections (10 exchanges)", "Priority support", "Trading signals access"],
+          highlight: true,
+        },
+        {
+          name: "Pro",
+          price: "$99/month",
+          features: ["Unlimited DCA bots", "Unlimited Grid bots", "Unlimited Options bots", "Smart Trade terminal", "Unlimited API connections", "Dedicated support", "All marketplace features", "API for custom integrations"],
+        },
+      ],
+      bestFor: [
+        "Intermediate to advanced crypto traders",
+        "Traders who want to automate DCA strategies",
+        "Users managing multiple exchange accounts",
+        "Traders looking to profit from sideways markets",
+        "Social trading enthusiasts who want to copy top performers",
+      ],
+      pros: [
+        "Supports 20+ exchanges from a single dashboard, eliminating the need to switch between platforms",
+        "DCA Bot is highly customizable with advanced safety order settings and risk management controls",
+        "Active social trading marketplace with verified strategy performance metrics",
+        "Comprehensive backtesting engine lets you validate strategies on historical data before risking real capital",
+        "Clean, intuitive interface that balances power features with ease of use for newcomers",
+        "Mobile app provides full bot management on the go, not just monitoring",
+      ],
+      cons: [
+        "Subscription pricing can add up if you need multiple bots across different strategies",
+        "API key dependency means you must trust the platform with your exchange credentials (though IP restrictions and key permissions help mitigate risk)",
+        "Backtesting accuracy may vary for complex multi-leg strategies during extreme market conditions",
+        "Options bot support is limited to fewer exchanges compared to spot and futures trading",
+      ],
+      alternatives: ["bitsgap", "cryptohopper", "pionex", "coinrule", "wundertrading"],
+      gettingStarted: [
+        { step: 1, title: "Create Your Account", description: "Sign up on 3Commas with your email. Choose the plan that fits your needs — the Free plan is a great starting point to explore the platform and test strategies with paper trading." },
+        { step: 2, title: "Connect Your Exchange", description: "Go to Settings → API Keys and connect your exchange account. Create an API key on your exchange with trading permissions (not withdrawal), and paste the keys into 3Commas. Enable IP restriction for added security." },
+        { step: 3, title: "Launch Your First Bot", description: "Navigate to the DCA or Grid bot section, choose a trading pair, set your parameters (investment amount, price range, safety orders), and click Start. Monitor performance from the dashboard and adjust as needed." },
+      ],
+      faq: [
+        { question: "Is 3Commas safe to use with my exchange account?", answer: "3Commas uses API keys to connect to your exchange. Your funds remain on the exchange at all times — 3Commas only has permission to place trades. For maximum security, enable IP restrictions on your API key and grant only trading permissions, never withdrawal access." },
+        { question: "How much money do I need to start with 3Commas?", answer: "You can start with as little as $50 for a DCA bot on the Free plan. However, for meaningful results, most traders start with $500-$1,000 per bot. Grid bots typically require a larger capital allocation to cover the full price grid range." },
+        { question: "Can I use 3Commas on my phone?", answer: "Yes, 3Commas offers full-featured iOS and Android apps. You can create, manage, and monitor all your bots from your mobile device. The app supports push notifications for trade alerts and bot status updates." },
+        { question: "What exchanges does 3Commas support?", answer: "3Commas supports 20+ exchanges including Binance, Coinbase Pro, Kraken, KuCoin, Bybit, OKX, Bitfinex, Huobi, Gate.io, and many more. The platform regularly adds new exchange integrations based on user demand." },
+        { question: "What is the difference between DCA Bot and Grid Bot?", answer: "The DCA Bot buys more of an asset as the price drops, lowering your average entry price. It works best in volatile or gradually declining markets. The Grid Bot places a series of buy and sell orders at set intervals, profiting from price oscillations within a range. It works best in sideways markets." },
+        { question: "Does 3Commas have a money-back guarantee?", answer: "Yes, 3Commas offers a 3-day money-back guarantee on all paid plans. You can also start with the free plan to test the platform before committing to a subscription." },
+      ],
+    },
   },
   {
     id: "pionex",
@@ -72,6 +186,86 @@ export const tools: Tool[] = [
     affiliateUrl: "https://bitsgap.com/affiliate-program",
     pricing: "$29-149/mo",
     rating: 4.2,
+    detailedContent: {
+      longDescription: `Bitsgap is a powerful cryptocurrency trading platform that provides a unified dashboard for managing trades across multiple exchanges, along with automated Grid bots and real-time arbitrage detection. Founded in 2018, the platform has established itself as a go-to solution for traders who operate on several exchanges and want to streamline their workflow without sacrificing advanced features.
+
+The platform's unified trading terminal is one of its most compelling features. Instead of logging into multiple exchange accounts separately, Bitsgap aggregates all your exchange data into a single, clean dashboard. You can view your balances, execute trades, and manage orders across all connected exchanges simultaneously. This not only saves time but also provides a holistic view of your market positions that would be impossible to get from checking exchanges individually.
+
+Bitsgap's Grid bot is the platform's flagship automated trading tool. The bot works by dividing a price range into a grid of equally spaced intervals, placing buy orders below the current price and sell orders above it. As the market fluctuates within the grid range, the bot automatically buys low and sells high, capturing profits from every price movement. What makes Bitsgap's Grid bot particularly effective is its ability to operate across multiple exchanges simultaneously, maximizing the number of trading opportunities.
+
+The arbitrage scanner is another standout feature that continuously monitors price differences across all connected exchanges in real-time. When a significant price gap is detected between exchanges for the same trading pair, Bitsgap alerts the user immediately. While fully automated arbitrage execution is limited by transaction speeds and fees, the scanner provides valuable intelligence that experienced traders can act on quickly using the platform's instant order execution.
+
+Bitsgap supports over 25 major cryptocurrency exchanges including Binance, Coinbase Pro, Kraken, Bitfinex, KuCoin, OKX, and Huobi. The platform uses secure API connections with IP whitelisting and trading-only permissions, ensuring that your funds remain safe on the exchanges at all times. The setup process is straightforward and typically takes just a few minutes per exchange.
+
+For risk management, Bitsgap offers stop-loss functionality on all Grid bots, allowing traders to define their maximum acceptable loss before the bot automatically stops trading. The platform also provides detailed performance analytics including total P&L, win rate, number of trades executed, and comparison against a buy-and-hold benchmark. These analytics help traders evaluate whether their bot strategies are actually outperforming simple market positions.
+
+The platform also includes a demo mode that allows traders to test their strategies with virtual money before committing real capital. This is particularly useful for newcomers who want to familiarize themselves with Grid bot parameters and see how different settings affect performance before risking their own funds.`,
+      features: [
+        "Unified trading dashboard across 25+ exchanges",
+        "AI-powered Grid Bot with automatic buy/sell grid execution",
+        "Real-time arbitrage scanner across all connected exchanges",
+        "Demo mode with virtual funds for strategy testing",
+        "Advanced order types including trailing stop and conditional orders",
+        "Detailed performance analytics with P&L tracking and benchmark comparison",
+        "Stop-loss protection on all automated bots",
+        "Mobile-responsive web application accessible from any device",
+        "Instant order execution with low latency connections",
+        "Portfolio overview with real-time balance aggregation",
+      ],
+      pricingPlans: [
+        {
+          name: "Basic",
+          price: "$29/month",
+          features: ["3 Grid bots", "3 API connections", "Arbitrage scanner", "Demo trading", "Basic analytics", "Email support"],
+        },
+        {
+          name: "Advanced",
+          price: "$59/month",
+          features: ["10 Grid bots", "10 API connections", "Arbitrage scanner", "Demo trading", "Advanced analytics", "Priority support", "Faster execution speed"],
+          highlight: true,
+        },
+        {
+          name: "Pro",
+          price: "$149/month",
+          features: ["Unlimited Grid bots", "25 API connections", "Arbitrage scanner", "Demo trading", "Pro analytics", "Dedicated support", "Fastest execution speed", "All advanced features"],
+        },
+      ],
+      bestFor: [
+        "Traders who operate across multiple exchanges and need a unified view",
+        "Grid trading enthusiasts looking for a reliable automated bot",
+        "Arbitrage traders seeking real-time cross-exchange price alerts",
+        "Intermediate traders who want to automate strategies with risk controls",
+        "Users who want to test strategies risk-free with demo mode",
+      ],
+      pros: [
+        "Unified dashboard eliminates the need to switch between 25+ exchange accounts",
+        "Grid Bot is one of the most reliable on the market with built-in stop-loss protection",
+        "Real-time arbitrage scanner identifies opportunities that manual monitoring would miss",
+        "Demo mode with virtual funds lets you test strategies thoroughly before going live",
+        "Clean, professional interface that displays complex multi-exchange data clearly",
+        "30-day cookie on affiliate links means lifetime commission on referred users",
+      ],
+      cons: [
+        "No native mobile app — the platform is mobile-responsive web only, which some users find less convenient than a native app",
+        "Grid bot profitability heavily depends on market conditions and works best in sideways markets",
+        "Arbitrage execution is manual — the scanner identifies opportunities but does not auto-execute trades",
+        "Basic plan limits you to only 3 Grid bots, which may feel restrictive for active traders",
+      ],
+      alternatives: ["3commas", "cryptohopper", "pionex", "wundertrading", "kryll"],
+      gettingStarted: [
+        { step: 1, title: "Create Your Bitsgap Account", description: "Visit bitsgap.com and create a free account with your email. Start with the 7-day free trial of the Advanced plan to explore all features including unlimited Grid bots and full arbitrage scanning." },
+        { step: 2, title: "Connect Your Exchanges", description: "Go to Settings → Exchanges and connect your exchange accounts using API keys. For each exchange, create an API key with trading permissions only (no withdrawal access), enable IP restriction if available, and paste the keys into Bitsgap." },
+        { step: 3, title: "Launch Your First Grid Bot", description: "Navigate to Bots → Grid Bot, select a trading pair, define your upper and lower price limits, set the number of grid levels and investment amount. Enable stop-loss for risk protection, then click Start. Monitor performance from the dashboard." },
+      ],
+      faq: [
+        { question: "How does the Bitsgap Grid Bot work?", answer: "The Grid Bot divides a price range into multiple levels, placing buy orders at lower levels and sell orders at higher levels. As the price moves within the grid, the bot automatically executes trades, buying low and selling high. Profits accumulate from each completed grid trade." },
+        { question: "Is Bitsgap safe to use?", answer: "Bitsgap connects to exchanges via API keys with trading-only permissions. Your funds stay on the exchanges and Bitsgap cannot withdraw them. The platform supports IP whitelisting and 2FA for additional security." },
+        { question: "Can I try Bitsgap for free?", answer: "Yes, Bitsgap offers a 7-day free trial of the Advanced plan with full access to all features. After the trial, you can continue with the Basic plan ($29/month) or upgrade. There is also a free demo mode for testing strategies with virtual funds." },
+        { question: "What is arbitrage on Bitsgap?", answer: "The arbitrage scanner monitors price differences for the same trading pair across all your connected exchanges. When a price gap exceeds a threshold, it alerts you so you can buy on the cheaper exchange and sell on the more expensive one." },
+        { question: "Does Bitsgap work on mobile?", answer: "Bitsgap is a web-based platform that is fully responsive and works on mobile browsers. While there is no native mobile app, the web interface is optimized for mobile use and provides full access to all features." },
+        { question: "How many exchanges can I connect?", answer: "The number of exchange connections depends on your plan: Basic (3), Advanced (10), Pro (25). Each connection uses a secure API key with trading-only permissions." },
+      ],
+    },
   },
   {
     id: "coinrule",
@@ -638,6 +832,78 @@ export const tools: Tool[] = [
     url: "https://defillama.com",
     pricing: "Free",
     rating: 4.8,
+    detailedContent: {
+      longDescription: `DeFi Llama is the largest and most comprehensive DeFi (Decentralized Finance) data aggregator in the cryptocurrency ecosystem. Created and maintained by a dedicated open-source community, the platform tracks Total Value Locked (TVL) data for over 3,000 DeFi protocols across 200+ blockchains, making it the go-to resource for anyone researching or monitoring the DeFi landscape.
+
+TVL, or Total Value Locked, represents the total amount of assets deposited in DeFi protocols. It is one of the most important metrics for evaluating the size, growth, and adoption of DeFi platforms. DeFi Llama collects this data directly from on-chain smart contracts, ensuring accuracy and transparency. Unlike some competitors who include wrapped tokens or double-count assets across protocols, DeFi Llama is known for its conservative and honest accounting methodology — it only counts real, unique deposits.
+
+The platform covers every major DeFi category including lending (Aave, Compound), decentralized exchanges (Uniswap, Curve), yield farming (Yearn Finance), bridges, liquid staking (Lido, Rocket Pool), insurance, derivatives, and more. Each protocol page provides detailed historical TVL charts, fee and revenue data, token information, and links to the protocol's official website and documentation.
+
+One of DeFi Llama's most powerful features is its chain comparison tool. Users can compare TVL across different blockchains to identify which ecosystems are growing fastest. This is invaluable for investors looking to allocate capital to emerging DeFi ecosystems like Arbitrum, Optimism, Base, or zkSync. The platform also tracks DeFi category rankings, letting users see which sectors (lending, DEX, bridges, etc.) are attracting the most capital.
+
+DeFi Llama's Yield Comparison tool is particularly useful for DeFi investors seeking the best returns. It aggregates APY and APR data from hundreds of protocols and pools, allowing users to filter by chain, category, and risk level. This eliminates the need to manually check each protocol's website to find the best yields.
+
+The platform also provides a comprehensive API that is completely free and open. Developers can query TVL data, protocol information, yield data, and more through well-documented API endpoints. This has made DeFi Llama the backbone data source for many other DeFi analytics tools, portfolio trackers, and research platforms.
+
+Recently, DeFi Llama has expanded its coverage to include stablecoin data, tracking the supply and distribution of stablecoins across chains. It also provides airdrop tracking features that help users identify potential airdrop opportunities from protocols that have not yet launched tokens.
+
+The best part? DeFi Llama is completely free to use with no premium tiers, no login requirements, and no advertisements. It is funded by the community and maintained by a team of dedicated contributors who believe in open-source, transparent DeFi data access.`,
+      features: [
+        "TVL tracking for 3,000+ DeFi protocols across 200+ blockchains",
+        "Chain comparison tool to compare DeFi ecosystem growth",
+        "Yield comparison with APY/APR data from hundreds of protocols",
+        "Historical TVL charts with granular date range selection",
+        "Protocol pages with fees, revenue, and token data",
+        "Completely free and open-source API for developers",
+        "Stablecoin supply tracking across all chains",
+        "Airdrop tracking and opportunity identification",
+        "DeFi category rankings (lending, DEX, bridges, staking, etc.)",
+        "Forks and protocol comparison tools",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0 (Free forever)",
+          features: ["All TVL data and charts", "Yield comparison tool", "Chain comparison", "Protocol analytics", "API access", "Airdrop tracking", "Stablecoin data", "No login required"],
+          highlight: true,
+        },
+      ],
+      bestFor: [
+        "DeFi researchers and analysts tracking protocol growth",
+        "Yield farmers comparing APY across protocols and chains",
+        "Crypto investors evaluating DeFi ecosystem trends",
+        "Developers building DeFi tools that need reliable data",
+        "Airdrop hunters looking for unlaunched token opportunities",
+      ],
+      pros: [
+        "Completely free with no premium tiers or hidden paywalls — truly open-source",
+        "Most accurate TVL data in the industry with conservative accounting methodology",
+        "Covers 3,000+ protocols across 200+ chains, the widest coverage available",
+        "Free, well-documented API used by hundreds of third-party applications",
+        "Community-maintained ensures rapid updates and new protocol additions",
+        "No account or login required — just visit and start exploring immediately",
+      ],
+      cons: [
+        "Interface can be overwhelming for beginners due to the sheer volume of data and options",
+        "No portfolio tracking features — it is a data aggregator, not a portfolio manager",
+        "Relies on community maintenance, which means occasional bugs or delays in new chain additions",
+        "No personalized alerts or notifications — you must check the site manually for updates",
+      ],
+      alternatives: ["dune-analytics", "nansen-query", "coingecko", "coinmarketcap"],
+      gettingStarted: [
+        { step: 1, title: "Explore the Dashboard", description: "Visit defillama.com. The homepage displays total DeFi TVL, top protocols by TVL, and chain rankings. No signup required. Spend a few minutes browsing the overview to understand the current state of DeFi." },
+        { step: 2, title: "Compare Chains and Yields", description: "Use the Chains tab to compare TVL across different blockchains. Click the Yield tab to find the best APY rates filtered by chain and category. This helps you identify where capital is flowing and where the best returns are." },
+        { step: 3, title: "Deep Dive into Protocols", description: "Click on any protocol name to see its detailed page with TVL history, fees, revenue, supported chains, and token information. Use the API docs if you want to build custom tools or automate data fetching." },
+      ],
+      faq: [
+        { question: "What is TVL in DeFi?", answer: "TVL stands for Total Value Locked — the total amount of cryptocurrency deposited in a DeFi protocol's smart contracts. It is the primary metric for measuring a protocol's size, adoption, and user trust." },
+        { question: "Is DeFi Llama accurate?", answer: "DeFi Llama is considered the gold standard for DeFi TVL data. It reads directly from on-chain contracts and uses a conservative methodology that avoids double-counting. It is widely trusted by the DeFi community and used as a data source by major platforms." },
+        { question: "Does DeFi Llama have an API?", answer: "Yes, DeFi Llama provides a completely free, open API with endpoints for TVL data, protocol information, yields, and more. The API is well-documented and used by hundreds of third-party applications and developers." },
+        { question: "How does DeFi Llama make money if it is free?", answer: "DeFi Llama is a community-driven, open-source project. It does not charge for access and does not display ads. It is maintained by volunteer contributors and funded through community donations." },
+        { question: "What chains does DeFi Llama support?", answer: "DeFi Llama supports 200+ blockchains including Ethereum, BSC, Solana, Arbitrum, Optimism, Polygon, Avalanche, Base, zkSync, and many more. New chains are added regularly by community contributors." },
+        { question: "Can I track my DeFi portfolio on DeFi Llama?", answer: "No, DeFi Llama is a data aggregator, not a portfolio tracker. For portfolio tracking, consider using tools like CoinStats, DeBank, or Zapper which can sync with your wallet and exchange accounts." },
+      ],
+    },
   },
   {
     id: "defiwonderland",
@@ -708,6 +974,88 @@ export const tools: Tool[] = [
     url: "https://etherscan.io",
     pricing: "Free / $499+/mo API",
     rating: 4.8,
+    detailedContent: {
+      longDescription: `Etherscan is the most widely used blockchain explorer for the Ethereum network and the gold standard for block explorers across the entire cryptocurrency industry. Launched in 2015, just months after Ethereum's mainnet went live, Etherscan has become an indispensable tool for developers, traders, researchers, and everyday users who interact with the Ethereum blockchain.
+
+At its most basic level, Etherscan allows users to search for and view any transaction, block, wallet address, or smart contract on the Ethereum blockchain. Every transaction ever executed on Ethereum is recorded permanently on the blockchain, and Etherscan provides a user-friendly interface to browse, search, and analyze this data. Whether you want to check if a transaction has been confirmed, view the balance of any wallet, or verify the source code of a smart contract, Etherscan is the tool everyone turns to.
+
+For developers, Etherscan's contract verification feature is one of its most valuable capabilities. When developers deploy a smart contract to Ethereum, they can submit the source code to Etherscan, which compiles it and verifies that the deployed bytecode matches the published source. This transparency is crucial for security audits, allowing anyone to review the code of a contract before interacting with it. Verified contracts also display a "Read Contract" and "Write Contract" interface, enabling users to interact directly with smart contracts through Etherscan's web interface.
+
+The Etherscan API is another powerhouse feature, used by thousands of applications worldwide. The API provides programmatic access to blockchain data including transaction histories, token balances, smart contract events, gas tracker data, and more. The free tier allows up to 100,000 API calls per day, while paid tiers offer higher rate limits and priority access. The API is essential infrastructure for DeFi dashboards, portfolio trackers, trading bots, and any application that needs to read from the Ethereum blockchain.
+
+Etherscan also serves as the primary token discovery platform for Ethereum. Its ERC-20 token tracker lists over 500,000 tokens, providing data on holders, transfer volumes, contract addresses, and verification status. For investors, the token tracker is invaluable for researching new tokens and verifying that a token contract is legitimate before buying.
+
+The platform's Gas Tracker feature shows real-time gas prices on the Ethereum network, helping users time their transactions to save on fees. During periods of network congestion, gas prices can spike dramatically, and Etherscan's tracker helps users identify the optimal time to submit transactions. The tracker shows estimated confirmation times for different gas price levels (Low, Average, Fast).
+
+Etherscan has expanded its reach through the Etherscan family of block explorers, which now covers multiple EVM-compatible chains including BscScan (BNB Chain), Polygonscan (Polygon), Arbiscan (Arbitrum), and Optimistic Etherscan (Optimism). Each chain-specific explorer provides the same powerful features tailored to the respective blockchain.
+
+The platform also includes useful developer tools like the Solidity compiler for verifying contracts, the Vyper compiler, the ABI encoder, and unit converter for Wei/Gwei/Ether conversions. These tools streamline the smart contract development workflow and reduce the need for developers to switch between multiple platforms.`,
+      features: [
+        "Complete Ethereum blockchain explorer — transactions, blocks, addresses, contracts",
+        "Smart contract verification with source code review and read/write interface",
+        "ERC-20 token tracker with 500,000+ tokens, holder data, and transfer volumes",
+        "Powerful API with free tier (100K calls/day) and paid plans for higher limits",
+        "Real-time Gas Tracker with estimated confirmation times and fee optimization",
+        "Multi-chain coverage: BscScan, Polygonscan, Arbiscan, Optimistic Etherscan, and more",
+        "Developer tools: Solidity compiler, ABI encoder, unit converter",
+        "Address labels for identifying known wallets (exchanges, whales, projects)",
+        "Transaction history search with advanced filters",
+        "Block rewards and validator/uncle block information",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["Blockchain explorer access", "100,000 API calls/day", "Contract verification", "Gas tracker", "Token tracker", "Address labels", "Basic developer tools"],
+          highlight: true,
+        },
+        {
+          name: "Standard",
+          price: "$499/month",
+          features: ["All Free features", "200,000 API calls/day", "5 API keys", "Priority support", "Dedicated API endpoints"],
+        },
+        {
+          name: "Enterprise",
+          price: "$799+/month",
+          features: ["All Standard features", "300,000+ API calls/day", "Unlimited API keys", "Dedicated support engineer", "Custom SLA", "On-premise options"],
+        },
+      ],
+      bestFor: [
+        "Ethereum developers who need to verify and interact with smart contracts",
+        "Crypto traders checking transaction status and wallet balances",
+        "DeFi researchers analyzing on-chain data and token metrics",
+        "Anyone who needs to verify the legitimacy of an Ethereum token or contract",
+        "DApps and applications that need reliable blockchain data via API",
+      ],
+      pros: [
+        "The most trusted and widely-used Ethereum blockchain explorer in the industry",
+        "Completely free for basic usage including 100,000 API calls per day — generous beyond compare",
+        "Smart contract verification adds a critical layer of transparency and security for DeFi users",
+        "Multi-chain family (BscScan, Polygonscan, etc.) means consistent experience across EVM chains",
+        "Gas Tracker saves users real money by helping them time transactions during low-fee periods",
+        "500,000+ ERC-20 tokens tracked with detailed holder and transfer analytics",
+      ],
+      cons: [
+        "Free API rate limits can be hit quickly by high-traffic applications, requiring paid plans",
+        "Interface is data-dense and can feel overwhelming for users new to blockchain exploration",
+        "Limited DeFi analytics compared to specialized tools like DeFi Llama or Dune Analytics",
+        "Contract interaction through the web UI is basic — no advanced debugging or simulation tools",
+      ],
+      alternatives: ["dune-analytics", "nansen-query", "defillama", "solscan", "blockchain-com-explorer"],
+      gettingStarted: [
+        { step: 1, title: "Search the Blockchain", description: "Visit etherscan.io and use the search bar to look up any Ethereum transaction hash, wallet address, block number, or token name. This is the quickest way to get started — just paste what you are looking for and explore the results." },
+        { step: 2, title: "Verify a Smart Contract", description: "If you are a developer, navigate to your deployed contract address and click 'Verify and Publish'. Select the compiler version, paste your source code, and submit. Once verified, anyone can read your contract's code and interact with it through the Etherscan interface." },
+        { step: 3, title: "Get an API Key", description: "For programmatic access, sign up for a free account and generate an API key from your profile. The free tier provides 100,000 calls per day, which is sufficient for most personal projects and small applications. Check the API documentation for available endpoints." },
+      ],
+      faq: [
+        { question: "What is Etherscan used for?", answer: "Etherscan is a blockchain explorer that lets you search, view, and analyze data on the Ethereum blockchain. You can use it to check transaction status, view wallet balances, verify smart contracts, track token transfers, and much more." },
+        { question: "Is Etherscan free?", answer: "Yes, the basic blockchain explorer and most features are completely free. The API also has a generous free tier with 100,000 calls per day. Paid plans start at $499/month for higher API rate limits and priority support." },
+        { question: "How do I check if a transaction is confirmed on Etherscan?", answer: "Simply paste the transaction hash into the Etherscan search bar. The transaction detail page will show the current status (Pending, Success, or Failed), the number of block confirmations, gas used, and all transaction details." },
+        { question: "Can I interact with smart contracts on Etherscan?", answer: "Yes, for verified contracts, Etherscan provides 'Read Contract' and 'Write Contract' buttons. Read functions let you query contract state for free. Write functions let you execute contract functions (requires connecting a Web3 wallet like MetaMask)." },
+        { question: "What is the Etherscan Gas Tracker?", answer: "The Gas Tracker shows real-time gas prices on Ethereum, estimating how much you will pay in fees and how fast your transaction will confirm at different gas price levels (Low, Average, Fast). It helps you save money by timing transactions during low-fee periods." },
+        { question: "Does Etherscan support other blockchains besides Ethereum?", answer: "Yes, through the Etherscan family of explorers: BscScan (BNB Chain), Polygonscan (Polygon), Arbiscan (Arbitrum), Optimistic Etherscan (Optimism), and more. Each provides the same features for its respective chain." },
+      ],
+    },
   },
   {
     id: "blockchain-com-explorer",
@@ -1051,6 +1399,81 @@ export const tools: Tool[] = [
     pricing: "Free / $3.49+/mo",
     rating: 4.5,
     featured: true,
+    detailedContent: {
+      longDescription: `CoinStats is a leading cryptocurrency portfolio tracker and market intelligence platform trusted by over 1 million users worldwide. Available on iOS, Android, Apple Watch, macOS, and as a web application, CoinStats provides a comprehensive suite of tools for managing your crypto investments, tracking market movements, and staying informed about the latest developments in the cryptocurrency space.
+
+The platform's portfolio tracker is its crown jewel, supporting over 22,000 cryptocurrencies across 300+ exchanges. Users can connect their exchange accounts via API, sync their wallet addresses, or manually add transactions to get a real-time view of their entire crypto portfolio. The tracker automatically calculates your total balance, profit and loss (P&L), asset allocation, and performance over time, presenting everything in clean, intuitive charts and dashboards.
+
+What sets CoinStats apart from other portfolio trackers is its AI-powered market insights engine. The platform uses machine learning algorithms to analyze market sentiment from social media, news outlets, and on-chain data to provide users with actionable trading signals and market analysis. These insights help users make more informed decisions about when to buy, sell, or hold their crypto assets.
+
+CoinStats also delivers real-time price alerts through push notifications, SMS, email, and Telegram. Users can set custom alerts based on price thresholds, percentage changes, volume spikes, and even specific news events. This feature is invaluable for traders who want to stay on top of market movements without constantly monitoring their screens.
+
+The platform aggregates news from over 1,000 sources, providing a curated feed of the most relevant and impactful crypto news. The AI-powered news feed filters out noise and highlights stories that are most likely to affect your portfolio, saving you hours of manual research.
+
+For DeFi enthusiasts, CoinStats supports tracking of DeFi positions across major protocols including Aave, Compound, Uniswap, and Curve. You can see your liquidity pool positions, staking rewards, lending interest, and LP token values all in one place. The platform also supports NFT portfolio tracking, letting you see the value of your NFT collections alongside your traditional crypto holdings.
+
+CoinStats Premium unlocks additional features including advanced portfolio analytics, unlimited price alerts, priority customer support, and exclusive market research reports. Premium members also get access to early beta features and a more detailed breakdown of their trading performance and tax reports.`,
+      features: [
+        "Track 22,000+ cryptocurrencies across 300+ exchanges in real-time",
+        "AI-powered market insights and sentiment analysis",
+        "Multi-platform support: iOS, Android, Apple Watch, macOS, Web",
+        "Custom price alerts via push, SMS, email, and Telegram",
+        "DeFi position tracking across Aave, Uniswap, Compound, and more",
+        "NFT portfolio tracking and valuation",
+        "News aggregator with 1,000+ sources and AI curation",
+        "Exchange API integration for automatic portfolio sync",
+        "Tax reporting tools with exportable CSV reports",
+        "Multi-currency support for global users",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["Basic portfolio tracking", "Up to 5 price alerts", "News feed access", "Basic market data", "Wallet connection (up to 3)"],
+        },
+        {
+          name: "Premium",
+          price: "$3.49/month",
+          features: ["Unlimited portfolio tracking", "Unlimited price alerts", "AI market insights", "Advanced analytics", "DeFi & NFT tracking", "Priority support", "Tax reports", "Unlimited wallet connections"],
+          highlight: true,
+        },
+      ],
+      bestFor: [
+        "Crypto investors who want a simple, beautiful portfolio tracker",
+        "DeFi users tracking positions across multiple protocols",
+        "Traders who rely on real-time alerts for market movements",
+        "NFT collectors who want to track their collection value",
+        "Beginners looking for an all-in-one crypto management app",
+      ],
+      pros: [
+        "Truly multi-platform experience with native apps on iOS, Android, Apple Watch, and macOS — not just responsive web",
+        "AI-powered insights actually surface actionable signals rather than generic market commentary",
+        "Supports 22,000+ tokens including obscure altcoins that most trackers miss",
+        "DeFi and NFT tracking in the same app means no more juggling multiple tools",
+        "Generous free tier that covers the needs of most casual investors",
+        "Clean, modern UI design that makes complex portfolio data easy to understand at a glance",
+      ],
+      cons: [
+        "Advanced tax reporting features are locked behind Premium subscription",
+        "Some users report slight delays in API-synced exchange balances during high-volume periods",
+        "AI insights are helpful but should not replace your own research and due diligence",
+        "Desktop experience is web-based — no dedicated Windows application",
+      ],
+      alternatives: ["zapper", "debank", "cointracker", "koinly", "zerion"],
+      gettingStarted: [
+        { step: 1, title: "Download the App", description: "Download CoinStats from the App Store (iOS/macOS) or Google Play (Android). You can also use the web version at coinstats.app. Create your account with email or sign in with your existing crypto wallet." },
+        { step: 2, title: "Connect Your Holdings", description: "Go to Portfolio → Add Wallet and connect your crypto wallet addresses or exchange API keys. CoinStats supports MetaMask, Trust Wallet, Ledger, and 100+ other wallets, plus direct API connections to Binance, Coinbase, and other major exchanges." },
+        { step: 3, title: "Set Up Alerts & Insights", description: "Navigate to Alerts and set price notifications for your key holdings. Enable AI Insights in Settings to receive personalized market analysis. Add your favorite news sources to your feed for a curated crypto news experience." },
+      ],
+      faq: [
+        { question: "Is CoinStats free to use?", answer: "Yes, CoinStats offers a generous free tier that includes basic portfolio tracking, up to 5 price alerts, and access to the news feed. For unlimited alerts, AI insights, DeFi tracking, and tax reports, you can upgrade to Premium for $3.49/month." },
+        { question: "How accurate is CoinStats portfolio tracking?", answer: "CoinStats pulls real-time data directly from exchanges via API and from blockchains via wallet addresses. The pricing data is aggregated from multiple sources to ensure accuracy. Manual transactions are also supported for maximum precision." },
+        { question: "Can I track my DeFi positions on CoinStats?", answer: "Yes, CoinStats supports DeFi tracking for major protocols including Aave, Compound, Uniswap, Curve, Yearn Finance, and more. You can see your staking rewards, lending interest, LP positions, and yield farming returns all within the app." },
+        { question: "Does CoinStats support NFT tracking?", answer: "Yes, CoinStats tracks your NFT collections across Ethereum, Solana, Polygon, and other chains. You can see estimated floor prices, your collection value over time, and individual NFT valuations." },
+        { question: "Is my data safe with CoinStats?", answer: "CoinStats uses read-only API keys to connect to exchanges, meaning the platform cannot execute trades or withdraw funds. Your wallet addresses are public blockchain data. The app uses encryption for sensitive data and does not store your private keys." },
+        { question: "What exchanges does CoinStats support for portfolio tracking?", answer: "CoinStats supports automatic portfolio sync via API for over 300 exchanges including Binance, Coinbase, Kraken, KuCoin, OKX, Bybit, Huobi, Gate.io, and many more. You can also manually add transactions for unsupported platforms." },
+      ],
+    },
   },
   {
     id: "zapper",
