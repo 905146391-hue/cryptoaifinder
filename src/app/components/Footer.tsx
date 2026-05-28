@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">CF</span>
@@ -30,13 +30,77 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Directory</h4>
             <ul className="space-y-2.5">
-              {["Trading Bots", "DeFi AI", "Analytics", "Security", "Charting", "Wallets"].map((item) => (
-                <li key={item}>
-                  <Link href="/categories/trading-bots" className="text-sm text-[#475569] hover:text-cyan-400 transition-colors">
-                    {item}
+              {[
+                { label: "Trading Bots", slug: "trading-bots" },
+                { label: "DeFi AI", slug: "defi" },
+                { label: "Analytics", slug: "analytics" },
+                { label: "Security", slug: "security" },
+                { label: "Charting", slug: "charting" },
+                { label: "Wallets", slug: "wallet" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link href={`/categories/${item.slug}`} className="text-sm text-[#475569] hover:text-cyan-400 transition-colors">
+                    {item.label}
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Resources / Blog */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Resources</h4>
+            <ul className="space-y-2.5">
+              <li>
+                <a
+                  href="https://medium.com/@905146391/3commas-review-2026-is-it-worth-it-a-complete-breakdown-f1313538a663"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
+                >
+                  3Commas Review 2026
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/@905146391"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
+                >
+                  Best AI Trading Bots 2026
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/@905146391"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
+                >
+                  Best Portfolio Trackers 2026
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/@905146391"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
+                >
+                  CoinStats Review 2026
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/@905146391"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-cyan-400/60 hover:text-cyan-400 transition-colors"
+                >
+                  More on Medium →
+                </a>
+              </li>
             </ul>
           </div>
 
