@@ -400,7 +400,7 @@ The platform also includes a demo mode that allows traders to test their strateg
     category: "trading-bots",
     tags: ["No-Code", "Visual Builder", "Beginner"],
     url: "https://coinrule.com",
-    affiliateUrl: "https://coinrule.com/?ref=affiliate",
+    affiliateUrl: "https://web.coinrule.com/coupon/25REFERRALDISCOUNT?tobilling=true&fpr=9ay8xe",
     pricing: "$0-499/mo",
     rating: 4.1,
     detailedContent: {
