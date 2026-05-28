@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 import CategoryFilter from "./components/CategoryFilter";
 import ToolGrid from "./components/ToolGrid";
 import Footer from "./components/Footer";
-import { BookOpen, ArrowRight } from "lucide-react";
+import { BookOpen, ArrowRight, Sparkles } from "lucide-react";
 
 const featuredArticles = [
   {
@@ -33,6 +33,14 @@ const featuredArticles = [
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
+
+  function getDomain(url: string) {
+    try { return new URL(url).hostname; } catch { return ''; }
+  }
+
+  const recentTools = useMemo(() => {
+    return tools.slice(-6).reverse();
+  }, []);
 
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
@@ -105,6 +113,39 @@ export default function Home() {
                   </a>
                 ))}
               </div>
+            </div>
+          </section>
+        )}
+
+        {/* Recently Added */}
+        {activeCategory === "all" && !searchQuery && (
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-6">
+            <div className="flex items-center gap-2 mb-4">
+              <Sparkles size={18} className="text-yellow-400" />
+              <span className="text-base font-semibold text-white">Recently Added</span>
+              <span className="text-xs text-[#475569]">— latest tools on CryptoFinder</span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+              {recentTools.map((tool) => (
+                <a
+                  key={tool.id}
+                  href={`/tools/${tool.id}`}
+                  className="group flex flex-col items-center gap-2 p-4 bg-[#0d0d14] border border-[#1a1a2e] rounded-xl hover:border-cyan-500/30 transition-all text-center"
+                >
+                  <img
+                    src={`https://www.google.com/s2/favicons?domain=${getDomain(tool.url)}&sz=32`}
+                    alt=""
+                    className="w-8 h-8 rounded-md object-contain bg-[#06060b]"
+                    loading="lazy"
+                  />
+                  <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors line-clamp-1">
+                    {tool.name}
+                  </span>
+                  <span className="text-[10px] text-[#475569] px-1.5 py-0.5 bg-[#06060b] rounded-full">
+                    {tool.category}
+                  </span>
+                </a>
+              ))}
             </div>
           </section>
         )}
