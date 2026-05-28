@@ -230,7 +230,7 @@ The platform also includes a social trading marketplace where users can browse, 
     category: "trading-bots",
     tags: ["Backtest", "Strategy Market", "Cloud"],
     url: "https://cryptohopper.com",
-    affiliateUrl: "https://www.cryptohopper.com/affiliate-program",
+    affiliateUrl: "https://www.cryptohopper.com/?atid=40720",
     pricing: "$19-99/mo",
     rating: 4.4,
     detailedContent: {
