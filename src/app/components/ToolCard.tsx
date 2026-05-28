@@ -31,6 +31,14 @@ function getCategoryColor(category: string): string {
   return colors[category] || "from-gray-500/20 to-gray-600/10 text-gray-400 border-gray-500/20";
 }
 
+function getDomain(url: string): string {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return '';
+  }
+}
+
 function getCategoryName(category: string): string {
   const names: Record<string, string> = {
     "trading-bots": "Trading Bot",
@@ -58,9 +66,25 @@ export default function ToolCard({ tool }: { tool: Tool }) {
         {/* Header */}
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${categoryColor.split(' ').slice(0,2).join(' ')} flex items-center justify-center border`}>
-              <span className="text-white font-bold text-sm">{tool.name.charAt(0).toUpperCase()}</span>
-            </div>
+            {getDomain(tool.url) ? (
+              <img
+                src={`https://www.google.com/s2/favicons?domain=${getDomain(tool.url)}&sz=64`}
+                alt=""
+                className="w-10 h-10 rounded-lg object-contain bg-[#0a0a0f] border border-[#1a1a2e]/30"
+                loading="lazy"
+                onError={(e) => {
+                  const el = e.currentTarget;
+                  el.replaceWith(Object.assign(document.createElement('span'), {
+                    className: 'w-10 h-10 rounded-lg bg-gradient-to-br flex items-center justify-center border text-white font-bold text-sm',
+                    textContent: tool.name.charAt(0).toUpperCase(),
+                  }));
+                }}
+              />
+            ) : (
+              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${categoryColor.split(' ').slice(0,2).join(' ')} flex items-center justify-center border`}>
+                <span className="text-white font-bold text-sm">{tool.name.charAt(0).toUpperCase()}</span>
+              </div>
+            )}
             <div>
               <h3 className="font-semibold text-white text-sm group-hover:text-cyan-400 transition-colors">
                 {tool.name}

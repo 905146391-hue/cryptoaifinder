@@ -206,9 +206,17 @@ export default async function ToolDetailPage({ params }: PageProps) {
                         </span>
                       )}
                     </div>
-                    <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-                      {tool.name}
-                    </h1>
+                    <div className="flex items-center gap-3 mb-3">
+                      <img
+                        src={`https://www.google.com/s2/favicons?domain=${new URL(tool.url).hostname}&sz=64`}
+                        alt=""
+                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain bg-[#0a0a0f] border border-[#1a1a2e]/30"
+                        loading="lazy"
+                      />
+                      <h1 className="text-3xl sm:text-4xl font-bold">
+                        {tool.name}
+                      </h1>
+                    </div>
                     <StarRating rating={tool.rating} />
                   </div>
                 </div>
