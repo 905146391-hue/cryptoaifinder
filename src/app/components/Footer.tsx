@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://medium.com/@905146391"
+                  href="https://medium.com/@905146391/best-ai-crypto-trading-bots-in-2026-tested-and-compared-fb80fde78730"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"

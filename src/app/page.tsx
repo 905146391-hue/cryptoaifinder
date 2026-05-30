@@ -18,7 +18,7 @@ const featuredArticles = [
   },
   {
     title: "Best AI Crypto Trading Bots 2026",
-    url: "https://medium.com/@905146391",
+    url: "https://medium.com/@905146391/best-ai-crypto-trading-bots-in-2026-tested-and-compared-fb80fde78730",
     tag: "Roundup",
     tagColor: "emerald",
   },
