@@ -6643,5 +6643,104 @@ The platform places a strong emphasis on security, employing a combination of co
     url: "https://blockchain.news",
     pricing: "Free",
     rating: 3.7,
+  },
+
+  {
+    id: "fere-ai",
+    name: "Fere AI",
+    description: "Autonomous AI crypto trading agent with a live integrated wallet that researches opportunities, builds trade setups, and executes strategies across multiple chains 24/7.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Autonomous Trading", "Multi-Chain", "DeFi"],
+    url: "https://fere.ai",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "saintquant",
+    name: "SaintQuant",
+    description: "AI-powered crypto trading bot platform combining machine learning with quantitative strategies for automated market-neutral, arbitrage, and trend-following execution.",
+    category: "trading-bots",
+    tags: ["Machine Learning", "Quant Trading", "Automated", "Multi-Strategy"],
+    url: "https://saintquant.com",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "aitradebtc",
+    name: "AiTradeBtc",
+    description: "AI-driven crypto trading platform that monitors market conditions and executes automated strategies across multiple assets with intelligent analytics and adaptive execution.",
+    category: "trading-bots",
+    tags: ["AI Trading", "Automated", "Multi-Asset", "Quantitative"],
+    url: "https://aitradebtc.com",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "arisealpha",
+    name: "AriseAlpha",
+    description: "Free AI-powered trading platform combining quantitative models with real-time market analytics for automated crypto and stock trading with portfolio management tools.",
+    category: "trading-bots",
+    tags: ["Free", "Quant Models", "Portfolio", "Multi-Asset"],
+    url: "https://arisealpha.com",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "orbs-spot",
+    name: "Orbs SPOT",
+    description: "Decentralized DeFi trading interface built natively for AI agents, enabling gasless non-custodial market, limit, TWAP, stop-loss and take-profit swaps across 25+ DEXs.",
+    category: "defi",
+    tags: ["AI Agent", "Gasless", "DeFi", "L3 Protocol"],
+    url: "https://orbs-network.github.io/spot/",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "cryptoscores",
+    name: "CryptoScores",
+    description: "AI-powered cryptocurrency research platform combining traditional financial metrics with blockchain data to deliver actionable investment insights and scoring for crypto assets.",
+    category: "analytics",
+    tags: ["AI Research", "Scoring", "Financial Metrics", "On-Chain Data"],
+    url: "https://cryptoscore.ai",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "coincheckup",
+    name: "CoinCheckup",
+    description: "Comprehensive crypto analysis platform tracking 40,000+ coins with fundamental analysis, price predictions, health scores, and investment ratings for data-driven trading decisions.",
+    category: "analytics",
+    tags: ["Fundamental Analysis", "Price Predictions", "Health Scores", "Ratings"],
+    url: "https://coincheckup.com",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "coincarp",
+    name: "CoinCarp",
+    description: "Global crypto market tracker providing real-time prices for 20,000+ coins across 500+ exchanges with exchange rankings, fundraising data, ICO listings, and multilingual support.",
+    category: "news-data",
+    tags: ["Price Tracking", "Exchange Rankings", "Fundraising", "ICO Data"],
+    url: "https://www.coincarp.com",
+    pricing: "Free",
+    rating: 3.5,
+  },
+
+  {
+    id: "best-wallet",
+    name: "Best Wallet",
+    description: "Non-custodial crypto wallet supporting 1,000+ tokens across 60+ blockchains with built-in swap functionality, decentralized account recovery, and anti-fraud mechanisms.",
+    category: "wallet",
+    tags: ["Non-Custodial", "Multi-Chain", "Swap", "DeFi"],
+    url: "https://bestwallet.com",
+    pricing: "Free",
+    rating: 3.5,
   }
 ];
