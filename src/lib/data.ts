@@ -6727,6 +6727,78 @@ The platform places a strong emphasis on security, employing a combination of co
     url: "https://bestwallet.com",
     pricing: "Free",
     rating: 3.5,
+  },
+
+  {
+    id: "coinscreener",
+    name: "CoinScreener",
+    description: "AI-powered crypto trading signals platform trusted by 50,000+ traders. Monitors 1,500+ top traders, tracks whale activity across 1,000+ markets, and delivers real-time alerts with technical analysis.",
+    category: "trading-bots",
+    tags: ["Trading Signals", "Whale Tracking", "AI Analysis", "Alerts"],
+    url: "https://www.coinscreener.ai",
+    pricing: "Free / Pro plans",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "noah-ai",
+    name: "Noah AI",
+    description: "AI-powered dApp builder that converts natural language into production-ready Solana and EVM smart contracts. Generates frontend UI, deploys contracts, and includes automated security auditing for Web3 development.",
+    category: "defi",
+    tags: ["No-Code", "Smart Contract", "Solana", "dApp Builder"],
+    url: "https://trynoah.ai",
+    pricing: "Free / Pay-as-you-go",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "incite-ai",
+    name: "Incite AI",
+    description: "Real-time AI investment platform that aggregates market data across stocks, crypto, and ETFs. Uses proprietary Polymorphic Algorithms to deliver instant buy/sell decisions and actionable insights for traders.",
+    category: "analytics",
+    tags: ["Market Analysis", "Price Prediction", "Multi-Asset", "Real-Time"],
+    url: "https://www.inciteai.com",
+    pricing: "Free / Pro & Max plans",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "token-metrics",
+    name: "Token Metrics",
+    description: "AI-driven crypto analytics platform combining market intelligence, trading signals, and portfolio management. Features proprietary AI ratings, daily market briefs, and alpha reports trusted by 100,000+ investors.",
+    category: "analytics",
+    tags: ["AI Ratings", "Trading Signals", "Portfolio", "Research"],
+    url: "https://tokenmetrics.com",
+    pricing: "Free / $49-499/mo",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "cookie-dao",
+    name: "Cookie DAO",
+    description: "AI-powered crypto narrative tracking platform that monitors social and on-chain data to identify trending tokens, track mindshare, and analyze market sentiment across all major blockchain ecosystems.",
+    category: "sentiment",
+    tags: ["Narrative Tracking", "Mindshare", "Sentiment", "AI Agents"],
+    url: "https://www.cookie.fun",
+    pricing: "Free / Token-gated",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "dexcheck",
+    name: "DexCheck",
+    description: "AI-powered DeFi analytics terminal providing whale tracking, token unlock dashboards, rug pull risk radar, and InsightsGPT for AI-generated market reports across 20+ blockchains including Ethereum and Solana.",
+    category: "analytics",
+    tags: ["Whale Tracking", "DEX Analytics", "Risk Radar", "AI Insights"],
+    url: "https://dexcheck.ai",
+    pricing: "Free / PRO via DCK staking",
+    rating: 3.5,
+    featured: false,
   }
 ];
 
