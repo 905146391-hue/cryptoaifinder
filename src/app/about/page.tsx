@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { categories } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About CryptoFinder - AI-Powered Crypto Tools Directory",
@@ -43,7 +44,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
             <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">446+</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{categories.find((c) => c.id === "all")?.count ?? 0}+</div>
               <div className="text-sm text-[#64748b]">AI-Powered Tools</div>
             </div>
             <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-6 text-center">

@@ -1,7 +1,9 @@
 import { Sparkles, TrendingUp, Shield, Zap, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { categories } from "@/lib/data";
 
 export default function Hero() {
+  const toolCount = categories.find((c) => c.id === "all")?.count ?? 0;
   return (
     <section className="relative overflow-hidden">
       {/* Background effects */}
@@ -15,7 +17,7 @@ export default function Hero() {
         <div className="flex justify-center mb-8 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-full">
             <Sparkles size={14} className="text-cyan-400" />
-            <span className="text-xs font-medium text-cyan-400">446+ AI-Powered Crypto Tools</span>
+            <span className="text-xs font-medium text-cyan-400">{toolCount}+ AI-Powered Crypto Tools</span>
           </div>
         </div>
 
@@ -51,7 +53,7 @@ export default function Hero() {
         {/* Stats */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
           {[
-            { icon: Zap, value: "446+", label: "AI Tools Curated", color: "cyan" },
+            { icon: Zap, value: `${toolCount}+`, label: "AI Tools Curated", color: "cyan" },
             { icon: TrendingUp, value: "11", label: "Categories", color: "emerald" },
             { icon: Shield, value: "100%", label: "Free to Browse", color: "purple" },
           ].map((stat) => (
