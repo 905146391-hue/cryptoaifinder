@@ -1,4 +1,5 @@
 import { tools, categories } from "@/lib/data";
+import { blogPosts } from "@/lib/blog-data";
 import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
@@ -59,5 +60,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages];
+  // Blog pages
+  const blogPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...blogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
+  return [...staticPages, ...categoryPages, ...toolPages, ...blogPages];
 }

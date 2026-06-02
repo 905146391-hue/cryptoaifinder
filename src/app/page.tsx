@@ -2,33 +2,22 @@
 
 import { useState, useMemo } from "react";
 import { tools } from "@/lib/data";
+import { blogPosts } from "@/lib/blog-data";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import CategoryFilter from "./components/CategoryFilter";
 import ToolGrid from "./components/ToolGrid";
 import Footer from "./components/Footer";
+import Link from "next/link";
 import { BookOpen, ArrowRight, Sparkles } from "lucide-react";
 
-const featuredArticles = [
-  {
-    title: "3Commas Review 2026: Is It Worth It?",
-    url: "https://medium.com/@905146391/3commas-review-2026-is-it-worth-it-a-complete-breakdown-f1313538a663",
-    tag: "Review",
-    tagColor: "cyan",
-  },
-  {
-    title: "Best AI Crypto Trading Bots 2026",
-    url: "https://medium.com/@905146391/best-ai-crypto-trading-bots-in-2026-tested-and-compared-fb80fde78730",
-    tag: "Roundup",
-    tagColor: "emerald",
-  },
-  {
-    title: "Best Crypto Portfolio Trackers 2026",
-    url: "https://medium.com/@905146391",
-    tag: "Roundup",
-    tagColor: "purple",
-  },
-];
+const tagColors = ["cyan", "emerald", "purple", "orange", "pink"];
+const featuredArticles = blogPosts.slice(0, 3).map((post, i) => ({
+  title: post.title,
+  slug: post.slug,
+  tag: post.category,
+  tagColor: tagColors[i % tagColors.length],
+}));
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -77,22 +66,18 @@ export default function Home() {
                   <span className="text-sm font-semibold text-white">From Our Blog</span>
                   <span className="text-xs px-2 py-0.5 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">In-depth Reviews</span>
                 </div>
-                <a
-                  href="https://medium.com/@905146391"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/blog"
                   className="flex items-center gap-1 text-xs text-[#475569] hover:text-cyan-400 transition-colors"
                 >
-                  View all on Medium <ArrowRight size={12} />
-                </a>
+                  View all articles <ArrowRight size={12} />
+                </Link>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {featuredArticles.map((article) => (
-                  <a
+                  <Link
                     key={article.title}
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`/blog/${article.slug}`}
                     className="group flex items-start gap-3 p-3 rounded-xl bg-[#06060b] border border-[#1a1a2e] hover:border-cyan-500/30 transition-all"
                   >
                     <div className={`mt-0.5 shrink-0 w-1.5 h-1.5 rounded-full ${
@@ -110,7 +95,7 @@ export default function Home() {
                         {article.title}
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Globe } from "lucide-react";
+import { blogPosts } from "@/lib/blog-data";
 
 export default function Footer() {
   return (
@@ -49,57 +50,25 @@ export default function Footer() {
 
           {/* Resources / Blog */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Resources</h4>
+            <h4 className="text-sm font-semibold text-white mb-4">Blog</h4>
             <ul className="space-y-2.5">
+              {blogPosts.slice(0, 4).map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="text-sm text-[#475569] hover:text-cyan-400 transition-colors line-clamp-1"
+                  >
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <a
-                  href="https://medium.com/@905146391/3commas-review-2026-is-it-worth-it-a-complete-breakdown-f1313538a663"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
-                >
-                  3Commas Review 2026
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://medium.com/@905146391/best-ai-crypto-trading-bots-in-2026-tested-and-compared-fb80fde78730"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
-                >
-                  Best AI Trading Bots 2026
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://medium.com/@905146391"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
-                >
-                  Best Portfolio Trackers 2026
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://medium.com/@905146391"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#475569] hover:text-cyan-400 transition-colors"
-                >
-                  CoinStats Review 2026
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://medium.com/@905146391"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/blog"
                   className="text-sm text-cyan-400/60 hover:text-cyan-400 transition-colors"
                 >
-                  More on Medium →
-                </a>
+                  View all articles →
+                </Link>
               </li>
             </ul>
           </div>

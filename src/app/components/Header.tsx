@@ -43,6 +43,9 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
 
           {/* Nav Links - Desktop */}
           <nav className="hidden md:flex items-center gap-1">
+            <Link href="/blog" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
+              Blog
+            </Link>
             <Link href="/about" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
               About
             </Link>
@@ -86,6 +89,9 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-[#1a1a2e] bg-[#06060b]">
           <div className="px-4 py-3 space-y-1">
+            <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
+              Blog
+            </Link>
             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
               About
             </Link>
