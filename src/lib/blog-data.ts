@@ -208,8 +208,10 @@ Explore more crypto tools at [CryptoFinder](https://cryptoaifinder.com).`,
     slug: "best-crypto-portfolio-trackers-2026",
     title: `Best Crypto Portfolio Trackers in 2026: Tested and Compared`,
     excerpt: `After months of testing, here are the five best crypto portfolio trackers in 2026 — broken down by strengths, weaknesses, and who each one is actually built for.`.slice(0, 200),
-    date: "2026-06-01",
+    date: "2026-06-02",
     category: "Comparison" as const,
+    mediumUrl: "https://medium.com/@905146391/best-crypto-portfolio-trackers-in-2026-track-every-coin-every-defi-position-0ad5b03e2813",
+    devtoUrl: "https://dev.to/cryptofinder/best-crypto-portfolio-trackers-in-2026-track-every-coin-every-defi-position-3lh0",
     content: `# Best Crypto Portfolio Trackers in 2026: Tested and Compared
 
 I've been using crypto portfolio trackers since 2020, and I've tried most of them. Some are brilliant. Some are bloated. And a few genuinely changed how I manage my investments.
