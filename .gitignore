@@ -40,3 +40,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Dead link check temp files
+dead_link_report.txt
+dead_link_report_final.md
+dead_links_found.txt
+dead_links_remaining.txt
+links_to_check.json
+link_check_*.json
+link_check_log.txt
+tool_urls_list.txt
+checked_urls.txt
+remaining*.txt
+sorted_tools.txt
+run_link_check*.js
+run_link_check*.py
+run_link_check*.sh
+check_links*.py
+extract_links.py
+remove_dead_tools.py
+src/lib/data.ts.bak
+nul
