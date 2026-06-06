@@ -6068,6 +6068,83 @@ The platform places a strong emphasis on security, employing a combination of co
     url: "https://galaxy.com/research",
     pricing: "Free / Institutional",
     rating: 4.2,
+    detailedContent: {
+      longDescription: `Galaxy Digital Research is the research arm of Galaxy Digital, one of the most prominent financial services and investment management firms focused on digital assets and blockchain technology. Founded by billionaire investor Michael Novogratz, Galaxy Digital has established itself as a leading institutional player in the crypto space, and its research division produces some of the most respected and widely cited analysis in the industry.
+
+Unlike many crypto research platforms that cater primarily to retail traders, Galaxy Research is built from the ground up with institutional investors in mind. The team comprises former Wall Street analysts, blockchain engineers, and crypto-native researchers who bring a level of rigor and depth that matches traditional financial research standards. This institutional-grade approach is reflected in the quality of their reports, which combine on-chain data analysis, macroeconomic context, and proprietary datasets to deliver insights that go beyond surface-level market commentary.
+
+The platform publishes research across a remarkably broad range of topics. Their Weekly Top Stories report has become a must-read for crypto professionals, providing a concise yet comprehensive summary of the week's most important developments across markets, regulation, DeFi, and emerging sectors. For those who need to stay current but lack the time to parse dozens of sources, this weekly digest alone makes Galaxy Research invaluable.
+
+Beyond weekly updates, Galaxy produces deep-dive thematic reports that are among the most thorough in the industry. Their annual predictions series — including the widely cited "26 Predictions for Crypto in 2026" — sets the tone for institutional expectations each year. Quarterly reports on crypto leverage, venture capital funding, and ecosystem updates for major chains like Solana and Ethereum provide systematic tracking of key market dynamics.
+
+Galaxy Research has also been at the forefront of covering the intersection of AI and crypto, producing influential reports on agentic payments, decentralized AI training, and the broader convergence of these two transformative technologies. Their regulatory analysis is equally strong, with detailed breakdowns of U.S. legislation like the CLARITY Act and GENIUS Act that have direct implications for crypto market structure and stablecoin regulation.
+
+One of the most attractive aspects of Galaxy Research is that virtually all of their content is freely accessible. There are no paywalls blocking access to their reports, making this one of the most generous institutional research offerings available. Users can subscribe to receive reports via email, ensuring they never miss a publication. For institutional clients seeking custom research or advisory services, Galaxy offers those as well through its broader financial services business.
+
+The research portal also hosts educational resources including the Digital Assets Academy, which provides structured learning paths for understanding crypto fundamentals, and The Investable Universe series, which maps out the landscape of investable digital assets. Podcasts and video webinars complement the written research, offering alternative formats for consuming insights.
+
+For institutional investors, fund managers, analysts, and serious crypto professionals, Galaxy Digital Research is an essential resource. The combination of institutional credibility, comprehensive coverage, timely updates, and free access makes it one of the best crypto research platforms available today.`,
+      features: [
+        "Weekly Top Stories digest covering the most important crypto developments",
+        "Deep-dive quarterly reports on leverage, venture capital, and chain ecosystems",
+        "Annual predictions series setting institutional expectations for the year ahead",
+        "Comprehensive AI + crypto intersection analysis and coverage",
+        "U.S. regulatory policy breakdowns (CLARITY Act, GENIUS Act, ETF analysis)",
+        "Digital Assets Academy with structured educational learning paths",
+        "The Investable Universe framework mapping investable digital assets",
+        "Podcasts and video webinars complementing written research",
+        "Free email subscription for automatic delivery of all new reports",
+        "Coverage spanning 20+ topics including Bitcoin, Ethereum, Solana, DeFi, Stablecoins, and more",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0",
+          features: ["All research reports", "Weekly Top Stories", "Annual predictions", "AI and crypto reports", "Regulatory analysis", "Email subscription", "Digital Assets Academy", "Podcasts and webinars"],
+        },
+        {
+          name: "Institutional",
+          price: "Custom",
+          features: ["Custom research and advisory services", "Direct analyst access", "Tailored market intelligence", "Investment committee presentations", "Regulatory strategy consulting"],
+        },
+      ],
+      bestFor: [
+        "Institutional investors and fund managers seeking credible crypto research",
+        "Analysts who need comprehensive, data-driven market insights",
+        "Crypto professionals tracking regulatory developments in the U.S.",
+        "Investors interested in the AI and crypto convergence thesis",
+        "Anyone wanting free, institutional-grade research without paywalls",
+      ],
+      pros: [
+        "All research is freely accessible with no paywall — exceptionally generous for institutional-grade content",
+        "Reports are authored by experienced analysts with Wall Street and crypto-native backgrounds",
+        "Weekly Top Stories is one of the best concise market summaries available anywhere",
+        "Strong coverage of emerging themes like AI + crypto, prediction markets, and tokenization",
+        "Regulatory analysis is among the most thorough and timely in the crypto space",
+        "Digital Assets Academy provides a structured on-ramp for newcomers to the space",
+      ],
+      cons: [
+        "Research is primarily focused on the U.S. market and regulatory environment — less coverage of Asian and European developments",
+        "No interactive dashboards or real-time data tools — content is PDF and article-based only",
+        "Publishing schedule can be inconsistent for niche topics outside the weekly cadence",
+        "Limited coverage of smaller altcoins and DeFi protocols — focus is on major assets and themes",
+        "No API access for programmatic consumption of research data",
+      ],
+      alternatives: ["messari", "glassnode", "coin-metrics", "delphi-digital", "chainalysis"],
+      gettingStarted: [
+        { step: 1, title: "Visit the Research Portal", description: "Go to galaxy.com/insights/research to browse the full library of published reports. You can filter by topic (Bitcoin, DeFi, AI, Regulation, etc.) and content type (Research, Perspectives, Podcasts)." },
+        { step: 2, title: "Subscribe for Updates", description: "Enter your email on the research page to subscribe. You'll receive new reports directly in your inbox as soon as they're published — typically 1-2 reports per week. This ensures you never miss important analysis." },
+        { step: 3, title: "Start with Weekly Top Stories", description: "If you're new to Galaxy Research, begin with the Weekly Top Stories series. It provides a concise overview of the most important crypto developments each week and serves as an excellent entry point to their research style and depth." },
+      ],
+      faq: [
+        { question: "Is Galaxy Digital Research really free?", answer: "Yes, virtually all published research reports, weekly digests, annual predictions, educational content, podcasts, and webinars are available for free on their website. There are no paywalls. Institutional clients can also access custom research and advisory services through Galaxy's broader business." },
+        { question: "How often does Galaxy publish new research?", answer: "Galaxy publishes Weekly Top Stories every week without fail. Deep-dive thematic reports are published on a rolling basis, typically 2-4 per month. Quarterly reports (leverage, VC funding, ecosystem updates) follow a regular quarterly schedule. Annual predictions are published each December." },
+        { question: "Who writes Galaxy's research?", answer: "Galaxy's research team comprises analysts with backgrounds in traditional finance (Wall Street), blockchain engineering, and crypto-native markets. The team is led by Alex Thorn (Head of Firmwide Research) and includes specialists covering DeFi, regulation, AI, and on-chain analysis." },
+        { question: "What topics does Galaxy Research cover?", answer: "Galaxy covers over 20 topics including Bitcoin, Ethereum, Solana, DeFi, stablecoins, AI + crypto, prediction markets, tokenization, regulation, mining, venture capital, and more. Their annual predictions series is particularly well-known and widely cited across the industry." },
+        { question: "Can I use Galaxy's research for investment decisions?", answer: "While Galaxy's research is high-quality and institutional-grade, it should be used as one input among many when making investment decisions. Their reports provide analysis and context, not specific investment recommendations. Always do your own due diligence and consult with a financial advisor." },
+        { question: "Does Galaxy Research offer real-time data or dashboards?", answer: "No, Galaxy Research focuses on written reports, analysis, and educational content rather than real-time data tools or interactive dashboards. If you need on-chain dashboards or real-time metrics, platforms like Glassnode or Dune Analytics would be better suited." },
+      ],
+    },
   },
   {
     id: "coinmetrics",
