@@ -3148,6 +3148,114 @@ CertiK has established partnerships with major blockchain ecosystems including B
     url: "https://slowmist.io",
     pricing: "Enterprise",
     rating: 4.7,
+    featured: true,
+    detailedContent: {
+      longDescription: `SlowMist is one of the most respected blockchain security firms in the world, founded in 2018 by a team of seasoned cybersecurity veterans led by Yu Xian (known in the community as "Cosmos"). Headquartered in Xiamen, China, SlowMist has built a reputation for excellence in smart contract auditing, blockchain security research, and incident response. The firm has audited thousands of projects, uncovered critical vulnerabilities in major protocols, and played a pivotal role in tracking and recovering stolen crypto assets across the globe.
+
+What distinguishes SlowMist from many Western security firms is their deep expertise in the full attack surface of blockchain systems. While many auditors focus narrowly on smart contract code, SlowMist takes a holistic approach that encompasses exchange security, wallet security, consensus mechanism analysis, and cross-chain bridge vulnerabilities. This comprehensive methodology has allowed them to identify attack vectors that purely code-focused audits would miss. Their research team regularly publishes detailed post-mortem analyses of major hacks, contributing invaluable knowledge to the broader security community.
+
+SlowMist's incident response capabilities are legendary in the crypto space. The firm maintains the SlowMist Hacked database — one of the most comprehensive archives of blockchain security incidents — and has assisted law enforcement agencies and victims in tracking stolen funds across multiple chains. Their blockchain forensics team uses advanced on-chain analysis tools to trace the flow of illicit funds, often identifying the exchanges and services where hackers attempt to cash out. In several high-profile cases, SlowMist's intervention has directly led to the freezing and recovery of stolen assets.
+
+The firm's audit process combines automated vulnerability scanning with meticulous manual code review. SlowMist auditors examine not only the smart contract logic but also the economic model, governance mechanisms, and potential manipulation vectors. They provide detailed reports with actionable remediation steps and often work closely with development teams through multiple audit rounds until all issues are resolved. A clean SlowMist audit report has become a strong trust signal in the Asian crypto market and increasingly globally.
+
+SlowMist also contributes significantly to the ecosystem through open-source tools and educational content. Their "SlowMist Zone" knowledge base provides free security resources for developers, and their research team actively publishes threat intelligence reports on emerging attack techniques. For any blockchain project — particularly those targeting the Asian market — SlowMist represents a top-tier security partner with a proven track record of protecting billions in digital assets.`,
+      features: [
+        "Comprehensive smart contract auditing with manual code review",
+        "Blockchain forensics and stolen fund tracking across multiple chains",
+        "Incident response and post-hack analysis with actionable insights",
+        "Exchange security assessment including hot/cold wallet architecture review",
+        "Cross-chain bridge and interoperability protocol security analysis",
+        "SlowMist Hacked database — comprehensive archive of blockchain security incidents",
+        "Economic model and governance mechanism vulnerability assessment",
+        "Advanced on-chain analysis tools for tracing illicit fund flows",
+        "Multi-round audit process with close developer collaboration",
+        "Open-source security tools and educational resources via SlowMist Zone",
+        "Regular threat intelligence reports on emerging attack techniques",
+        "Law enforcement assistance for crypto-related investigations",
+      ],
+      pricingPlans: [
+        {
+          name: "Smart Contract Audit",
+          price: "Custom quote",
+          features: ["Manual code review", "Automated vulnerability scanning", "Economic model analysis", "Detailed audit report", "Post-audit remediation support", "Optional public report"],
+        },
+        {
+          name: "Incident Response",
+          price: "Custom quote",
+          features: ["24/7 emergency response", "On-chain fund tracking", "Exchange coordination", "Law enforcement liaison", "Root cause analysis", "Recovery strategy"],
+          highlight: true,
+        },
+        {
+          name: "Security Consulting",
+          price: "Custom quote",
+          features: ["Architecture review", "Exchange security assessment", "Wallet security audit", "Team training", "Ongoing security advisory"],
+        },
+      ],
+      bestFor: [
+        "DeFi protocols seeking top-tier smart contract audits",
+        "Exchanges requiring comprehensive security assessments",
+        "Projects targeting the Asian crypto market",
+        "Victims of hacks needing forensic investigation and fund recovery",
+        "Blockchain teams wanting ongoing security advisory services",
+      ],
+      pros: [
+        "World-class blockchain forensics and incident response capabilities",
+        "Holistic security approach covering code, economics, and infrastructure",
+        "Strong reputation in the Asian market with global recognition",
+        "Detailed public post-mortems contribute to ecosystem security knowledge",
+        "Proven track record of assisting in stolen fund recovery",
+      ],
+      cons: [
+        "Audit services can be expensive for early-stage projects",
+        "High demand leads to scheduling delays during peak periods",
+        "Primary communication in Chinese — may require translation for non-Chinese teams",
+        "Public audit reports may not be available for all engagements",
+      ],
+      alternatives: ["certik", "trail-of-bits", "openzeppelin", "hacken"],
+      gettingStarted: [
+        {
+          step: 1,
+          title: "Contact SlowMist for a quote",
+          description: "Visit slowmist.io and submit an inquiry through their contact form. Provide details about your project, the scope of code to audit, and your timeline requirements.",
+        },
+        {
+          step: 2,
+          title: "Prepare your codebase and documentation",
+          description: "Organize your smart contracts, architecture documentation, and test suite. SlowMist auditors will need a complete picture of your system including economic models and governance mechanisms.",
+        },
+        {
+          step: 3,
+          title: "Engage in the audit process",
+          description: "Work closely with SlowMist auditors through multiple rounds of review. Address identified vulnerabilities, implement recommended fixes, and request re-audit of changes until all issues are resolved.",
+        },
+      ],
+      faq: [
+        {
+          question: "What is SlowMist known for?",
+          answer: "SlowMist is a leading Chinese blockchain security firm known for smart contract audits, blockchain forensics, and incident response. They are particularly respected for their ability to track stolen funds across multiple chains and assist in crypto asset recovery, as well as their comprehensive approach that examines code, economics, and infrastructure together.",
+        },
+        {
+          question: "How much does a SlowMist audit cost?",
+          answer: "SlowMist provides custom quotes based on project scope, code complexity, and timeline. Prices vary significantly depending on the size of the codebase and the depth of analysis required. Contact their team directly for a specific quote for your project.",
+        },
+        {
+          question: "Does SlowMist only serve Chinese-speaking clients?",
+          answer: "No, while SlowMist is based in China and primarily communicates in Chinese, they serve clients globally. Many international projects have engaged SlowMist for audits. English-speaking teams may need to account for translation in their communication workflow.",
+        },
+        {
+          question: "What is the SlowMist Hacked database?",
+          answer: "The SlowMist Hacked database is one of the most comprehensive archives of blockchain security incidents, documenting hacks, exploits, and vulnerabilities across the crypto ecosystem. It serves as a valuable resource for researchers, developers, and the community to learn from past security failures.",
+        },
+        {
+          question: "How does SlowMist compare to CertiK or Trail of Bits?",
+          answer: "SlowMist is particularly strong in blockchain forensics and incident response, while CertiK emphasizes formal verification and Trail of Bits focuses on low-level security research. All three are top-tier firms, but SlowMist's unique advantage lies in their holistic approach and their dominant position in the Asian market.",
+        },
+        {
+          question: "Can SlowMist help recover stolen crypto?",
+          answer: "Yes, SlowMist has a proven track record of assisting in crypto asset recovery. Their blockchain forensics team traces stolen funds on-chain, identifies the exchanges and services where hackers attempt to cash out, and coordinates with law enforcement and exchanges to freeze and recover assets where possible.",
+        },
+      ],
+    },
   },
   {
     id: "consensys-diligence",
@@ -3178,6 +3286,114 @@ CertiK has established partnerships with major blockchain ecosystems including B
     url: "https://openzeppelin.com",
     pricing: "Free / Enterprise",
     rating: 4.8,
+    featured: true,
+    detailedContent: {
+      longDescription: `OpenZeppelin is the undisputed industry standard for smart contract security, serving as the foundational building block for the vast majority of Web3 applications deployed today. Founded in 2015 by Demian Brener and Manuel Aráoz, the company has grown from an open-source Solidity library into a comprehensive security platform that protects hundreds of billions of dollars in total value across the blockchain ecosystem. If you have ever interacted with a DeFi protocol, NFT marketplace, or DAO, there is an extremely high probability that OpenZeppelin code is running under the hood.
+
+At the heart of OpenZeppelin's offering is the Contracts library — the most widely used, audited, and battle-tested collection of smart contract implementations in existence. The library provides secure, reusable implementations of ERC-20 tokens, ERC-721 and ERC-1155 NFTs, governance contracts, access control mechanisms, upgradeable proxies, and much more. Every contract in the library undergoes rigorous internal and external security audits before release. For Solidity developers, importing OpenZeppelin Contracts is not just a best practice — it is effectively mandatory for any production-grade project.
+
+Beyond the Contracts library, OpenZeppelin Defender has emerged as a game-changing platform for Web3 operations and security automation. Defender provides a suite of tools for managing smart contracts in production, including automated transaction scheduling, relayers for gasless transactions, real-time monitoring and alerting, and secure admin operations via multi-signature governance. This is particularly valuable for DeFi protocols and DAOs that need to manage treasury operations, protocol upgrades, and emergency responses without introducing single points of failure.
+
+The OpenZeppelin Security Services division provides professional smart contract audits conducted by some of the most experienced security researchers in the blockchain space. Their audit process goes far beyond automated scanning — it includes manual code review, economic attack simulation, architecture assessment, and post-audit remediation support. Major protocols including Compound, Aave, MakerDAO, and Uniswap have relied on OpenZeppelin audits to secure billions in user funds. A clean OpenZeppelin audit report has become a badge of trust in the DeFi ecosystem.
+
+OpenZeppelin's commitment to the ecosystem extends to education and open-source development. Their "OpenZeppelin Learn" platform provides free educational content on smart contract security best practices. The team actively maintains EIP (Ethereum Improvement Proposal) standards, contributes to core Ethereum infrastructure, and runs the popular OpenZeppelin Forum where thousands of developers discuss security patterns. For any team building on Ethereum or EVM-compatible chains, OpenZeppelin is not just a tool — it is the foundation of secure development.`,
+      features: [
+        "OpenZeppelin Contracts — audited Solidity library for ERC-20, ERC-721, ERC-1155, and governance",
+        "Upgradeable contract patterns with transparent proxy architecture",
+        "Access control framework with Role-Based Access Control (RBAC)",
+        "OpenZeppelin Defender for automated contract management and monitoring",
+        "Secure multi-signature admin operations via Defender",
+        "Automated transaction scheduling and gasless relayers",
+        "Real-time security alerts and anomaly detection",
+        "Professional smart contract audit services by top-tier researchers",
+        "Economic attack simulation and architecture assessment in audits",
+        "OpenZeppelin Learn — free security education platform",
+        "Active EIP standards maintenance and ecosystem contributions",
+        "Widely integrated with Hardhat, Foundry, and Truffle development frameworks",
+      ],
+      pricingPlans: [
+        {
+          name: "Contracts Library",
+          price: "Free (MIT License)",
+          features: ["Full Contracts library", "Upgradeable contracts", "Access control", "Governance contracts", "Community support"],
+        },
+        {
+          name: "Defender",
+          price: "Free / Pro plans available",
+          features: ["Admin operations dashboard", "Transaction relayers", "Monitoring and alerts", "Multi-sig governance", "Pro: advanced features and higher limits"],
+          highlight: true,
+        },
+        {
+          name: "Audit Services",
+          price: "Custom quote",
+          features: ["Manual code review", "Architecture assessment", "Economic attack simulation", "Post-audit support", "Public audit report"],
+        },
+      ],
+      bestFor: [
+        "Solidity developers building production-grade smart contracts",
+        "DeFi protocols requiring secure token and governance contracts",
+        "DAOs managing treasury operations and protocol upgrades",
+        "Web3 startups seeking industry-standard security audits",
+        "Security researchers studying battle-tested contract patterns",
+      ],
+      pros: [
+        "Industry gold standard — used by virtually every major DeFi protocol",
+        "Contracts library is free, open-source, and MIT-licensed",
+        "Rigorously audited code with billions of dollars secured",
+        "Defender provides enterprise-grade ops tooling for production",
+        "Audit reports carry significant trust weight in the ecosystem",
+      ],
+      cons: [
+        "Audit services are expensive and have long wait times",
+        "Defender advanced features require paid subscription",
+        "Learning curve for upgradeable contract patterns",
+        "Primarily Ethereum/EVM focused — limited non-EVM support",
+      ],
+      alternatives: ["certik", "trail-of-bits", "consensys-diligence", "quantstamp"],
+      gettingStarted: [
+        {
+          step: 1,
+          title: "Install OpenZeppelin Contracts",
+          description: "Add the library to your Solidity project with npm install @openzeppelin/contracts. Import battle-tested ERC-20, ERC-721, and governance contracts directly into your code.",
+        },
+        {
+          step: 2,
+          title: "Set up OpenZeppelin Defender",
+          description: "Sign up at defender.openzeppelin.com and connect your smart contracts. Configure transaction relayers, set up monitoring alerts, and establish multi-sig admin workflows.",
+        },
+        {
+          step: 3,
+          title: "Request an audit when ready",
+          description: "Once your smart contracts are feature-complete, contact OpenZeppelin's audit team for a quote. Their security researchers will perform manual code review, architecture analysis, and economic attack simulation.",
+        },
+      ],
+      faq: [
+        {
+          question: "What is OpenZeppelin Contracts?",
+          answer: "OpenZeppelin Contracts is a free, open-source Solidity library providing secure, audited implementations of standard smart contract patterns including ERC-20 tokens, ERC-721/1155 NFTs, access control, governance, and upgradeable proxies. It is the most widely used smart contract library in the Ethereum ecosystem.",
+        },
+        {
+          question: "Is OpenZeppelin Contracts free?",
+          answer: "Yes, the Contracts library is completely free and open-source under the MIT license. You can use it in commercial projects without any cost. Defender has both free and paid tiers, while audit services are priced based on project scope.",
+        },
+        {
+          question: "What does an OpenZeppelin audit cover?",
+          answer: "An OpenZeppelin audit includes comprehensive manual code review, architecture assessment, economic attack simulation, automated vulnerability scanning, and post-audit remediation support. Audits are conducted by experienced security researchers and result in a public report that serves as a trust signal for the ecosystem.",
+        },
+        {
+          question: "How does OpenZeppelin Defender work?",
+          answer: "Defender is a Web3 operations platform that helps teams manage smart contracts in production. It provides secure admin operations via multi-sig, automated transaction scheduling, gasless relayers, and real-time monitoring with customizable alerts. It is designed to eliminate single points of failure in protocol operations.",
+        },
+        {
+          question: "Which blockchains does OpenZeppelin support?",
+          answer: "OpenZeppelin primarily supports Ethereum and EVM-compatible chains including Polygon, Arbitrum, Optimism, Base, Avalanche, BNB Chain, and others. The Contracts library is written in Solidity and works on any EVM-compatible network.",
+        },
+        {
+          question: "Do I need an audit if I use OpenZeppelin Contracts?",
+          answer: "While OpenZeppelin Contracts themselves are thoroughly audited, your custom contract logic still needs independent review. Using OpenZeppelin Contracts reduces risk significantly, but your business logic, integration patterns, and deployment parameters should still be audited by a professional security firm before handling significant value.",
+        },
+      ],
+    },
   },
   {
     id: "quantstamp",
@@ -4305,6 +4521,109 @@ TrendSpider also offers a screener tool that can scan hundreds of assets simulta
     url: "https://defillama.com/chains",
     pricing: "Free",
     rating: 4.8,
+    featured: true,
+    detailedContent: {
+      longDescription: `DeFi Llama is the undisputed gold standard for DeFi analytics, serving as the go-to data platform for anyone serious about decentralized finance. Founded in 2020, the platform started as a simple Total Value Locked (TVL) tracker and has since evolved into the most comprehensive, open-source DeFi data aggregator in the industry. With coverage spanning over 200 blockchain networks and thousands of protocols, DeFi Llama provides the most accurate and transparent picture of the DeFi landscape available anywhere.
+
+What sets DeFi Llama apart from competitors is its unwavering commitment to open-source principles and community-driven data integrity. Every data adapter is publicly available on GitHub, allowing anyone to verify how TVL is calculated. This radical transparency has earned DeFi Llama the trust of institutional investors, researchers, and traders alike. Unlike proprietary platforms that hide their methodology, DeFi Llama's open approach means its data can be scrutinized, forked, and improved by the community.
+
+The platform's charting capabilities have grown far beyond basic TVL tracking. Users can now explore detailed metrics including protocol revenue, fees generated, treasury holdings, raises and funding rounds, token unlocks, stablecoin flows, and bridge volumes. The "Yields" section has become an essential tool for yield farmers, tracking real-time APY across thousands of liquidity pools. The "NFT" section covers floor prices, volume trends, and collection analytics. Each chart is interactive, embeddable, and exportable, making DeFi Llama an indispensable resource for content creators and analysts.
+
+DeFi Llama's multi-chain coverage is unmatched. Whether you're tracking Ethereum mainnet, Solana, Arbitrum, Optimism, Base, Polygon, Avalanche, or emerging L2s and appchains, DeFi Llama has you covered. The platform's "Chains" page provides a bird's-eye view of the entire multi-chain ecosystem, ranking networks by TVL, 24h change, and protocol count. For researchers comparing chain adoption or traders looking for yield opportunities, this is the first stop.
+
+The platform also offers a powerful API that developers can use to build custom dashboards, trading signals, or portfolio tools. Despite its depth, the core interface remains free and ad-free, funded by the LlamaX governance token and community contributions. With weekly data updates, real-time TVL tracking, and a vibrant Discord community, DeFi Llama continues to set the standard for what crypto data transparency should look like.`,
+      features: [
+        "Real-time TVL tracking across 200+ blockchain networks",
+        "Interactive, embeddable charts for every DeFi protocol",
+        "Protocol revenue and fee analytics with historical data",
+        "Yield farming dashboard with real-time APY across thousands of pools",
+        "Token unlocks calendar tracking vesting schedules and supply changes",
+        "Stablecoin flow analytics monitoring minting, burning, and cross-chain transfers",
+        "Bridge volume tracking comparing cross-chain activity",
+        "NFT floor price and volume analytics for major collections",
+        "Raises and funding round tracker for DeFi projects",
+        "Open-source data adapters on GitHub for full transparency",
+        "Powerful API for developers building custom analytics",
+        "Treasury holdings tracker showing protocol-owned assets",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["All charts and dashboards", "TVL tracking", "Yield dashboard", "NFT analytics", "API access (rate-limited)", "No ads"],
+        },
+        {
+          name: "Pro API",
+          price: "Contact for pricing",
+          features: ["Higher rate limits", "Priority data freshness", "Dedicated support", "Custom data feeds", "SLA guarantees"],
+          highlight: true,
+        },
+      ],
+      bestFor: [
+        "DeFi researchers tracking protocol growth and adoption",
+        "Yield farmers comparing APY across liquidity pools",
+        "Institutional investors monitoring multi-chain TVL trends",
+        "Content creators embedding live DeFi charts",
+        "Developers building DeFi dashboards and tools",
+      ],
+      pros: [
+        "Completely free with no ads on the core platform",
+        "100% open-source methodology — fully auditable data",
+        "200+ chains and thousands of protocols covered",
+        "Interactive charts that can be embedded anywhere",
+        "Community-driven with rapid protocol listing",
+      ],
+      cons: [
+        "Some newer protocols may have delayed data",
+        "API rate limits on free tier can be restrictive",
+        "No mobile app — browser-only experience",
+        "Overwhelming for beginners unfamiliar with DeFi metrics",
+      ],
+      alternatives: ["coingecko", "defillama", "dune", "messari"],
+      gettingStarted: [
+        {
+          step: 1,
+          title: "Visit DeFi Llama",
+          description: "Go to defillama.com and explore the homepage dashboard showing total DeFi TVL across all chains.",
+        },
+        {
+          step: 2,
+          title: "Browse by chain or protocol",
+          description: "Use the \"Chains\" page to compare networks by TVL, or search for a specific protocol to see its detailed metrics.",
+        },
+        {
+          step: 3,
+          title: "Explore advanced sections",
+          description: "Check out the Yields dashboard for farming opportunities, the Unlocks calendar for token vesting data, and the Raises tracker for funding rounds.",
+        },
+      ],
+      faq: [
+        {
+          question: "What is DeFi Llama?",
+          answer: "DeFi Llama is the largest open-source DeFi data aggregator, tracking Total Value Locked (TVL), protocol revenue, yields, and other metrics across 200+ blockchain networks and thousands of DeFi protocols.",
+        },
+        {
+          question: "Is DeFi Llama free to use?",
+          answer: "Yes, the core platform is completely free and ad-free. DeFi Llama is funded by the LlamaX governance token and community contributions. A paid Pro API tier is available for developers who need higher rate limits.",
+        },
+        {
+          question: "How does DeFi Llama calculate TVL?",
+          answer: "TVL is calculated using open-source data adapters that track the value of assets locked in each protocol's smart contracts. Every adapter is publicly available on GitHub, so anyone can verify the methodology or contribute improvements.",
+        },
+        {
+          question: "Which blockchains does DeFi Llama cover?",
+          answer: "DeFi Llama covers over 200 blockchain networks including Ethereum, Solana, Arbitrum, Optimism, Base, Polygon, Avalanche, BNB Chain, and many emerging L2s and appchains. New chains are added regularly based on community demand.",
+        },
+        {
+          question: "Can I use DeFi Llama data in my own project?",
+          answer: "Absolutely. DeFi Llama provides a free API that developers can use to integrate DeFi data into their own dashboards, trading bots, or analytics tools. The entire platform is open-source and community-maintained.",
+        },
+        {
+          question: "How is DeFi Llama different from CoinGecko or Dune Analytics?",
+          answer: "DeFi Llama specializes in DeFi-specific metrics like TVL, protocol revenue, and yield data, with a focus on open-source transparency. CoinGecko focuses on price data and market cap, while Dune Analytics is a general-purpose SQL-based blockchain query platform. They complement each other rather than compete directly.",
+        },
+      ],
+    },
   },
   {
     id: "messari-charts",
@@ -4706,6 +5025,107 @@ The Phantom team continues to rapidly develop new features, including in-app dAp
     url: "https://safe.global",
     pricing: "Free",
     rating: 4.8,
+    featured: true,
+    detailedContent: {
+      longDescription: `Safe Wallet (formerly known as Gnosis Safe) is the most trusted multi-signature wallet infrastructure in Web3, securing over $100 billion in digital assets across the Ethereum ecosystem and beyond. Since its inception in 2018, Safe has become the de facto standard for teams, DAOs, institutions, and enterprises that require collective asset management with robust security guarantees. If a protocol's treasury is held in a multi-sig, there's a very high chance that multi-sig is a Safe.
+
+The core innovation of Safe lies in its smart contract wallet architecture. Unlike traditional externally owned accounts (EOAs) controlled by a single private key, Safe wallets are smart contracts that enforce customizable access control policies. The most common configuration is M-of-N multi-signature, where M out of N designated signers must approve any transaction before it executes. This eliminates single points of failure — if one team member's key is compromised, the attacker still cannot move funds without additional signatures. Safe supports configurations ranging from simple 2-of-3 setups for small teams to complex 5-of-9 arrangements for DAO treasuries with multiple stakeholders.
+
+Safe's capabilities extend far beyond basic multi-sig. The platform supports transaction batching, allowing multiple operations to be bundled into a single atomic transaction — a critical feature for DeFi interactions where multiple protocol calls must succeed or fail together. Safe also supports gasless transactions through relayers, delegate keys for hot wallet operations, and spending limits that allow specific addresses to spend up to a predefined amount without full multi-sig approval. These features make Safe equally suitable for both cold treasury storage and active DeFi treasury management.
+
+The Safe ecosystem has grown into a full-stack infrastructure layer. The Safe{Core} SDK allows developers to build custom applications on top of Safe's smart account infrastructure. Safe{Wallet} provides a polished web interface for managing multi-sig wallets. Safe{Net} is an emerging transaction processing network. Major protocols including Aave, Uniswap, MakerDAO, Lido, and ENS use Safe to manage their treasuries and protocol parameters. For any organization managing significant on-chain assets, Safe is not just recommended — it is the industry standard that auditors, investors, and the community expect to see.`,
+      features: [
+        "M-of-N multi-signature smart contract wallets with customizable signer thresholds",
+        "Transaction batching — bundle multiple operations into a single atomic transaction",
+        "Gasless transactions via relayers for improved UX",
+        "Delegate keys for hot wallet operations with limited permissions",
+        "Spending limits allowing specific addresses predefined withdrawal caps",
+        "Safe{Core} SDK for developers building on Safe infrastructure",
+        "Multi-chain support across Ethereum, Polygon, Arbitrum, Optimism, Base, Gnosis Chain, and more",
+        "Integration with hardware wallets including Ledger and Trezor for cold signing",
+        "Transaction simulation before execution to preview outcomes",
+        "Address book and team management for organizational workflows",
+        "Composable with DeFi protocols for treasury management",
+        "Battle-tested security — $100B+ in assets secured with zero smart contract exploits",
+      ],
+      pricingPlans: [
+        {
+          name: "Safe{Wallet}",
+          price: "Free",
+          features: ["Multi-sig wallet creation", "Transaction batching", "Spending limits", "Multi-chain support", "Hardware wallet integration", "Address book", "Team management"],
+          highlight: true,
+        },
+        {
+          name: "Safe{Core} (Developer)",
+          price: "Free / usage-based",
+          features: ["SDK and API access", "Account abstraction", "Custom transaction guards", "Plugin system", "Relayer infrastructure"],
+        },
+      ],
+      bestFor: [
+        "DAO treasuries requiring multi-signature governance",
+        "DeFi protocol teams managing protocol parameters and upgrades",
+        "Web3 startups holding community-raised funds",
+        "Institutional investors requiring collective custody",
+        "Any organization with shared on-chain assets",
+      ],
+      pros: [
+        "Industry gold standard — expected by auditors, investors, and the community",
+        "$100B+ secured with a perfect security track record",
+        "Smart contract architecture eliminates single points of failure",
+        "Rich feature set including batching, spending limits, and relayers",
+        "Extensive ecosystem with SDK, plugins, and developer tooling",
+      ],
+      cons: [
+        "Gas costs higher than simple EOA transactions due to smart contract execution",
+        "Setup process can be intimidating for non-technical users",
+        "Requires coordination among multiple signers for every transaction",
+        "Some DeFi protocols may not fully support smart contract wallets",
+      ],
+      alternatives: ["metamask", "ledger-nano", "trezor", "argent"],
+      gettingStarted: [
+        {
+          step: 1,
+          title: "Create a Safe wallet",
+          description: "Visit app.safe.global, connect your wallet, and click \"Create new Safe.\" Choose your network (Ethereum mainnet, Polygon, Arbitrum, etc.) and give your Safe a name.",
+        },
+        {
+          step: 2,
+          title: "Configure signers and threshold",
+          description: "Add the Ethereum addresses of all signers and set the confirmation threshold (e.g., 3 out of 5 must approve). Pay the deployment gas fee to create the Safe smart contract on-chain.",
+        },
+        {
+          step: 3,
+          title: "Start using your Safe",
+          description: "Deposit assets into your Safe address. To send transactions, one signer initiates and others confirm via the web interface or mobile app. Explore spending limits, transaction batching, and DeFi integrations as needed.",
+        },
+      ],
+      faq: [
+        {
+          question: "What is Safe Wallet (Gnosis Safe)?",
+          answer: "Safe is a smart contract-based multi-signature wallet that requires multiple signers to approve transactions before they execute. It is the most widely used multi-sig wallet in Web3, securing over $100 billion in assets for DAOs, institutions, and protocol teams.",
+        },
+        {
+          question: "How does Safe differ from MetaMask?",
+          answer: "MetaMask is an Externally Owned Account (EOA) controlled by a single private key — if that key is compromised, all funds are at risk. Safe is a smart contract wallet that requires multiple signatures (M-of-N) to authorize transactions, eliminating single points of failure. Many teams use MetaMask as a signer interface for their Safe.",
+        },
+        {
+          question: "Is Safe free to use?",
+          answer: "Yes, Safe{Wallet} is free to use. You only pay the standard blockchain gas fees for deploying your Safe smart contract and executing transactions. The Safe{Core} SDK and API are also available for developers with usage-based pricing for higher volumes.",
+        },
+        {
+          question: "What happens if a signer loses their key?",
+          answer: "As long as you still have enough signers to meet the threshold (e.g., 3 out of 5), the remaining signers can still operate the Safe. You can also replace a lost signer by having the remaining signers approve a transaction to add a new signer address and remove the lost one.",
+        },
+        {
+          question: "Which networks does Safe support?",
+          answer: "Safe supports Ethereum mainnet and major EVM-compatible chains including Polygon, Arbitrum, Optimism, Base, Gnosis Chain, Avalanche, BNB Chain, Scroll, and many others. The same Safe interface works across all supported networks.",
+        },
+        {
+          question: "Can I use a hardware wallet with Safe?",
+          answer: "Yes, Safe fully supports hardware wallets including Ledger and Trezor. Each signer can connect their hardware wallet to sign transactions, combining the security of cold storage with the multi-sig protection of Safe's smart contract architecture.",
+        },
+      ],
+    },
   },
   {
     id: "fire",
@@ -4806,6 +5226,114 @@ The Phantom team continues to rapidly develop new features, including in-app dAp
     url: "https://www.ledger.com",
     pricing: "$79-399 one-time",
     rating: 4.7,
+    featured: true,
+    detailedContent: {
+      longDescription: `Ledger is the world's most popular hardware wallet manufacturer, with over 7 million devices sold across 200+ countries since its founding in 2014 in Paris, France. Ledger's hardware wallets provide the gold standard in cryptocurrency self-custody by keeping private keys completely isolated in a secure element chip — the same type of tamper-resistant hardware used in passports and credit cards. For anyone serious about securing their crypto assets, Ledger represents the first and most important line of defense.
+
+The Ledger product line centers around two flagship devices: the Ledger Nano X and the Ledger Nano S Plus. The Nano X features Bluetooth connectivity for mobile use, a larger screen, and the ability to install up to 100 apps simultaneously. The Nano S Plus is the wired-only option with a larger screen than the original Nano S and support for up to 100 apps. Both devices use Ledger's custom BOLOS (Blockchain Open Ledger Operating System), which isolates each cryptocurrency application from others, ensuring that a vulnerability in one app cannot compromise assets managed by another.
+
+At the heart of every Ledger device is a Secure Element (SE) chip — a CC EAL5+ certified component that is designed to resist both physical and software attacks. When you create a wallet, your 24-word recovery phrase is generated and stored entirely within this secure enclave, never exposed to your computer or phone. All transaction signing happens inside the SE chip, meaning even if your connected device is completely compromised by malware, your private keys remain safe. This hardware-level isolation is what distinguishes true hardware wallets from software wallets and is the reason Ledger has maintained a flawless security record for its devices.
+
+Ledger Live, the companion application, has evolved into a comprehensive crypto management platform. Beyond basic send/receive functionality, Ledger Live now supports in-app token swaps, staking for multiple assets including Ethereum (ETH), Solana (SOL), and Tezos (XTZ), DeFi protocol access via WalletConnect, and NFT management. Users can buy crypto directly through integrated partners like Coinify and MoonPay, track their portfolio performance, and access dApps — all while their private keys remain securely locked in the hardware device.
+
+Ledger's commitment to security extends beyond hardware. The company runs the Ledger Donjon, a world-class security research lab that continuously attempts to break Ledger devices to identify and fix vulnerabilities before attackers can. Ledger also offers Ledger Recover, an optional subscription service that encrypts and distributes shards of your recovery phrase to trusted custodians, providing a safety net for users worried about losing their seed phrase. For institutions, Ledger Enterprise provides a managed custody platform with governance rules, multi-approval workflows, and SOC 2 Type 2 certification.`,
+      features: [
+        "CC EAL5+ certified Secure Element chip for tamper-resistant key storage",
+        "24-word recovery phrase generated and stored entirely within the secure enclave",
+        "BOLOS operating system isolating each crypto app from others",
+        "Ledger Live app for portfolio management, swaps, staking, and DeFi access",
+        "Bluetooth connectivity (Nano X) for mobile use on iOS and Android",
+        "Supports 5,500+ cryptocurrencies and tokens across major blockchains",
+        "In-app token swaps via integrated exchange partners",
+        "Multi-asset staking with real-time reward tracking",
+        "NFT management with visual gallery in Ledger Live",
+        "WalletConnect integration for secure DeFi protocol access",
+        "Ledger Donjon security lab continuously testing device resilience",
+        "Optional Ledger Recover service for encrypted recovery phrase backup",
+      ],
+      pricingPlans: [
+        {
+          name: "Ledger Nano S Plus",
+          price: "$79 one-time",
+          features: ["Secure Element chip", "USB-C connection", "Up to 100 apps", "Ledger Live app", "5,500+ coins supported", "No Bluetooth"],
+        },
+        {
+          name: "Ledger Nano X",
+          price: "$149 one-time",
+          features: ["All Nano S Plus features", "Bluetooth connectivity", "Mobile compatible (iOS/Android)", "Larger screen", "Rechargeable battery", "Up to 100 apps"],
+          highlight: true,
+        },
+        {
+          name: "Ledger Stax",
+          price: "$399 one-time",
+          features: ["All Nano X features", "Curved E Ink touchscreen", "Customizable lock screen", "Wireless charging", "Magnetic stacking", "Next-gen design"],
+        },
+      ],
+      bestFor: [
+        "Long-term crypto investors wanting maximum self-custody security",
+        "DeFi users who need secure dApp interaction without exposing private keys",
+        "Anyone holding significant crypto value that software wallets cannot protect",
+        "Institutional investors requiring SOC 2 compliant custody infrastructure",
+        "Multi-chain users managing diverse portfolios across 5,500+ assets",
+      ],
+      pros: [
+        "Industry-leading Secure Element chip with CC EAL5+ certification",
+        "7+ million devices sold with zero hardware-level exploits",
+        "Supports 5,500+ coins — broadest hardware wallet coverage",
+        "Ledger Live is a polished, full-featured companion application",
+        "Bluetooth option (Nano X) enables convenient mobile use",
+      ],
+      cons: [
+        "Nano X Bluetooth battery is non-replaceable",
+        "Ledger Recover subscription service raised community privacy concerns",
+        "Physical device required for every transaction — less convenient than hot wallets",
+        "Stax ($399) is significantly more expensive than competitors",
+      ],
+      alternatives: ["trezor", "metamask", "safe-wallet", "phantom"],
+      gettingStarted: [
+        {
+          step: 1,
+          title: "Purchase from the official Ledger store",
+          description: "Always buy directly from ledger.com — never from third-party sellers on Amazon or eBay. This ensures your device has not been tampered with. Choose between Nano S Plus ($79), Nano X ($149), or Stax ($399).",
+        },
+        {
+          step: 2,
+          title: "Set up your device and write down your recovery phrase",
+          description: "Follow the on-device instructions to generate your 24-word recovery phrase. Write it down on the provided recovery sheet, store it in a secure physical location, and never enter it into any digital device or share it with anyone.",
+        },
+        {
+          step: 3,
+          title: "Install Ledger Live and add accounts",
+          description: "Download Ledger Live from ledger.com, connect your device, and install the apps for the cryptocurrencies you hold. Transfer a small test amount first to verify everything works before moving your full balance.",
+        },
+      ],
+      faq: [
+        {
+          question: "What is a Ledger hardware wallet?",
+          answer: "A Ledger hardware wallet is a physical device that stores your cryptocurrency private keys in a secure element chip, completely isolated from the internet. This means even if your computer is hacked, your crypto remains safe because the private keys never leave the device. All transactions must be physically confirmed by pressing buttons on the device.",
+        },
+        {
+          question: "Is Ledger safer than a software wallet like MetaMask?",
+          answer: "Yes, fundamentally. Software wallets store private keys on your internet-connected device where malware can potentially access them. Ledger stores keys in a tamper-resistant Secure Element chip that is physically isolated — transaction signing happens inside the chip, and private keys are never exposed to your computer or phone.",
+        },
+        {
+          question: "What happens if I lose my Ledger device?",
+          answer: "Your crypto is not stored on the device — it is on the blockchain. As long as you have your 24-word recovery phrase, you can restore access to all your assets on any new Ledger device or compatible wallet. This is why securing your recovery phrase is absolutely critical: anyone who has it can access your funds.",
+        },
+        {
+          question: "Which Ledger model should I buy?",
+          answer: "For most users, the Nano X ($149) is the best choice — it offers Bluetooth for mobile use, a larger screen, and the same security as the Stax at a much lower price. The Nano S Plus ($79) is great if you only use a computer and want to save money. The Stax ($399) offers a premium E Ink touchscreen experience for those who want the best hardware.",
+        },
+        {
+          question: "Can I use Ledger with DeFi protocols?",
+          answer: "Absolutely. Ledger Live supports WalletConnect, allowing you to securely interact with DeFi protocols like Uniswap, Aave, and Compound. You can also connect your Ledger to MetaMask as a hardware signer, combining MetaMask's dApp compatibility with Ledger's hardware security.",
+        },
+        {
+          question: "Does Ledger support staking?",
+          answer: "Yes, Ledger Live supports native staking for Ethereum (ETH), Solana (SOL), Tezos (XTZ), Cosmos (ATOM), Polkadot (DOT), and several other assets. You can stake directly from the app while your private keys remain secure in the hardware device. Rewards are tracked and displayed in your portfolio.",
+        },
+      ],
+    },
   },
   {
     id: "trezor",
