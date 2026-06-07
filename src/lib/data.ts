@@ -4062,7 +4062,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
     category: "charting",
     tags: ["Charts", "Pine Script", "Community"],
     url: "https://tradingview.com",
-    affiliateUrl: "https://tradingview.com/partner-program",
+    affiliateUrl: "https://www.tradingview.com/?aff_id=167394",
     pricing: "Free / $14.95-59.95/mo",
     rating: 4.8,
     featured: true,
