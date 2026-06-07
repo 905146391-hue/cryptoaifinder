@@ -2053,7 +2053,7 @@ CoinStats Premium unlocks additional features including advanced portfolio analy
     category: "portfolio",
     tags: ["Tax", "Portfolio", "800+ Integrations"],
     url: "https://koinly.io",
-    affiliateUrl: "https://koinly.io/?via=77B460BA&utm_source=friend",
+    affiliateUrl: "https://koinly.io/?via=9692AD35&utm_source=affiliate",
     pricing: "Free / $49+/mo",
     rating: 4.5,
     detailedContent: {
