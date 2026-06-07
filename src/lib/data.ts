@@ -4926,7 +4926,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
         "Teams building complex financial primitives (lending, AMM, derivatives)",
         "Protocols that have already passed manual audits and want additional certainty",
         "Security-conscious DAOs wanting mathematical guarantees for treasury contracts",
-        "Developers who want to shift from "bug hunting" to "proving correctness"",
+        "Developers who want to shift from 'bug hunting' to 'proving correctness'",
       ],
       pros: [
         "Mathematical certainty: if proof passes, invariant cannot be violated under any conditions",
