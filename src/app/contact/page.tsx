@@ -50,9 +50,12 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:submit@cryptoaifinder.com"
-              className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-sm text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-300 transition-all"
             >
-              submit@cryptoaifinder.com →
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              submit@cryptoaifinder.com
             </a>
           </div>
 
@@ -66,9 +69,12 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:support@cryptoaifinder.com"
-              className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-300 transition-all"
             >
-              support@cryptoaifinder.com →
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              support@cryptoaifinder.com
             </a>
           </div>
 
@@ -82,9 +88,12 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:partnerships@cryptoaifinder.com"
-              className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-500/10 border border-purple-500/20 text-sm text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all"
             >
-              partnerships@cryptoaifinder.com →
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              partnerships@cryptoaifinder.com
             </a>
           </div>
 
@@ -98,9 +107,12 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:hello@cryptoaifinder.com"
-              className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-yellow-500/10 border border-yellow-500/20 text-sm text-yellow-400 hover:bg-yellow-500/20 hover:text-yellow-300 transition-all"
             >
-              hello@cryptoaifinder.com →
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              hello@cryptoaifinder.com
             </a>
           </div>
         </div>
