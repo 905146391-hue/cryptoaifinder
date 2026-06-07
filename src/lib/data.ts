@@ -210,6 +210,7 @@ The platform also includes a social trading marketplace where users can browse, 
   },
   {
     id: "cryptohopper",
+    featured: true,
     name: "Cryptohopper",
     description: "Cloud-based AI strategy designer with backtesting, simulation, and marketplace for trading strategies and signals.",
     category: "trading-bots",
@@ -289,6 +290,7 @@ The platform also includes a social trading marketplace where users can browse, 
   },
   {
     id: "bitsgap",
+    featured: true,
     name: "Bitsgap",
     description: "Unified dashboard for multi-exchange management with AI grid bots and arbitrage detection.",
     category: "trading-bots",
@@ -380,6 +382,7 @@ The platform also includes a demo mode that allows traders to test their strateg
   },
   {
     id: "coinrule",
+    featured: true,
     name: "Coinrule",
     description: "No-code strategy builder with visual rule creation. Perfect for beginners who want automation without coding.",
     category: "trading-bots",
@@ -895,6 +898,7 @@ The platform supports multi-chain analysis, ensuring that users can track activi
   },
   {
     id: "arkham",
+    featured: true,
     name: "Arkham Intelligence",
     description: "800M+ labeled addresses with on-chain intelligence and wallet association identification.",
     category: "analytics",
@@ -1076,6 +1080,7 @@ Dune continues to expand its blockchain coverage and data offerings, recently ad
   },
   {
     id: "glassnode",
+    featured: true,
     name: "Glassnode",
     description: "On-chain metrics and token performance analytics. Focus on institutional and macro analysis.",
     category: "analytics",
@@ -1174,6 +1179,7 @@ Glassnode Studio provides access to pre-built dashboards organized by topic: Bit
   },
   {
     id: "moralis",
+    featured: true,
     name: "Moralis",
     description: "Web3 API with real-time on-chain data streams. Developer-focused blockchain infrastructure.",
     category: "analytics",
@@ -1301,6 +1307,7 @@ Moralis continues to expand its feature set with new APIs, additional chain supp
   },
   {
     id: "defillama",
+    featured: true,
     name: "DeFi Llama",
     description: "Largest TVL aggregator for DeFi protocols. Open-source and community-maintained.",
     category: "analytics",
@@ -1403,6 +1410,7 @@ The best part? DeFi Llama is completely free to use with no premium tiers, no lo
   },
   {
     id: "chainalysis",
+    featured: true,
     name: "Chainalysis",
     description: "Blockchain analysis and investigation platform. Industry standard for compliance and investigation.",
     category: "analytics",
@@ -1512,6 +1520,7 @@ The best part? DeFi Llama is completely free to use with no premium tiers, no lo
   },
   {
     id: "etherscan",
+    featured: true,
     name: "Etherscan",
     description: "The leading Ethereum blockchain explorer. Transaction tracking, contract verification, and API access.",
     category: "analytics",
@@ -1604,6 +1613,7 @@ The platform also includes useful developer tools like the Solidity compiler for
   },
   {
     id: "blockchain-com-explorer",
+    featured: true,
     name: "Blockchain.com Explorer",
     description: "Popular blockchain explorer for Bitcoin, Ethereum, and more. Simple interface.",
     category: "analytics",
@@ -1677,6 +1687,7 @@ The platform also includes useful developer tools like the Solidity compiler for
   },
   {
     id: "solscan",
+    featured: true,
     name: "Solscan",
     description: "Solana blockchain explorer with detailed transaction and account information.",
     category: "analytics",
@@ -1750,6 +1761,7 @@ The platform also includes useful developer tools like the Solidity compiler for
   },
   {
     id: "polygonscan",
+    featured: true,
     name: "Polygonscan",
     description: "Official Polygon blockchain explorer. Track transactions, contracts, and tokens.",
     category: "analytics",
@@ -1828,6 +1840,7 @@ The platform also includes useful developer tools like the Solidity compiler for
   },
   {
     id: "bscscan",
+    featured: true,
     name: "BscScan",
     description: "BNB Smart Chain explorer. Most popular BSC block explorer with API access.",
     category: "analytics",
@@ -1916,6 +1929,7 @@ The platform also includes useful developer tools like the Solidity compiler for
   },
   {
     id: "arbiscan",
+    featured: true,
     name: "Arbiscan",
     description: "Arbitrum One blockchain explorer. Track L2 transactions and smart contracts.",
     category: "analytics",
@@ -2044,6 +2058,7 @@ The platform also includes useful developer tools like the Solidity compiler for
   },
   {
     id: "the-graph",
+    featured: true,
     name: "The Graph",
     description: "Indexing protocol for querying blockchain data with GraphQL. Decentralized data access.",
     category: "analytics",
@@ -2144,6 +2159,7 @@ The platform also includes useful developer tools like the Solidity compiler for
   },
   {
     id: "dappradar",
+    featured: true,
     name: "DappRadar",
     description: "DApp discovery and analytics platform. Track DAU, TVL, and volume across all protocols.",
     category: "analytics",
@@ -2227,6 +2243,7 @@ The RADAR token, launched in 2021, powers DappRadar's ecosystem through governan
   },
   {
     id: "messari",
+    featured: true,
     name: "Messari",
     description: "Crypto research with AI-driven industry analysis and institutional-grade data.",
     category: "analytics",
@@ -2312,6 +2329,7 @@ The recently introduced AI-powered features include natural language querying (a
   },
   {
     id: "coingecko",
+    featured: true,
     name: "CoinGecko",
     description: "Largest crypto data aggregator. Prices, market cap, on-chain analytics, and research reports.",
     category: "analytics",
@@ -2409,6 +2427,7 @@ The platform's mobile app brings all of these features to iOS and Android device
   },
   {
     id: "coinmarketcap",
+    featured: true,
     name: "CoinMarketCap",
     description: "Most referenced crypto price tracking website. Rankings, portfolio, and educational content.",
     category: "analytics",
@@ -2545,6 +2564,7 @@ The Diamond Awards program recognizes top-performing cryptocurrency projects and
   },
   {
     id: "bybt",
+    featured: true,
     name: "Bybt (CoinGlass)",
     description: "Comprehensive futures and options data. Liquidation maps and open interest tracking.",
     category: "analytics",
@@ -2776,6 +2796,7 @@ CoinStats Premium unlocks additional features including advanced portfolio analy
   },
   {
     id: "debank",
+    featured: true,
     name: "DeBank",
     description: "DeFi portfolio tracking with on-chain activity monitoring. Most comprehensive DeFi dashboard.",
     category: "portfolio",
@@ -2879,6 +2900,7 @@ The DeBank API (previously known as OpenOcean API) is widely used by developers 
   },
   {
     id: "cointracker",
+    featured: true,
     name: "CoinTracker",
     description: "Portfolio tracking with tax calculation. Syncs with 500+ wallets and exchanges.",
     category: "portfolio",
@@ -2958,6 +2980,7 @@ The DeBank API (previously known as OpenOcean API) is widely used by developers 
   },
   {
     id: "koinly",
+    featured: true,
     name: "Koinly",
     description: "Crypto tax calculator with portfolio tracking. Supports 800+ exchanges and wallets.",
     category: "portfolio",
@@ -3102,6 +3125,7 @@ The DeBank API (previously known as OpenOcean API) is widely used by developers 
   },
   {
     id: "exodus",
+    featured: true,
     name: "Exodus Portfolio",
     description: "Beautiful multi-asset wallet with built-in portfolio tracking and exchange.",
     category: "portfolio",
@@ -3334,6 +3358,7 @@ The DeBank API (previously known as OpenOcean API) is widely used by developers 
   },
   {
     id: "uniswap",
+    featured: true,
     name: "Uniswap",
     description: "Largest decentralized exchange by volume. AI-powered liquidity provision and routing.",
     category: "defi",
@@ -3425,6 +3450,7 @@ Uniswap's self-custodial model ensures that users maintain full control of their
   },
   {
     id: "curve",
+    featured: true,
     name: "Curve Finance",
     description: "Specialized AMM for stablecoins and pegged assets. Optimized for low-slippage trades.",
     category: "defi",
@@ -3523,6 +3549,7 @@ Curve's product expansion beyond stablecoin pools includes: Curve Crypto (volati
   },
   {
     id: "aave",
+    featured: true,
     name: "Aave",
     description: "Leading DeFi lending protocol. Flash loans, variable/stable rates, and safety module.",
     category: "defi",
@@ -3616,6 +3643,7 @@ The protocol's governance is entirely on-chain through the Aave DAO, where AAVE 
   },
   {
     id: "compound",
+    featured: true,
     name: "Compound",
     description: "Decentralized lending protocol with cTokens. Earn interest on supplied assets.",
     category: "defi",
@@ -3701,6 +3729,7 @@ The protocol's governance is entirely on-chain through the Aave DAO, where AAVE 
   },
   {
     id: "lido",
+    featured: true,
     name: "Lido",
     description: "Liquid staking protocol for Ethereum and other PoS chains. Stake without locking.",
     category: "defi",
@@ -4024,6 +4053,7 @@ Beyond Ethereum, Lido offers liquid staking for Polygon (stMATIC), Solana (stSOL
   },
   {
     id: "1inch-defi",
+    featured: true,
     name: "1inch DeFi",
     description: "DEX aggregator finding best prices across 100+ liquidity sources. Pathfinder algorithm.",
     category: "defi",
@@ -4182,6 +4212,7 @@ Beyond the core aggregation product, 1inch has expanded into a full DeFi ecosyst
   },
   {
     id: "gmx",
+    featured: true,
     name: "GMX",
     description: "Decentralized perpetual exchange on Arbitrum and Avalanche. Up to 50x leverage.",
     category: "defi",
@@ -4281,6 +4312,7 @@ Beyond the core aggregation product, 1inch has expanded into a full DeFi ecosyst
   },
   {
     id: "certik",
+    featured: true,
     name: "CertiK Skynet",
     description: "AI Auditor with 88.6% vulnerability detection rate. Multi-stage verification with real-time risk monitoring.",
     category: "security",
@@ -4405,6 +4437,7 @@ CertiK has established partnerships with major blockchain ecosystems including B
   },
   {
     id: "revoke-cash",
+    featured: true,
     name: "Revoke.cash",
     description: "Token approval auditing and malicious approval revocation. Essential wallet hygiene tool.",
     category: "security",
@@ -4592,6 +4625,7 @@ SlowMist also contributes significantly to the ecosystem through open-source too
   },
   {
     id: "consensys-diligence",
+    featured: true,
     name: "ConsenSys Diligence",
     description: "Smart contract security audits by ConsenSys. MythX automated analysis tool.",
     category: "security",
@@ -4669,6 +4703,7 @@ SlowMist also contributes significantly to the ecosystem through open-source too
   },
   {
     id: "trail-of-bits",
+    featured: true,
     name: "Trail of Bits",
     description: "Cybersecurity firm with deep crypto expertise. Smart contract audits and tools.",
     category: "security",
@@ -4886,6 +4921,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "certora",
+    featured: true,
     name: "Certora",
     description: "Formal verification for smart contracts. Mathematical proof of correctness.",
     category: "security",
@@ -4970,6 +5006,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "slither",
+    featured: true,
     name: "Slither (Trail of Bits)",
     description: "Static analysis framework for Solidity. Fast and accurate vulnerability detection.",
     category: "security",
@@ -5085,6 +5122,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "tenderly",
+    featured: true,
     name: "Tenderly",
     description: "Web3 development platform with smart contract monitoring and alerting.",
     category: "security",
@@ -5194,6 +5232,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "gnosis-safe",
+    featured: true,
     name: "Safe (Gnosis Safe)",
     description: "Most trusted multi-sig wallet. $100B+ secured across Web3.",
     category: "security",
@@ -5272,6 +5311,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "blockaid",
+    featured: true,
     name: "Blockaid",
     description: "Web3 security API. Simulates transactions and detects threats before signing.",
     category: "security",
@@ -5436,6 +5476,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "immunefi",
+    featured: true,
     name: "Immunefi",
     description: "Largest Web3 bug bounty platform. $150M+ in bounties paid to white-hats.",
     category: "security",
@@ -5519,6 +5560,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "code4rena",
+    featured: true,
     name: "Code4rena",
     description: "Competitive smart contract auditing. Wardens compete to find vulnerabilities.",
     category: "security",
@@ -5623,6 +5665,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "hardhat",
+    featured: true,
     name: "Hardhat",
     description: "Ethereum development environment with testing and debugging. Plugin ecosystem.",
     category: "security",
@@ -5698,6 +5741,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "foundry",
+    featured: true,
     name: "Foundry",
     description: "Blazing fast Ethereum development toolkit. Forge for testing, Cast for RPC.",
     category: "security",
@@ -5808,6 +5852,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "lunarcrush",
+    featured: true,
     name: "LunarCrush",
     description: "Social media aggregation with sentiment analysis across Twitter, Reddit, YouTube. AI-driven signals.",
     category: "sentiment",
@@ -5977,6 +6022,7 @@ OpenZeppelin's commitment to the ecosystem extends to education and open-source 
   },
   {
     id: "tradingview-sentiment",
+    featured: true,
     name: "TradingView (Sentiment)",
     description: "Social sentiment from TradingView community. Most widely used sentiment overlay.",
     category: "sentiment",
@@ -6270,6 +6316,7 @@ TradingView's pricing model offers a generous free tier that includes basic char
   },
   {
     id: "trendspider",
+    featured: true,
     name: "TrendSpider",
     description: "Automated pattern recognition with trendlines and key levels. AI reduces subjective bias in TA.",
     category: "charting",
@@ -6362,6 +6409,7 @@ TrendSpider also offers a screener tool that can scan hundreds of assets simulta
   },
   {
     id: "tickeron",
+    featured: true,
     name: "Tickeron",
     description: "AI pattern recognition and predictions across crypto, stocks, and ETFs. Machine learning TA.",
     category: "charting",
@@ -6446,6 +6494,7 @@ TrendSpider also offers a screener tool that can scan hundreds of assets simulta
   },
   {
     id: "coinglass",
+    featured: true,
     name: "CoinGlass",
     description: "Futures and options market data with liquidation heatmaps. Essential for derivatives traders.",
     category: "charting",
@@ -6540,6 +6589,7 @@ TrendSpider also offers a screener tool that can scan hundreds of assets simulta
   },
   {
     id: "glassnode-charts",
+    featured: true,
     name: "Glassnode Charts",
     description: "On-chain charts with technical indicators. Premium data visualization.",
     category: "charting",
@@ -6669,6 +6719,7 @@ TrendSpider also offers a screener tool that can scan hundreds of assets simulta
   },
   {
     id: "dexscreener",
+    featured: true,
     name: "DEXScreener",
     description: "Real-time DEX pair charts across 50+ chains. Fast and free.",
     category: "charting",
@@ -6886,6 +6937,7 @@ The platform also offers a powerful API that developers can use to build custom 
   },
   {
     id: "coingecko-charts",
+    featured: true,
     name: "CoinGecko (Charts)",
     description: "Largest crypto price charts. Free and premium data feeds.",
     category: "charting",
@@ -6965,6 +7017,7 @@ The platform also offers a powerful API that developers can use to build custom 
   },
   {
     id: "coinmarketcap-charts",
+    featured: true,
     name: "CoinMarketCap (Charts)",
     description: "Most referenced crypto price charts. Historical data and community ratings.",
     category: "charting",
@@ -7074,6 +7127,7 @@ The platform also offers a powerful API that developers can use to build custom 
   },
   {
     id: "bybt-charts",
+    featured: true,
     name: "Bybt (Charts)",
     description: "Comprehensive futures and options charts. Liquidation maps.",
     category: "charting",
@@ -7187,6 +7241,7 @@ The platform also offers a powerful API that developers can use to build custom 
   },
   {
     id: "metamask",
+    featured: true,
     name: "MetaMask",
     description: "Leading Ethereum wallet with 650K+ assets supported. AI transaction monitoring and smart gas prediction.",
     category: "wallet",
@@ -7300,6 +7355,7 @@ The platform's developer ecosystem is one of its greatest strengths, with virtua
   },
   {
     id: "phantom",
+    featured: true,
     name: "Phantom",
     description: "Leading Solana wallet with in-app staking and NFT management. Sleek UI.",
     category: "wallet",
@@ -7408,6 +7464,7 @@ The Phantom team continues to rapidly develop new features, including in-app dAp
   },
   {
     id: "rainbow",
+    featured: true,
     name: "Rainbow",
     description: "Beautiful Ethereum wallet with DeFi integration. Best UI/UX in Web3.",
     category: "wallet",
@@ -7678,6 +7735,7 @@ The Safe ecosystem has grown into a full-stack infrastructure layer. The Safe{Co
   },
   {
     id: "exodus",
+    featured: true,
     name: "Exodus",
     description: "Beautiful multi-asset wallet with built-in exchange. 260+ assets supported, human support.",
     category: "wallet",
@@ -7920,6 +7978,7 @@ Ledger's commitment to security extends beyond hardware. The company runs the Le
   },
   {
     id: "onekey",
+    featured: true,
     name: "OneKey (Hardware)",
     description: "Open-source hardware wallet with mobile app. Supports 1000+ coins, air-gapped signing.",
     category: "wallet",
@@ -8009,6 +8068,7 @@ OneKey has gained particular traction in Asia and among users who value open-sou
   },
   {
     id: "trezor",
+    featured: true,
     name: "Trezor (Hardware)",
     description: "First hardware wallet. Open-source firmware with Trezor Suite app.",
     category: "wallet",
@@ -8198,6 +8258,7 @@ Security features include a PIN code with exponential delay between attempts (pr
   },
   {
     id: "walletconnect",
+    featured: true,
     name: "WalletConnect",
     description: "Open-source protocol for connecting wallets to dApps. Universal QR code standard.",
     category: "wallet",
@@ -8806,6 +8867,7 @@ Beyond trading, Binance has built an entire ecosystem: Binance Smart Chain (BSC)
   },
   {
     id: "okx",
+    featured: true,
     name: "OKX",
     description: "Top-3 global crypto exchange. Advanced trading tools, Copy Trading, and Web3 ecosystem.",
     category: "exchange",
@@ -8897,6 +8959,7 @@ The platform places a strong emphasis on security, employing a combination of co
   },
   {
     id: "bybit",
+    featured: true,
     name: "Bybit",
     description: "Fast-growing crypto exchange with derivatives focus. Copy Trading and Launchpad.",
     category: "exchange",
@@ -8986,6 +9049,7 @@ The exchange's Web3 ecosystem is expanding rapidly through Bybit Web3 Wallet, an
   },
   {
     id: "coinbase",
+    featured: true,
     name: "Coinbase",
     description: "US-regulated exchange. Most trusted by institutions. Advanced Trade and Base L2.",
     category: "exchange",
@@ -9073,6 +9137,7 @@ Base, Coinbase's Ethereum Layer-2 network built on the OP Stack, has quickly bec
   },
   {
     id: "kraken",
+    featured: true,
     name: "Kraken",
     description: "US-based exchange with strong security record. 220+ coins, staking, and futures.",
     category: "exchange",
@@ -9313,6 +9378,7 @@ In 2024, Kraken launched Kraken Wallet, a self-custody wallet supporting 8 block
   },
   {
     id: "deribit",
+    featured: true,
     name: "Deribit",
     description: "Leading crypto options and futures exchange. 90%+ options market share.",
     category: "exchange",
@@ -9740,6 +9806,7 @@ In 2024, Kraken launched Kraken Wallet, a self-custody wallet supporting 8 block
   },
   {
     id: "delphi-digital",
+    featured: true,
     name: "Delphi Digital",
     description: "Premium crypto research firm. Deep protocol analysis and investment thesis.",
     category: "news-data",
@@ -9854,6 +9921,7 @@ In 2024, Kraken launched Kraken Wallet, a self-custody wallet supporting 8 block
   },
   {
     id: "galaxy-research",
+    featured: true,
     name: "Galaxy Digital Research",
     description: "Institutional crypto research. Monthly reports, market overviews, and sector deep dives.",
     category: "news-data",

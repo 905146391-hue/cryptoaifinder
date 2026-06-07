@@ -59,12 +59,17 @@ function getCategoryDescription(slug: string): string {
   return descriptions[slug] || "Explore the best AI-powered crypto tools in this category.";
 }
 
+function getDomain(url: string): string {
+  try { return new URL(url).hostname; } catch { return ''; }
+}
+
 export default async function CategoryPage({ params }: PageProps) {
   const { slug } = await params;
   const category = categories.find((c) => c.id === slug);
   if (!category) return <div>Category not found</div>;
 
   const categoryTools = tools.filter((t) => t.category === slug);
+  const featuredTools = categoryTools.filter((t) => t.featured).slice(0, 12);
   const sortedTools = categoryTools.sort((a, b) => b.rating - a.rating);
   const description = getCategoryDescription(slug);
 
@@ -122,6 +127,45 @@ export default async function CategoryPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* Featured Tools in this category */}
+        {featuredTools.length > 0 && (
+          <div className="border-b border-[#1a1a2e] bg-[#0a0a0f]">
+            <div className="max-w-7xl mx-auto px-4 py-8">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-yellow-400 text-sm">★</span>
+                <span className="text-sm font-semibold text-white">Featured in {category.name}</span>
+                <span className="text-xs text-[#475569]">— hand-picked with in-depth reviews</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                {featuredTools.map((tool) => (
+                  <a
+                    key={tool.id}
+                    href={tool.affiliateUrl || `/tools/${tool.id}`}
+                    {...(tool.affiliateUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="group flex flex-col items-center gap-2 p-3 bg-[#0d0d14] border border-[#1a1a2e] rounded-xl hover:border-yellow-500/30 transition-all text-center"
+                  >
+                    {getDomain(tool.url) ? (
+                      <img
+                        src={`https://www.google.com/s2/favicons?domain=${getDomain(tool.url)}&sz=32`}
+                        alt=""
+                        className="w-7 h-7 rounded-md object-contain bg-[#06060b]"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="w-7 h-7 rounded-md bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 flex items-center justify-center text-xs font-bold text-white">
+                        {tool.name.charAt(0).toUpperCase()}
+                      </div>
+                    )}
+                    <span className="text-xs font-medium text-white group-hover:text-yellow-400 transition-colors line-clamp-1">
+                      {tool.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Category Navigation */}
         <div className="border-b border-[#1a1a2e] bg-[#0a0a0f]">
           <div className="max-w-7xl mx-auto px-4">
@@ -170,9 +214,9 @@ export default async function CategoryPage({ params }: PageProps) {
                       </div>
                     </div>
                   </div>
-                  {index === 0 && (
-                    <span className="px-2 py-0.5 text-xs bg-yellow-500/10 text-yellow-400 rounded-full border border-yellow-500/20">
-                      #1
+                  {tool.featured && (
+                    <span className="px-2 py-0.5 text-[10px] bg-yellow-500/10 text-yellow-400 rounded-full border border-yellow-500/20">
+                      Featured
                     </span>
                   )}
                 </div>

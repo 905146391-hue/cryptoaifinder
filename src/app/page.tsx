@@ -9,7 +9,7 @@ import CategoryFilter from "./components/CategoryFilter";
 import ToolGrid from "./components/ToolGrid";
 import Footer from "./components/Footer";
 import Link from "next/link";
-import { BookOpen, ArrowRight, Sparkles } from "lucide-react";
+import { BookOpen, ArrowRight, Sparkles, Star } from "lucide-react";
 
 const tagColors = ["cyan", "emerald", "purple", "orange", "pink"];
 const featuredArticles = blogPosts.slice(0, 3).map((post, i) => ({
@@ -27,8 +27,8 @@ export default function Home() {
     try { return new URL(url).hostname; } catch { return ''; }
   }
 
-  const recentTools = useMemo(() => {
-    return tools.slice(-6).reverse();
+  const featuredTools = useMemo(() => {
+    return tools.filter((t) => t.featured).slice(0, 12);
   }, []);
 
   const filteredTools = useMemo(() => {
@@ -102,20 +102,21 @@ export default function Home() {
           </section>
         )}
 
-        {/* Recently Added */}
+        {/* Featured Tools */}
         {activeCategory === "all" && !searchQuery && (
           <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-6">
             <div className="flex items-center gap-2 mb-4">
-              <Sparkles size={18} className="text-yellow-400" />
-              <span className="text-base font-semibold text-white">Recently Added</span>
-              <span className="text-xs text-[#475569]">— latest tools on CryptoFinder</span>
+              <Star size={18} className="text-yellow-400 fill-yellow-400" />
+              <span className="text-base font-semibold text-white">Featured Tools</span>
+              <span className="text-xs text-[#475569]">— editor's picks with in-depth reviews</span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-              {recentTools.map((tool) => (
+              {featuredTools.map((tool) => (
                 <a
                   key={tool.id}
-                  href={`/tools/${tool.id}`}
-                  className="group flex flex-col items-center gap-2 p-4 bg-[#0d0d14] border border-[#1a1a2e] rounded-xl hover:border-cyan-500/30 transition-all text-center"
+                  href={tool.affiliateUrl || `/tools/${tool.id}`}
+                  {...(tool.affiliateUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="group flex flex-col items-center gap-2 p-4 bg-[#0d0d14] border border-[#1a1a2e] rounded-xl hover:border-yellow-500/30 transition-all text-center"
                 >
                   <img
                     src={`https://www.google.com/s2/favicons?domain=${getDomain(tool.url)}&sz=32`}
@@ -123,7 +124,7 @@ export default function Home() {
                     className="w-8 h-8 rounded-md object-contain bg-[#06060b]"
                     loading="lazy"
                   />
-                  <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors line-clamp-1">
+                  <span className="text-sm font-medium text-white group-hover:text-yellow-400 transition-colors line-clamp-1">
                     {tool.name}
                   </span>
                   <span className="text-[10px] text-[#475569] px-1.5 py-0.5 bg-[#06060b] rounded-full">
