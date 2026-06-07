@@ -5347,6 +5347,84 @@ Ledger's commitment to security extends beyond hardware. The company runs the Le
     affiliateUrl: "https://onekey.so/r/6LYB9T",
     pricing: "$58-169 one-time",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `OneKey is an open-source hardware wallet that has quickly become one of the most popular choices for crypto self-custody, particularly among users outside the United States. Developed by a team based in Hong Kong, OneKey combines military-grade security hardware with a sleek mobile app to deliver a hardware wallet experience that rivals Ledger and Trezor at a more affordable price point. The wallet supports over 1,000 cryptocurrencies across 50+ blockchain networks, making it one of the most versatile hardware wallets available.
+
+The OneKey hardware wallet lineup includes the OneKey Classic (entry-level, $58), OneKey Touch (mid-range with touchscreen, $99), and OneKey Pro (premium with larger display, $169). All models share the same open-source firmware, security chip architecture, and air-gapped signing capability. The open-source nature is a significant differentiator — unlike Ledger, which uses closed-source firmware for some components, OneKey's entire codebase is publicly auditable on GitHub, allowing security researchers and the community to verify there are no backdoors or vulnerabilities.
+
+Air-gapped signing is one of OneKey's standout features. The device never connects to the internet directly — transactions are signed using QR code scanning, which completely eliminates the risk of remote exploitation through Bluetooth, Wi-Fi, or USB connections. The hardware uses a certified secure element chip (EAL 5+), a built-in self-destruct mechanism that wipes the device if physical tampering is detected, and a secure boot process that verifies firmware integrity on every startup. The combination of open-source software and air-gapped hardware creates a security model that is exceptionally difficult to compromise.
+
+The OneKey App serves as the companion interface for managing crypto assets and interacting with DeFi protocols. Available on iOS and Android, the app supports portfolio tracking across 50+ blockchains, NFT management, and dApp browsing through a built-in Web3 browser. One unique feature is the app's ability to function as a software wallet (without the hardware device connected), providing hot wallet convenience for daily transactions while keeping the hardware wallet for cold storage of larger holdings. The app also supports WalletConnect, allowing users to interact with DeFi protocols like Uniswap and Aave while their private keys remain secure in the hardware device.
+
+OneKey has gained particular traction in Asia and among users who value open-source transparency. The wallet supports BIP39 mnemonic phrases (compatible with most wallet software), Shamir Backup (splitting your seed into multiple shares), and a 25th passphrase for creating hidden wallets. With a built-in 500mAh battery providing up to 20 days of typical use, a USB-C charging port, and a compact credit-card-sized form factor, OneKey is designed for both security and everyday portability.`,
+      features: [
+        "100% open-source firmware and app — fully auditable codebase on GitHub, no hidden backdoors",
+        "Air-gapped signing via QR codes: no Bluetooth, no Wi-Fi, no USB data connection, zero remote attack surface",
+        "Certified EAL 5+ secure element chip with physical tamper detection and self-destruct mechanism",
+        "Supports 1,000+ cryptocurrencies across 50+ blockchain networks including BTC, ETH, SOL, BNB Chain",
+        "BIP39 mnemonic phrases with 12/18/24-word options and Shamir Backup for seed splitting",
+        "OneKey App: mobile portfolio tracker, Web3 dApp browser, WalletConnect support, and NFT management",
+        "25th passphrase (hidden wallet) for plausible deniability and additional security layer",
+        "Built-in 500mAh rechargeable battery with 20-day typical battery life and USB-C charging",
+        "Three models: Classic ($58), Touch ($99), Pro ($169) to match different budgets and needs",
+        "Compatible with MetaMask, Rabby, Phantom, and other popular wallet software via hardware signer mode",
+      ],
+      pricingPlans: [
+        {
+          name: "OneKey Classic",
+          price: "$58 one-time",
+          features: ["EAL 5+ secure chip", "Air-gapped QR signing", "Open-source firmware", "500mAh battery", "Compact credit-card size", "USB-C charging"],
+          highlight: true,
+        },
+        {
+          name: "OneKey Touch",
+          price: "$99 one-time",
+          features: ["All Classic features", "Touchscreen display", "Larger screen for transaction review", "Enhanced battery life", "Premium build materials"],
+        },
+        {
+          name: "OneKey Pro",
+          price: "$169 one-time",
+          features: ["All Touch features", "Largest display in lineup", "Extended battery", "Professional-grade secure element", "Priority firmware updates"],
+        },
+      ],
+      bestFor: [
+        "Users who prioritize open-source transparency and community-auditable security",
+        "Crypto holders in regions where Ledger's closed-source approach raises trust concerns",
+        "DeFi users who want hardware-level security for WalletConnect and dApp interactions",
+        "Beginners looking for an affordable entry point into hardware wallet self-custody",
+        "Multi-chain users who hold assets across 50+ blockchain networks in one device",
+      ],
+      pros: [
+        "100% open-source means the entire codebase is auditable — unmatched transparency in hardware wallets",
+        "Air-gapped QR signing completely eliminates remote hacking vectors that affect USB and Bluetooth wallets",
+        "Significantly more affordable than Ledger Nano X ($149) and Stax ($399) while offering comparable security",
+        "The OneKey App doubles as a functional software wallet, providing hot wallet convenience for daily use",
+        "Shamir Backup support allows splitting your seed phrase into multiple shares for disaster recovery",
+        "Active development with regular firmware updates, security audits, and expanding chain support",
+      ],
+      cons: [
+        "Smaller community and shorter track record compared to Ledger and Trezor (founded 2018 vs 2014/2013)",
+        "Not available through major retail partners like Amazon or Best Buy — must order from onekey.so directly",
+        "Customer support is primarily email-based and can be slower than Ledger's established support infrastructure",
+        "Air-gapped QR signing, while secure, is slower and less convenient than Bluetooth-based wallets for frequent transactions",
+        "App ecosystem is smaller: fewer third-party integrations compared to Ledger Live's extensive partner network",
+        "Less recognized brand in Western markets — most reviews and community discussions are in Chinese/Asian communities",
+      ],
+      alternatives: ["ledger-nano", "trezor", "safepal", "keepkey", "ellipal"],
+      gettingStarted: [
+        { step: 1, title: "Unbox & Charge", description: "Order from onekey.so (be cautious of third-party sellers — only buy directly). Charge the device via USB-C for at least 1 hour before first use. Download the OneKey App from the App Store or Google Play." },
+        { step: 2, title: "Create Your Wallet", description: "Power on the device and follow the on-screen prompts. Write down your 24-word recovery phrase on the included card — never store it digitally or take a photo. Verify the phrase by re-entering selected words on the device." },
+        { step: 3, title: "Connect to the App & Start Using", description: "Open the OneKey App, scan the QR code on your device to pair, and start adding crypto assets. For DeFi, use the built-in dApp browser or WalletConnect. Transfer a small test amount first before moving your full balance." },
+      ],
+      faq: [
+        { question: "Is OneKey really open source?", answer: "Yes, 100% of OneKey's firmware, hardware schematics, and companion app source code is available on GitHub (github.com/OneKeyHQ). This allows independent security researchers and the community to audit every line of code for vulnerabilities or backdoors — a level of transparency that closed-source wallets like Ledger cannot offer." },
+        { question: "How does air-gapped signing work?", answer: "When you initiate a transaction in the OneKey App, the app displays a QR code containing the transaction data. You scan this QR code with your OneKey device's camera, review the transaction details on the device screen, approve it, and the device generates a signed QR code. You then scan the signed QR code back into the app, which broadcasts it to the blockchain. At no point does the device connect to the internet, Bluetooth, Wi-Fi, or USB data." },
+        { question: "What happens if I lose my OneKey device?", answer: "Your crypto is not stored on the device — it is on the blockchain. As long as you have your 24-word recovery phrase, you can restore access to all your assets on any new OneKey device or any BIP39-compatible wallet (Ledger, Trezor, MetaMask, Trust Wallet, etc.). This is why securing your recovery phrase is absolutely critical: anyone who has it can access your funds." },
+        { question: "How does OneKey compare to Ledger?", answer: "OneKey is fully open-source while Ledger uses closed-source firmware for its secure element chip. OneKey uses air-gapped QR signing (no connectivity) while Ledger uses USB/Bluetooth. OneKey is more affordable ($58-169 vs $79-399). Ledger has a larger app ecosystem (Ledger Live supports more third-party services) and a longer track record. For users who prioritize open-source transparency and air-gapped security, OneKey is the better choice. For those who want the most integrations and brand recognition, Ledger wins." },
+        { question: "Does OneKey support staking?", answer: "Yes, the OneKey App supports native staking for multiple Proof-of-Stake assets including ETH (via Lido and Rocket Pool), SOL, ATOM, DOT, and ADA. You can stake directly from the app while your private keys remain secure in the hardware device. Staking rewards are tracked and displayed in your portfolio." },
+        { question: "Can I use OneKey as a software wallet without the hardware device?", answer: "Yes, the OneKey App functions as a standalone software wallet when the hardware device is not connected. This is useful for small daily transactions where you want convenience. However, the software wallet is only as secure as your phone — for storing significant funds, always use the hardware device for signing." },
+      ],
+    },
   },
   {
     id: "trezor",
@@ -5924,6 +6002,83 @@ The platform has faced challenges including increased competition from specializ
     pricing: "0.1% Maker/Taker",
     rating: 4.7,
     featured: true,
+    detailedContent: {
+      longDescription: `Binance is the world's largest cryptocurrency exchange by trading volume, serving over 200 million users across 180+ countries. Founded in 2017 by Changpeng Zhao (CZ), the platform has grown from a lean startup to a global financial powerhouse in less than a decade. With daily trading volumes regularly exceeding $20 billion, Binance offers unmatched liquidity across 600+ cryptocurrencies and 1,000+ trading pairs.
+
+At its core, Binance provides a comprehensive suite of crypto financial services that go far beyond simple buy-and-sell functionality. The platform's spot trading engine supports both basic market/limit orders and advanced trading view with technical indicators, making it suitable for everyone from first-time buyers to professional day traders. The fee structure is among the most competitive in the industry at 0.1% for both maker and taker orders, with additional discounts available when paying fees in BNB (Binance Coin).
+
+Binance Earn is one of the platform's most popular features, allowing users to generate passive income on their crypto holdings. Options include Flexible Savings (withdraw anytime), Locked Staking (higher yields, fixed term), Launchpool (stake tokens to farm new project tokens), and Dual Investment (yield-enhanced options strategy). With APYs ranging from 1% to over 100% during promotional periods, Binance Earn has become a go-to platform for crypto yield generation.
+
+For advanced traders, Binance Futures offers up to 125x leverage on major pairs, with both COIN-margined and USDT-margined contracts available. The platform also supports options trading, vanilla options, and portfolio margin for sophisticated risk management. The Binance API is among the most widely used in the industry, with extensive documentation and support for multiple programming languages, making it the backbone of countless trading bots and portfolio trackers.
+
+Beyond trading, Binance has built an entire ecosystem: Binance Smart Chain (BSC) as a low-cost Ethereum alternative, Binance Web3 Wallet for seamless DeFi access, Binance Launchpad for early-stage token sales, and Binance Pay for fee-free crypto payments. The exchange also operates Binance Charity, committing to transparency in charitable crypto donations.`,
+      features: [
+        "600+ cryptocurrencies with 1,000+ trading pairs and deepest liquidity",
+        "0.1% trading fee with up to 25% discount when paying with BNB",
+        "Binance Earn: savings, staking, Launchpool, and Dual Investment for passive income",
+        "Binance Futures with up to 125x leverage and portfolio margin support",
+        "Binance Web3 Wallet: self-custody wallet with in-app DeFi and NFT access",
+        "Binance Launchpad: early access to vetted token sales before exchange listing",
+        "P2P trading with 700+ payment methods and zero fees in most markets",
+        "Binance API: robust REST and WebSocket API used by most major trading bots",
+        "Binance Card: spend crypto at 90+ million merchants worldwide with up to 8% BNB cashback",
+        "24/7 customer support in 40+ languages with live chat and VIP tiers",
+      ],
+      pricingPlans: [
+        {
+          name: "Regular User",
+          price: "0.1% Maker / 0.1% Taker",
+          features: ["Spot trading", "P2P trading", "Binance Earn (flexible savings)", "Basic Web3 Wallet", "Binance Pay", "0 BNB fee discount"],
+        },
+        {
+          name: "BNB Holder (VIP 0 with BNB)",
+          price: "0.075% Maker / 0.075% Taker",
+          features: ["25% fee discount with BNB", "Launchpad participation", "Locked staking access", "Advanced trading view", "API key creation"],
+          highlight: true,
+        },
+        {
+          name: "VIP 1-9 (Volume Based)",
+          price: "0.02%-0.09% Maker / 0.04%-0.1% Taker",
+          features: ["Tiered fee discounts by 30-day volume", "Dedicated account manager (VIP 3+)", "Faster withdrawal limits", "Priority customer support", "OTC desk access (VIP 5+)"],
+        },
+      ],
+      bestFor: [
+        "Beginners buying crypto for the first time (intuitive mobile app)",
+        "Active day traders who need deep liquidity and low fees",
+        "Passive income seekers using Binance Earn and staking products",
+        "DeFi users who want a Web3 wallet without managing seed phrases",
+        "API bot traders who need a stable and well-documented trading API",
+      ],
+      pros: [
+        "World's deepest liquidity ensures minimal slippage even on large orders",
+        "Extremely competitive fee structure, especially with BNB discount",
+        "Most comprehensive product suite: trading, earn, Web3, Pay, Launchpad all in one app",
+        "P2P trading supports 700+ local payment methods with zero fees in most regions",
+        "Binance Smart Chain offers a low-cost alternative to Ethereum for DeFi and NFTs",
+        "Regular promotional campaigns with zero-fee trading on selected pairs",
+      ],
+      cons: [
+        "Regulatory uncertainty in some jurisdictions — Binance has withdrawn from several markets including the Netherlands, Germany, and parts of Canada",
+        "Customer support can be slow during extreme market volatility when ticket volumes spike",
+        "The sheer number of features and products can be overwhelming for complete beginners",
+        "KYC requirements have tightened significantly — limited functionality without full identity verification",
+        "Past security incidents (2019 hack) and ongoing regulatory scrutiny may concern privacy-focused users",
+      ],
+      alternatives: ["okx", "bybit", "kraken", "coinbase", "kucoin"],
+      gettingStarted: [
+        { step: 1, title: "Create Account & Complete KYC", description: "Sign up with your email or phone number. Complete identity verification (KYC) by uploading a government-issued ID — this unlocks higher withdrawal limits and full platform features." },
+        { step: 2, title: "Fund Your Account", description: "Deposit crypto from an external wallet, buy with a credit/debit card, or use P2P trading to buy USDT/USDC directly from other users with your local bank or payment app (WeChat Pay, Alipay, etc.)." },
+        { step: 3, title: "Start Trading or Earning", description: "Use the Simple Convert feature for quick swaps, the Spot trading view for limit/market orders, or head to Binance Earn to start generating passive income on your holdings. Enable 2FA for security." },
+      ],
+      faq: [
+        { question: "Is Binance safe to use?", answer: "Binance uses industry-standard security including cold storage for the majority of user funds, 2FA, anti-phishing codes, and device management. The SAFU (Secure Asset Fund for Users) fund insures user assets in case of a breach. However, no exchange is 100% risk-free — use strong security practices and consider self-custody for long-term holdings." },
+        { question: "What is the minimum deposit on Binance?", answer: "There is no minimum deposit for crypto deposits. For fiat purchases, the minimum varies by payment method — typically $10-50 via card, and as low as $1 on P2P trading. Withdrawal minimums depend on the specific cryptocurrency." },
+        { question: "How do I reduce my trading fees on Binance?", answer: "Hold BNB in your spot wallet and enable 'Use BNB for fee payment' in your account settings. This gives you a 25% discount on spot trading fees and 10% on futures fees. Higher 30-day trading volumes also unlock VIP tier fee reductions." },
+        { question: "What is Binance Web3 Wallet?", answer: "Binance Web3 Wallet is a self-custody wallet built into the Binance app. Unlike the main Binance exchange wallet, you hold the keys (seed phrase). It supports multi-chain DeFi, NFT trading, and dApp browsing without needing a separate wallet app. However, losing your seed phrase means losing access — there is no 'forgot password' recovery." },
+        { question: "Can I use Binance in the United States?", answer: "Binance.com is not available to U.S. residents. U.S. users must use Binance.US, a separate platform with a smaller coin selection and different fee structure. Some features like Binance Earn and Launchpad are not available on Binance.US." },
+        { question: "What is the SAFU fund?", answer: "SAFU (Secure Asset Fund for Users) is an emergency insurance fund established by Binance in 2018. A portion of trading fees is allocated to SAFU, which is kept in a separate cold wallet. In the event of a hack or catastrophic event, SAFU is used to compensate affected users. The fund currently holds over $1 billion in assets." },
+      ],
+    },
   },
   {
     id: "okx",
@@ -6026,6 +6181,84 @@ The platform places a strong emphasis on security, employing a combination of co
     affiliateUrl: "https://www.bybit.com/en/register?affiliate",
     pricing: "0.1% Maker/Taker",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Bybit is one of the world's fastest-growing cryptocurrency exchanges, rising from a derivatives-only platform in 2018 to a full-featured exchange serving over 50 million users worldwide. Headquartered in Dubai, Bybit has established itself as the second-largest derivatives exchange by open interest, trailing only Binance. The platform is known for its high-performance trading engine, competitive fees, and aggressive product expansion that now spans spot, margin, futures, options, copy trading, Launchpad, and Web3 DeFi.
+
+Bybit's derivatives trading platform is its crown jewel. The exchange's Unified Trading Account (UTA) allows traders to manage spot, margin, futures, and options positions from a single account, eliminating the need to transfer funds between sub-accounts. The futures engine supports up to 100x leverage on BTC and ETH perpetuals, with 125x available on select altcoin pairs. Bybit's matching engine processes over 100,000 transactions per second with 99.99% uptime, ensuring that orders are executed with minimal slippage even during peak volatility.
+
+Copy Trading is one of Bybit's standout features, allowing users to automatically replicate the trades of top-performing traders. With over 50,000 master traders on the platform, users can browse detailed performance metrics including win rate, ROI, maximum drawdown, and total P&L before choosing a trader to follow. The system supports one-click copying with customizable allocation sizes and risk parameters, making it accessible to beginners who want to participate in futures trading without developing their own strategies.
+
+Bybit's Launchpad platform has become a popular venue for early-stage token offerings, hosting successful launches for projects like Sui, Aptos, and several AI-focused tokens. Users stake MNT (Mantle) or USDT to earn allocation tickets, which determine their share of the token distribution. The average ROI on Bybit Launchpad tokens has been competitive with Binance Launchpad, attracting a large community of "launchpool hunters."
+
+The exchange's Web3 ecosystem is expanding rapidly through Bybit Web3 Wallet, an integrated self-custody wallet that supports over 20 blockchain networks including Ethereum, Solana, BNB Chain, Arbitrum, and Base. The wallet features a built-in DEX aggregator, NFT marketplace, and access to DeFi protocols directly from the Bybit app. Bybit's partnership with Mantle Network (MNT) and the MNT ecosystem has created a vertically integrated platform that connects centralized and decentralized trading seamlessly.`,
+      features: [
+        "50M+ users with top-2 derivatives exchange by open interest globally",
+        "Unified Trading Account: manage spot, margin, futures, and options from one account",
+        "100x-125x leverage on perpetual futures with an engine processing 100K+ transactions per second",
+        "Copy Trading: follow 50,000+ master traders with one-click replication and customizable risk controls",
+        "Bybit Launchpad: stake MNT/USDT for early access to vetted token offerings with competitive ROI",
+        "Bybit Web3 Wallet: self-custody wallet supporting 20+ blockchains with built-in DEX aggregator",
+        "Bybit Earn: flexible savings, fixed staking, and dual investment products for passive income",
+        "Spot grid, DCA, and martingale bots built directly into the platform — no external tools needed",
+        "Institutional-grade API with WebSocket streaming and full support for algorithmic trading",
+        "24/7 multilingual customer support with live chat and VIP account managers",
+      ],
+      pricingPlans: [
+        {
+          name: "Standard (Non-VIP)",
+          price: "0.1% Maker / 0.1% Taker (Spot)",
+          features: ["Spot and futures trading", "Copy Trading access", "Bybit Earn basic products", "Web3 Wallet", "Standard API access", "Basic customer support"],
+        },
+        {
+          name: "VIP 1-5 (Volume Based)",
+          price: "0.01%-0.06% Maker / 0.03%-0.08% Taker (Spot)",
+          features: ["30-day volume $50K-$100M", "Lower derivatives fees", "Faster withdrawals", "Priority support", "Exclusive Launchpad allocations"],
+          highlight: true,
+        },
+        {
+          name: "Pro / Market Maker",
+          price: "0.00%-0.01% Maker / 0.02%-0.03% Taker",
+          features: ["Custom fee schedules", "Colocation services", "Dedicated account manager", "OTC block trading", "API rate limit increases"],
+        },
+      ],
+      bestFor: [
+        "Futures and derivatives traders who need high leverage and deep liquidity",
+        "Beginners who want to learn trading by copying experienced master traders",
+        "Launchpad hunters seeking early access to vetted token launches",
+        "Web3 users who want an integrated CEX + self-custody wallet experience",
+        "API traders who need a high-performance engine with low latency execution",
+      ],
+      pros: [
+        "Top-2 derivatives exchange with deep liquidity and competitive maker-taker fee tiers",
+        "Copy Trading is genuinely useful for beginners — detailed trader metrics with historical P&L data",
+        "Unified Trading Account eliminates the friction of transferring between spot and futures wallets",
+        "Launchpad has a strong track record with projects like Sui and Aptos, attracting launchpool hunters",
+        "Bybit Web3 Wallet bridges CEX and DeFi, supporting 20+ chains with a built-in DEX aggregator",
+        "High-performance matching engine (100K TPS, 99.99% uptime) ensures reliable execution in volatile markets",
+      ],
+      cons: [
+        "Not available in several major markets including the United States, China, UK, and Singapore",
+        "The platform's rapid product expansion can feel cluttered — the app has a steep learning curve for newcomers",
+        "Regulatory risk: Bybit has faced legal challenges in multiple jurisdictions including Japan, Canada, and Malaysia",
+        "Past incidents: a $1.5 billion hack in February 2025, though all funds were returned or compensated",
+        "Spot liquidity for altcoins is thinner compared to Binance and OKX, especially for newer tokens",
+        "Copy Trading ROI metrics can be misleading if a trader had one lucky win skewing their long-term statistics",
+      ],
+      alternatives: ["binance", "okx", "bitget", "mexc", "bingx"],
+      gettingStarted: [
+        { step: 1, title: "Create Account & Fund", description: "Sign up with your email on Bybit.com. Deposit crypto from an external wallet or buy USDT via P2P trading (supports WeChat Pay, Alipay, and local bank transfers in many regions). Enable 2FA for security." },
+        { step: 2, title: "Try Copy Trading", description: "Navigate to Copy Trading → Master Traders, filter by 7/30-day ROI and win rate, select a trader, and set your copy allocation (suggest starting with 10-20% of your portfolio). Monitor the position from your Copy Trading dashboard." },
+        { step: 3, title: "Explore Launchpad & Web3", description: "For Launchpad, stake MNT or USDT in the Launchpad pool to earn allocation tickets. For Web3, download Bybit Web3 Wallet and explore dApps on Arbitrum or Base with your exchange balance as a seamless on-ramp." },
+      ],
+      faq: [
+        { question: "Is Bybit safe after the 2025 hack?", answer: "Bybit suffered a $1.5 billion hack in February 2025, but all affected users were fully compensated within 48 hours through the exchange's reserve fund and a bridge loan from industry partners. The platform has since implemented enhanced security measures including real-time monitoring, multi-party computation (MPC) wallets, and additional cold storage layers. However, the incident is a reminder that no exchange is risk-free." },
+        { question: "What is the minimum deposit on Bybit?", answer: "There is no minimum deposit for crypto deposits. For P2P trading, the minimum trade amount varies by payment method and currency, typically ranging from $1-10 USDT. Fiat deposits via bank transfer or card also have low minimums, usually around $10-30." },
+        { question: "How does Bybit Copy Trading work?", answer: "Browse the Master Traders list filtered by ROI, win rate, and trading style. Select a trader, set your copy amount (minimum $10), and choose a copy mode (fixed ratio or fixed amount). The system automatically replicates the master trader's positions in your account. You can stop copying at any time and close positions independently." },
+        { question: "Does Bybit require KYC?", answer: "Bybit introduced mandatory KYC in 2023. Users must complete identity verification (Level 1) to access most features including spot trading, deposits, and withdrawals. Higher verification levels are required for larger withdrawal limits and VIP status." },
+        { question: "What is Bybit's Unified Trading Account?", answer: "The Unified Trading Account (UTA) allows you to use a single balance across spot, margin, futures, and options trading. Instead of transferring funds between sub-accounts, you simply allocate your total balance to different strategies. UTA also supports portfolio margin, which calculates risk across all positions for more capital-efficient trading." },
+        { question: "Can I use Bybit in the United States?", answer: "No, Bybit does not serve U.S. residents or citizens. The platform uses IP-based blocking and KYC verification to enforce this restriction. U.S. users should consider alternatives like Kraken, Coinbase, or Binance.US for regulated crypto trading." },
+      ],
+    },
   },
   {
     id: "coinbase",
@@ -6037,6 +6270,82 @@ The platform places a strong emphasis on security, employing a combination of co
     affiliateUrl: "https://www.coinbase.com/join/affiliate",
     pricing: "0.4-0.6% (Advanced: 0.05-0.25%)",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Coinbase is the most trusted cryptocurrency exchange in the United States, serving over 110 million verified users across 100+ countries. Founded in 2012 by Brian Armstrong and Fred Ehrsam, Coinbase was the first major crypto exchange to go public via a direct listing on NASDAQ in April 2021. The company is headquartered in Wilmington, Delaware, and is fully regulated as a publicly traded company — a distinction that sets it apart from most competitors in the crypto space.
+
+The platform's reputation rests heavily on its regulatory compliance and security track record. Coinbase holds licenses in 50+ U.S. states, is a qualified custodian under New York banking law, and carries crime insurance that protects digital assets against theft and cybersecurity breaches. Over 98% of customer funds are stored in offline cold storage, and the company has never suffered a major hack resulting in the loss of user funds.
+
+Coinbase Advanced Trade is the platform's professional trading interface, offering lower fees (0.05%-0.25% taker/maker) compared to the standard "Simple Trade" experience (0.4%-0.6%). Advanced Trade includes real-time order books, deep liquidity from over 220 supported assets, and advanced charting tools powered by TradingView. The interface is accessible via web and mobile, making it a solid choice for both casual investors and active traders.
+
+Base, Coinbase's Ethereum Layer-2 network built on the OP Stack, has quickly become a major force in the DeFi ecosystem. Launched in August 2023, Base offers sub-cent transaction fees, Ethereum-equivalent security, and seamless on-ramping directly from the Coinbase app. With over $2 billion in total value locked (TVL) within its first year, Base has attracted major DeFi protocols including Uniswap, Aave, and Aerodrome, making it a compelling alternative to expensive Ethereum mainnet transactions.`,
+      features: [
+        "110M+ verified users across 100+ countries with FDIC-insured USD balances up to $250,000",
+        "Coinbase Advanced Trade: 0.05%-0.25% fees with TradingView-powered charts",
+        "Base L2: Ethereum Layer-2 with sub-cent fees and $2B+ TVL, fully integrated into Coinbase app",
+        "Coinbase Earn: learn about crypto and earn free tokens through educational quizzes",
+        "Coinbase One: $29.99/month subscription with zero trading fees, priority support, and pre-verified staking",
+        "Institutional services: Coinbase Prime for hedge funds, custody solutions with $130B+ assets under custody",
+        "Coinbase Card: spend crypto at 90M+ merchants with up to 4% crypto rewards",
+        "Multichain support: Ethereum, Base, Solana, Polygon, Arbitrum, Optimism, and more",
+        "Staking rewards: earn up to 5%+ APY on ETH, SOL, ATOM, ADA, and other PoS assets",
+        "Dedicated iOS and Android apps with FaceID/TouchID biometric login and 2FA",
+      ],
+      pricingPlans: [
+        {
+          name: "Simple Trade",
+          price: "0.4%-0.6% spread-based",
+          features: ["Buy/sell with fiat", "Coinbase Earn access", "Coinbase Card eligible", "Basic charting", "Phone/email support"],
+        },
+        {
+          name: "Advanced Trade",
+          price: "0.05%-0.25% maker/taker",
+          features: ["Pro-grade order types", "TradingView charts", "API access", "Lower fees for active traders", "Real-time order book"],
+          highlight: true,
+        },
+        {
+          name: "Coinbase One",
+          price: "$29.99/month",
+          features: ["Zero trading fees (up to $10,000/month)", "Priority customer support", "Pre-verified staking rewards", "No spread on trades", "Exclusive research reports"],
+        },
+      ],
+      bestFor: [
+        "Beginners making their first crypto purchase with a regulated, public company",
+        "U.S. users who need full KYC compliance and FDIC-insured USD balances",
+        "Institutional investors requiring qualified custody and prime brokerage services",
+        "DeFi users who want low-cost access via Base L2 directly from a trusted on-ramp",
+        "Long-term holders who want to earn staking rewards on PoS assets",
+      ],
+      pros: [
+        "Publicly traded U.S. company with transparent financials and regulatory compliance — the safest exchange for U.S. users",
+        "Base L2 integration makes DeFi accessible with near-zero fees directly from the main app",
+        "Industry-leading security: 98%+ cold storage, never suffered a major hack, crime insurance coverage",
+        "Coinbase Earn is one of the best free educational resources in crypto, with actual token rewards",
+        "Deep institutional adoption: $130B+ assets under custody for hedge funds and corporations",
+        "FDIC-insured USD balances up to $250,000 — unique among major crypto exchanges",
+      ],
+      cons: [
+        "Higher fees on Simple Trade (0.4%-0.6%) compared to Binance, OKX, and other global exchanges",
+        "Limited coin selection (220+) compared to Binance (600+) and OKX (350+), though coverage is improving",
+        "Customer support has historically been slow, with long wait times during market volatility spikes",
+        "Base network is newer and less battle-tested than Ethereum mainnet or Arbitrum/Optimism",
+        "Coinbase has faced criticism for overly aggressive token listing practices and potential conflicts of interest via its venture arm",
+        "Advanced Trade interface, while improved, still lags behind purpose-built trading terminals like 3Commas or TradingView",
+      ],
+      alternatives: ["kraken", "gemini", "binance-us", "robinhood-crypto", "okx"],
+      gettingStarted: [
+        { step: 1, title: "Sign Up & Verify Identity", description: "Download the Coinbase app or visit coinbase.com. Sign up with your email and complete KYC by uploading a government-issued ID. U.S. users also need to link a bank account or debit card." },
+        { step: 2, title: "Buy Your First Crypto", description: "Tap 'Buy' on the home screen, select your cryptocurrency (BTC, ETH, SOL, etc.), enter the amount, and confirm. Funds typically settle instantly with a linked debit card, or within 3-5 days via bank transfer." },
+        { step: 3, title: "Explore Advanced Trade & Base", description: "Switch to Advanced Trade for lower fees if you plan to trade actively. To use DeFi cheaply, send assets to Base via the 'Send' button — Coinbase covers the gas fee for Base withdrawals on supported assets." },
+      ],
+      faq: [
+        { question: "Is Coinbase safe and legit?", answer: "Yes. Coinbase is a publicly traded U.S. company (NASDAQ: COIN) with over $130 billion in assets under custody. It holds licenses in 50+ U.S. states, keeps 98%+ of funds in offline cold storage, and has never suffered a major hack. USD balances are FDIC-insured up to $250,000." },
+        { question: "What are Coinbase Advanced Trade fees?", answer: "Advanced Trade uses a maker-taker fee model starting at 0.60% taker / 0.40% maker, with volume-based discounts down to 0.05% taker / 0.00% maker for users with $1B+ 30-day volume. Most retail users pay 0.25% taker / 0.15% maker." },
+        { question: "What is Base and how do I use it?", answer: "Base is Coinbase's Ethereum Layer-2 network, offering transaction fees under $0.01. You can send supported assets (ETH, USDC, DAI, etc.) from Coinbase directly to Base in the 'Send' tab. Once on Base, connect your Coinbase Wallet or MetaMask to use DeFi apps like Uniswap and Aerodrome at a fraction of mainnet costs." },
+        { question: "How do I earn staking rewards on Coinbase?", answer: "Eligible users can stake ETH (yield varies, ~3-5% APY), SOL (~5-7% APY), ATOM, ADA, and several other PoS assets directly from the Coinbase app. Rewards are paid out daily or epoch-based depending on the asset. There is no minimum staking amount for most assets." },
+        { question: "Can I use Coinbase outside the United States?", answer: "Yes, Coinbase operates in 100+ countries. However, Advanced Trade, staking, and certain features may be restricted based on local regulations. Check coinbase.com/legal/licensing for the most up-to-date regional availability." },
+        { question: "What is the Coinbase One subscription?", answer: "Coinbase One is a $29.99/month subscription that eliminates trading fees on up to $10,000 in monthly volume, provides priority customer support, and offers pre-verified staking rewards (no waiting period). It pays for itself if you trade more than ~$6,000/month." },
+      ],
+    },
   },
   {
     id: "kraken",
@@ -6048,6 +6357,84 @@ The platform places a strong emphasis on security, employing a combination of co
     affiliateUrl: "https://www.kraken.com/referral",
     pricing: "0-0.26% Maker/Taker",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Kraken is one of the oldest and most respected cryptocurrency exchanges, founded in 2011 by Jesse Powell. Headquartered in San Francisco, Kraken was among the first exchanges to introduce proof-of-reserves audits and has maintained a spotless security record throughout its 13+ year history. The platform serves over 10 million users globally, supporting 220+ cryptocurrencies with fiat trading pairs in USD, EUR, GBP, CAD, and JPY.
+
+Kraken's commitment to security is legendary in the crypto space. The exchange has never been successfully hacked — an extraordinary achievement given the industry's history. Kraken was the first exchange to conduct a cryptographically verified proof-of-reserves audit in 2014, long before the FTX collapse made such audits an industry standard. The platform stores 95% of deposits in air-gapped cold storage distributed across multiple geographic locations, and every withdrawal requires multi-signature authorization.
+
+The exchange offers a tiered trading experience. Kraken's Instant Buy interface is designed for newcomers, allowing simple crypto purchases via bank transfer, debit card, or wire. For active traders, Kraken Pro provides a professional-grade terminal with real-time order books, advanced charting, and order types including limit, stop-loss, take-profit, and trailing stop orders. Pro fees start at 0.16% maker / 0.26% taker and scale down to 0.00% maker / 0.10% taker for high-volume traders.
+
+Kraken's margin and futures offerings are among the most sophisticated available on a U.S.-regulated exchange. Spot margin supports up to 5x leverage on major pairs, while Kraken Futures (licensed under the CFTC) offers up to 50x on Bitcoin and Ethereum perpetuals. The platform's staking service (currently paused for U.S. clients due to SEC settlement) has historically offered competitive yields on ETH, SOL, DOT, and other PoS assets.
+
+In 2024, Kraken launched Kraken Wallet, a self-custody wallet supporting 8 blockchains (Ethereum, Solana, Bitcoin, Dogecoin, Optimism, Arbitrum, Base, and Polygon). Unlike exchange wallets, Kraken Wallet gives users full control over their private keys and supports DeFi dApp connections — a major step toward bridging centralized and decentralized finance under the Kraken brand.`,
+      features: [
+        "13+ year track record with zero successful hacks — longest unbroken security record among major exchanges",
+        "Proof-of-reserves audits since 2014, cryptographically verified for full transparency",
+        "Kraken Pro: professional trading with 0.00%-0.16% maker / 0.10%-0.26% taker fee tiers",
+        "Kraken Futures: CFTC-regulated derivatives with up to 50x leverage on BTC and ETH perpetuals",
+        "Kraken Wallet: self-custody multi-chain wallet supporting 8 blockchains and DeFi dApp access",
+        "220+ cryptocurrencies with fiat on/off-ramps in USD, EUR, GBP, CAD, and JPY",
+        "Margin trading with up to 5x leverage and advanced order types including trailing stops",
+        "OTC desk for high-volume trades ($100,000+) with dedicated execution support and minimal slippage",
+        "24/7 live chat customer support in multiple languages with average response times under 2 minutes",
+        "Staking rewards on 12+ PoS assets (paused for U.S. clients due to SEC settlement)",
+      ],
+      pricingPlans: [
+        {
+          name: "Instant Buy",
+          price: "0.9% (stablecoins) / 1.5% (other)",
+          features: ["Simple buy/sell interface", "Card and bank transfer support", "Recurring buys available", "No order book or charting"],
+        },
+        {
+          name: "Kraken Pro",
+          price: "0.00%-0.16% Maker / 0.10%-0.26% Taker",
+          features: ["Professional order book and charting", "Limit/stop/take-profit orders", "API access for automated trading", "Volume-based fee tiers", "Margin and futures trading"],
+          highlight: true,
+        },
+        {
+          name: "Kraken Pro VIP",
+          price: "0.00% Maker / 0.08%-0.10% Taker",
+          features: ["30-day volume above $10M", "Dedicated account manager", "OTC desk access", "Priority withdrawals", "Customized fee structure"],
+        },
+      ],
+      bestFor: [
+        "Security-conscious traders who prioritize a proven track record over the lowest fees",
+        "U.S. users who need a regulated exchange with CFTC-licensed futures trading",
+        "Professional traders who want advanced order types with competitive fee tiers",
+        "Institutions requiring proof-of-reserves audits and verified cold storage custody",
+        "Self-custody users transitioning from exchange wallet to Kraken Wallet for DeFi access",
+      ],
+      pros: [
+        "Zero successful hacks in 13+ years — the gold standard for exchange security and reliability",
+        "Cryptographically verified proof-of-reserves since 2014, years ahead of the industry",
+        "Kraken Pro fees are competitive with global exchanges, and maker fees drop to 0.00% for high-volume traders",
+        "Kraken Wallet bridges centralized and decentralized finance with a user-friendly self-custody experience",
+        "24/7 live chat support is responsive and helpful — a rarity in the crypto exchange space",
+        "Multiple fiat currencies (USD, EUR, GBP, CAD, JPY) with low-fee bank transfers via Kraken's own banking rails",
+      ],
+      cons: [
+        "Instant Buy fees (0.9%-1.5%) are significantly higher than competitors — always use Kraken Pro instead",
+        "Coin selection (220+) is smaller than Binance (600+) and KuCoin (700+), limiting altcoin trading options",
+        "U.S. clients cannot access staking rewards due to SEC settlement, reducing passive income opportunities",
+        "The platform interface has a steeper learning curve than simpler alternatives like Coinbase",
+        "Slower to list new tokens compared to KuCoin, Bitget, and other altcoin-focused exchanges",
+        "Mobile app experience, while functional, lags behind Coinbase and Binance in terms of polish and UX",
+      ],
+      alternatives: ["coinbase", "gemini", "okx", "bybit", "bitstamp"],
+      gettingStarted: [
+        { step: 1, title: "Create Account & Verify Identity", description: "Sign up on Kraken with your email. Complete KYC by uploading a government-issued ID and proof of address (utility bill or bank statement). Kraken supports multiple verification tiers — Intermediate is needed for full fiat deposit/withdrawal access." },
+        { step: 2, title: "Deposit Funds", description: "For the lowest fees, deposit USD/EUR via bank transfer (ACH, SEPA, or wire). Crypto deposits from external wallets are also supported. Avoid Instant Buy card deposits unless you need instant settlement — they cost 3.75% + 25¢." },
+        { step: 3, title: "Start Trading on Kraken Pro", description: "Switch to Kraken Pro for the actual trading terminal. Place limit orders for lower fees, use the advanced charting tools, and set stop-loss orders to manage risk. For futures, enable the feature in your account settings first." },
+      ],
+      faq: [
+        { question: "Is Kraken really the most secure exchange?", answer: "Kraken has a 13+ year track record with zero successful hacks, making it arguably the most secure major exchange. The platform stores 95% of deposits in air-gapped cold storage, requires multi-signature approval for all withdrawals, and has conducted proof-of-reserves audits since 2014 — before most exchanges even existed." },
+        { question: "What is the difference between Kraken and Kraken Pro?", answer: "Kraken is the simple interface for buying/selling crypto — but it charges high fees (0.9%-1.5%). Kraken Pro is the professional trading terminal with real-time order books, advanced order types, and much lower fees (0.00%-0.26%). Most users should use Kraken Pro even for basic trades to save on fees." },
+        { question: "Can I stake crypto on Kraken?", answer: "Staking is available for non-U.S. clients on 12+ assets including ETH, SOL, DOT, ADA, and ATOM, with competitive yields. U.S. clients cannot access staking due to a 2023 SEC settlement. Kraken also offers on-chain staking via Kraken Wallet for users who prefer self-custody." },
+        { question: "Does Kraken offer futures trading?", answer: "Yes, Kraken Futures is licensed under the U.S. CFTC and offers perpetual futures on BTC (up to 50x), ETH (up to 50x), and other major cryptocurrencies. Kraken Futures requires a separate activation step in account settings and is not available in all jurisdictions." },
+        { question: "How do Kraken's fees compare to Binance?", answer: "Kraken Pro's base fees (0.16% maker / 0.26% taker) are slightly higher than Binance's base (0.10% maker / 0.10% taker). However, Kraken's maker fees drop to 0.00% at high volumes, while Binance's drop to 0.02%. For most retail traders, the difference is negligible — choose based on security and feature preferences." },
+        { question: "What is Kraken Wallet?", answer: "Kraken Wallet is a self-custody mobile wallet launched in 2024. Unlike your Kraken exchange account, you hold the private keys (12-word seed phrase). It supports 8 blockchains (Ethereum, Solana, Bitcoin, Dogecoin, Optimism, Arbitrum, Base, Polygon), DeFi dApp connections via WalletConnect, and NFT management." },
+      ],
+    },
   },
   {
     id: "kucoin",
