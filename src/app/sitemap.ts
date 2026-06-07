@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/tools/staking-calculator`,
+      lastModified: "2025-06-07",
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
   ];
 
   // Category pages
