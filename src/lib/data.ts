@@ -902,6 +902,84 @@ The platform supports multi-chain analysis, ensuring that users can track activi
     url: "https://arkhamintelligence.com",
     pricing: "Free / $100+/mo",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Arkham Intelligence is a blockchain analytics platform that specializes in de-anonymizing cryptocurrency transactions by linking blockchain addresses to real-world entities. Launched in 2022 and backed by prominent investors including Sam Altman (OpenAI CEO) and Peter Thiel, Arkham has rapidly become one of the most talked-about tools in the crypto intelligence space. The platform's core capability is its massive database of over 800 million labeled addresses — wallets identified as belonging to specific exchanges, institutions, trading firms, protocols, and notable individuals.
+
+What makes Arkham unique is its entity-linking technology. Rather than just showing transaction hashes and wallet addresses (which look like random strings of characters), Arkham identifies who controls those addresses. When a large wallet moves $50 million in USDC, Arkham tells you whether it is Jump Trading rebalancing, Binance's hot wallet shuffling funds, or a DeFi protocol's treasury executing a governance proposal. This transforms on-chain data from a sea of anonymous transactions into a readable narrative of market movements.
+
+The Arkham Intel Exchange is the platform's most controversial and innovative feature. It functions as a marketplace where users can place bounties for identifying specific wallet addresses. If you notice a wallet that made unusually profitable trades, you can post a bounty (paid in ARKM tokens) for anyone who can identify who owns it. Conversely, intelligence providers can offer information about specific entities for a price. This creates a decentralized intelligence economy — a concept that has drawn both excitement from transparency advocates and criticism from privacy-focused users.
+
+Arkham's Visualizer provides a graphical interface for tracking fund flows between wallets. Users can select any address and see a network graph of where its funds came from and where they went, with entity labels overlaid on each node. This is particularly useful for investigating hacks (tracking where stolen funds are being moved), analyzing whale movements (seeing if a large holder is sending funds to exchanges to sell), and monitoring protocol treasuries (tracking how DAOs are spending their funds).
+
+The platform also offers a real-time alerts system that notifies users when specific entities make transactions. For example, a trader might set an alert for when "Jump Trading" or "Wintermute" moves more than $10 million in any asset, or when a specific DeFi protocol's treasury executes a large transfer. These alerts provide actionable intelligence for traders who want to react quickly to significant market-moving events.`,
+      features: [
+        "800M+ labeled wallet addresses linked to real-world entities (exchanges, institutions, protocols, individuals)",
+        "Entity Dashboard: view all known wallets for a specific entity with aggregated balance and transaction history",
+        "Intel Exchange: decentralized marketplace for buying, selling, and bounty-hunting wallet identity information",
+        "Visualizer: interactive fund flow graphs showing where money moves between labeled entities",
+        "Real-time alerts: notifications when specific entities make transactions above user-defined thresholds",
+        "Portfolio tracking for any labeled entity — monitor the holdings of exchanges, VCs, and whales",
+        "Multi-chain support: Ethereum, BNB Chain, Arbitrum, Optimism, Polygon, Base, Avalanche, and more",
+        "ARKM token utility: used for Intel Exchange transactions, premium features, and governance voting",
+        "Custom watchlists: track specific wallets, entities, or tokens with personalized dashboards",
+        "API access for programmatic entity resolution and wallet labeling integration into trading systems",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0/month",
+          features: ["Basic entity search", "Limited Visualizer access", "5 labeled address lookups/day", "Basic alerts (5 max)", "Public dashboards only"],
+        },
+        {
+          name: "Pro",
+          price: "$100/month",
+          features: ["Unlimited entity search", "Full Visualizer access", "Unlimited label lookups", "Custom alerts (50 max)", "Private dashboards", "API access (basic)", "CSV export"],
+          highlight: true,
+        },
+        {
+          name: "Enterprise",
+          price: "Custom pricing",
+          features: ["All Pro features", "Dedicated data pipeline", "Custom entity labels", "Real-time API streaming", "SLA guarantees", "Dedicated account manager", "White-label options"],
+        },
+      ],
+      bestFor: [
+        "Traders who want to track whale and institution wallet movements in real-time",
+        "Investigative researchers analyzing hacks, scams, and illicit fund flows on-chain",
+        "Due diligence teams vetting counterparties by examining their on-chain transaction history",
+        "Crypto journalists who need entity-labeled data for investigative reporting",
+        "DeFi power users who want to monitor protocol treasury movements and governance activity",
+      ],
+      pros: [
+        "800M+ labeled addresses is the largest entity-labeled dataset in crypto — unmatched for wallet identification",
+        "The Visualizer makes fund flow analysis intuitive with a graphical interface rather than raw transaction lists",
+        "Intel Exchange creates a unique market-based approach to on-chain intelligence gathering",
+        "Real-time alerts on entity movements provide actionable trading intelligence before the broader market reacts",
+        "Multi-chain coverage across 10+ networks means you can track entities across the entire crypto ecosystem",
+        "Free tier is surprisingly generous for casual use — enough for basic entity lookups and research",
+      ],
+      cons: [
+        "Privacy concerns: the platform's core function is de-anonymizing wallets, which many in crypto consider ethically problematic",
+        "Intel Exchange has been criticized as a 'doxxing marketplace' and faces regulatory uncertainty in multiple jurisdictions",
+        "Label accuracy is not guaranteed — some entity labels may be incorrect or outdated, especially for smaller wallets",
+        "ARKM token's long-term utility is uncertain; the Intel Exchange concept has not yet proven sustainable demand",
+        "$100/month Pro plan is expensive for individual users compared to alternatives like Dune (free) or Nansen (similar pricing)",
+        "Coverage is strongest on Ethereum and BNB Chain; other chains have significantly fewer labeled addresses",
+      ],
+      alternatives: ["nansen", "dune", "glassnode", "chainalysis", "elliptic"],
+      gettingStarted: [
+        { step: 1, title: "Search for an Entity", description: "Visit platform.arkhamintelligence.com and search for a known entity like 'Binance' or 'Jump Trading.' Explore their Entity Dashboard to see all associated wallets, aggregated balances, and recent transactions." },
+        { step: 2, title: "Use the Visualizer", description: "Copy any wallet address (from Etherscan or a news article) and paste it into Arkham's search bar. Switch to the Visualizer tab to see a graphical map of fund flows — click any node to expand and trace where the money goes." },
+        { step: 3, title: "Set Up Alerts", description: "Create alerts for entities or wallets you want to monitor. Start with high-signal alerts like 'Binance hot wallet moves > $50M' or 'Jump Trading deposits to exchanges.' Configure alert delivery via email, Telegram, or API webhook on the Pro plan." },
+      ],
+      faq: [
+        { question: "Is Arkham ethical? Doesn't it violate crypto privacy?", answer: "This is a legitimate debate. Arkham argues that blockchain data is inherently public and that labeling addresses simply makes this public data more accessible and useful. Critics argue that de-anonymizing wallets violates the privacy expectations of crypto users and could enable targeted harassment. The reality is nuanced: labeling exchange and institution wallets is generally considered fair game, while identifying individual retail users is more controversial. Users should be aware that their blockchain activity is public and potentially identifiable." },
+        { question: "How accurate are Arkham's entity labels?", answer: "Arkham's labels are generated through a combination of public data scraping, user submissions (via Intel Exchange), and proprietary algorithms. High-profile entities (exchanges, major protocols, known VCs) have highly accurate labels. Smaller or newer entities may have incomplete or outdated labels. Always cross-reference critical intelligence with multiple sources before making trading decisions." },
+        { question: "What is the ARKM token used for?", answer: "ARKM is the native token of the Arkham platform. It is used to pay for bounties and intelligence on the Intel Exchange, access premium platform features, and participate in governance voting. The token was launched via Binance Launchpad in July 2023. Note that token utility and value are subject to market conditions and platform adoption." },
+        { question: "Can Arkham track stolen funds from hacks?", answer: "Yes, Arkham's Visualizer is widely used by security researchers and journalists to trace stolen funds. By following the entity-labeled flow graph, investigators can see which exchanges or mixers the stolen funds are being routed through. However, tracking becomes difficult once funds enter privacy protocols like Tornado Cash or are bridged to privacy-focused chains." },
+        { question: "How does Arkham compare to Nansen?", answer: "Arkham focuses on entity identification — 'who owns this wallet?' Nansen focuses on smart money tracking — 'what are the best-performing wallets buying?' Arkham is better for investigative research and tracking specific entities. Nansen is better for discovering new investment opportunities by following successful traders. Many users subscribe to both for complementary intelligence." },
+        { question: "Can I use Arkham for free?", answer: "Yes, the free tier allows basic entity searches, limited Visualizer access, and up to 5 labeled address lookups per day. For casual research — looking up a few entities or tracing a specific transaction — the free tier is sufficient. Professional traders and researchers will need the Pro plan ($100/month) for unlimited access, custom alerts, and API usage." },
+      ],
+    },
   },
   {
     id: "dune",
@@ -1005,6 +1083,84 @@ Dune continues to expand its blockchain coverage and data offerings, recently ad
     url: "https://glassnode.com",
     pricing: "$29-799/mo",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Glassnode is the leading on-chain data and intelligence platform for institutional and professional cryptocurrency investors. Founded in 2017 by Jan Happel and Yann Allemann, the Swiss-based company has established itself as the gold standard for blockchain data analysis, serving clients including major hedge funds, trading desks, and research institutions. Glassnode ingests and processes data from over 20 blockchain networks, transforming raw on-chain activity into actionable market intelligence.
+
+At the heart of Glassnode's offering is its comprehensive suite of on-chain metrics. These go far beyond simple transaction counts or wallet balances — Glassnode tracks nuanced indicators like Realized Cap (the total value of all coins at the price they last moved), SOPR (Spent Output Profit Ratio, measuring whether coins are being sold at a profit or loss), MVRV Ratio (Market Value to Realized Value, identifying overvalued and undervalued conditions), and Exchange Net Position Change (tracking whether coins are flowing into or out of exchanges). These metrics provide a window into market participant behavior that traditional technical analysis cannot capture.
+
+Glassnode's Workbench is the platform's flagship analytics interface, allowing users to build custom dashboards combining multiple on-chain metrics, overlay price charts with indicator thresholds, and create alerts for specific metric conditions. For example, a trader might set an alert when the MVRV Ratio drops below 1.0 (historically a strong accumulation signal) or when Exchange Net Position Change shows a significant outflow (indicating accumulation by long-term holders). The Workbench is designed for power users who want to build their own analytical frameworks rather than rely on pre-packaged reports.
+
+The Weekly On-Chain Report (formerly "The Week On-Chain") is one of the most widely read publications in crypto, distributed to over 100,000 subscribers. Each issue provides a deep-dive analysis of current market conditions using Glassnode's proprietary metrics, often including the popular "Bitcoin Market Dashboard" that categorizes market phases (Bull, Bear, Accumulation, Distribution) based on multiple on-chain indicators. For investors who prefer curated analysis over raw data exploration, the newsletter is an invaluable resource.
+
+Glassnode Studio provides access to pre-built dashboards organized by topic: Bitcoin fundamentals, Ethereum ecosystem health, DeFi protocol metrics, stablecoin flows, and derivatives market analysis. For users who need raw data for custom models, the Glassnode API offers programmatic access to the full metric library, with Python and R SDKs available for quantitative researchers.`,
+      features: [
+        "On-chain data from 20+ blockchains including Bitcoin, Ethereum, Solana, Polygon, Arbitrum, and Base",
+        "Proprietary metrics: MVRV Ratio, SOPR, Realized Cap, Exchange Net Position Change, HODL Waves, and 200+ more",
+        "Workbench: build custom dashboards with drag-and-drop metrics, threshold alerts, and multi-chart layouts",
+        "Weekly On-Chain Report: 100K+ subscriber newsletter with institutional-grade market analysis",
+        "Bitcoin Market Dashboard: multi-indicator framework categorizing market cycles (Bull/Bear/Accumulation/Distribution)",
+        "Glassnode Studio: pre-built dashboards for Bitcoin, Ethereum, DeFi, stablecoins, and derivatives",
+        "Glassnode API: programmatic access to the full metric library with Python and R SDKs",
+        "Entity-adjusted metrics: advanced clustering algorithms that group addresses controlled by the same entity",
+        "Real-time alerts: custom notifications when specific on-chain metrics cross user-defined thresholds",
+        "Institutional-grade data quality with historical data going back to the genesis block for Bitcoin and Ethereum",
+      ],
+      pricingPlans: [
+        {
+          name: "Standard",
+          price: "$29/month",
+          features: ["Basic on-chain metrics", "Pre-built dashboards", "Weekly report access", "Limited Workbench features", "7-day data history"],
+        },
+        {
+          name: "Advanced",
+          price: "$99/month",
+          features: ["Full metric library", "Custom Workbench dashboards", "Real-time alerts", "90-day data history", "API access (basic tier)", "Export to CSV"],
+          highlight: true,
+        },
+        {
+          name: "Professional",
+          price: "$799/month",
+          features: ["All Advanced features", "Full historical data", "Entity-adjusted metrics", "API access (unlimited)", "Dedicated support", "Custom research requests", "Python/R SDK access"],
+        },
+      ],
+      bestFor: [
+        "Professional traders who want to augment technical analysis with on-chain market intelligence",
+        "Institutional investors who need entity-adjusted metrics for macro portfolio decisions",
+        "Quantitative researchers building predictive models using on-chain data via the Glassnode API",
+        "Crypto fund managers who need to explain market conditions to LPs using data-driven reports",
+        "Long-term investors tracking accumulation/distribution patterns to time entry and exit points",
+      ],
+      pros: [
+        "Most comprehensive on-chain metric library in the industry — 200+ proprietary indicators across 20+ chains",
+        "Entity-adjusted metrics provide more accurate insights by grouping related addresses (exchange clusters, miner wallets)",
+        "The Weekly On-Chain Report is widely considered the best free source of institutional crypto market analysis",
+        "Workbench enables powerful custom analysis without needing to code or use external BI tools",
+        "Historical data goes back to genesis for Bitcoin and Ethereum, enabling decade-long backtesting of strategies",
+        "Strong reputation among institutions — cited by Bloomberg, Reuters, and major hedge fund research reports",
+      ],
+      cons: [
+        "Pricing is steep for retail users — the $29 Standard plan is very limited, and most useful features require the $99 Advanced plan",
+        "Steep learning curve: understanding metrics like SOPR, MVRV Z-Score, and Entity-Adjusted NRPL requires substantial study",
+        "No direct trading integration — Glassnode is purely analytical and does not connect to exchange APIs for execution",
+        "Coverage for newer chains (Solana, Base, Arbitrum) is less deep than Bitcoin and Ethereum metrics",
+        "Real-time data is only available on Professional tier; Standard and Advanced plans have data delays of several hours",
+        "The interface can feel overwhelming for newcomers due to the sheer number of metrics and customization options",
+      ],
+      alternatives: ["dune", "nansen", "messari", "santiment", "cryptoquant"],
+      gettingStarted: [
+        { step: 1, title: "Start with the Free Content", description: "Subscribe to the Weekly On-Chain Report (free) and explore the Bitcoin Market Dashboard at insights.glassnode.com. These provide a great introduction to how on-chain metrics are used to analyze market conditions." },
+        { step: 2, title: "Learn the Key Metrics", description: "Focus on understanding 3-5 core metrics first: MVRV Ratio (valuation), SOPR (profit/loss of moved coins), Exchange Net Position Change (accumulation/distribution), and HODL Waves (holder behavior). Glassnode Academy offers free courses explaining each metric." },
+        { step: 3, title: "Build Your First Dashboard", description: "Subscribe to the Advanced plan and open the Workbench. Create a dashboard with MVRV Ratio overlaid on Bitcoin price, add Exchange Balance as a secondary chart, and set alerts for when MVRV drops below 1.0 (accumulation signal) or exceeds 3.7 (overheating signal)." },
+      ],
+      faq: [
+        { question: "What is the difference between Glassnode and Nansen?", answer: "Glassnode focuses on macro-level on-chain metrics for market analysis — things like MVRV Ratio, exchange flows, and holder behavior. Nansen focuses on wallet-level tracking — identifying which wallets belong to institutions, tracking smart money movements, and analyzing specific token holders. Glassnode answers 'what is the market doing?' while Nansen answers 'who is moving money and where?' Many professional investors use both." },
+        { question: "Can I trade based on Glassnode metrics?", answer: "Glassnode provides market intelligence, not trading signals. Metrics like MVRV Ratio can indicate whether Bitcoin is historically overvalued or undervalued, but they are not precise timing tools. Use on-chain metrics as a macro overlay to your trading strategy — they are most effective for identifying accumulation zones (buy) and euphoria phases (take profit), not for day-to-day entries and exits." },
+        { question: "Is Glassnode worth $99/month for a retail investor?", answer: "For a retail investor managing a portfolio of $10,000+, the $99 Advanced plan can be justified if you actively use the data for market timing decisions. The difference between buying during accumulation and buying during euphoria can easily be worth more than $99. For smaller portfolios, start with the free newsletter and consider upgrading when you have specific use cases for the custom dashboards and alerts." },
+        { question: "What are entity-adjusted metrics?", answer: "Entity-adjusted metrics use clustering algorithms to group blockchain addresses that are controlled by the same entity. For example, a single exchange might use thousands of addresses, but Glassnode's clustering identifies them as belonging to the same exchange. This provides more accurate metrics — without entity adjustment, one whale moving coins between their own wallets would appear as a large transaction, when it is actually just internal wallet management." },
+        { question: "Does Glassnode cover altcoins?", answer: "Glassnode covers major Layer-1 blockchains (Ethereum, Solana, Polygon, Avalanche, Arbitrum, Base) and their ecosystems, but the depth of metrics varies. Bitcoin and Ethereum have the most comprehensive coverage with 100+ metrics each. Altcoin coverage is expanding, but niche tokens and newer chains may have limited data. For deep altcoin analysis, combine Glassnode with Dune Analytics for custom queries." },
+        { question: "How often is Glassnode data updated?", answer: "Data update frequency depends on your plan and the metric. Professional plan users get real-time data for most Bitcoin and Ethereum metrics (updated every block, approximately every 10 minutes for Bitcoin and 12 seconds for Ethereum). Standard and Advanced plans may have delays of several hours for certain metrics. API users on Professional plan can access streaming WebSocket data." },
+      ],
+    },
   },
   {
     id: "intotheblock",
@@ -1526,6 +1682,79 @@ The platform also includes useful developer tools like the Solidity compiler for
     url: "https://dappradar.com",
     pricing: "Free / Pro",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `DappRadar is the world's largest dApp discovery and analytics platform, tracking over 15,000 decentralized applications across 50+ blockchain networks. Founded in 2018 in Lithuania, DappRadar has become the go-to resource for anyone looking to discover, evaluate, and monitor the rapidly expanding universe of Web3 applications. The platform's core mission is to make dApp data transparent and accessible, helping users cut through the noise to find legitimate, high-quality applications.
+
+At the heart of DappRadar is its dApp ranking system, which organizes applications by category (DeFi, Gaming, NFT Marketplaces, Social, Gambling) and ranks them by key metrics: Unique Active Wallets (UAW), transaction volume, and Total Value Locked (TVL). This ranking system is widely cited by media outlets and used by investors to identify trending protocols before they appear on mainstream radar. When a new blockchain game goes viral or a DeFi protocol starts attracting significant capital, DappRadar is often the first place it appears in public data.
+
+The platform's NFT analytics suite has become particularly valuable as the NFT market has matured. DappRadar tracks NFT collections across multiple marketplaces (OpenSea, Blur, Magic Eden, LooksRare), providing floor price history, trading volume, unique holder counts, and wash trading detection. The wash trading filter is especially important — DappRadar's algorithms identify suspicious trading patterns (same wallet buying and selling, circular transfers) to provide "clean" volume data that excludes manipulative activity. This transparency has made DappRadar a trusted source for NFT market analysis.
+
+DappRadar's gaming tracking is the most comprehensive in the industry, monitoring blockchain games across all major gaming-focused chains (Immutable X, Ronin, Polygon, BNB Chain, Solana). Users can filter games by genre (RPG, strategy, card game, metaverse), track daily active players, and see in-game asset trading volumes. For GameFi investors and players, DappRadar provides the data needed to identify which games have real user bases versus those that are bot-driven or temporarily hyped.
+
+The RADAR token, launched in 2021, powers DappRadar's ecosystem through governance voting and PRO membership access. PRO members get advanced analytics features including historical data export, custom alerts for dApp metric changes, and early access to new features. The token also enables community curation — RADAR holders can vote on which dApps receive featured placement and which categories deserve expanded coverage.`,
+      features: [
+        "15,000+ dApps tracked across 50+ blockchain networks including Ethereum, Solana, BNB Chain, Polygon, Arbitrum, and Base",
+        "dApp rankings by category (DeFi, Gaming, NFT, Social, Gambling) sorted by UAW, volume, and TVL",
+        "NFT analytics: floor price history, trading volume, unique holders, and wash trading detection across major marketplaces",
+        "Gaming tracker: daily active players, in-game asset volume, genre filtering for 500+ blockchain games",
+        "DeFi protocol analytics: TVL tracking, token price charts, and protocol-level metrics for 2,000+ DeFi applications",
+        "Wash trading detection: algorithms that identify and filter out manipulative trading patterns for clean NFT data",
+        "Multi-chain portfolio tracker: connect your wallet to see your dApp interactions, NFT holdings, and DeFi positions",
+        "RADAR token: governance voting, PRO membership access, and community curation of featured dApps",
+        "Industry reports: quarterly reports on blockchain gaming, NFT market trends, and dApp ecosystem growth",
+        "Custom alerts (PRO): notifications when specific dApp metrics cross thresholds (e.g., UAW up 50% in 24h)",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0",
+          features: ["dApp rankings and search", "Basic metrics (UAW, volume, TVL)", "NFT collection tracking", "Gaming leaderboards", "Portfolio tracker", "Industry reports"],
+        },
+        {
+          name: "PRO",
+          price: "Stake 30,000 RADAR tokens (or equivalent subscription)",
+          features: ["All Free features", "Historical data export", "Custom alerts", "Advanced analytics", "API access", "Early feature access", "Ad-free experience", "PRO badge"],
+          highlight: true,
+        },
+      ],
+      bestFor: [
+        "Investors who want to discover trending dApps and protocols before they appear on mainstream exchanges",
+        "NFT traders who need clean, wash-trade-filtered data for making buying and selling decisions",
+        "GameFi enthusiasts researching which blockchain games have real player bases versus bot-driven activity",
+        "Journalists and researchers who need citable dApp metrics for market analysis and reporting",
+        "DeFi users who want to monitor protocol adoption and TVL trends across multiple chains",
+      ],
+      pros: [
+        "Largest dApp database in the industry — 15,000+ applications tracked across 50+ chains",
+        "Wash trading detection provides clean, reliable NFT market data that other platforms do not filter",
+        "Gaming tracking is unmatched — no other platform covers blockchain games with this depth and breadth",
+        "Industry reports are well-researched and frequently cited by mainstream media including Bloomberg and CoinDesk",
+        "The free tier provides substantial value — full dApp rankings, NFT data, and portfolio tracking at no cost",
+        "Multi-chain coverage includes smaller networks that are often ignored by competitors focused on Ethereum only",
+      ],
+      cons: [
+        "PRO membership requires staking 30,000 RADAR tokens, which ties up capital and exposes users to token price volatility",
+        "UAW (Unique Active Wallets) can be inflated by Sybil attacks and airdrop farming — it is not a perfect measure of genuine users",
+        "dApp rankings update with a slight delay — data is not real-time and may lag on-chain activity by several minutes",
+        "The interface can feel cluttered with ads (free tier) and the sheer volume of data can be overwhelming for newcomers",
+        "NFT wash trading detection, while valuable, is not perfect — sophisticated wash traders can still evade detection algorithms",
+        "RADAR token utility beyond PRO membership is limited, and the token's long-term value proposition is uncertain",
+      ],
+      alternatives: ["dune", "nansen", "coingecko", "debank", "defillama"],
+      gettingStarted: [
+        { step: 1, title: "Browse Top dApps", description: "Visit dappradar.com and explore the Rankings page. Filter by category (DeFi, Gaming, NFT) and blockchain. Sort by UAW to find the most-used dApps or by Volume to find where the money is flowing." },
+        { step: 2, title: "Track NFTs & Games", description: "Use the NFT section to search for specific collections and see floor price history, trading volume, and wash trading metrics. Check the Gaming section to discover trending blockchain games — sort by 'Active Players (7d)' to find games with genuine user bases." },
+        { step: 3, title: "Connect Your Portfolio", description: "Connect your wallet to DappRadar's Portfolio Tracker to see your dApp interactions, NFT holdings, and DeFi positions across all supported chains. Use this to discover which dApps you are already using and find similar applications." },
+      ],
+      faq: [
+        { question: "What is UAW and is it a reliable metric?", answer: "UAW (Unique Active Wallets) measures the number of distinct wallet addresses that interact with a dApp within a given timeframe. It is the closest metric to 'daily active users' in Web3. However, UAW can be inflated by Sybil attacks (one person using hundreds of wallets) and airdrop farming (temporary interaction spikes driven by airdrop expectations). Always look at UAW trends over weeks/months rather than single-day spikes, and cross-reference with volume data for a complete picture." },
+        { question: "How does DappRadar detect wash trading?", answer: "DappRadar's wash trading detection analyzes NFT transaction patterns to identify suspicious activity: the same wallet buying and selling the same NFT repeatedly, circular transfers between related wallets, and trades at prices far above market norms. When wash trading is detected, the volume is excluded from the 'clean' volume metric. This makes DappRadar's NFT data significantly more reliable than raw marketplace data." },
+        { question: "Do I need to buy RADAR tokens to use DappRadar?", answer: "No, the free tier provides full access to dApp rankings, NFT data, gaming tracking, and portfolio features. RADAR tokens are only required for PRO membership, which unlocks historical data export, custom alerts, API access, and advanced analytics. Most individual users will find the free tier sufficient." },
+        { question: "How does DappRadar compare to DeFiLlama?", answer: "DeFiLlama specializes in DeFi TVL tracking with deep protocol-level data. DappRadar covers the entire dApp ecosystem including gaming, NFTs, and social applications. Use DeFiLlama for DeFi-specific research (protocol TVL, yields, treasury data) and DappRadar for broader dApp discovery and cross-category comparisons." },
+        { question: "Can I use DappRadar to find new investment opportunities?", answer: "Many investors use DappRadar to identify protocols before they are widely known. Look for dApps with consistently growing UAW over 30+ days (not single-day spikes), rising volume, and positive user sentiment. However, DappRadar provides data, not investment advice — always do your own research and never invest based solely on UAW or volume metrics." },
+        { question: "How often is DappRadar data updated?", answer: "Most metrics (UAW, volume, TVL) are updated every 5-15 minutes. NFT floor prices and collection data refresh every few minutes. Historical data is available on the PRO plan. Data is sourced directly from blockchain nodes and indexed through DappRadar's proprietary infrastructure." },
+      ],
+    },
   },
   {
     id: "messari",
@@ -1536,6 +1765,81 @@ The platform also includes useful developer tools like the Solidity compiler for
     url: "https://messari.io",
     pricing: "$29-1000+/mo",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Messari is the premier crypto research and data intelligence platform, widely regarded as the "Bloomberg of crypto." Founded in 2018 by Ryan Selkis, a former Digital Currency Group executive, Messari has built a reputation for rigorous, institutional-grade research that covers every corner of the cryptocurrency ecosystem. The platform combines quantitative on-chain data with qualitative research reports, creating a comprehensive intelligence layer that serves hedge funds, venture capital firms, trading desks, and corporate strategy teams.
+
+At the core of Messari's offering is its asset-level research. Every major cryptocurrency (500+ assets) has a dedicated profile page with quantitative metrics (market cap, volume, TVL, revenue, active addresses) and qualitative analysis (team background, tokenomics, competitive landscape, regulatory risk). This dual approach — hard data plus expert analysis — differentiates Messari from purely data-driven platforms like Dune Analytics or CoinGecko. Investors use Messari not just to look up numbers, but to understand the narrative, risks, and competitive positioning of each asset.
+
+Messari's quarterly and annual reports are among the most cited research publications in crypto. The "State of Crypto" reports provide macro-level analysis of market trends, regulatory developments, and sector-by-sector performance. The "Theses" series (annual predictions) from Ryan Selkis has become essential reading for crypto investors and builders, often running 150+ pages with detailed forecasts and investment themes for the year ahead. These reports are frequently referenced in mainstream financial media including Bloomberg, CNBC, and the Wall Street Journal.
+
+The Messari Protocol Services division provides specialized research for individual blockchain ecosystems. Protocols like Solana, Polkadot, Cosmos, and Avalanche commission Messari to produce in-depth quarterly reports on their ecosystem's growth, developer activity, and competitive positioning. These reports serve as independent third-party analysis that protocols use to attract investors and developers — a business model that aligns Messari's incentives with producing high-quality, objective research.
+
+Messari Governor is the platform's governance tracking tool, monitoring proposal activity across 150+ DAOs and protocols. Users can track upcoming votes, see voting power distribution, and analyze governance participation trends. For institutional investors who hold governance tokens, Governor provides a centralized dashboard for managing voting responsibilities and staying informed about protocol-level decisions that could affect their investments.
+
+The recently introduced AI-powered features include natural language querying (ask questions about crypto data in plain English), automated report generation, and sentiment analysis of governance proposals and community discussions. These AI tools lower the barrier to entry for users who may not have the time or expertise to manually analyze raw data and research reports.`,
+      features: [
+        "500+ asset profiles with quantitative metrics (market cap, volume, TVL, revenue) and qualitative research (team, tokenomics, risks)",
+        "Quarterly 'State of Crypto' reports: macro-level market analysis cited by Bloomberg, CNBC, and Wall Street Journal",
+        "Annual 'Theses' by Ryan Selkis: 150+ page forecast of crypto investment themes and predictions",
+        "Protocol Services: ecosystem-specific quarterly reports for Solana, Polkadot, Cosmos, Avalanche, and more",
+        "Messari Governor: governance tracking across 150+ DAOs with voting power analysis and proposal monitoring",
+        "AI-powered querying: natural language search across the entire research database with automated report generation",
+        "Screener tool: filter 500+ assets by sector, market cap, revenue, P/E ratio, and custom metrics",
+        "Data API: programmatic access to quantitative metrics with Python, R, and REST endpoints",
+        "Enterprise dashboard: customizable views for institutional clients tracking specific sectors, protocols, or investment theses",
+        "Daily newsletter and podcast network covering market movements, regulatory news, and research highlights",
+      ],
+      pricingPlans: [
+        {
+          name: "Pro",
+          price: "$24.99/month (annual billing)",
+          features: ["500+ asset profiles", "Daily research briefs", "Basic screener", "Governor (limited)", "Newsletter access", "Mobile app"],
+        },
+        {
+          name: "Enterprise",
+          price: "$1,000+/month (annual billing)",
+          features: ["All Pro features", "Full Governor access", "Advanced screener", "Data API access", "Quarterly reports", "AI querying", "Custom dashboards", "Dedicated analyst support"],
+          highlight: true,
+        },
+      ],
+      bestFor: [
+        "Institutional investors who need rigorous, citable research for investment committee decisions",
+        "VC analysts conducting due diligence on protocols before making investment decisions",
+        "Hedge fund managers who need macro crypto market analysis to inform portfolio allocation",
+        "Governance token holders who need to track proposals and voting across multiple DAOs",
+        "Crypto-native companies who need competitive intelligence and sector-level market analysis",
+      ],
+      pros: [
+        "Unmatched depth of qualitative research — Messari analysts produce original insights, not just aggregated data",
+        "The 'State of Crypto' and 'Theses' reports are essential annual reading for serious crypto investors",
+        "Protocol Services reports provide independent, third-party ecosystem analysis that protocols use for investor relations",
+        "Governor tool centralizes DAO governance tracking across 150+ protocols — saves hours of manual proposal monitoring",
+        "Strong reputation and credibility — Messari research is frequently cited by mainstream financial media",
+        "AI features (natural language querying, automated reports) make institutional-grade research accessible to non-experts",
+      ],
+      cons: [
+        "Enterprise pricing ($1,000+/month) is prohibitively expensive for individual investors and small funds",
+        "The Pro plan ($24.99/month) is limited — most useful features (API, advanced screener, AI querying) are Enterprise-only",
+        "Research can have a U.S.-centric regulatory perspective that may not align with global crypto market realities",
+        "Founder Ryan Selkis's outspoken political commentary has occasionally created controversy and brand risk",
+        "Asset coverage (500+) is smaller than pure data aggregators like CoinGecko (10,000+) — focused on quality over quantity",
+        "Research reports can become outdated quickly in fast-moving markets — always check the publication date before citing",
+      ],
+      alternatives: ["glassnode", "nansen", "dune", "coingecko", "coinmarketcap"],
+      gettingStarted: [
+        { step: 1, title: "Start with Free Content", description: "Subscribe to the Messari daily newsletter and follow @MessariCrypto on Twitter for research highlights. Read the latest 'State of Crypto' quarterly report (free) to understand the platform's analytical approach before subscribing." },
+        { step: 2, title: "Explore Asset Profiles", description: "Subscribe to Pro ($24.99/month) and explore asset profiles for your holdings. Compare the quantitative metrics (revenue, P/E ratio) and read the qualitative analysis (team, tokenomics, risks) to understand the full investment thesis for each asset." },
+        { step: 3, title: "Use the Screener & Governor", description: "Use the Screener to filter assets by sector (DeFi, L1, L2, Gaming) and financial metrics (revenue > $10M, P/E < 20x). Set up Governor to track governance proposals for DAO tokens you hold — never miss an important vote again." },
+      ],
+      faq: [
+        { question: "Is Messari worth $1,000/month for Enterprise?", answer: "For professional investors and funds managing $1M+, Enterprise pricing can be justified. The combination of API access (for quantitative models), full research reports (for investment committee presentations), and Governor (for DAO governance tracking) replaces multiple separate subscriptions. For individual investors, the Pro plan ($24.99/month) provides 80% of the research value at a fraction of the cost." },
+        { question: "How does Messari make money from Protocol Services?", answer: "Blockchain protocols pay Messari to produce independent quarterly research reports on their ecosystem. This creates a conflict-of-interest question — can a report paid for by Solana be truly objective about Solana? Messari addresses this by disclosing all Protocol Services relationships and maintaining editorial independence. The reports are generally considered credible, but readers should be aware of the funding source." },
+        { question: "What is the difference between Messari and CoinGecko?", answer: "CoinGecko is a data aggregator — it collects and displays market data (price, volume, market cap) for 10,000+ cryptocurrencies. Messari is a research platform — it provides original analysis, reports, and institutional-grade intelligence on 500+ assets. CoinGecko answers 'what is the price?' while Messari answers 'why should I invest?' Many investors use CoinGecko for price checks and Messari for research." },
+        { question: "Does Messari have a mobile app?", answer: "Yes, Messari has iOS and Android apps. The mobile app provides access to asset profiles, daily research briefs, news feed, and Governor governance tracking. The full screener and API features are web-only. The app is well-designed for on-the-go research and notification-based governance alerts." },
+        { question: "Can I use Messari AI to analyze any token?", answer: "Messari's AI features (currently in beta) allow natural language queries like 'show me all DeFi protocols with revenue over $50M and P/E under 30x' or 'summarize the risks for investing in Lido.' The AI pulls from Messari's research database, so it is limited to the 500+ assets with full coverage. It cannot analyze tokens that Messari does not cover." },
+        { question: "How current is Messari's research?", answer: "Asset profiles are updated regularly with the latest quantitative data (daily for price/volume, quarterly for revenue/financials). Qualitative research reports are published on a rolling schedule — major assets get quarterly updates, while smaller assets may be updated annually. Always check the 'Last Updated' date on any research report before relying on it for investment decisions." },
+      ],
+    },
   },
   {
     id: "coingecko",
@@ -1946,6 +2250,79 @@ CoinStats Premium unlocks additional features including advanced portfolio analy
     url: "https://debank.com",
     pricing: "Free",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `DeBank is the most comprehensive DeFi portfolio tracker and on-chain activity dashboard available. Founded in 2020 by a team of DeFi-native developers, DeBank has become the default tool for serious DeFi users who need to track their positions across dozens of protocols, chains, and wallets. The platform supports 40+ blockchain networks including Ethereum, BNB Chain, Arbitrum, Optimism, Polygon, Avalanche, Base, Solana, and many Layer-2 solutions.
+
+What sets DeBank apart from other portfolio trackers is its depth of protocol integration. Rather than just showing token balances, DeBank parses smart contract data to display your exact positions in lending protocols (deposits, borrows, health factors), liquidity pools (LP token value, fee earnings, impermanent loss), staking contracts (staked amount, rewards accrued), yield farms (deposited amount, pending harvest), and more. A user with 50+ DeFi positions across 10 chains can see their entire financial picture in a single dashboard — something no exchange or basic wallet can provide.
+
+The "Whale Watching" feature on DeBank has become legendary in the DeFi community. The platform ranks wallets by net worth and displays their complete transaction history and current positions. Users can follow specific whales (or any wallet address) to see what they are buying, selling, and farming in real-time. This transparency — while controversial from a privacy standpoint — provides valuable market intelligence for DeFi participants who want to understand what sophisticated players are doing.
+
+DeBank's social features, branded as "DeBank Hi," transform the platform from a pure portfolio tracker into a Web3 social network. Users can follow other wallets, post status updates, comment on transactions, and build a reputation based on their on-chain activity. Verified badges are awarded based on wallet age, transaction volume, and protocol interactions — creating a trust layer for identifying genuine DeFi users versus bots or Sybil attackers. This social layer has made DeBank a hub for DeFi alpha sharing and community interaction.
+
+The DeBank API (previously known as OpenOcean API) is widely used by developers building DeFi aggregators, dashboards, and analytics tools. It provides programmatic access to protocol data, token prices, wallet balances, and transaction history across 40+ chains. Many popular DeFi tools and Telegram bots rely on DeBank's API as their primary data source.`,
+      features: [
+        "Portfolio tracking across 40+ blockchain networks with deep protocol-level position parsing",
+        "Lending positions: deposits, borrows, health factors, and liquidation thresholds across Aave, Compound, and 20+ protocols",
+        "LP positions: token pair value, fee earnings, impermanent loss estimates for Uniswap, Curve, Balancer, and 30+ DEXs",
+        "Staking & farming: staked amounts, rewards accrued, pending harvests across Lido, Rocket Pool, Convex, and 50+ farms",
+        "Whale Watching: follow any wallet to see real-time transactions, portfolio composition, and protocol interactions",
+        "DeBank Hi: Web3 social network with wallet following, status updates, verified badges, and community interaction",
+        "Transaction history with decoded function calls — see exactly what each transaction did, not just hash and value",
+        "Multi-wallet support: aggregate all your wallets (hot, cold, hardware) into a single unified portfolio view",
+        "Gas tracker: real-time gas prices across Ethereum, Arbitrum, Optimism, Base, and other L2 networks",
+        "API access: programmatic portfolio data, token prices, and protocol metrics used by hundreds of DeFi tools",
+      ],
+      pricingPlans: [
+        {
+          name: "Free",
+          price: "$0",
+          features: ["Unlimited wallet tracking", "All protocol integrations", "Whale watching", "DeBank Hi social features", "Transaction history", "Gas tracker", "Multi-chain support (40+ chains)"],
+          highlight: true,
+        },
+        {
+          name: "DeBank Pro",
+          price: "Coming soon (beta)",
+          features: ["Advanced analytics", "Custom alerts", "Tax reporting integration", "API access (higher limits)", "Priority data updates"],
+        },
+      ],
+      bestFor: [
+        "DeFi power users with positions across 10+ protocols and 5+ chains who need a unified portfolio view",
+        "Yield farmers who need to track staking rewards, LP fees, and farming harvests across multiple protocols",
+        "Whale watchers who want to monitor what large wallets are buying, selling, and farming in real-time",
+        "Airdrop hunters who need to verify their protocol interactions and transaction history for eligibility",
+        "DeFi researchers analyzing protocol adoption, user behavior, and cross-chain capital flows",
+      ],
+      pros: [
+        "Most comprehensive DeFi protocol coverage — tracks positions in 100+ protocols with smart contract-level detail",
+        "Completely free with no paywall for core features — unlimited wallets, chains, and protocol integrations",
+        "Whale Watching is genuinely useful for market intelligence and discovering new protocols early",
+        "DeBank Hi adds a social dimension that makes DeFi more engaging and community-driven",
+        "Multi-chain support (40+) with fast data updates — most positions refresh within minutes of on-chain confirmation",
+        "Decoded transaction history shows human-readable function calls (e.g., 'Swapped 1000 USDC for 0.5 ETH on Uniswap')",
+      ],
+      cons: [
+        "Privacy concerns: anyone can look up your wallet and see your entire DeFi portfolio and transaction history",
+        "No mobile app — the mobile web experience is functional but lacks the polish of a native app",
+        "DeBank Hi's social features can feel cluttered and gamified — not everyone wants a social network attached to their portfolio tracker",
+        "Whale Watching can create FOMO and herd behavior — seeing a whale buy a token does not mean it is a good investment",
+        "Protocol coverage, while extensive, sometimes misses newer or smaller DeFi protocols for the first few days after launch",
+        "The interface can be overwhelming for DeFi newcomers — understanding all the position types requires existing DeFi knowledge",
+      ],
+      alternatives: ["zapper", "zerion", "nansen", "rotki", "coinstats"],
+      gettingStarted: [
+        { step: 1, title: "Connect Your Wallet", description: "Visit debank.com and click 'Connect Wallet' in the top-right corner. Connect your primary DeFi wallet (MetaMask, Rabby, or WalletConnect). DeBank will automatically scan all supported chains and display your complete portfolio." },
+        { step: 2, title: "Explore Your Portfolio", description: "Review your Dashboard to see total net worth, asset allocation, and position breakdowns. Click into any protocol (e.g., Aave, Uniswap) to see detailed position data including deposits, borrows, LP pairs, and pending rewards. Add additional wallets for a unified view." },
+        { step: 3, title: "Follow Whales & Use Hi", description: "Use the search bar to look up any wallet address or ENS name. Follow interesting wallets to track their activity. Set up your DeBank Hi profile with a verified badge to participate in the social features and build your on-chain reputation." },
+      ],
+      faq: [
+        { question: "Is DeBank safe to connect my wallet to?", answer: "DeBank is a read-only portfolio tracker — it only needs 'view' permissions to display your balances and positions. You never need to sign transactions or approve token spending to use DeBank. The platform cannot move your funds. However, connecting your wallet does expose your address and transaction history, which is publicly visible on DeBank. If privacy is a concern, use DeBank's search function without connecting a wallet." },
+        { question: "Can anyone see my DeFi portfolio on DeBank?", answer: "Yes. DeBank displays the portfolio and transaction history of any wallet address that is searched. This is possible because all blockchain data is public — DeBank simply makes it more accessible and readable. If you want privacy, use a separate wallet for DeFi activities that you do not publicly associate with your identity." },
+        { question: "How does DeBank compare to Zapper?", answer: "Both are excellent DeFi portfolio trackers. DeBank has deeper protocol integration (100+ protocols vs Zapper's 60+), better whale watching, and the social features (DeBank Hi). Zapper has a more polished UI, better NFT support, and a built-in swap/bridge interface for executing transactions. Many DeFi users keep both bookmarked — DeBank for tracking and Zapper for executing." },
+        { question: "Does DeBank show NFT values?", answer: "DeBank's primary focus is DeFi positions (tokens, lending, LP, staking). NFT support is more limited — it shows NFT holdings but does not provide floor price estimates or rarity rankings like dedicated NFT portfolio trackers. For comprehensive NFT tracking, use a tool like NFTBank or combine DeBank with OpenSea's portfolio feature." },
+        { question: "Can I use DeBank to find airdrop eligibility?", answer: "Yes. Many airdrops require specific on-chain interactions (using a protocol before a certain date, holding a minimum balance, etc.). DeBank's transaction history and protocol interaction tracking make it easy to verify your eligibility. However, DeBank itself does not determine eligibility — it simply displays the data that protocols use to make eligibility decisions." },
+        { question: "What is DeBank Hi and is it worth using?", answer: "DeBank Hi is a Web3 social layer that lets you follow wallets, post updates, and build an on-chain reputation. It is worth using if you want to discover new protocols through community activity, follow interesting DeFi participants, or build your own reputation in the DeFi community. If you prefer a pure portfolio tracking experience without social features, you can ignore Hi and just use the Dashboard." },
+      ],
+    },
   },
   {
     id: "nansen-portfolio",
@@ -2522,6 +2899,84 @@ Uniswap's self-custodial model ensures that users maintain full control of their
     url: "https://curve.fi",
     pricing: "Protocol Fees",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Curve Finance is the largest decentralized exchange (DEX) for stablecoins and pegged assets, consistently ranking among the top DeFi protocols by Total Value Locked (TVL) with over $2 billion in deposits. Launched in January 2020 by Michael Egorov, Curve revolutionized the automated market maker (AMM) model by introducing a specialized bonding curve optimized for assets that trade at similar prices — stablecoins like USDC/DAI/USDT, wrapped tokens like stETH/ETH, and liquid staking derivatives.
+
+The key innovation behind Curve is its StableSwap algorithm, which combines the best features of constant-sum (zero slippage but limited price range) and constant-product (unlimited price range but high slippage) AMM models. For stablecoin pairs that should always trade at 1:1, Curve provides near-zero slippage trades with minimal price impact. This makes Curve the go-to venue for large stablecoin swaps — a $10 million USDC to DAI trade on Curve incurs a fraction of the slippage it would on Uniswap.
+
+Curve's deep liquidity pools are fueled by liquidity providers (LPs) who deposit assets and earn trading fees plus CRV token rewards. The platform's "gauge" system allows the CRV community to vote on how CRV emissions are distributed among different pools, creating a market for liquidity direction. Protocols that want to attract liquidity for their tokens can bribe CRV holders to vote for their pool's gauge, a practice that has spawned an entire ecosystem of bribe marketplaces (Votium, Hidden Hand, StakeDAO).
+
+The veCRV (vote-escrowed CRV) tokenomics model is one of the most influential innovations in DeFi. Users lock CRV tokens for up to 4 years to receive veCRV, which grants voting power on gauge emissions, a share of protocol trading fees (50% of all fees), and boosted LP rewards (up to 2.5x). This long-term alignment mechanism has been widely copied by other protocols (Balancer's veBAL, Frax's veFXS) and is now known as the "Curve Wars" — a term describing the competition among protocols to accumulate veCRV and direct emissions to their own pools.
+
+Curve's product expansion beyond stablecoin pools includes: Curve Crypto (volatile asset pools for pairs like ETH/BTC), Curve Lending (isolated lending markets using crvUSD as collateral), and crvUSD (Curve's native stablecoin backed by crypto collateral with a novel liquidation mechanism called LLAMMA). The protocol has also expanded cross-chain, with deployments on Ethereum, Arbitrum, Optimism, Polygon, Avalanche, Fantom, and several other networks.`,
+      features: [
+        "StableSwap AMM: optimized bonding curve for stablecoin and pegged asset pairs with near-zero slippage",
+        "Deepest stablecoin liquidity in DeFi — routinely handles $10M+ swaps with minimal price impact",
+        "veCRV tokenomics: lock CRV for up to 4 years to earn trading fees (50% of protocol revenue), boosted LP rewards (up to 2.5x), and gauge voting power",
+        "Gauge system: CRV holders vote on CRV emission distribution, creating a market for liquidity direction",
+        "crvUSD: Curve's native stablecoin with LLAMMA (Lending-Liquidating AMM Algorithm) for soft liquidations",
+        "Curve Lending: isolated lending markets using crvUSD, allowing borrowing against select crypto collateral",
+        "Factory pools: permissionless pool creation for any token pair, enabling new projects to bootstrap liquidity on Curve",
+        "Cross-chain deployment: available on Ethereum, Arbitrum, Optimism, Polygon, Avalanche, Fantom, and more",
+        "Trading fee model: 0.04% base fee split 50/50 between LPs and veCRV holders",
+        "Bribe ecosystem: protocols incentivize veCRV holders to direct emissions to their pools via Votium, Hidden Hand, and other bribe marketplaces",
+      ],
+      pricingPlans: [
+        {
+          name: "Trader",
+          price: "0.04% fee per trade",
+          features: ["Near-zero slippage on stablecoin swaps", "Deep liquidity for large trades", "Cross-chain support", "No account or KYC needed"],
+        },
+        {
+          name: "Liquidity Provider",
+          price: "Gas fees only (earn fees + CRV rewards)",
+          features: ["Earn trading fees (50% of 0.04%)", "Earn CRV token rewards", "Boost rewards up to 2.5x with veCRV", "Stake LP tokens in gauges for maximum yield"],
+          highlight: true,
+        },
+        {
+          name: "veCRV Holder",
+          price: "Lock CRV for 1 week to 4 years",
+          features: ["Earn 50% of all protocol trading fees", "Vote on gauge emission weights", "Boost your LP rewards up to 2.5x", "Receive bribes from protocols seeking gauge votes"],
+        },
+      ],
+      bestFor: [
+        "Whales and institutions who need to swap large stablecoin amounts with minimal slippage",
+        "Liquidity providers seeking stable, predictable yields from stablecoin trading fees",
+        "Governance participants who want to influence CRV emission distribution and earn bribe income",
+        "Protocols that want to bootstrap deep liquidity for their stablecoin or pegged asset",
+        "Yield farmers who compound CRV rewards and LP fees across Curve, Convex, and bribe marketplaces",
+      ],
+      pros: [
+        "Unmatched stablecoin liquidity — the default venue for large stablecoin swaps across all of DeFi",
+        "veCRV tokenomics create powerful long-term alignment between the protocol and token holders",
+        "The bribe ecosystem (Votium, Hidden Hand) provides additional yield layers on top of trading fees and CRV rewards",
+        "crvUSD's LLAMMA liquidation mechanism is a genuine innovation that avoids the brutal liquidations of traditional lending protocols",
+        "Factory pools enable permissionless liquidity creation, making Curve accessible to new projects without governance approval",
+        "Multi-chain deployment ensures Curve's liquidity is available wherever DeFi activity is concentrated",
+      ],
+      cons: [
+        "The Curve ecosystem is notoriously complex — understanding veCRV, gauges, bribes, and Convex requires significant study",
+        "CRV token has experienced significant price decline since its peak, raising concerns about long-term emission sustainability",
+        "Founder Michael Egorov's large CRV-backed loans have created systemic risk concerns — a liquidation cascade could destabilize the CRV market",
+        "The bribe ecosystem, while innovative, raises governance concerns — are gauge votes determined by protocol merit or by who pays the most bribes?",
+        "Curve's interface is dated and less user-friendly than newer DEXs like Uniswap or 1inch",
+        "Stablecoin pools are concentrated risk — if one stablecoin in a pool depegs, all LPs in that pool suffer losses",
+      ],
+      alternatives: ["uniswap", "balancer", "1inch-defi", "convex", "pancakeswap"],
+      gettingStarted: [
+        { step: 1, title: "Connect Your Wallet", description: "Visit curve.fi and click 'Connect Wallet.' Curve supports MetaMask, WalletConnect, and most major wallets. Ensure you are on the correct network (Ethereum for the deepest liquidity, Arbitrum or Optimism for lower gas fees)." },
+        { step: 2, title: "Swap or Provide Liquidity", description: "To swap stablecoins, select a pool (e.g., 3pool for USDC/DAI/USDT), enter your amount, and confirm. To provide liquidity, click 'Deposit' in your chosen pool, approve the tokens, and deposit. You will receive LP tokens representing your share of the pool." },
+        { step: 3, title: "Stake LP Tokens & Boost Rewards", description: "After depositing, stake your LP tokens in the pool's gauge to earn CRV rewards. Lock CRV tokens for veCRV to boost your LP rewards up to 2.5x and earn 50% of protocol trading fees. For maximum yield, consider routing through Convex Finance for auto-compounding." },
+      ],
+      faq: [
+        { question: "Why use Curve instead of Uniswap for stablecoin swaps?", answer: "Curve's StableSwap algorithm is specifically designed for assets that trade at similar prices (stablecoins, liquid staking derivatives). For a $100,000 USDC to DAI swap, Curve's slippage is near-zero, while Uniswap's constant-product AMM would incur noticeable price impact. The larger the trade, the bigger Curve's advantage. For volatile asset pairs like ETH/USDC, Uniswap is typically the better venue." },
+        { question: "What are the Curve Wars?", answer: "The 'Curve Wars' refers to the competition among DeFi protocols to accumulate veCRV and direct CRV emissions to their own liquidity pools. Protocols like Convex, Frax, and Yearn compete to lock CRV, accumulate voting power, and influence which pools receive the most CRV rewards. This competition has created an entire ecosystem of bribe marketplaces (Votium, Hidden Hand) where protocols pay veCRV holders to vote for their preferred pools." },
+        { question: "Is providing liquidity on Curve safe?", answer: "Curve's smart contracts have been audited multiple times and manage billions in TVL, making them among the most battle-tested in DeFi. However, risks remain: stablecoin depegging (if a stablecoin in a pool loses its peg, LPs absorb the loss), smart contract risk (exploits, though rare for Curve), and impermanent loss (minimal for stablecoin pools, but significant for volatile asset pools like Curve Crypto). Always diversify across multiple pools and never deposit more than you can afford to lose." },
+        { question: "What is crvUSD and how is it different from DAI?", answer: "crvUSD is Curve's native stablecoin, backed by crypto collateral (ETH, stETH, wBTC). Its key innovation is LLAMMA (Lending-Liquidating AMM Algorithm), which provides 'soft liquidations' — instead of a binary liquidation event where collateral is suddenly sold, LLAMMA gradually converts collateral to crvUSD as the price declines, then back to collateral as it recovers. This is fundamentally different from DAI's liquidation model, which relies on external keepers to trigger liquidations at specific price thresholds." },
+        { question: "How do I earn the highest yield on Curve?", answer: "The optimal strategy is to deposit into high-emission pools, stake LP tokens in the gauge, lock CRV for veCRV (boost rewards up to 2.5x), and then stake your LP tokens on Convex Finance for auto-compounding and additional CVX rewards. Alternatively, deposit CRV into Convex to receive cvxCRV, which earns a share of Convex's aggregated veCRV revenue without requiring you to manage locks and votes yourself." },
+        { question: "What is Convex Finance and how does it relate to Curve?", answer: "Convex Finance is a yield optimizer built on top of Curve. It aggregates user deposits to accumulate veCRV voting power, then distributes the boosted rewards back to users. By depositing through Convex, you earn higher CRV rewards (thanks to Convex's massive veCRV position) plus CVX tokens, without needing to lock CRV yourself. Convex controls a significant portion of Curve's governance, making it a critical part of the Curve ecosystem." },
+      ],
+    },
   },
   {
     id: "balancer",
@@ -2655,6 +3110,79 @@ The protocol's governance is entirely on-chain through the Aave DAO, where AAVE 
     url: "https://lido.fi",
     pricing: "Protocol Fees",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Lido is the largest liquid staking protocol in the world, with over $20 billion in Total Value Locked (TVL) — making it the single largest DeFi protocol by TVL. Founded in 2020 by Konstantin Lomashuk, Vasiliy Shapovalov, and Jordan Fish, Lido solved one of the biggest friction points in Proof-of-Stake blockchains: the choice between staking (earning yield but locking up assets) and liquidity (keeping assets available for DeFi).
+
+The core innovation is elegantly simple. When a user deposits ETH into Lido, they receive stETH (staked ETH) in return — a liquid token that represents their staked ETH plus accrued rewards. The deposited ETH is pooled and delegated to a curated set of professional node operators who run validators on Ethereum. As validators earn rewards, the stETH balance automatically increases (rebases) to reflect the accumulated yield. This means users earn staking rewards (~3-5% APY) while retaining full liquidity — they can trade stETH, use it as collateral in lending protocols, provide liquidity in DEX pools, or use it across the entire DeFi ecosystem.
+
+Lido's dominance in liquid staking has made stETH the most widely used yield-bearing asset in DeFi. It is accepted as collateral on Aave, MakerDAO, and Compound; tradeable on Curve, Uniswap, and 1inch; and usable in yield strategies on Yearn, Convex, and Pendle. This deep integration creates a powerful network effect: the more protocols that accept stETH, the more useful stETH becomes, which attracts more stakers to Lido, which increases stETH's market depth, which attracts more protocols. This flywheel has made Lido nearly synonymous with liquid staking.
+
+However, Lido's market dominance (controlling approximately 30% of all staked ETH) has raised significant centralization concerns within the Ethereum community. Critics argue that Lido's concentration of stake gives it disproportionate influence over Ethereum's consensus layer and could threaten the network's censorship resistance. Lido has responded with governance proposals to implement a dual-governance model (giving stETH holders veto power over certain decisions), a self-limiting mechanism (capping Lido's share of total ETH staked), and efforts to increase node operator diversity through the Simple DVT Module.
+
+Beyond Ethereum, Lido offers liquid staking for Polygon (stMATIC), Solana (stSOL), and Polkadot (stDOT), though these deployments have significantly lower TVL compared to the flagship Ethereum product. The LDO token is Lido's governance token, allowing holders to vote on protocol parameters including node operator selection, fee structures, and treasury management. LDO holders do not receive direct protocol revenue — the token's value is derived from governance power over the largest DeFi protocol.`,
+      features: [
+        "stETH: liquid staking token for Ethereum — automatically accrues staking rewards via daily rebases",
+        "No minimum staking amount: stake any amount of ETH (vs. 32 ETH minimum for solo staking)",
+        "Instant liquidity: stETH is tradeable on Curve, Uniswap, and 1inch — no unbonding period or lockup",
+        "Deep DeFi integration: use stETH as collateral on Aave, MakerDAO, Compound; provide liquidity on Curve and Balancer",
+        "Curated node operator set: 30+ professional validators selected through Lido DAO governance",
+        "Dual-governance model (in development): stETH holders get veto power over governance decisions",
+        "Multi-chain support: liquid staking available for Ethereum (stETH), Polygon (stMATIC), Solana (stSOL), Polkadot (stDOT)",
+        "Simple DVT Module: distributed validator technology to increase node operator diversity and decentralization",
+        "Staking APR: typically 3-5% for Ethereum, varies by chain and network conditions",
+        "LDO governance: token holders vote on node operator selection, fee parameters, treasury allocation, and protocol upgrades",
+      ],
+      pricingPlans: [
+        {
+          name: "Staker",
+          price: "10% fee on staking rewards",
+          features: ["Earn ~3-5% APR (net of fees)", "Receive stETH instantly", "No minimum amount", "No lockup period", "Full DeFi composability", "Auto-compounding via rebase"],
+          highlight: true,
+        },
+        {
+          name: "Node Operator",
+          price: "Earn 90% of staking rewards + tips/MEV",
+          features: ["Must be approved by Lido DAO", "Run validators with pooled ETH", "Earn operator commission", "Contribute to protocol decentralization"],
+        },
+      ],
+      bestFor: [
+        "ETH holders who want to earn staking yield without locking up funds for the unbonding period",
+        "DeFi users who want to use their staked ETH as collateral in lending protocols or liquidity pools",
+        "Small ETH holders who cannot meet the 32 ETH minimum for solo staking",
+        "Institutional investors who need liquid staking exposure without managing validator infrastructure",
+        "Yield optimizers who compound stETH across Curve, Convex, Aave, and other DeFi protocols for maximum APY",
+      ],
+      pros: [
+        "Largest and most liquid staking derivative — stETH has $20B+ in circulation and deep liquidity on every major DEX",
+        "No minimum deposit and instant liquidity make staking accessible to everyone, not just 32 ETH holders",
+        "Deep DeFi integration: stETH is the most widely accepted yield-bearing collateral in DeFi",
+        "Auto-compounding via rebase mechanism means your balance grows automatically without claiming or restaking rewards",
+        "Curated node operators with strong track records reduce slashing risk compared to permissionless validator pools",
+        "The 10% fee is competitive — solo stakers keep 100% of rewards but bear hardware, slashing, and lockup costs",
+      ],
+      cons: [
+        "Centralization risk: Lido controls ~30% of all staked ETH, raising concerns about Ethereum consensus layer concentration",
+        "Regulatory risk: liquid staking derivatives (LSDs) face uncertain regulatory treatment, particularly from the SEC",
+        "stETH can depeg from ETH during market stress — it has traded at 2-5% discount during extreme events",
+        "Node operator selection is centralized: Lido DAO chooses which operators run validators, creating a permissioned system",
+        "The 10% fee, while competitive, is higher than Rocket Pool (up to 15% for node operators, but stakers pay variable rates based on supply/demand)",
+        "Governance token (LDO) holders do not receive protocol revenue — value is purely governance-based, which some investors find unappealing",
+      ],
+      alternatives: ["rocket-pool", "frax-ether", "stakewise", "swell", "ankr"],
+      gettingStarted: [
+        { step: 1, title: "Connect Your Wallet", description: "Visit stake.lido.fi and connect your wallet (MetaMask, WalletConnect, or any major wallet). Ensure you are on the Ethereum mainnet — Lido's Ethereum staking is only available on mainnet (not L2s)." },
+        { step: 2, title: "Stake Your ETH", description: "Enter the amount of ETH you want to stake (any amount, no minimum). Review the estimated APR and stETH you will receive. Confirm the transaction — your stETH tokens will appear in your wallet immediately after confirmation." },
+        { step: 3, title: "Use stETH in DeFi", description: "Your stETH balance will automatically increase daily to reflect staking rewards. To maximize yield: provide stETH/ETH liquidity on Curve for trading fees + CRV rewards, deposit stETH as collateral on Aave to borrow against it, or stake stETH on Yearn for auto-compounding strategies." },
+      ],
+      faq: [
+        { question: "Is Lido safe? What are the risks of liquid staking?", answer: "Lido's smart contracts are among the most audited in DeFi, managing $20B+ with no major exploits. However, risks include: smart contract risk (bugs in the staking or rebase contracts), slashing risk (if node operators misbehave, stakers share the penalty), stETH depeg risk (stETH can trade below ETH during market stress), and regulatory risk (liquid staking faces uncertain legal treatment). Diversify your staking across multiple protocols if you are staking life-changing amounts." },
+        { question: "Why does stETH sometimes trade below ETH?", answer: "stETH can depeg from ETH during periods of market stress or when large holders need immediate ETH liquidity. The largest depeg occurred during the June 2022 crypto crash when stETH traded at a 5% discount. This happens because stETH can only be redeemed for ETH after Ethereum's next upgrade enables withdrawals (currently available via the Lido withdrawal queue, which can have a delay during high demand). For most users, small depegs are not a concern if you are holding long-term." },
+        { question: "How do I withdraw my staked ETH from Lido?", answer: "Withdrawals are available through Lido's withdrawal mechanism. You can request to unstake your stETH, which enters a withdrawal queue. The queue length varies based on demand — during normal conditions, withdrawals complete within hours to days. During high demand (e.g., after a major market event), the queue can take days to weeks. Alternatively, you can swap stETH for ETH on Curve or 1inch instantly, though you may incur a small depeg discount." },
+        { question: "How does Lido compare to Rocket Pool?", answer: "Both offer liquid staking for Ethereum. Lido has deeper liquidity ($20B TVL vs $3B), a simpler user experience (just stake and receive stETH), and broader DeFi integration. Rocket Pool is more decentralized (permissionless node operators, anyone can run a validator), has a lower minimum for running a node (8 ETH + RPL vs Lido's curated operator selection), and is generally preferred by the Ethereum community for its decentralization ethos. For passive stakers, Lido is simpler. For the Ethereum community's health, Rocket Pool is arguably better." },
+        { question: "What is the Lido DAO and how does governance work?", answer: "The Lido DAO is governed by LDO token holders who vote on protocol decisions including: node operator selection (approving new validators), fee parameters (the 10% staking fee split), treasury management ($100M+ in assets), and protocol upgrades. Governance happens on Snapshot (off-chain voting) and Aragon (on-chain execution). The DAO has faced criticism for being dominated by a small number of large LDO holders and VCs." },
+        { question: "Can I stake less than 32 ETH on Lido?", answer: "Yes, that is one of Lido's primary value propositions. Unlike solo staking which requires exactly 32 ETH to run a validator, Lido allows staking any amount — from 0.01 ETH to thousands of ETH. Your ETH is pooled with other stakers' deposits and delegated to node operators who run the actual validators. There is no minimum deposit and no lockup period." },
+      ],
+    },
   },
   {
     id: "rocket-pool",
@@ -2905,6 +3433,84 @@ The protocol's governance is entirely on-chain through the Aave DAO, where AAVE 
     url: "https://1inch.io",
     pricing: "Protocol Fees",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `1inch is the largest and most widely used decentralized exchange (DEX) aggregator in DeFi, processing over $400 billion in cumulative trading volume since its launch in 2019. Founded by Sergej Kunz and Anton Bukov during an ETHGlobal hackathon, 1inch solves a fundamental DeFi problem: with hundreds of DEXs across multiple chains, how do you ensure you are getting the best possible price for every trade? 1inch's Pathfinder algorithm splits each trade across up to 100+ liquidity sources to find the optimal route.
+
+The core innovation of 1inch is its aggregation and routing technology. When a user wants to swap 100 ETH for USDC, 1inch does not simply route the trade to the DEX with the best quoted price. Instead, the Pathfinder algorithm splits the trade across multiple DEXs — perhaps 40% through Uniswap V3, 30% through Curve's 3pool, 20% through Balancer, and 10% through SushiSwap — to achieve an overall price better than any single DEX can offer. This multi-hop, multi-DEX routing is invisible to the user, who simply sees one transaction with the best available price.
+
+1inch's Fusion Mode, launched in late 2022, introduced an intent-based trading model that eliminates gas fees for users and provides MEV (Miner Extractable Value) protection. In Fusion Mode, users sign an off-chain order specifying what they want to trade and at what price. A network of "resolvers" compete to fill the order at the best price, paying the gas fees themselves in exchange for a small spread. This model protects users from sandwich attacks, front-running, and failed transactions — three of the biggest pain points in DeFi trading.
+
+The 1INCH token powers the protocol's governance and staking system. Token holders can stake 1INCH to earn a share of protocol fees (currently from Fusion Mode resolver spreads and limit order fees) and participate in governance decisions via the 1inch DAO. The token also enables gasless transactions through the 1inch Gas Refund Program, where users earn rebates on gas fees based on their staked 1INCH balance.
+
+Beyond the core aggregation product, 1inch has expanded into a full DeFi ecosystem: 1inch Wallet (a non-custodial mobile wallet with built-in aggregation), 1inch Limit Orders (placing orders at specific prices without constant monitoring), 1inch Earn (yield-generating liquidity pools), and the 1inch Developer Portal (APIs and SDKs for integrating 1inch's routing into other applications). The protocol is deployed across 12+ blockchain networks including Ethereum, BNB Chain, Polygon, Arbitrum, Optimism, Avalanche, and Base.`,
+      features: [
+        "Pathfinder algorithm: splits trades across 100+ DEXs to find the optimal multi-hop, multi-DEX route",
+        "Fusion Mode: intent-based trading with zero gas fees, MEV protection, and no failed transactions",
+        "Support for 12+ blockchain networks including Ethereum, Arbitrum, Optimism, Polygon, BNB Chain, Avalanche, and Base",
+        "1inch Wallet: non-custodial mobile wallet (iOS/Android) with built-in aggregation, limit orders, and staking",
+        "Limit Order Protocol: place orders at specific prices with zero gas fees for placing (only for filling)",
+        "1inch Earn: provide liquidity to 1inch pools and earn trading fees plus 1INCH token rewards",
+        "Gas Refund Program: earn rebates on gas fees based on your staked 1INCH balance",
+        "MEV protection: Fusion Mode prevents sandwich attacks and front-running by executing trades through resolvers",
+        "Developer Portal: REST API, JavaScript SDK, and smart contract documentation for integrating 1inch routing",
+        "DAO governance: 1INCH token holders vote on protocol parameters, fee distribution, and treasury management",
+      ],
+      pricingPlans: [
+        {
+          name: "Trader (Classic Mode)",
+          price: "Gas fees + 0% protocol fee",
+          features: ["Best price routing", "Multi-DEX splitting", "Multi-chain support", "No account needed", "Standard transaction speed"],
+        },
+        {
+          name: "Trader (Fusion Mode)",
+          price: "0 gas fees + small resolver spread",
+          features: ["Zero gas fees", "MEV protection", "No failed transactions", "Faster execution", "Best for trades under ~$10,000"],
+          highlight: true,
+        },
+        {
+          name: "Limit Orders",
+          price: "0 gas to place + filling fee",
+          features: ["Set target prices", "No constant monitoring", "Automatic execution", "Partial fills supported", "Cross-DEX execution"],
+        },
+      ],
+      bestFor: [
+        "DeFi traders who want to ensure they are getting the best possible price on every swap",
+        "Large traders ($100K+) who benefit most from 1inch's multi-DEX splitting to minimize slippage",
+        "MEV-conscious users who want protection from sandwich attacks and front-running via Fusion Mode",
+        "Mobile-first DeFi users who want a wallet with built-in best-price aggregation",
+        "Developers building trading bots or DeFi applications that need programmatic best-price routing",
+      ],
+      pros: [
+        "Unmatched DEX aggregation — 100+ liquidity sources across 12+ chains ensures you almost always get the best price",
+        "Fusion Mode is genuinely innovative: zero gas fees, MEV protection, and no failed transactions is a triple win for users",
+        "The Pathfinder algorithm's multi-hop, multi-DEX splitting consistently beats single-DEX prices by 1-5% on large trades",
+        "1inch Wallet is one of the best mobile DeFi wallets, combining aggregation with limit orders and staking in one app",
+        "The protocol has maintained strong security with no major exploits despite processing $400B+ in cumulative volume",
+        "Limit Order Protocol is gas-efficient and fills automatically without requiring constant user monitoring",
+      ],
+      cons: [
+        "Fusion Mode's resolver spread can sometimes exceed the gas savings for very small trades — Classic Mode may be cheaper for trades under ~$500",
+        "The 1INCH token's price has underperformed relative to the protocol's success, leading to community frustration about token utility",
+        "1inch's interface has become more complex as features are added — the simple 'swap and go' experience is now layered with modes and options",
+        "Cross-chain routing is not seamless — you cannot swap ETH on Ethereum for SOL on Solana without a bridge step",
+        "Competition from aggregators like Matcha, ParaSwap, and CowSwap has narrowed 1inch's price advantage on smaller trades",
+        "Some users report that 1inch's default slippage tolerance (0.5%) can be too tight during volatile market conditions, causing transaction failures",
+      ],
+      alternatives: ["matcha", "paraswap", "cowswap", "odos", "openocean"],
+      gettingStarted: [
+        { step: 1, title: "Connect Your Wallet", description: "Visit app.1inch.io and connect your wallet (MetaMask, WalletConnect, or 1inch Wallet). Ensure you are on the correct network — 1inch supports Ethereum, Arbitrum, Optimism, Polygon, BNB Chain, Avalanche, Base, and more." },
+        { step: 2, title: "Choose Your Trading Mode", description: "Select Classic Mode for standard swaps with best-price routing. For trades under ~$10,000, try Fusion Mode for zero gas fees and MEV protection. The interface will show you which mode gives the best net result (price minus fees) before you confirm." },
+        { step: 3, title: "Review & Confirm Your Trade", description: "Before confirming, review the routing details: 1inch shows which DEXs your trade will be split across and the expected output. Adjust slippage tolerance if needed (increase to 1-2% during high volatility). Approve the token if it is your first trade, then confirm the transaction." },
+      ],
+      faq: [
+        { question: "Why should I use 1inch instead of trading directly on Uniswap?", answer: "1inch aggregates liquidity from Uniswap and 99+ other DEXs, so trading through 1inch will never give you a worse price than trading directly on Uniswap — and will usually give you a better price by splitting your trade across multiple DEXs. For large trades ($10K+), the savings from multi-DEX splitting can be significant (1-5% or more). For very small trades (<$100), the difference is negligible and trading directly on Uniswap may be simpler." },
+        { question: "What is Fusion Mode and when should I use it?", answer: "Fusion Mode uses an intent-based model where 'resolvers' compete to fill your order at the best price. Benefits: zero gas fees (resolver pays), MEV protection (no sandwich attacks), and no failed transactions. Use Fusion Mode for trades under ~$10,000 on Ethereum mainnet. For very large trades or on low-gas networks like Arbitrum, Classic Mode may offer slightly better net pricing." },
+        { question: "Is 1inch safe to use?", answer: "1inch's smart contracts have been audited by multiple top-tier firms and have processed $400B+ in volume with no major exploits. The protocol is non-custodial — you never deposit funds into 1inch, you simply approve token spending for each trade. However, always verify the contract address you are interacting with and use the official 1inch interface (app.1inch.io) to avoid phishing clones." },
+        { question: "How does 1inch find the best price?", answer: "1inch's Pathfinder algorithm queries prices from 100+ DEXs simultaneously, then calculates the optimal trade route. It considers direct swaps (Token A → Token B on one DEX), multi-hop swaps (Token A → Token C → Token B across two DEXs), and multi-DEX splits (50% through Uniswap, 30% through Curve, 20% through SushiSwap). The algorithm runs in under 1 second and returns the route with the highest output amount." },
+        { question: "What is the 1INCH token used for?", answer: "1INCH is the governance and utility token of the 1inch Network. You can stake 1INCH to earn a share of protocol fees from Fusion Mode and limit orders, participate in DAO governance votes, and earn gas fee rebates through the Gas Refund Program. The token does not provide trading fee discounts or revenue sharing in the traditional sense — its primary utility is governance and staking rewards." },
+        { question: "Does 1inch work on mobile?", answer: "Yes, 1inch offers a dedicated mobile wallet (1inch Wallet) for iOS and Android. The wallet includes built-in best-price aggregation, Fusion Mode, limit orders, and staking — making it a complete mobile DeFi experience. The web interface (app.1inch.io) also works on mobile browsers with WalletConnect support." },
+      ],
+    },
   },
   {
     id: "paraswap",
@@ -5177,6 +5783,79 @@ The Safe ecosystem has grown into a full-stack infrastructure layer. The Safe{Co
     url: "https://www.exodus.com",
     pricing: "Free",
     rating: 4.5,
+    detailedContent: {
+      longDescription: `Exodus is one of the most visually polished and user-friendly cryptocurrency wallets available, designed to make managing digital assets as intuitive as using a modern banking app. Founded in 2015 and headquartered in Nebraska, Exodus has grown to serve over 10 million users across desktop (Windows, macOS, Linux) and mobile (iOS, Android) platforms. The wallet supports 260+ cryptocurrencies, built-in exchange functionality, and a seamless interface that has made it the default recommendation for crypto newcomers.
+
+What makes Exodus stand out is its design-first philosophy. Every screen in the app is crafted with visual appeal and usability in mind — live portfolio charts, colorful asset icons, and smooth animations make the experience feel premium rather than utilitarian. The portfolio tracker automatically calculates your total balance in your preferred fiat currency, shows percentage allocation by asset, and displays real-time price movements with interactive charts. This level of polish is rare in the crypto wallet space, where most interfaces prioritize function over form.
+
+The built-in exchange is a key feature that sets Exodus apart from basic wallets like MetaMask. Through integration with multiple third-party exchange providers (including FTX US, Ramp, and MoonPay), Exodus allows users to swap between 150+ cryptocurrency pairs directly within the app — no need to send funds to an external exchange, trade, and send back. While the exchange fees (typically 1-3%) are higher than using a centralized exchange like Binance or Coinbase, the convenience of in-app swapping is significant for users who value simplicity over the lowest possible rate.
+
+Exodus is a software (hot) wallet, meaning private keys are stored on your device rather than in a hardware security module. The wallet is non-custodial — Exodus never holds your funds or has access to your private keys. Your 12-word recovery phrase is the master key to your wallet, generated locally and never transmitted to Exodus servers. However, because it is a hot wallet, it is suitable for active trading and daily transactions but not recommended for storing life-changing amounts. For larger holdings, Exodus integrates with Trezor hardware wallets, allowing users to combine Exodus's beautiful interface with Trezor's cold storage security.
+
+Customer support is another area where Exodus excels. Unlike most crypto companies that rely on automated responses and Discord communities, Exodus employs a team of human support agents available 24/7 through the app's live chat. The company publishes regular video tutorials, detailed help articles, and maintains active social media support channels — a stark contrast to the "figure it out yourself" approach common in DeFi wallets.`,
+      features: [
+        "260+ cryptocurrencies supported with live portfolio tracking and interactive price charts",
+        "Built-in exchange: swap 150+ pairs directly in-app via FTX US, Ramp, and MoonPay integrations",
+        "Beautiful, intuitive interface with dark mode, customizable themes, and smooth animations",
+        "Non-custodial: private keys and 12-word recovery phrase stored locally — Exodus has zero access to your funds",
+        "24/7 human customer support via in-app live chat — real people, not bots or automated responses",
+        "Desktop apps for Windows, macOS, and Linux with full feature parity to mobile (iOS, Android)",
+        "Trezor hardware wallet integration: use Exodus's interface with Trezor's cold storage security",
+        "Built-in Web3 browser and WalletConnect support for connecting to DeFi apps and NFT marketplaces",
+        "FTX and stock trading (U.S. only): buy and sell stocks alongside crypto from a single app",
+        "Regular educational content: video tutorials, blog posts, and email guides for beginners",
+      ],
+      pricingPlans: [
+        {
+          name: "Exodus Wallet",
+          price: "Free",
+          features: ["260+ crypto assets", "Built-in exchange (1-3% fee)", "Portfolio tracking", "24/7 human support", "Desktop + mobile apps", "Trezor integration", "Web3 dApp browser"],
+          highlight: true,
+        },
+        {
+          name: "Exchange Fees",
+          price: "1-3% per swap",
+          features: ["150+ trading pairs", "Powered by FTX US / Ramp / MoonPay", "Instant settlement", "No account needed", "Fee varies by pair and provider"],
+        },
+      ],
+      bestFor: [
+        "Crypto beginners who want a beautiful, intuitive wallet that feels like a modern finance app",
+        "Multi-asset holders who want to manage BTC, ETH, SOL, and 250+ altcoins in one place",
+        "Users who value human customer support over community forums and Discord channels",
+        "Trezor owners who want a more visually polished interface than Trezor Suite",
+        "Casual traders who prefer in-app swaps over sending funds to centralized exchanges",
+      ],
+      pros: [
+        "Stunningly beautiful interface that makes crypto management feel accessible and enjoyable",
+        "24/7 human customer support is genuinely responsive — a rare and valuable feature in crypto wallets",
+        "Seamless Trezor integration allows using Exodus as the UI layer on top of cold storage security",
+        "Multi-platform support with full feature parity across Windows, macOS, Linux, iOS, and Android",
+        "Built-in exchange eliminates the friction of transferring to CEXs for quick swaps",
+        "Non-custodial design means you always control your keys — Exodus has no ability to freeze or seize funds",
+      ],
+      cons: [
+        "Hot wallet (software-based): not suitable for storing large amounts — use with Trezor for significant holdings",
+        "Exchange fees (1-3%) are significantly higher than centralized exchanges (0.1-0.6%)",
+        "Not fully open-source: while some components are public, the complete codebase is not auditable",
+        "Limited DeFi functionality compared to MetaMask or Rabby — dApp integration is basic",
+        "No support for custom RPC networks — you are limited to the chains Exodus officially supports",
+        "Customer support, while human, cannot help with lost recovery phrases or irreversible blockchain transactions",
+      ],
+      alternatives: ["metamask", "trust-wallet", "phantom", "rainbow", "rabby"],
+      gettingStarted: [
+        { step: 1, title: "Download & Install", description: "Download Exodus from exodus.com (never from third-party app stores). Available for Windows, macOS, Linux, iOS, and Android. The desktop version offers the full experience with Trezor integration and the best exchange rates." },
+        { step: 2, title: "Create Your Wallet", description: "Open the app and follow the setup wizard. Exodus generates a 12-word recovery phrase — write it down on paper and store it securely. Set a password for the app (this encrypts the wallet file on your device but is NOT the same as the recovery phrase)." },
+        { step: 3, title: "Receive, Swap & Explore", description: "Click 'Receive' to get your deposit address for any supported asset. Use the built-in exchange to swap between assets directly. For advanced security, connect your Trezor hardware wallet in Settings → Hardware Wallets to use Exodus as the UI for cold storage." },
+      ],
+      faq: [
+        { question: "Is Exodus safe for storing crypto?", answer: "Exodus is a non-custodial wallet, meaning you control your private keys. However, it is a software (hot) wallet, so its security depends on your device's security. For daily-use amounts and active trading, Exodus is perfectly fine. For storing life-changing sums, connect a Trezor hardware wallet through Exodus for cold storage security." },
+        { question: "What happens if I forget my Exodus password?", answer: "Your Exodus password only encrypts the wallet file on your device. You can restore access using your 12-word recovery phrase by reinstalling the app and selecting 'Restore from backup.' However, if you lose both your password AND your recovery phrase, your funds are permanently inaccessible — no one, including Exodus support, can help you recover them." },
+        { question: "Why are Exodus exchange fees so high?", answer: "Exodus's built-in exchange uses third-party providers (FTX US, Ramp, MoonPay) that charge a spread of 1-3%. This is higher than centralized exchanges like Binance (0.1%) because the providers handle the entire swap process — order routing, liquidity aggregation, and settlement — without requiring you to create an account or complete KYC. For large swaps, it is often cheaper to send funds to a CEX, trade, and send back." },
+        { question: "Does Exodus support NFTs?", answer: "Yes, Exodus supports NFT viewing and management for Ethereum, Solana, and Polygon NFTs. You can view your NFT collection, see floor prices, and send/receive NFTs. However, Exodus does not have a built-in NFT marketplace — you will need to use OpenSea, Magic Eden, or other marketplaces for buying and selling." },
+        { question: "Can I stake crypto on Exodus?", answer: "Yes, Exodus supports staking for several Proof-of-Stake assets including Solana (SOL), Cosmos (ATOM), Cardano (ADA), and a few others. Staking rewards are earned directly in the app with no minimum lockup period for most assets. APY varies by network and is displayed in the staking interface." },
+        { question: "Is Exodus better than MetaMask?", answer: "Exodus and MetaMask serve different purposes. Exodus is a beautiful, all-in-one portfolio wallet with built-in exchange and human support — ideal for managing multiple assets and casual use. MetaMask is a developer-focused wallet with deep DeFi and dApp integration — ideal for power users interacting with DeFi protocols. Many users keep both: Exodus for portfolio tracking and MetaMask for DeFi interactions." },
+      ],
+    },
   },
   {
     id: "edge",
@@ -5435,6 +6114,84 @@ OneKey has gained particular traction in Asia and among users who value open-sou
     url: "https://trezor.io",
     pricing: "$69-219 one-time",
     rating: 4.6,
+    detailedContent: {
+      longDescription: `Trezor is the original hardware wallet — the first device ever created to store cryptocurrency private keys offline and away from internet-connected computers. Developed by SatoshiLabs, a Czech company founded in 2013, Trezor has built an unmatched reputation for security, transparency, and innovation in the hardware wallet space. Every Trezor device runs fully open-source firmware and software, making it one of the few hardware wallets where every line of code can be independently audited and verified.
+
+The Trezor product lineup includes three models: the Trezor Safe 3 (entry-level, $79), Trezor Safe 5 (mid-range with touchscreen, $169), and Trezor Safe 5 (premium, $219). The Safe 3 features a 2-button interface, a secure element chip (EAL 6+), and support for over 1,000 cryptocurrencies. The Safe 5 upgrades to a 1.54-inch color touchscreen with Gorilla Glass, an NDA-free EAL 6+ secure element, and a microSD slot for encrypted backup. Both models are USB-C connected and fully compatible with Trezor Suite, the companion desktop and web application.
+
+Trezor Suite is the software interface that transforms the hardware device into a complete crypto management platform. The app offers portfolio tracking across all major blockchains, built-in exchange functionality (buy/sell crypto directly), and integration with third-party services like CoinJoin for Bitcoin privacy and Invity for comparing exchange rates. Trezor Suite also supports staking for Ethereum and other Proof-of-Stake assets, though this is facilitated through third-party staking providers rather than native on-device staking.
+
+What truly sets Trezor apart is its commitment to the open-source ethos. Every component — firmware, bootloader, Trezor Suite app, and even the hardware schematics — is publicly available on GitHub. This transparency has fostered a global community of security researchers who continuously audit the codebase. Trezor also pioneered the Shamir Backup (SLIP-39) standard, which allows users to split their recovery seed into multiple shares stored in different locations, providing resilience against both loss and theft.
+
+Security features include a PIN code with exponential delay between attempts (preventing brute-force attacks), passphrase support for hidden wallets, and a secure boot process that verifies firmware integrity on every startup. The Trezor Safe 5's touchscreen ensures that transaction details are displayed and confirmed directly on the device, eliminating the risk of a compromised computer displaying false transaction information.`,
+      features: [
+        "World's first hardware wallet (2013) with fully open-source firmware, software, and hardware schematics",
+        "Trezor Safe 3 ($79): EAL 6+ secure element, 2-button interface, 1,000+ coins, USB-C",
+        "Trezor Safe 5 ($169-$219): 1.54-inch color touchscreen with Gorilla Glass, NDA-free EAL 6+ secure element",
+        "Trezor Suite: portfolio tracking, built-in crypto exchange, CoinJoin Bitcoin privacy, and Invity rate comparison",
+        "Shamir Backup (SLIP-39): split your recovery seed into multiple shares for disaster resilience",
+        "Passphrase support: create hidden wallets with a custom passphrase for plausible deniability",
+        "MicroSD card slot (Safe 5): encrypted backup and restore without typing seed phrases on a computer",
+        "PIN protection with exponential delay: 2^PIN attempts between each wrong guess, making brute force impossible",
+        "Over 1,000 cryptocurrencies supported across Bitcoin, Ethereum, Solana, Cardano, and 50+ other chains",
+        "Compatible with MetaMask, Rabby, Exodus, and other popular wallets via hardware signer mode",
+      ],
+      pricingPlans: [
+        {
+          name: "Trezor Safe 3",
+          price: "$79 one-time",
+          features: ["EAL 6+ secure element", "2-button interface", "1,000+ cryptocurrencies", "USB-C connection", "Open-source firmware", "Trezor Suite access"],
+          highlight: true,
+        },
+        {
+          name: "Trezor Safe 5",
+          price: "$169 one-time",
+          features: ["All Safe 3 features", "1.54-inch color touchscreen", "Gorilla Glass protection", "NDA-free secure element", "MicroSD encrypted backup", "Enhanced haptic feedback"],
+        },
+        {
+          name: "Trezor Safe 5 (Bitcoin-only)",
+          price: "$219 one-time",
+          features: ["All Safe 5 features", "Bitcoin-only firmware (smaller attack surface)", "Special edition design", "Includes Bitcoin-only educational materials"],
+        },
+      ],
+      bestFor: [
+        "Bitcoin maximalists who value the longest track record in hardware wallet security",
+        "Privacy-focused users who need CoinJoin integration and open-source transparency",
+        "Long-term holders who want Shamir Backup for distributed seed phrase security",
+        "Users who refuse to trust closed-source firmware and demand fully auditable code",
+        "Beginners who want the Trezor Suite's user-friendly interface for managing crypto",
+      ],
+      pros: [
+        "First and most battle-tested hardware wallet — 11+ years of security history with zero remote exploits",
+        "100% open-source at every level: firmware, software, hardware schematics — nothing hidden",
+        "Shamir Backup (SLIP-39) is the gold standard for seed phrase disaster recovery and inheritance planning",
+        "Trezor Suite provides a polished, all-in-one crypto management experience without needing third-party apps",
+        "CoinJoin integration for Bitcoin privacy is unique among major hardware wallet brands",
+        "NDA-free secure element on Safe 5 means the chip's design is publicly documented — no hidden secrets",
+      ],
+      cons: [
+        "More expensive than alternatives like OneKey ($58) and SafePal ($49.99) for similar feature sets",
+        "No Bluetooth or wireless connectivity — USB-C only, which can be inconvenient for mobile-first users",
+        "No native staking on-device; staking is routed through third-party providers within Trezor Suite",
+        "The Safe 3's 2-button interface is slower and more cumbersome than touchscreen alternatives",
+        "Trezor Suite, while polished, has fewer third-party integrations than Ledger Live's extensive app catalog",
+        "Slower to support new blockchain networks compared to Ledger, which has a larger development team",
+      ],
+      alternatives: ["ledger-nano", "onekey", "safepal", "keepkey", "ellipal"],
+      gettingStarted: [
+        { step: 1, title: "Unbox & Set Up", description: "Order directly from trezor.io (never buy from third-party sellers). Connect the device via USB-C to your computer. Visit suite.trezor.io/web to download Trezor Suite or use the web version. Follow the on-screen setup wizard." },
+        { step: 2, title: "Create Your Wallet & Backup", description: "The device will generate a 12 or 24-word recovery seed. Write every word on the included recovery card in order. For extra security, consider setting up Shamir Backup to split your seed into multiple shares. Enable PIN and passphrase protection." },
+        { step: 3, title: "Start Using Trezor Suite", description: "Once set up, Trezor Suite is your command center. Add cryptocurrency accounts, track your portfolio, buy/sell crypto through integrated partners, and enable CoinJoin for Bitcoin privacy. Connect to MetaMask or Rabby for DeFi with hardware-level security." },
+      ],
+      faq: [
+        { question: "Is Trezor really safer than Ledger?", answer: "Both are highly secure. Trezor's advantage is its fully open-source codebase — every line of firmware, software, and even hardware schematics is publicly auditable. Ledger uses a closed-source secure element chip. Trezor's 11+ year track record with zero remote exploits is unmatched. However, Ledger's secure element chip is technically more resistant to physical attacks. For most users, the choice comes down to philosophy: open-source transparency (Trezor) vs. hardware-level physical security (Ledger)." },
+        { question: "What happens if I lose my Trezor device?", answer: "Your crypto is on the blockchain, not the device. As long as you have your recovery seed (12 or 24 words), you can restore access on any new Trezor device or any BIP39-compatible wallet. For Shamir Backup users, you need a threshold number of shares (e.g., 2 of 3) to reconstruct the seed. Always store recovery shares in separate physical locations." },
+        { question: "What is Shamir Backup and do I need it?", answer: "Shamir Backup (SLIP-39) splits your recovery seed into multiple shares (e.g., 3 shares where any 2 are needed to recover). This means a single stolen share is useless, and a single lost share is recoverable. It is ideal for inheritance planning and high-value holdings. For most users with under $10,000 in crypto, the standard 12/24-word seed is sufficient." },
+        { question: "Does Trezor support staking?", answer: "Trezor Suite supports Ethereum staking through third-party providers integrated into the app. You can also connect your Trezor to MetaMask and use DeFi staking protocols. However, Trezor does not have native on-device staking — all staking is facilitated through external services, meaning you should research the staking provider's reliability and fees." },
+        { question: "Can I use Trezor with my iPhone?", answer: "Trezor devices use USB-C and do not have Bluetooth. For iPhone, you need a Lightning-to-USB adapter (not included). The Trezor Suite mobile app for iOS is limited to watch-only portfolio tracking. For full functionality with DeFi, connect Trezor to a desktop or Android device. If mobile-first is your priority, consider Ledger Nano X with Bluetooth." },
+        { question: "What is the difference between Trezor Safe 3 and Safe 5?", answer: "The Safe 3 ($79) is the entry-level model with a 2-button interface and monochrome display. The Safe 5 ($169+) upgrades to a color touchscreen, adds a microSD slot for encrypted backup, uses an NDA-free secure element, and includes Gorilla Glass protection. For most users, the Safe 3 provides sufficient security. Upgrade to Safe 5 if you want touchscreen convenience and microSD backup." },
+      ],
+    },
   },
   {
     id: "keepkey",
