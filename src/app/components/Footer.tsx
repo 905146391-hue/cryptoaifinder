@@ -45,6 +45,11 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/compare" className="text-sm text-cyan-400/70 hover:text-cyan-400 transition-colors font-medium">
+                  Tool Comparisons →
+                </Link>
+              </li>
             </ul>
           </div>
 
