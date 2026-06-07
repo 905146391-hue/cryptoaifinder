@@ -57,6 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/tools/gas-tracker`,
+      lastModified: "2025-06-07",
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
   ];
 
   // Category pages
