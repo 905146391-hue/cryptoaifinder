@@ -45,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/tools/profit-calculator`,
+      lastModified: "2025-06-07",
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
   ];
 
   // Category pages
