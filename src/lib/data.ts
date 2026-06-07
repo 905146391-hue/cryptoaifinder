@@ -809,7 +809,7 @@ The platform also includes a demo mode that allows traders to test their strateg
     category: "analytics",
     tags: ["Smart Money", "Labels", "Institutional"],
     url: "https://nansen.ai",
-    affiliateUrl: "https://nansen.ai/referral",
+    affiliateUrl: "https://app.nansen.ai/welcome?ref=rt8JvAyzZrI",
     pricing: "$150-3000/mo",
     rating: 4.6,
     featured: true,
