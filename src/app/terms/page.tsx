@@ -85,7 +85,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-4">10. Contact</h2>
-            <p>For questions about these Terms of Service, please contact us at <a href="mailto:legal@cryptoaifinder.com" className="text-cyan-400 hover:text-cyan-300">legal@cryptoaifinder.com</a>.</p>
+            <p>For questions about these Terms of Service, please contact us at <a href="mailto:cryptoaifinder@gmail.com" className="text-cyan-400 hover:text-cyan-300">cryptoaifinder@gmail.com</a>.</p>
           </section>
         </div>
       </div>

@@ -83,7 +83,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-4">8. Contact</h2>
-            <p>If you have questions about this privacy policy, please contact us at <a href="mailto:privacy@cryptoaifinder.com" className="text-cyan-400 hover:text-cyan-300">privacy@cryptoaifinder.com</a>.</p>
+            <p>If you have questions about this privacy policy, please contact us at <a href="mailto:cryptoaifinder@gmail.com" className="text-cyan-400 hover:text-cyan-300">cryptoaifinder@gmail.com</a>.</p>
           </section>
         </div>
       </div>

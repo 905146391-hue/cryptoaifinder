@@ -49,13 +49,13 @@ export default function ContactPage() {
               Have an AI-powered crypto tool you&apos;d like us to list? Fill out the form and we&apos;ll review it within 48 hours.
             </p>
             <a
-              href="mailto:submit@cryptoaifinder.com"
+              href="mailto:cryptoaifinder@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-sm text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-300 transition-all"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              submit@cryptoaifinder.com
+              cryptoaifinder@gmail.com
             </a>
           </div>
 
@@ -68,13 +68,13 @@ export default function ContactPage() {
               Found incorrect information, a broken link, or an outdated listing? Let us know and we&apos;ll fix it ASAP.
             </p>
             <a
-              href="mailto:support@cryptoaifinder.com"
+              href="mailto:cryptoaifinder@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-300 transition-all"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              support@cryptoaifinder.com
+              cryptoaifinder@gmail.com
             </a>
           </div>
 
@@ -87,13 +87,13 @@ export default function ContactPage() {
               Interested in partnering with CryptoFinder? We&apos;re open to affiliate partnerships, sponsorships, and collaborations.
             </p>
             <a
-              href="mailto:partnerships@cryptoaifinder.com"
+              href="mailto:cryptoaifinder@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-500/10 border border-purple-500/20 text-sm text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              partnerships@cryptoaifinder.com
+              cryptoaifinder@gmail.com
             </a>
           </div>
 
@@ -106,13 +106,13 @@ export default function ContactPage() {
               Questions, feedback, or anything else? We typically respond within 24 hours.
             </p>
             <a
-              href="mailto:hello@cryptoaifinder.com"
+              href="mailto:cryptoaifinder@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-yellow-500/10 border border-yellow-500/20 text-sm text-yellow-400 hover:bg-yellow-500/20 hover:text-yellow-300 transition-all"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              hello@cryptoaifinder.com
+              cryptoaifinder@gmail.com
             </a>
           </div>
         </div>
