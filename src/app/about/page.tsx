@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { categories } from "@/lib/data";
+import { Shield, RefreshCw, Mail, Users, Star, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About CryptoFinder - AI-Powered Crypto Tools Directory",
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
             <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{categories.find((c) => c.id === "all")?.count ?? 0}+</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">446+</div>
               <div className="text-sm text-[#64748b]">AI-Powered Tools</div>
             </div>
             <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-6 text-center">
@@ -88,6 +88,87 @@ export default function AboutPage() {
           <p className="text-[#94a3b8] leading-relaxed">
             CryptoFinder maintains editorial independence. While we may earn commissions through affiliate links, our listings and reviews are not influenced by compensation. We list tools based on their merit and relevance to the crypto community.
           </p>
+
+          {/* Trust Elements */}
+          <h2 className="text-2xl font-bold text-white mt-12">Why Trust CryptoFinder</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+            <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-5 flex items-start gap-4">
+              <RefreshCw size={20} className="text-cyan-400 mt-0.5 shrink-0" />
+              <div>
+                <h3 className="font-semibold text-white mb-1">Weekly Updates</h3>
+                <p className="text-sm text-[#64748b]">Our directory is refreshed every week. We add new tools, update pricing, verify affiliate links, and remove discontinued services to keep information accurate.</p>
+              </div>
+            </div>
+            <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-5 flex items-start gap-4">
+              <Star size={20} className="text-yellow-400 mt-0.5 shrink-0" />
+              <div>
+                <h3 className="font-semibold text-white mb-1">Hand-Curated, Not Automated</h3>
+                <p className="text-sm text-[#64748b]">Every tool is manually reviewed and categorized by real crypto traders — not scraped by bots. We test tools ourselves before listing them.</p>
+              </div>
+            </div>
+            <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-5 flex items-start gap-4">
+              <Shield size={20} className="text-emerald-400 mt-0.5 shrink-0" />
+              <div>
+                <h3 className="font-semibold text-white mb-1">Transparent Monetization</h3>
+                <p className="text-sm text-[#64748b]">We earn through affiliate partnerships (clearly marked). No paid placements. No sponsored rankings. You always see our honest ratings — affiliate status does not affect scores.</p>
+              </div>
+            </div>
+            <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-5 flex items-start gap-4">
+              <Users size={20} className="text-purple-400 mt-0.5 shrink-0" />
+              <div>
+                <h3 className="font-semibold text-white mb-1">Built by Traders, for Traders</h3>
+                <p className="text-sm text-[#64748b]">CryptoFinder is built and maintained by active cryptocurrency traders who use these tools daily. We understand what matters because we are users too.</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-2xl font-bold text-white mt-12">Data Sources &amp; Methodology</h2>
+          <div className="bg-[#12121a] border border-[#1a1a2e] rounded-xl p-6 my-6">
+            <p className="text-[#94a3b8] leading-relaxed mb-4">
+              Our ratings are based on a multi-factor evaluation system:
+            </p>
+            <ul className="space-y-2 text-sm text-[#64748b]">
+              <li className="flex items-start gap-2">
+                <span className="text-cyan-400 mt-1">-</span>
+                <span><strong className="text-[#94a3b8]">Functionality (30%)</strong> — Does the tool deliver on its core promise? Is it reliable and well-maintained?</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-cyan-400 mt-1">-</span>
+                <span><strong className="text-[#94a3b8]">User Experience (25%)</strong> — How intuitive is the interface? Is onboarding smooth?</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-cyan-400 mt-1">-</span>
+                <span><strong className="text-[#94a3b8]">Pricing &amp; Value (20%)</strong> — Is the pricing fair relative to competitors? Does the free tier offer real utility?</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-cyan-400 mt-1">-</span>
+                <span><strong className="text-[#94a3b8]">Community &amp; Support (15%)</strong> — Active community? Responsive support? Good documentation?</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-cyan-400 mt-1">-</span>
+                <span><strong className="text-[#94a3b8]">Security &amp; Trust (10%)</strong> — Track record? Security audits? Transparent team?</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "AboutPage",
+                name: "About CryptoFinder",
+                description: "CryptoFinder is the most comprehensive directory of AI-powered crypto tools. We help traders, developers, and investors discover the best tools for trading, DeFi, analytics, security, and more.",
+                url: "https://cryptoaifinder.com/about",
+                publisher: {
+                  "@type": "Organization",
+                  name: "CryptoFinder",
+                  url: "https://cryptoaifinder.com",
+                },
+              }),
+            }}
+          />
 
           <h2 className="text-2xl font-bold text-white mt-12">Contact Us</h2>
           <p className="text-[#94a3b8] leading-relaxed">

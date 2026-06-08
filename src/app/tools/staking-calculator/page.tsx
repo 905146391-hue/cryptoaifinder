@@ -2,403 +2,310 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import {
-  Calculator,
-  TrendingUp,
-  Coins,
-  Calendar,
-  RotateCcw,
-  ArrowRight,
-  ExternalLink,
-  Info,
-  Percent,
-  Clock,
-} from "lucide-react";
+import { ArrowLeft, Coins, ExternalLink } from "lucide-react";
 
-const COMPOUND_OPTIONS = [
-  { label: "Daily", value: 365 },
-  { label: "Weekly", value: 52 },
-  { label: "Monthly", value: 12 },
-  { label: "Yearly", value: 1 },
-  { label: "No Compounding", value: 0 },
-];
-
-const stakingTools = [
-  { name: "Lido", id: "lido", apy: "3.5%" },
-  { name: "Compound", id: "compound", apy: "Variable" },
-  { name: "Curve", id: "curve", apy: "Variable" },
-  { name: "Aave", id: "aave", apy: "Variable" },
-];
-
-export default function StakingCalculator() {
+export default function StakingCalculatorPage() {
   const [amount, setAmount] = useState("");
   const [apy, setApy] = useState("");
-  const [period, setPeriod] = useState("12");       // months
-  const [compoundFreq, setCompoundFreq] = useState(365); // daily default
-  const [customPeriodUnit, setCustomPeriodUnit] = useState<"days" | "months" | "years">("months");
+  const [period, setPeriod] = useState("365");
+  const [compound, setCompound] = useState("daily");
 
-  const periodsPerYear = compoundFreq === 0 ? 1 : compoundFreq;
+  const results = useMemo(() => {
+    // Strip commas before parsing
+    const principal = parseFloat(String(amount).replace(/,/g, ""));
+    const apyRate = parseFloat(String(apy).replace(/,/g, ""));
+    const days = parseFloat(String(period).replace(/,/g, ""));
 
-  const result = useMemo(() => {
-    const P = parseFloat(amount);
-    const r = parseFloat(apy) / 100;
-    const tRaw = parseFloat(period);
-
-    if (!P || !r || !tRaw || P <= 0 || r <= 0 || tRaw <= 0) return null;
-
-    // Convert period to years
-    let tYears: number;
-    if (customPeriodUnit === "days") tYears = tRaw / 365;
-    else if (customPeriodUnit === "months") tYears = tRaw / 12;
-    else tYears = tRaw;
-
-    let total: number;
-    let rewards: number;
-
-    if (compoundFreq === 0) {
-      // Simple interest
-      rewards = P * r * tYears;
-      total = P + rewards;
-    } else {
-      // Compound interest: A = P(1 + r/n)^(n*t)
-      total = P * Math.pow(1 + r / periodsPerYear, periodsPerYear * tYears);
-      rewards = total - P;
+    if (
+      isNaN(principal) || isNaN(apyRate) || isNaN(days) ||
+      principal <= 0 || apyRate <= 0 || days <= 0
+    ) {
+      return null;
     }
 
-    const dailyReward = rewards / (tYears * 365);
-    const monthlyReward = rewards / (tYears * 12);
-    const apyDisplay = (Math.pow(1 + r / periodsPerYear, periodsPerYear) - 1) * 100;
+    const rate = apyRate / 100;
+    const years = days / 365;
+    let finalAmount: number;
+
+    // Compound interest formula: A = P * (1 + r/n)^(n*t)
+    // where n = periods per year, t = time in years
+    switch (compound) {
+      case "daily":
+        finalAmount = principal * Math.pow(1 + rate / 365, 365 * years);
+        break;
+      case "weekly":
+        finalAmount = principal * Math.pow(1 + rate / 52, 52 * years);
+        break;
+      case "monthly":
+        finalAmount = principal * Math.pow(1 + rate / 12, 12 * years);
+        break;
+      case "yearly":
+        finalAmount = principal * Math.pow(1 + rate, years);
+        break;
+      default:
+        finalAmount = principal * (1 + rate * years); // simple interest fallback
+    }
+
+    const totalRewards = finalAmount - principal;
+
+    // Effective APY: what rate would produce this with annual compounding
+    const effectiveAPY = years > 0
+      ? (Math.pow(finalAmount / principal, 1 / years) - 1) * 100
+      : 0;
 
     return {
-      total,
-      rewards,
-      dailyReward,
-      monthlyReward,
-      apyDisplay,
-      tYears,
+      principal,
+      totalRewards,
+      finalAmount,
+      effectiveAPY,
     };
-  }, [amount, apy, period, compoundFreq, customPeriodUnit, periodsPerYear]);
-
-  const formatCurrency = (val: number) =>
-    new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(val);
-
-  const reset = () => {
-    setAmount("");
-    setApy("");
-    setPeriod("12");
-    setCompoundFreq(365);
-    setCustomPeriodUnit("months");
-  };
-
-  const presetTools = stakingTools;
+  }, [amount, apy, period, compound]);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f]">
-      {/* Header */}
-      <header className="border-b border-[#1a1a2e] bg-[#06060b]/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-lg font-bold gradient-text">CryptoFinder</span>
-          </Link>
+    <main className="min-h-screen bg-[#0a0a0f] text-white">
+      <div className="border-b border-[#1a1a2e]/50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4">
+          <nav className="flex items-center gap-2 text-sm text-[#475569]">
+            <Link href="/" className="hover:text-cyan-400 transition-colors">
+              Home
+            </Link>
+            <span>/</span>
+            <span className="text-white">Staking Calculator</span>
+          </nav>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="mb-8">
           <Link
             href="/"
-            className="text-sm text-[#64748b] hover:text-white transition-colors flex items-center gap-1"
+            className="inline-flex items-center gap-1 text-sm text-[#475569] hover:text-cyan-400 transition-colors mb-4"
           >
-            <ArrowRight size={14} className="rotate-180" />
-            Back to Directory
+            <ArrowLeft size={14} /> Back to Home
           </Link>
-        </div>
-      </header>
-
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        {/* Hero */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#8b5cf6]/10 border border-[#8b5cf6]/20 rounded-full text-[#a78bfa] text-xs font-medium mb-4">
-            <Calculator size={14} />
-            Free Tool
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-violet-500 flex items-center justify-center">
+              <Coins size={20} />
+            </div>
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-bold">
+                Staking Calculator
+              </h1>
+              <p className="text-sm text-[#475569] mt-1">
+                Estimate staking rewards &amp; APY with compounding
+              </p>
+            </div>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-            Staking Rewards Calculator
-          </h1>
-          <p className="text-[#94a3b8] max-w-xl mx-auto leading-relaxed">
-            Estimate your staking rewards with daily, weekly, or monthly compounding.
-            Supports any APY% and staking duration.
-          </p>
         </div>
 
-        {/* Calculator Card */}
-        <div className="bg-[#0d0d14] border border-[#1a1a2e] rounded-2xl p-6 sm:p-8 mb-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
-            {/* Stake Amount */}
-            <div className="sm:col-span-2">
-              <label className="block text-sm font-medium text-[#94a3b8] mb-2">
-                Stake Amount (USD)
-              </label>
-              <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#475569]">$</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <div className="bg-[#0d0d14] border border-[#1a1a2e] rounded-xl p-5 space-y-4">
+              <h2 className="text-sm font-semibold text-white flex items-center gap-2">
+                <span className="w-1 h-4 rounded-full bg-purple-500" />
+                Staking Parameters
+              </h2>
+
+              <div>
+                <label className="block text-xs text-[#475569] mb-1.5">
+                  Staked Amount (USD)
+                </label>
                 <input
                   type="number"
+                  step="any"
+                  placeholder="e.g. 1000"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
-                  placeholder="1,000"
-                  min="0"
-                  step="any"
-                  className="w-full pl-8 pr-4 py-3 bg-[#06060b] border border-[#1a1a2e] rounded-xl text-white placeholder-[#475569] focus:outline-none focus:border-[#8b5cf6]/50 focus:ring-1 focus:ring-[#8b5cf6]/20 transition-all"
+                  className="w-full px-3 py-2 bg-[#06060b] border border-[#1a1a2e] rounded-lg text-sm text-white placeholder-[#333] focus:outline-none focus:border-purple-500/50"
                 />
               </div>
-            </div>
 
-            {/* APY % */}
-            <div>
-              <label className="block text-sm font-medium text-[#94a3b8] mb-2">
-                APY (%)
-              </label>
-              <div className="relative">
+              <div>
+                <label className="block text-xs text-[#475569] mb-1.5">
+                  APY (%)
+                </label>
                 <input
                   type="number"
+                  step="any"
+                  placeholder="e.g. 5.0"
                   value={apy}
                   onChange={(e) => setApy(e.target.value)}
-                  placeholder="5.0"
-                  min="0"
-                  max="100"
-                  step="any"
-                  className="w-full pl-4 pr-8 py-3 bg-[#06060b] border border-[#1a1a2e] rounded-xl text-white placeholder-[#475569] focus:outline-none focus:border-[#10b981]/50 focus:ring-1 focus:ring-[#10b981]/20 transition-all"
+                  className="w-full px-3 py-2 bg-[#06060b] border border-[#1a1a2e] rounded-lg text-sm text-white placeholder-[#333] focus:outline-none focus:border-purple-500/50"
                 />
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#475569]">%</span>
-              </div>
-            </div>
-
-            {/* Staking Period */}
-            <div>
-              <label className="block text-sm font-medium text-[#94a3b8] mb-2">
-                Staking Period
-              </label>
-              <div className="flex gap-2">
-                <input
-                  type="number"
-                  value={period}
-                  onChange={(e) => setPeriod(e.target.value)}
-                  placeholder="12"
-                  min="1"
-                  className="flex-1 pl-4 pr-4 py-3 bg-[#06060b] border border-[#1a1a2e] rounded-xl text-white placeholder-[#475569] focus:outline-none focus:border-[#06b6d4]/50 focus:ring-1 focus:ring-[#06b6d4]/20 transition-all"
-                />
-                <select
-                  value={customPeriodUnit}
-                  onChange={(e) => setCustomPeriodUnit(e.target.value as any)}
-                  className="px-3 py-3 bg-[#06060b] border border-[#1a1a2e] rounded-xl text-white text-sm focus:outline-none focus:border-[#06b6d4]/50"
-                >
-                  <option value="days">Days</option>
-                  <option value="months">Months</option>
-                  <option value="years">Years</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Compounding Frequency */}
-            <div className="sm:col-span-2">
-              <label className="block text-sm font-medium text-[#94a3b8] mb-2">
-                Compounding Frequency
-              </label>
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-                {COMPOUND_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.value}
-                    onClick={() => setCompoundFreq(opt.value)}
-                    className={`px-3 py-2 rounded-lg text-xs font-medium border transition-all ${
-                      compoundFreq === opt.value
-                        ? "bg-[#8b5cf6]/20 border-[#8b5cf6]/40 text-[#a78bfa]"
-                        : "bg-[#06060b] border-[#1a1a2e] text-[#64748b] hover:text-white hover:border-[#475569]"
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Reset */}
-          <div className="flex justify-end mb-6">
-            <button
-              onClick={reset}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-[#64748b] hover:text-white bg-[#06060b] border border-[#1a1a2e] rounded-lg hover:border-[#475569] transition-all"
-            >
-              <RotateCcw size={12} />
-              Reset
-            </button>
-          </div>
-
-          {/* Results */}
-          {result ? (
-            <div className="space-y-4">
-              {/* Total Banner */}
-              <div className="p-5 rounded-xl bg-[#8b5cf6]/5 border border-[#8b5cf6]/20">
-                <p className="text-sm text-[#a78bfa] mb-1">Total after staking</p>
-                <p className="text-2xl sm:text-3xl font-bold text-white">
-                  {formatCurrency(result.total)}
-                </p>
-                <p className="text-sm text-[#94a3b8] mt-1">
-                  {formatCurrency(parseFloat(amount) || 0)} staked →{" "}
-                  <span className="text-[#10b981] font-medium">
-                    +{formatCurrency(result.rewards)} rewards
-                  </span>
-                </p>
               </div>
 
-              {/* Detail Cards */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div className="bg-[#06060b] border border-[#1a1a2e] rounded-xl p-4">
-                  <div className="flex items-center gap-1.5 text-[#475569] text-xs mb-1">
-                    <Coins size={12} />
-                    Total Rewards
-                  </div>
-                  <p className="text-lg font-bold text-[#10b981]">
-                    {formatCurrency(result.rewards)}
-                  </p>
-                </div>
-                <div className="bg-[#06060b] border border-[#1a1a2e] rounded-xl p-4">
-                  <div className="flex items-center gap-1.5 text-[#475569] text-xs mb-1">
-                    <Percent size={12} />
-                    Effective APY
-                  </div>
-                  <p className="text-lg font-bold text-white">
-                    {result.apyDisplay.toFixed(2)}%
-                  </p>
-                </div>
-                <div className="bg-[#06060b] border border-[#1a1a2e] rounded-xl p-4">
-                  <div className="flex items-center gap-1.5 text-[#475569] text-xs mb-1">
-                    <Clock size={12} />
-                    Daily Reward
-                  </div>
-                  <p className="text-lg font-bold text-white">
-                    {formatCurrency(result.dailyReward)}
-                  </p>
-                </div>
-                <div className="bg-[#06060b] border border-[#1a1a2e] rounded-xl p-4">
-                  <div className="flex items-center gap-1.5 text-[#475569] text-xs mb-1">
-                    <Calendar size={12} />
-                    Monthly Reward
-                  </div>
-                  <p className="text-lg font-bold text-white">
-                    {formatCurrency(result.monthlyReward)}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="text-center py-10">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#8b5cf6]/10 border border-[#8b5cf6]/20 mb-4">
-                <Calculator size={24} className="text-[#a78bfa]" />
-              </div>
-              <p className="text-[#64748b] text-sm">
-                Enter your staking details above to estimate rewards
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* Preset Tools CTA */}
-        <div className="mb-12">
-          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <TrendingUp size={20} className="text-[#10b981]" />
-            Start Staking on These Platforms
-          </h2>
-          <p className="text-sm text-[#94a3b8] mb-5">
-            Ready to stake for real? These platforms offer competitive APY and secure staking infrastructure.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {presetTools.map((t) => {
-              const tool = stakingTools.find((s) => s.id === t.id);
-              return (
-                <a
-                  key={t.id}
-                  href={`/tools/${t.id}`}
-                  className="group flex flex-col items-center gap-2 p-4 bg-[#0d0d14] border border-[#1a1a2e] rounded-xl hover:border-[#8b5cf6]/30 hover:bg-[#13131e] transition-all text-center"
-                >
-                  <img
-                    src={`https://www.google.com/s2/favicons?domain=${t.id}.com&sz=32`}
-                    alt=""
-                    className="w-8 h-8 rounded-md object-contain bg-[#06060b]"
-                    loading="lazy"
+              <div>
+                <label className="block text-xs text-[#475569] mb-1.5">
+                  Staking Period (days)
+                </label>
+                <div className="flex items-center gap-1.5">
+                  <input
+                    type="number"
+                    step="any"
+                    value={period}
+                    onChange={(e) => setPeriod(e.target.value)}
+                    className="w-20 px-2.5 py-2 bg-[#06060b] border border-[#1a1a2e] rounded-lg text-sm text-white placeholder-[#333] focus:outline-none focus:border-purple-500/50"
                   />
-                  <span className="text-sm font-medium text-white group-hover:text-[#a78bfa] transition-colors">
-                    {t.name}
-                  </span>
-                  <span className="text-[10px] text-[#475569]">
-                    APY: {t.apy}
-                  </span>
-                </a>
-              );
-            })}
+                  {[
+                    { label: "30d", val: "30" },
+                    { label: "90d", val: "90" },
+                    { label: "180d", val: "180" },
+                    { label: "1y", val: "365" },
+                  ].map((p) => (
+                    <button
+                      key={p.val}
+                      type="button"
+                      onClick={() => setPeriod(p.val)}
+                      className={`shrink-0 px-1.5 py-1 text-[11px] rounded-md border transition-all ${
+                        period === p.val
+                          ? "bg-purple-500/20 text-purple-400 border-purple-500/30"
+                          : "bg-[#06060b] text-[#475569] border-[#1a1a2e] hover:border-purple-500/30"
+                      }`}
+                    >
+                      {p.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs text-[#475569] mb-1.5">
+                  Compounding Frequency
+                </label>
+                <div className="grid grid-cols-4 gap-2">
+                  {[
+                    { label: "Daily", val: "daily" },
+                    { label: "Weekly", val: "weekly" },
+                    { label: "Monthly", val: "monthly" },
+                    { label: "Yearly", val: "yearly" },
+                  ].map((c) => (
+                    <button
+                      key={c.val}
+                      type="button"
+                      onClick={() => setCompound(c.val)}
+                      className={`px-2 py-1.5 text-xs rounded-md border transition-all ${
+                        compound === c.val
+                          ? "bg-purple-500/20 text-purple-400 border-purple-500/30"
+                          : "bg-[#06060b] text-[#475569] border-[#1a1a2e] hover:border-purple-500/30"
+                      }`}
+                    >
+                      {c.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="bg-[#0d0d14] border border-[#1a1a2e] rounded-xl p-5 h-full">
+              <h2 className="text-sm font-semibold text-white flex items-center gap-2 mb-4">
+                <span className="w-1 h-4 rounded-full bg-purple-500" />
+                Results
+              </h2>
+
+              {results ? (
+                <div className="space-y-4">
+                  <div className="bg-[#06060b] rounded-lg p-4 border border-[#1a1a2e]">
+                    <p className="text-xs text-[#475569] mb-1">
+                      Estimated Rewards
+                    </p>
+                    <p className="text-2xl font-bold text-emerald-400">
+                      +${results.totalRewards.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </p>
+                  </div>
+
+                  <div className="bg-[#06060b] rounded-lg p-4 border border-[#1a1a2e]">
+                    <p className="text-xs text-[#475569] mb-1">
+                      Final Balance
+                    </p>
+                    <p className="text-2xl font-bold text-white">
+                      ${results.finalAmount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-[#06060b] rounded-lg p-3 border border-[#1a1a2e]">
+                      <p className="text-xs text-[#475569] mb-1">Principal</p>
+                      <p className="text-lg font-semibold text-white">
+                        ${results.principal.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      </p>
+                    </div>
+                    <div className="bg-[#06060b] rounded-lg p-3 border border-[#1a1a2e]">
+                      <p className="text-xs text-[#475569] mb-1">
+                        Effective APY
+                      </p>
+                      <p className="text-lg font-semibold text-purple-400">
+                        {results.effectiveAPY.toFixed(2)}%
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#06060b] rounded-lg p-3 border border-[#1a1a2e]">
+                    <p className="text-xs text-[#475569] mb-1">
+                      Reward Multiplier
+                    </p>
+                    <p className="text-lg font-semibold text-white">
+                      {(results.finalAmount / results.principal).toFixed(3)}x
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <Coins size={40} className="text-[#1a1a2e] mb-3" />
+                  <p className="text-sm text-[#475569]">
+                    Enter staked amount, APY, and period to calculate rewards
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
-        {/* FAQ */}
-        <div className="bg-[#0d0d14] border border-[#1a1a2e] rounded-2xl p-6 sm:p-8 mb-8">
-          <h2 className="text-xl font-bold text-white mb-6">
-            Staking Calculator FAQ
+        <div className="mt-8 bg-[#0d0d14] border border-[#1a1a2e] rounded-xl p-5">
+          <h2 className="text-sm font-semibold text-white mb-3">
+            Common APY References
           </h2>
-          <div className="space-y-5">
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-1.5">
-                What is APY?
-              </h3>
-              <p className="text-sm text-[#94a3b8]">
-                APY (Annual Percentage Yield) includes compounding — it&apos;s the real annual return
-                you earn from staking, accounting for rewards being reinvested.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-1.5">
-                How does compounding frequency affect my rewards?
-              </h3>
-              <p className="text-sm text-[#94a3b8]">
-                More frequent compounding = slightly higher returns. Daily compounding yields the most;
-                no compounding pays simple interest only on your principal.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-1.5">
-                Is staking risk-free?
-              </h3>
-              <p className="text-sm text-[#94a3b8]">
-                No. Staking involves slashing risk (penalties for validator misbehavior), smart contract
-                risk, and the opportunity cost of locked funds. This calculator shows rewards only —
-                not risks.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-1.5">
-                Can I change the compounding frequency?
-              </h3>
-              <p className="text-sm text-[#94a3b8]">
-                Yes — use the buttons above. &quot;No Compounding&quot; assumes simple interest (rewards
-                not reinvested). In practice, most liquid staking tokens (stETH, rETH) compound
-                continuously.
-              </p>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { asset: "ETH Staking", apy: "3-5%" },
+              { asset: "SOL Staking", apy: "6-8%" },
+              { asset: "USDC Lending", apy: "4-12%" },
+              { asset: "DeFi Yield", apy: "5-50%" },
+            ].map((ref) => (
+              <div
+                key={ref.asset}
+                className="bg-[#06060b] rounded-lg p-3 border border-[#1a1a2e] text-center"
+              >
+                <p className="text-xs text-white font-medium">{ref.asset}</p>
+                <p className="text-xs text-purple-400 mt-1">{ref.apy}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <p className="text-sm text-[#64748b] mb-3">
-            Looking for more DeFi tools?
-          </p>
-          <Link
-            href="/categories/defi"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#8b5cf6]/10 border border-[#8b5cf6]/20 rounded-xl text-[#a78bfa] text-sm font-medium hover:bg-[#8b5cf6]/20 transition-all"
-          >
-            Browse DeFi Tools
-            <ArrowRight size={14} />
-          </Link>
+        {/* CTA: Start staking on these platforms */}
+        <div className="mt-8 bg-gradient-to-r from-purple-500/10 to-violet-500/10 border border-purple-500/20 rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-white mb-3">Start staking &amp; earning on these exchanges</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <a href="https://www.binance.com/en/register?ref=affiliate" target="_blank" rel="sponsored noopener" className="bg-[#0d0d14] border border-[#1a1a2e] hover:border-yellow-500/30 rounded-lg p-3 text-center transition-all group">
+              <p className="text-sm font-semibold text-white group-hover:text-yellow-400 transition-colors">Binance Earn</p>
+              <p className="text-xs text-[#475569] mt-1">Flexible &amp; locked staking</p>
+              <span className="inline-flex items-center gap-1 mt-2 text-xs text-yellow-400">Start Earning <ExternalLink size={12} /></span>
+            </a>
+            <a href="https://www.okx.com/join/affiliate" target="_blank" rel="sponsored noopener" className="bg-[#0d0d14] border border-[#1a1a2e] hover:border-cyan-500/30 rounded-lg p-3 text-center transition-all group">
+              <p className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">OKX Earn</p>
+              <p className="text-xs text-[#475569] mt-1">On-chain staking &amp; DeFi</p>
+              <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">Start Earning <ExternalLink size={12} /></span>
+            </a>
+            <a href="https://www.bitget.com" target="_blank" rel="sponsored noopener" className="bg-[#0d0d14] border border-[#1a1a2e] hover:border-teal-500/30 rounded-lg p-3 text-center transition-all group">
+              <p className="text-sm font-semibold text-white group-hover:text-teal-400 transition-colors">Bitget Earn</p>
+              <p className="text-xs text-[#475569] mt-1">Code <span className="font-mono text-teal-400">ygnw</span> &middot; High yield</p>
+              <span className="inline-flex items-center gap-1 mt-2 text-xs text-teal-400">Start Earning <ExternalLink size={12} /></span>
+            </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }

@@ -11,6 +11,27 @@ export const metadata: Metadata = {
   title: "Crypto AI Finder - Discover AI Tools for Crypto Trading",
   description: "The most comprehensive directory of AI-powered tools for cryptocurrency trading, DeFi, on-chain analytics, and portfolio management.",
   keywords: "AI crypto tools, crypto trading bots, DeFi AI, blockchain analytics, cryptocurrency tools",
+  openGraph: {
+    title: "Crypto AI Finder - Discover AI Tools for Crypto Trading",
+    description: "446+ AI-powered crypto tools across 11 categories. Your trusted guide to the best AI tools in crypto.",
+    url: "https://cryptoaifinder.com",
+    siteName: "CryptoFinder",
+    type: "website",
+    images: [
+      {
+        url: "https://cryptoaifinder.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CryptoFinder - AI Crypto Tools Directory",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Crypto AI Finder",
+    description: "446+ AI-powered crypto tools across 11 categories.",
+    images: ["https://cryptoaifinder.com/og-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -21,6 +42,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
       <head>
+        <meta property="og:image" content="https://cryptoaifinder.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://cryptoaifinder.com/og-image.png" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FKDPM7FP9"></script>
         <script
           dangerouslySetInnerHTML={{
