@@ -45,6 +45,9 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
             <Link href="/about" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
               About
             </Link>
+            <Link href="/best" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14] transition-all">
+              🏆 Best Of
+            </Link>
             <Link href="/contact" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
               Contact
             </Link>
@@ -54,15 +57,6 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
               className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all"
             >
               GitHub
-            </Link>
-            <Link href="/compare" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
-              Compare
-            </Link>
-            <Link
-              href="/tools/profit-calculator"
-              className="px-3 py-1.5 text-sm text-[#64748b] hover:text-yellow-400 rounded-md hover:bg-[#0d0d14] transition-all"
-            >
-              🧮 Tools
             </Link>
           </nav>
 
@@ -97,6 +91,9 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
               About
             </Link>
+            <Link href="/best" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14]">
+              🏆 Best Of
+            </Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
               Contact
             </Link>
@@ -106,16 +103,6 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
               className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]"
             >
               GitHub
-            </Link>
-            <Link href="/compare" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
-              Compare
-            </Link>
-            <Link
-              href="/tools/profit-calculator"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]"
-            >
-              🧮 Free Tools
             </Link>
           </div>
         </div>
