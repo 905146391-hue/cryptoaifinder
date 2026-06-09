@@ -42,11 +42,17 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
 
           {/* Nav Links - Desktop */}
           <nav className="hidden md:flex items-center gap-1">
-            <Link href="/about" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
-              About
+            <Link href="/start-here" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14] transition-all">
+              🚀 Start Here
             </Link>
             <Link href="/best" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14] transition-all">
               🏆 Best Of
+            </Link>
+            <Link href="/compare" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14] transition-all">
+              Compare
+            </Link>
+            <Link href="/about" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
+              About
             </Link>
             <Link href="/contact" className="px-3 py-1.5 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14] transition-all">
               Contact
@@ -88,11 +94,17 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-[#1a1a2e] bg-[#06060b]">
           <div className="px-4 py-3 space-y-1">
-            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
-              About
+            <Link href="/start-here" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14]">
+              🚀 Start Here
             </Link>
             <Link href="/best" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14]">
               🏆 Best Of
+            </Link>
+            <Link href="/compare" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-cyan-400 rounded-md hover:bg-[#0d0d14]">
+              Compare
+            </Link>
+            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
+              About
             </Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#64748b] hover:text-white rounded-md hover:bg-[#0d0d14]">
               Contact
