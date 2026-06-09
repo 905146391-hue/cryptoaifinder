@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 import CategoryFilter from "./components/CategoryFilter";
 import ToolGrid from "./components/ToolGrid";
 import Footer from "./components/Footer";
-import { BookOpen, ArrowRight, Sparkles } from "lucide-react";
+import { BookOpen, ArrowRight, Sparkles, Bot, Shield, Wallet, BarChart3, Search } from "lucide-react";
 
 const featuredArticles = [
   {
@@ -66,6 +66,47 @@ export default function Home() {
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
         />
+
+        {/* Start Here - Persona Navigation */}
+        {activeCategory === "all" && !searchQuery && (
+          <section id="start-here" className="max-w-7xl mx-auto px-4 sm:px-6 pb-4">
+            <div className="bg-gradient-to-r from-[#0d0d14] via-[#0f0f1a] to-[#0d0d14] border border-[#1a1a2e] rounded-2xl p-6">
+              <div className="text-center mb-5">
+                <h2 className="text-lg font-bold text-white mb-1">What brings you here?</h2>
+                <p className="text-sm text-[#64748b]">Pick your goal. We will point you to the right tools.</p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <a href="/best-crypto-trading-bots" className="group flex items-start gap-3 p-4 rounded-xl bg-[#06060b] border border-[#1a1a2e] hover:border-cyan-500/30 hover:bg-[#0a0a14] transition-all">
+                  <span className="mt-0.5 w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center shrink-0 group-hover:bg-cyan-500/20 transition-colors">
+                    <Bot size={16} className="text-cyan-400" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">I want to trade smarter</p>
+                    <p className="text-xs text-[#64748b] mt-1">Automated bots, AI signals, smart terminals &rarr;</p>
+                  </div>
+                </a>
+                <a href="/best-crypto-wallets" className="group flex items-start gap-3 p-4 rounded-xl bg-[#06060b] border border-[#1a1a2e] hover:border-emerald-500/30 hover:bg-[#0a0a14] transition-all">
+                  <span className="mt-0.5 w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors">
+                    <Wallet size={16} className="text-emerald-400" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">I want to secure my assets</p>
+                    <p className="text-xs text-[#64748b] mt-1">Hardware wallets, DeFi security, audit tools &rarr;</p>
+                  </div>
+                </a>
+                <a href="/best" className="group flex items-start gap-3 p-4 rounded-xl bg-[#06060b] border border-[#1a1a2e] hover:border-purple-500/30 hover:bg-[#0a0a14] transition-all">
+                  <span className="mt-0.5 w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition-colors">
+                    <Search size={16} className="text-purple-400" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">I am just exploring</p>
+                    <p className="text-xs text-[#64748b] mt-1">Browse all categories ranked & compared &rarr;</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* From Our Blog banner */}
         {activeCategory === "all" && !searchQuery && (
