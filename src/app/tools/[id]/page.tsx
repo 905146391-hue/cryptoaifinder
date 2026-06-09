@@ -245,6 +245,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
                   {/* CTA Banner */}
                   <a
                     href={tool.affiliateUrl || tool.url}
+                    onClick={() => { if (tool.affiliateUrl && typeof window !== "undefined" && window.gtag) { window.gtag("event", "affiliate_click", { tool_name: tool.name, tool_category: tool.category }); } }}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 rounded-2xl p-6 sm:p-8 text-center transition-all duration-200 transform hover:scale-[1.01] shadow-lg shadow-cyan-500/10"
@@ -341,6 +342,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
                           </ul>
                           <a
                             href={tool.affiliateUrl || tool.url}
+                    onClick={() => { if (tool.affiliateUrl && typeof window !== "undefined" && window.gtag) { window.gtag("event", "affiliate_click", { tool_name: tool.name, tool_category: tool.category }); } }}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`block mt-4 text-center py-2.5 rounded-lg font-medium text-sm transition-colors ${
@@ -450,6 +452,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
                     <div className="mt-6 pt-6 border-t border-slate-700/50">
                       <a
                         href={tool.affiliateUrl || tool.url}
+                    onClick={() => { if (tool.affiliateUrl && typeof window !== "undefined" && window.gtag) { window.gtag("event", "affiliate_click", { tool_name: tool.name, tool_category: tool.category }); } }}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-[1.02]"
@@ -539,6 +542,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
                     </p>
                     <a
                       href={tool.affiliateUrl || tool.url}
+                    onClick={() => { if (tool.affiliateUrl && typeof window !== "undefined" && window.gtag) { window.gtag("event", "affiliate_click", { tool_name: tool.name, tool_category: tool.category }); } }}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-600 hover:to-emerald-600 text-white font-bold text-lg rounded-xl transition-all duration-200 transform hover:scale-[1.02] shadow-lg shadow-cyan-500/20"
@@ -693,6 +697,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
               <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 sticky top-4">
                 <a
                   href={tool.affiliateUrl || tool.url}
+                    onClick={() => { if (tool.affiliateUrl && typeof window !== "undefined" && window.gtag) { window.gtag("event", "affiliate_click", { tool_name: tool.name, tool_category: tool.category }); } }}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-600 hover:to-emerald-600 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-[1.02]"
