@@ -166,6 +166,25 @@ export default function BestIndexPage() {
             </p>
           </div>
 
+          {/* How We Choose */}
+          <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 mb-10">
+            <h2 className="text-lg font-bold text-white mb-3">How We Pick the Best Tools</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-400">
+              <div>
+                <p className="text-white font-medium mb-1">1. We Test Them Ourselves</p>
+                <p>Every tool on this list has been reviewed by a real person. We sign up, kick the tires, and compare features side by side. No AI-generated summaries — our rankings come from actual usage.</p>
+              </div>
+              <div>
+                <p className="text-white font-medium mb-1">2. We Rank by What Matters</p>
+                <p>Pricing, ease of use, feature depth, community trust, and real user reviews. We weigh these so you do not have to. A tool with a flashy website but poor support will not make the list.</p>
+              </div>
+              <div>
+                <p className="text-white font-medium mb-1">3. We Are Transparent About Money</p>
+                <p>Some links on this page earn us a commission if you sign up — at zero extra cost to you. This never influences our rankings. We recommend tools we would use ourselves, period.</p>
+              </div>
+            </div>
+          </div>
+
           {/* Category Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             {categories.map((cat) => (
