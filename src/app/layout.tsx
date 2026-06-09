@@ -58,6 +58,25 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('click', function(e) {
+                var link = e.target.closest('a[rel*=\"sponsored\"]');
+                if (!link) return;
+                var page = window.location.pathname;
+                var name = link.textContent.trim().slice(0, 60) || link.href;
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  event: 'affiliate_click',
+                  tool_name: name,
+                  tool_url: link.href,
+                  page: page
+                });
+              });
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[#0a0a0f] text-[#e2e8f0]">{children}</body>
     </html>
