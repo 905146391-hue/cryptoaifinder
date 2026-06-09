@@ -225,6 +225,56 @@ export default async function ToolDetailPage({ params }: PageProps) {
                   {tool.description}
                 </p>
 
+                {/* Who / Skip — quick decision helper */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
+                  <div className="flex items-start gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg p-3">
+                    <span className="shrink-0 mt-0.5">{`\u{1F3AF}`}</span>
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold text-emerald-400 mb-0.5">Best for</p>
+                      <p className="text-xs text-slate-400 leading-relaxed">
+                        {tool.tags?.some((t: string) => t.toLowerCase().includes("beginner")) || tool.pricing?.toLowerCase().includes("free")
+                          ? `Beginners and casual users who want a simple start without a steep learning curve.`
+                          : tool.category === "trading-bots"
+                          ? `Active traders who want to automate strategies and save time. Best if you already trade manually.`
+                          : tool.category === "wallet"
+                          ? `Anyone holding crypto who values security — from beginners to institutions.`
+                          : tool.category === "defi"
+                          ? `DeFi users comfortable with self-custody, gas fees, and wallet connections.`
+                          : tool.category === "analytics" || tool.category === "charting"
+                          ? `Data-driven traders and researchers who want deeper market insights.`
+                          : tool.category === "security"
+                          ? `Projects and users serious about protecting assets and auditing code.`
+                          : tool.category === "portfolio"
+                          ? `Anyone with crypto across multiple places who needs one unified dashboard.`
+                          : tool.category === "exchange"
+                          ? `Traders looking for reliable liquidity, competitive fees, and solid platform UX.`
+                          : `${category?.name || "Crypto"} users looking for a solid tool in this category.`
+                        }
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2.5 bg-red-500/5 border border-red-500/15 rounded-lg p-3">
+                    <span className="shrink-0 mt-0.5">{`⚠️`}</span>
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold text-red-400 mb-0.5">Skip if</p>
+                      <p className="text-xs text-slate-400 leading-relaxed">
+                        {tool.rating < 3.8
+                          ? `You need a top-rated tool. Check our Best Of list for higher-rated alternatives.`
+                          : tool.tags?.some((t: string) => t.toLowerCase().includes("advanced") || t.toLowerCase().includes("professional"))
+                          ? `You are a complete beginner. This tool assumes experience — start with a simpler option.`
+                          : tool.category === "trading-bots"
+                          ? `You only trade a few times a month. Manual trading is simpler and cheaper for low volume.`
+                          : tool.category === "wallet"
+                          ? `You only hold crypto on exchanges and do not plan to self-custody.`
+                          : tool.category === "defi"
+                          ? `You are new to crypto. Master wallets and exchanges before entering DeFi.`
+                          : `You already have a tool in this category that works well. If it is not broken, do not fix it.`
+                        }
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {tool.tags.map((tag) => (
