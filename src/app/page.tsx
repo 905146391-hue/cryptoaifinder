@@ -11,6 +11,12 @@ import { BookOpen, ArrowRight, Sparkles, Bot, Shield, Wallet, BarChart3, Search 
 
 const featuredArticles = [
   {
+    title: "CoinStats Review 2026: I Tracked 6 Exchanges and 4 Wallets in One Place",
+    url: "https://medium.com/@905146391/coinstats-review-2026-i-tracked-6-exchanges-and-4-wallets-in-one-place-heres-what-happened-ff88792ad9af",
+    tag: "Review",
+    tagColor: "purple",
+  },
+  {
     title: "3Commas Review 2026: Is It Worth It?",
     url: "https://medium.com/@905146391/3commas-review-2026-is-it-worth-it-a-complete-breakdown-f1313538a663",
     tag: "Review",
@@ -24,7 +30,7 @@ const featuredArticles = [
   },
   {
     title: "Best Crypto Portfolio Trackers 2026",
-    url: "https://medium.com/@905146391",
+    url: "https://medium.com/@905146391/best-crypto-portfolio-trackers-in-2026-track-every-coin-every-defi-position-0ad5b03e2813",
     tag: "Roundup",
     tagColor: "purple",
   },
