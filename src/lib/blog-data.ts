@@ -15,6 +15,8 @@ export const blogPosts: BlogPost[] = [
     title: `How I Went From Losing Track of My Crypto to Gaining Clarity With CoinStats`,
     excerpt: `Six months ago, I was tracking my crypto portfolio across three exchanges, two hardware wallets, and a DeFi dashboard that I'd bookmarked but never actually used. Then I stumbled on CoinStats.`.slice(0, 200),
     date: "2026-06-01",
+    mediumUrl: "https://medium.com/@905146391/coinstats-review-2026-i-tracked-6-exchanges-and-4-wallets-in-one-place-heres-what-happened-ff88792ad9af",
+    devtoUrl: "https://dev.to/cryptofinder/-coinstats-review-2026-i-tracked-6-exchanges-and-4-wallets-in-one-place-heres-what-happened-9o4",
     category: "Review" as const,
     content: `# How I Went From Losing Track of My Crypto to Gaining Clarity With CoinStats
 
