@@ -6646,5 +6646,17 @@ The platform places a strong emphasis on security, employing a combination of co
     url: "https://blockchain.news",
     pricing: "Free",
     rating: 3.7,
-  }
+  },
+
+  {
+    id: "metamask-agent-wallet",
+    name: "MetaMask Agent Wallet",
+    description: "First self-custody wallet built for AI agents, enabling autonomous DeFi trading across 25+ EVM chains with user-defined rules, spending limits, and Blockaid-powered security scanning.",
+    category: "wallet",
+    tags: ["AI Agent", "DeFi", "Self-Custody", "Wallet"],
+    url: "https://metamask.io",
+    pricing: "Free (Early Access)",
+    rating: 3.5,
+    featured: false,
+  },
 ];
