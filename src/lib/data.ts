@@ -44,14 +44,14 @@ export interface Tool {
 }
 
 export const categories = [
-  { id: "all", name: "All Tools", count: 460 },
+  { id: "all", name: "All Tools", count: 447 },
   { id: "trading-bots", name: "Trading Bots", count: 50 },
   { id: "analytics", name: "On-Chain Analytics", count: 50 },
   { id: "defi", name: "DeFi AI", count: 53 },
   { id: "security", name: "Security & Audit", count: 50 },
   { id: "portfolio", name: "Portfolio Management", count: 34 },
   { id: "charting", name: "Chart & TA", count: 35 },
-  { id: "wallet", name: "Wallet & Key", count: 37 },
+  { id: "wallet", name: "Wallet & Key", count: 38 },
   { id: "exchange", name: "CEX & DEX", count: 38 },
   { id: "nft", name: "NFT & Gaming", count: 37 },
   { id: "news-data", name: "News & Data Feeds", count: 38 },
