@@ -620,4 +620,15 @@ Rating: **4.1/5** ⭐
 Explore more crypto tools at [CryptoFinder](https://cryptoaifinder.com).`,
   },
 
+  {
+    slug: "koinly-review-2026",
+    title: "Koinly Review 2026",
+    excerpt: "I tested Koinly for crypto taxes.",
+    date: "2026-06-10",
+    mediumUrl: "https://medium.com/@905146391/koinly-review-2026-11bf4597b321",
+    devtoUrl: "https://dev.to/cryptofinder/-koinly-review-2026-4fe7",
+    category: "Review" as const,
+    content: "Full review on Medium or Dev.to.",
+  },
+
 ];
