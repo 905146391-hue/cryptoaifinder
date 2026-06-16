@@ -216,7 +216,7 @@ export default function BestIndexPage() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-slate-700 rounded-xl p-8 text-center">
             <h2 className="text-xl font-bold mb-2">Want to explore everything?</h2>
             <p className="text-slate-400 mb-4">
-              Browse our complete directory of 446+ AI-powered crypto tools across 11 categories.
+              Browse our complete directory of 460+ AI-powered crypto tools across 11 categories.
             </p>
             <Link
               href="/"

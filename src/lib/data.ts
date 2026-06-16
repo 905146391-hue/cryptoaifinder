@@ -44,7 +44,7 @@ export interface Tool {
 }
 
 export const categories = [
-  { id: "all", name: "All Tools", count: 446 },
+  { id: "all", name: "All Tools", count: 460 },
   { id: "trading-bots", name: "Trading Bots", count: 50 },
   { id: "analytics", name: "On-Chain Analytics", count: 50 },
   { id: "defi", name: "DeFi AI", count: 53 },

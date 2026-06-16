@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: "AI crypto tools, crypto trading bots, DeFi AI, blockchain analytics, cryptocurrency tools",
   openGraph: {
     title: "Crypto AI Finder - Discover AI Tools for Crypto Trading",
-    description: "446+ AI-powered crypto tools across 11 categories. Your trusted guide to the best AI tools in crypto.",
+    description: "460+ AI-powered crypto tools across 11 categories. Your trusted guide to the best AI tools in crypto.",
     url: "https://cryptoaifinder.com",
     siteName: "CryptoFinder",
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Crypto AI Finder",
-    description: "446+ AI-powered crypto tools across 11 categories.",
+    description: "460+ AI-powered crypto tools across 11 categories.",
     images: ["https://cryptoaifinder.com/og-image.png"],
   },
 };

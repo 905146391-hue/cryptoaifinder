@@ -77,7 +77,7 @@ export default function StartHerePage() {
             Stop Browsing. <span className="text-cyan-400">Start Using.</span>
           </h1>
           <p className="text-[#94a3b8] text-lg leading-relaxed max-w-3xl">
-            446 tools is too many. You do not need all of them. You need the right ones that work together.
+            460 tools is too many. You do not need all of them. You need the right ones that work together.
             Pick your goal below and get a battle-tested tool stack.
           </p>
         </div>

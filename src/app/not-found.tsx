@@ -40,7 +40,7 @@ export default function NotFound() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-600 hover:to-emerald-600 text-white font-semibold rounded-xl transition-all shadow-lg shadow-cyan-500/20"
           >
             <Search size={18} />
-            Browse All 446+ Tools
+            Browse All 460+ Tools
           </Link>
         </div>
 

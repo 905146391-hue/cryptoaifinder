@@ -32,7 +32,7 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#475569]" />
               <input
                 type="text"
-                placeholder="Search 446+ AI crypto tools..."
+                placeholder="Search 460+ AI crypto tools..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 bg-[#0d0d14] border border-[#1a1a2e] rounded-lg text-sm text-white placeholder-[#475569] focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
