@@ -628,7 +628,7 @@ Explore more crypto tools at [CryptoFinder](https://cryptoaifinder.com).`,
     mediumUrl: "https://medium.com/@905146391/koinly-review-2026-11bf4597b321",
     devtoUrl: "https://dev.to/cryptofinder/-koinly-review-2026-4fe7",
     category: "Review" as const,
-    content: "Full review on Medium or Dev.to.",
+    content: "Full review on Medium or Dev.to. Sign up for Koinly with our link to get started.",
   },
 
 ];
