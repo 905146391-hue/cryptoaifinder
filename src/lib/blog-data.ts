@@ -631,4 +631,25 @@ Explore more crypto tools at [CryptoFinder](https://cryptoaifinder.com).`,
     content: "Read the full review on [Medium](https://medium.com/@905146391/koinly-review-2026-11bf4597b321) or [Dev.to](https://dev.to/cryptofinder/-koinly-review-2026-4fe7). Ready to try Koinly? [Sign up here](https://koinly.io/?via=77B460BA) at no extra cost.",
   },
 
+  {
+    slug: "lunarcrush-review-2026",
+    title: "LunarCrush Review 2026",
+    excerpt: "Social sentiment actually predicts crypto prices.",
+    date: "2026-06-19",
+    mediumUrl: "https://medium.com/@905146391/lunarcrush-review-2026-75c8e0b502c3",
+    devtoUrl: "https://dev.to/cryptofinder/lunarcrush-review-2026-how-i-started-catching-crypto-trends-before-they-hit-the-charts-4279",
+    category: "Review" as const,
+    content: "Full review on Medium or Dev.to.",
+  },
+  {
+    slug: "nansen-review-2026",
+    title: "Nansen Review 2026",
+    excerpt: "I tracked smart money wallets on Nansen for a month.",
+    date: "2026-06-20",
+    mediumUrl: "https://medium.com/@905146391/nansen-review-2026-e543e1b036c7",
+    devtoUrl: "https://dev.to/cryptofinder/nansen-review-2026-i-followed-smart-money-wallets-for-30-days-the-results-were-uncomfortable-3fm8",
+    category: "Review" as const,
+    content: "Full review on Medium or Dev.to.",
+  },
+
 ];
