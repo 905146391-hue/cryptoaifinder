@@ -11,6 +11,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "coingecko-review-2026",
+    title: "CoinGecko Review 2026: I Tracked 12,000 Coins for Free — Here's Why It Beats Every Paid Alternative",
+    excerpt: "I tracked 12,000 coins for free. Here's why CoinGecko beats every paid alternative.",
+    date: "2026-06-27",
+    mediumUrl: "https://medium.com/@905146391/coingecko-review-2026-i-tracked-12-000-coins-for-free-heres-why-it-beats-every-paid-alternative-c6ae5fb858db",
+    devtoUrl: "https://dev.to/cryptofinder/coingecko-review-2026-i-tracked-12000-coins-for-free-heres-why-it-beats-every-paid-alternative-e9",
+    category: "Review" as const,
+    content: "Full review on Medium or Dev.to.",
+  },
+
+  {
     slug: "coinstats-review-2026",
     title: `How I Went From Losing Track of My Crypto to Gaining Clarity With CoinStats`,
     excerpt: `Six months ago, I was tracking my crypto portfolio across three exchanges, two hardware wallets, and a DeFi dashboard that I'd bookmarked but never actually used. Then I stumbled on CoinStats.`.slice(0, 200),
