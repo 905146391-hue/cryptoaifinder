@@ -109,7 +109,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
   // Resolve alternative tools with their data
   const altTools = tool.detailedContent?.alternatives
     ? tool.detailedContent.alternatives
-        .map((altId) => tools.find((t) => t.id === altId))
+        .map((altId) => tools.find((t) => t.id === altId)).filter(Boolean)
         .filter(Boolean)
     : [];
 
