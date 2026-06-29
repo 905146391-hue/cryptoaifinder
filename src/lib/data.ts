@@ -6659,7 +6659,6 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
-,
   {
     id: "aiagentmarketplace",
     name: "Aiagentmarketplace",

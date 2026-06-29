@@ -11,6 +11,12 @@ import { BookOpen, ArrowRight, Sparkles, Bot, Shield, Wallet, BarChart3, Search 
 
 const featuredArticles = [
   {
+    title: "CoinGlass Review 2026: I Lost $4K in a Liquidation Cascade — This Tool Would Have Saved Me",
+    url: "https://medium.com/@905146391/coinglass-review-2026-i-lost-4k-in-a-liquidation-cascade-this-tool-would-have-saved-me-4cba0855752e",
+    tag: "Review",
+    tagColor: "cyan",
+  },
+  {
     title: "CoinGecko Review 2026: I Tracked 12,000 Coins for Free — Here's Why It Beats Every Paid Alternative",
     url: "https://medium.com/@905146391/coingecko-review-2026-i-tracked-12-000-coins-for-free-heres-why-it-beats-every-paid-alternative-c6ae5fb858db",
     tag: "Review",
@@ -27,12 +33,6 @@ const featuredArticles = [
     url: "https://medium.com/@905146391/nansen-review-2026-e543e1b036c7",
     tag: "Review",
     tagColor: "purple",
-  },
-  {
-    title: "CoinStats Review 2026: I Tracked 6 Exchanges and 4 Wallets in One Place",
-    url: "https://medium.com/@905146391/coinstats-review-2026-i-tracked-6-exchanges-and-4-wallets-in-one-place-heres-what-happened-ff88792ad9af",
-    tag: "Review",
-    tagColor: "emerald",
   },
 ];
 
