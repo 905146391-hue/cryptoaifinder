@@ -6659,4 +6659,16 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+,
+  {
+    id: "aiagentmarketplace",
+    name: "Aiagentmarketplace",
+    url: "https://github.com/Omairdev/aiagentmarketplace",
+    description: "A decentralized, trustless marketplace for the autonomous AI agent economy. Built on Algorand using TealScript, featurin",
+    category: "analytics",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  }
 ];
