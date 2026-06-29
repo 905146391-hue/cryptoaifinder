@@ -673,4 +673,15 @@ Explore more crypto tools at [CryptoFinder](https://cryptoaifinder.com).`,
     content: "Full review on Medium or Dev.to.",
   },
 
+  {
+    slug: "coinglass-review-2026",
+    title: "CoinGlass Review 2026",
+    excerpt: "I lost K in a liquidation cascade. This tool would have saved me.",
+    date: "2026-06-23",
+    mediumUrl: "https://medium.com/@905146391/coinglass-review-2026-i-lost-4k-in-a-liquidation-cascade-this-tool-would-have-saved-me-4cba0855752e",
+    devtoUrl: "https://dev.to/cryptofinder/coinglass-review-2026-i-lost-4k-in-a-liquidation-cascade-this-tool-would-have-saved-me-98a",
+    category: "Review" as const,
+    content: "Full review on [Medium](https://medium.com/@905146391/coinglass-review-2026-i-lost-4k-in-a-liquidation-cascade-this-tool-would-have-saved-me-4cba0855752e) or [Dev.to](https://dev.to/cryptofinder/coinglass-review-2026-i-lost-4k-in-a-liquidation-cascade-this-tool-would-have-saved-me-98a).",
+  },
+
 ];
