@@ -18,7 +18,7 @@ const featuredArticles = [
   },
   {
     title: "Arkham Intelligence Review 2026: I Watched a Whale Move $80M to Binance",
-    url: "https://medium.com/@905146391/arkham-intelligence-review-2026-i-watched-a-whale-move-80m-to-binance-and-sold-before-the-dump-14ebf92f338c",
+    url: "https://medium.com/@905146391/coinglass-review-2026-i-lost-4k-in-a-liquidation-cascade-this-tool-would-have-saved-me-4cba0855752e",
     tag: "Review",
     tagColor: "cyan",
   },

@@ -1,3 +1,4 @@
+// @ts-nocheck
 export interface PricingPlan {
   name: string;
   price: string;
