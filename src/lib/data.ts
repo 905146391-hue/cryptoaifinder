@@ -6755,4 +6755,16 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+,
+  {
+    id: "polystate-services",
+    name: "Polystate Services",
+    url: "https://github.com/Spider333/Polystate-Services",
+    description: "Curated directory of 97+ crypto, fintech, privacy, and travel tools for digital nomads and sovereign individuals. Mainta",
+    category: "analytics",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  }
 ];
