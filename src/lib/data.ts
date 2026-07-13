@@ -6767,4 +6767,38 @@ The platform places a strong emphasis on security, employing a combination of co
     pricing: "Check website",
     featured: false,
   }
+,
+  {
+    id: "magpie",
+    name: "Magpie",
+    url: "https://github.com/colfin22/magpie",
+    description: "🐦‍⬛ Autonomous self-hosted crypto trading bot with a pluggable LLM brain — Gemini, ChatGPT, Claude, Perplexity, Grok, De",
+    category: "trading-bots",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  },
+  {
+    id: "depthsight",
+    name: "Depthsight",
+    url: "https://github.com/DepthSight-Pro/DepthSight",
+    description: "Self-hosted visual crypto trading platform built with FastAPI, React, and Redis. Features genetic backtesting and AI str",
+    category: "trading-bots",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  },
+  {
+    id: "polymarket-trading-bot-python-v2",
+    name: "Polymarket Trading Bot Python V2",
+    url: "https://github.com/Benjam1nCup/Polymarket-trading-bot-python-V2",
+    description: "polymarket arbitrage bot polymarket trading bot polymarket arbitrage bot polymarket trading bot polymarket arbitrage bot",
+    category: "trading-bots",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  }
 ];
