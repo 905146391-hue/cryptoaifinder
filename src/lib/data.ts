@@ -6755,7 +6755,6 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
-,
   {
     id: "polystate-services",
     name: "Polystate Services",
@@ -6766,8 +6765,8 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 4.0,
     pricing: "Check website",
     featured: false,
-  }
-,
+  },
+
   {
     id: "magpie",
     name: "Magpie",
@@ -6779,6 +6778,7 @@ The platform places a strong emphasis on security, employing a combination of co
     pricing: "Check website",
     featured: false,
   },
+
   {
     id: "depthsight",
     name: "Depthsight",
@@ -6790,6 +6790,7 @@ The platform places a strong emphasis on security, employing a combination of co
     pricing: "Check website",
     featured: false,
   },
+
   {
     id: "polymarket-trading-bot-python-v2",
     name: "Polymarket Trading Bot Python V2",
@@ -6800,5 +6801,65 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 4.0,
     pricing: "Check website",
     featured: false,
-  }
+  },
+
+  {
+    id: "fere-ai",
+    name: "Fere AI",
+    description: "AI agents that turn market signals into autonomous crypto and Polymarket trading workflows, handling research, execution, risk management, and 24/7 strategy monitoring with their own wallets.",
+    category: "trading-bots",
+    tags: ["AI Agents", "Autonomous Trading", "Polymarket", "Risk Management"],
+    url: "https://www.fereai.xyz",
+    pricing: "Free / Paid plans",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "coinfello",
+    name: "CoinFello",
+    description: "Self-custodial DeFi AI agent that researches, executes, and automates on-chain actions through natural language, supporting swaps, LP positions, staking, and multi-step strategies across EVM chains.",
+    category: "defi",
+    tags: ["AI Agent", "DeFi Automation", "Self-Custodial", "Natural Language"],
+    url: "https://coinfello.com",
+    pricing: "Free / Premium",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "mintlocke",
+    name: "MintLocke",
+    description: "Non-custodial AI-powered Bitcoin autopilot that executes on-chain DCA strategies with intelligent buy sizing, running EMA crossover signals on cbBTC via Base with Claude API-powered execution layer.",
+    category: "trading-bots",
+    tags: ["AI Trading", "Self-Custodial", "Bitcoin DCA", "On-Chain Automation"],
+    url: "https://mintlocke.com",
+    pricing: "$5/mo or $50/year",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "noah-ai",
+    name: "Noah AI",
+    description: "AI-powered platform that generates and deploys full-stack crypto dApps from plain English prompts, creating UI, smart contracts, backend infrastructure, and wallet integrations across Solana and EVM chains.",
+    category: "security",
+    tags: ["AI Code Gen", "dApp Builder", "Smart Contracts", "No-Code"],
+    url: "https://trynoah.ai",
+    pricing: "$10-$50/mo",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "speraxos",
+    name: "SperaxOS",
+    description: "Open-source AI agent workspace for DeFi with 100+ composable tools, supporting multi-provider AI models, autonomous on-chain execution, yield optimization, and risk defense across 10+ blockchains.",
+    category: "defi",
+    tags: ["AI Agent", "DeFi Tools", "Open Source", "Multi-Chain"],
+    url: "https://www.sperax.io",
+    pricing: "Free / Open Source",
+    rating: 3.5,
+    featured: false,
+  },
 ];
