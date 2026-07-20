@@ -6862,4 +6862,16 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+,
+  {
+    id: "trading",
+    name: "Trading",
+    url: "https://github.com/darkvolg/Trading",
+    description: "Open-source crypto trading strategy for Freqtrade. Multi-indicator confluence + hyperopt-tuned. Live performance public,",
+    category: "trading-bots",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  }
 ];
