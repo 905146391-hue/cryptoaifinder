@@ -6862,7 +6862,7 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
-,
+
   {
     id: "trading",
     name: "Trading",
@@ -6873,5 +6873,77 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 4.0,
     pricing: "Check website",
     featured: false,
-  }
+  },
+
+  {
+    id: "blocksec-trace-ai",
+    name: "BlockSec Trace AI",
+    description: "AI agent-powered on-chain investigation tool that traces stolen crypto funds across 8 blockchains via natural language conversation, generating structured reports for law enforcement and exchange recovery requests.",
+    category: "security",
+    tags: ["AI Agent", "Fund Tracing", "On-Chain Investigation", "Security"],
+    url: "https://blocksec.com/trace-ai",
+    pricing: "$5 trace / $100 full report",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "moonagents",
+    name: "MoonAgents",
+    description: "AI crypto agent by MoonPay that lets users trade, swap, and manage digital assets through natural language on Telegram, with non-custodial key storage and 54+ professional tools across 10 blockchains.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Telegram Trading", "Non-Custodial", "Multi-Chain"],
+    url: "https://www.moonpay.com/agents",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "seekerclaw",
+    name: "SeekerClaw",
+    description: "On-device AI agent for Android that runs 24/7 with persistent memory, supporting autonomous Solana trading including swaps, DCA, and limit orders via a capped burner wallet with Claude-powered reasoning.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Solana Trading", "On-Device", "Autonomous"],
+    url: "https://seekerclaw.xyz",
+    pricing: "Free / Open Source",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "heytraders",
+    name: "HeyTraders",
+    description: "Personal AI quant research tool that converts plain-English trading ideas into verifiable backtested strategies, providing instant win rates, Sharpe ratios, and trade-level auditability for crypto markets.",
+    category: "analytics",
+    tags: ["AI Quant", "Backtesting", "Natural Language", "Strategy Research"],
+    url: "https://heytraders.com",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "orus",
+    name: "Orus",
+    description: "MCP server that connects a self-custodial Farao trading account to AI chats like Claude, ChatGPT, and WhatsApp, enabling conversational market research and trade execution across 100+ perpetuals markets.",
+    category: "trading-bots",
+    tags: ["AI Trading", "MCP Server", "Perpetuals", "Self-Custodial"],
+    url: "https://getfarao.com/orus",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "pump-parade",
+    name: "Pump Parade",
+    description: "AI-powered crypto discovery platform that helps traders find promising altcoins early using on-chain metrics, social sentiment, and AI-driven technical analysis across 1000+ tokens with risk flags and price predictions.",
+    category: "analytics",
+    tags: ["AI Analysis", "Altcoin Discovery", "Sentiment", "Price Prediction"],
+    url: "https://pumpparade.com",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
 ];
