@@ -6946,4 +6946,16 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+,
+  {
+    id: "frequi-ultimate",
+    name: "Frequi Ultimate",
+    url: "https://github.com/titouannwtt/frequi-ultimate",
+    description: "The multi-bot Freqtrade dashboard. Glassmorphism design, 50+ enhanced components, fleet comparison, market context, risk",
+    category: "trading-bots",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  }
 ];
