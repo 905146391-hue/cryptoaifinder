@@ -6958,4 +6958,16 @@ The platform places a strong emphasis on security, employing a combination of co
     pricing: "Check website",
     featured: false,
   }
+,
+  {
+    id: "polymarket-ai-model-trading-bot-btc-up-d",
+    name: "Polymarket Ai Model Trading Bot Btc Up Down Forecast Edge Ar",
+    url: "https://github.com/thxthanxwe/polymarket-ai-model-trading-bot-btc-up-down-forecast-edge-arbitrage",
+    description: "polymarket AI model trading bot — Production-ready TypeScript bot for BTC Up/Down 5m/15m/1h markets. External forecast A",
+    category: "trading-bots",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  }
 ];
