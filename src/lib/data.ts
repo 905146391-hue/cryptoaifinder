@@ -6970,4 +6970,16 @@ The platform places a strong emphasis on security, employing a combination of co
     pricing: "Check website",
     featured: false,
   }
+,
+  {
+    id: "crypto-tax-csv-converter-desktop",
+    name: "Crypto Tax Csv Converter Desktop",
+    url: "https://github.com/growingsqueeg/Crypto-Tax-CSV-Converter-Desktop",
+    description: "Crypto Tax CSV Converter Desktop for Windows — import exchange or wallet-export CSV files, map columns, normalize dates/",
+    category: "security",
+    tags: ["AI", "Crypto"],
+    rating: 4.0,
+    pricing: "Check website",
+    featured: false,
+  }
 ];
