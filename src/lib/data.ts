@@ -6946,7 +6946,7 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
-,
+
   {
     id: "frequi-ultimate",
     name: "Frequi Ultimate",
@@ -6957,8 +6957,8 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 4.0,
     pricing: "Check website",
     featured: false,
-  }
-,
+  },
+
   {
     id: "polymarket-ai-model-trading-bot-btc-up-d",
     name: "Polymarket Ai Model Trading Bot Btc Up Down Forecast Edge Ar",
@@ -6969,8 +6969,8 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 4.0,
     pricing: "Check website",
     featured: false,
-  }
-,
+  },
+
   {
     id: "crypto-tax-csv-converter-desktop",
     name: "Crypto Tax Csv Converter Desktop",
@@ -6981,5 +6981,113 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 4.0,
     pricing: "Check website",
     featured: false,
-  }
+  },
+
+  {
+    id: "almanak",
+    name: "Almanak",
+    description: "AI-powered non-custodial DeFi strategy platform that lets users describe, backtest, optimize, and deploy automated yield and trading strategies through Safe wallets.",
+    category: "defi",
+    tags: ["AI Agent", "DeFi Strategies", "Backtesting", "Non-Custodial"],
+    url: "https://www.almanak.co",
+    pricing: "Free beta",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "byreal",
+    name: "Byreal",
+    description: "Solana-based agent-native DEX with open-source AI skills for copy farming, pool analysis, swaps, and concentrated liquidity management.",
+    category: "defi",
+    tags: ["AI Agent", "Solana", "Copy Farming", "DEX"],
+    url: "https://byreal.io",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "ozak-ai",
+    name: "Ozak AI",
+    description: "Predictive AI platform delivering institutional-grade buy and sell signals for crypto, stocks, and forex through multi-agent market analysis and real-time data streams.",
+    category: "analytics",
+    tags: ["AI Signals", "Multi-Agent", "Market Analysis", "Prediction"],
+    url: "https://ozak.ai",
+    pricing: "Token-based",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "midash-ai",
+    name: "MiDash AI",
+    description: "No-code AI trading platform that turns natural-language strategy ideas into backtested and executed trades across crypto, stocks, and forex.",
+    category: "trading-bots",
+    tags: ["No-Code", "Natural Language", "Backtesting", "Multi-Asset"],
+    url: "https://www.midash.ai",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "deepalpha",
+    name: "DeepAlpha",
+    description: "Cloud-based AI crypto trading bot offering non-custodial AI, grid, and DCA strategies across 12 exchanges with Telegram control and built-in backtesting.",
+    category: "trading-bots",
+    tags: ["AI Bot", "Grid", "DCA", "Telegram"],
+    url: "https://deepalphabot.com",
+    pricing: "$39/mo",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "quote-trade",
+    name: "Quote.Trade",
+    description: "AI-native dark pool DEX for private stablecoin-settled crypto trading with hidden orders, MCP agent support, and up to 5x leverage.",
+    category: "exchange",
+    tags: ["Dark Pool", "AI Agent", "Stablecoin", "Leverage"],
+    url: "https://quote.trade",
+    pricing: "Free / ~0.13% spread",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "cobo-agentic-wallet",
+    name: "Cobo Agentic Wallet",
+    description: "MPC-secured wallet built for AI agents, using programmable Pacts and recipe-driven skills for autonomous yet governed on-chain execution.",
+    category: "wallet",
+    tags: ["AI Agent", "MPC", "Pact Protocol", "Self-Custody"],
+    url: "https://agenticwallet.cobo.com",
+    pricing: "Free early access",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "aiusd",
+    name: "AIUSD",
+    description: "Agentic trading infrastructure that lets AI agents trade across DEXs, perpetuals, and prediction markets through a unified stablecoin capital layer.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Execution", "Cross-Chain", "Stablecoin"],
+    url: "https://aiusd.ai",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "allox",
+    name: "AlloX",
+    description: "AI-powered portfolio allocation platform that converts crypto market narratives into diversified, risk-managed, on-chain token baskets.",
+    category: "portfolio",
+    tags: ["Narrative Investing", "Basket", "Rebalancing", "Risk Tiers"],
+    url: "https://www.allox.ai",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
 ];
