@@ -7090,4 +7090,52 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+
+  {
+    id: "minara",
+    name: "Minara",
+    description: "AI-native financial operating system that enables research, strategy generation, backtesting, and on-chain execution across crypto and stocks through natural language conversation.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Natural Language", "Backtesting", "On-Chain Execution", "Portfolio"],
+    url: "https://minara.ai",
+    pricing: "Freemium",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "nina-antalpha",
+    name: "Nina by Antalpha",
+    description: "Non-custodial Web3 AI assistant covering 50+ chains with 100+ MCP skills for trading, smart-money tracking, wallet safety checks, and prediction market analysis.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Non-Custodial", "Cross-Chain", "MCP", "Wallet Safety"],
+    url: "https://www.antalpha.com",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "altfins",
+    name: "altFINS",
+    description: "Comprehensive crypto analytics platform offering AI-powered trade setups, automated chart pattern recognition, and an AI copilot for screening 2,000+ cryptocurrencies across multiple timeframes.",
+    category: "analytics",
+    tags: ["AI Trade Setups", "Chart Patterns", "Screener", "Technical Analysis", "AI Copilot"],
+    url: "https://altfins.com",
+    pricing: "Freemium",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "bella-alpha",
+    name: "Bella Alpha",
+    description: "AI-powered Telegram trading signal bot with five specialized models for different market conditions, plus LLM-based research engine for crypto project analysis and market data retrieval.",
+    category: "trading-bots",
+    tags: ["AI Signals", "Telegram", "Multi-Model", "RAG Research", "Perpetuals"],
+    url: "https://t.me/BellaSignalBot",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
 ];
