@@ -7138,4 +7138,52 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+
+  {
+    id: "walbi",
+    name: "Walbi",
+    description: "AI-powered crypto futures platform where traders create no-code AI agents from a single prompt or follow community-built agents that adapt to live market conditions 24/7.",
+    category: "trading-bots",
+    tags: ["AI Agents", "No-Code", "Futures", "Agent Marketplace"],
+    url: "https://walbi.com",
+    pricing: "Free / 0.025% per trade",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "ironwallet",
+    name: "IronWallet",
+    description: "Non-custodial wallet with an MCP server that lets AI clients like Claude Code and Cursor manage balances, transfers, and swaps across 12 blockchains with keys that never leave the device.",
+    category: "wallet",
+    tags: ["MCP Server", "Non-Custodial", "AI Wallet", "Multi-Chain"],
+    url: "https://ironwallet.io",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "arc-studio",
+    name: "Arc Studio",
+    description: "Circle's AI coding agent that turns plain-language prompts into full-stack onchain apps, generating frontend, backend, and smart contracts with testnet deployment across nine EVM networks.",
+    category: "security",
+    tags: ["AI Code Gen", "Smart Contracts", "Onchain Apps", "USDC"],
+    url: "https://developers.circle.com/ai/arc-studio",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "warren-ai",
+    name: "WarrenAI",
+    description: "Investing.com's AI financial researcher covering 72,000+ assets including crypto, delivering real-time market answers, technical chart analysis, portfolio insights, and analyst-backed research in 26 languages.",
+    category: "analytics",
+    tags: ["AI Research", "Real-Time Data", "Chart Analysis", "Portfolio"],
+    url: "https://www.investing.com/warrenai",
+    pricing: "Free / InvestingPro subscription",
+    rating: 3.5,
+    featured: false,
+  },
 ];
