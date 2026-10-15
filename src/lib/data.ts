@@ -7258,4 +7258,52 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+
+  {
+    id: "sparkling",
+    name: "Sparkling",
+    description: "Telegram-native AI trading agent that prepares perpetual futures, prediction markets, swaps, and tokenized stocks from one self-custodial balance for user confirmation.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Telegram Bot", "Perpetual Futures", "Self-Custodial"],
+    url: "https://sparkl.ing",
+    pricing: "Free / trading fees",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "navi-solana",
+    name: "NAVI",
+    description: "AI trading co-pilot for Solana tokens offering rug checks, AI token analysis, holder bubble maps, technical analysis, and alerts before you buy.",
+    category: "analytics",
+    tags: ["Solana", "Rug Check", "AI Analysis", "Token Alerts"],
+    url: "https://navi.trade",
+    pricing: "Free / Pro",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "coinfeeds",
+    name: "Coinfeeds",
+    description: "Custom AI agents for crypto exchanges, funds, and apps that monitor portfolios across hundreds of assets and deliver personalized AI news feeds.",
+    category: "news-data",
+    tags: ["AI Agents", "News Feed", "Portfolio Monitoring", "NLP API"],
+    url: "https://www.coinfeeds.ai",
+    pricing: "Contact for pricing",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "dealsize-ai",
+    name: "DealSize.ai",
+    description: "AI chat assistant for traders that answers technical analysis questions on crypto, forex, and stocks and reviews broker-connected trade performance.",
+    category: "analytics",
+    tags: ["AI Chat", "Technical Analysis", "Multi-Asset", "Trade Review"],
+    url: "https://www.dealsize.ai",
+    pricing: "Free / $25/mo",
+    rating: 3.5,
+    featured: false,
+  },
 ];
