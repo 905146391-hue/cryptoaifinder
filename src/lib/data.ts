@@ -7306,4 +7306,28 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+
+  {
+    id: "walletfinder-ai",
+    name: "WalletFinder.ai",
+    description: "DeFi analytics platform that discovers profitable crypto wallets on ETH, SOL, and Base, with AI assistant market analysis, Telegram alerts, and copytrading.",
+    category: "analytics",
+    tags: ["Wallet Analysis", "Copytrading", "Telegram Alerts", "DeFi Analytics"],
+    url: "https://walletfinder.ai",
+    pricing: "Free trial / $21/mo",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "true-ai",
+    name: "TRUE AI",
+    description: "Non-custodial Solana DEX with conversational AI market analysis, chart uploads in 11 languages, copy trading, and optional Autopilot agents within user-set risk limits.",
+    category: "trading-bots",
+    tags: ["Solana", "AI Agent", "DEX", "Copy Trading"],
+    url: "https://truefinance.ai",
+    pricing: "Free / trading fees",
+    rating: 3.5,
+    featured: false,
+  },
 ];
