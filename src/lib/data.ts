@@ -7330,4 +7330,108 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+
+  {
+    id: "chartsense-ai",
+    name: "ChartSense AI",
+    description:
+      "AI chart analysis platform that scans live crypto market data or uploaded charts to surface key levels, order-book walls, funding rates, liquidation zones and Monte Carlo risk estimates in minutes.",
+    category: "charting",
+    tags: ["Chart Analysis", "Risk Modeling", "Order Book", "Trading Psychology"],
+    url: "https://chartsenseai.com",
+    pricing: "$1 trial / paid monthly plans",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "gl1f-crypto",
+    name: "GL1F Crypto",
+    description:
+      "No-code on-chain machine learning studio for crypto markets where anyone can train, backtest, tokenize and monetize quant models as verifiable Model NFTs across 274 built-in signals.",
+    category: "analytics",
+    tags: ["No-Code ML", "Model NFT", "Backtesting", "On-Chain Inference"],
+    url: "https://crypto.gl1f.com",
+    pricing: "Free (alpha)",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "aeredium",
+    name: "AEREDIUM",
+    description:
+      "AI guardrails platform for autonomous crypto agents, pairing The Chair policy engine with an MCP Connector that enforces spend limits, threshold signatures and auditable receipts for DeFi execution.",
+    category: "security",
+    tags: ["AI Guardrails", "Agent Policy Engine", "MCP", "DeFi Security"],
+    url: "https://aeredium.ai",
+    pricing: "Contact for pricing",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "fensory",
+    name: "Fensory",
+    description:
+      "Trading MCP server that gives Claude, ChatGPT and Cursor a live account across 1,900+ markets including crypto perps, with account-level caps and no withdrawal rights.",
+    category: "trading-bots",
+    tags: ["MCP", "Perpetual Futures", "Agent Trading", "Non-Custodial"],
+    url: "https://fensory.com",
+    pricing: "Free / 0.01-0.05% builder fee",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "tychi-agent-finance",
+    name: "Tychi Agent Finance",
+    description:
+      "Open-source MCP server and SDK that gives AI agents self-custody crypto wallets with policy-gated spending, local key signing, x402 payments and ERC-8004 on-chain identity.",
+    category: "wallet",
+    tags: ["Agent Wallet", "MCP", "x402 Payments", "Policy Engine"],
+    url: "https://www.tychilabs.com/ai",
+    pricing: "Free (open source beta)",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "kyro",
+    name: "Kyro",
+    description:
+      "AI investing workspace unifying 250+ brokers, exchanges and wallets such as Binance, Coinbase and MetaMask, answering exposure questions about real holdings with 100+ models.",
+    category: "portfolio",
+    tags: ["Portfolio Tracker", "Multi-Model AI", "Crypto Equities", "Smart Alerts"],
+    url: "https://kyro.app",
+    pricing: "Free / $12/mo / $39/mo",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "blockchain-ai",
+    name: "Blockchain.ai",
+    description:
+      "Solana analytics and trading terminal combining natural-language AI market intelligence, verified signal track records, automated wallet copy trading and an MCP server for AI assistants.",
+    category: "analytics",
+    tags: ["Solana", "Copy Trading", "MCP", "AI Signals"],
+    url: "https://blockchain.ai",
+    pricing: "Free data API / paid plans",
+    rating: 3.5,
+    featured: false,
+  },
+
+  {
+    id: "autosignal-ai",
+    name: "AutoSignal.ai",
+    description:
+      "Crypto research workbench pairing AI-generated trade signals with liquidation heatmaps, open interest, funding rates and ETF flows, plus a read-only MCP server for AI agents.",
+    category: "analytics",
+    tags: ["AI Signals", "Liquidation Data", "Derivatives", "MCP"],
+    url: "https://autosignal.ai",
+    pricing: "Free / $29.99/mo",
+    rating: 3.5,
+    featured: false,
+  },
 ];
