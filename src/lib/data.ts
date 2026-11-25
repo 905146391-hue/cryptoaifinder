@@ -7494,4 +7494,52 @@ The platform places a strong emphasis on security, employing a combination of co
     rating: 3.5,
     featured: false,
   },
+  {
+    id: "circuit",
+    name: "Circuit",
+    description:
+      "Self-custodial agentic trading platform where AI agents described in plain English are backtested and run on your wallet across Hyperliquid, Lighter, Polymarket and tokenized stocks, with keys held in hardware enclaves.",
+    category: "trading-bots",
+    tags: ["Agentic Trading", "Hyperliquid", "Self-Custody", "Backtesting"],
+    url: "https://circuit.org",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+  {
+    id: "bankr",
+    name: "Bankr",
+    description:
+      "AI agent execution layer and cross-chain wallet on Base that lets users and autonomous agents trade, launch tokens, bridge and manage portfolios via natural language across X, Farcaster and Telegram.",
+    category: "trading-bots",
+    tags: ["AI Agent", "Agent Wallet", "Token Launch", "x402"],
+    url: "https://bankr.bot",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+  {
+    id: "giza",
+    name: "Giza",
+    description:
+      "Non-custodial autonomous AI agents that continuously optimize DeFi yield across lending protocols like Aave and Compound, with over 25,000 agents deployed managing $35M+ in capital on Base.",
+    category: "defi",
+    tags: ["DeFi Yield", "Autonomous Agents", "Yield Optimization", "Non-Custodial"],
+    url: "https://gizatech.xyz",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
+  {
+    id: "dexpaprika-mcp",
+    name: "DexPaprika MCP Server",
+    description:
+      "Free hosted MCP server giving AI agents keyless access to live DEX data across 33+ chains: pools, tokens, OHLCV candles, swaps and built-in RSI, EMA and MACD indicators.",
+    category: "news-data",
+    tags: ["MCP", "DEX Data", "AI Agents", "On-Chain Analytics"],
+    url: "https://mcp.dexpaprika.com",
+    pricing: "Free",
+    rating: 3.5,
+    featured: false,
+  },
 ];
